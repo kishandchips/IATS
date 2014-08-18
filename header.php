@@ -21,7 +21,7 @@
                 <div class="header-top clearfix">
                     <div class="logo">
                         <a href="<?php echo bloginfo('url' ); ?>">
-                            <i class="icon-logo"></i> 
+                            <!-- <i class="icon-logo"></i>  -->
                             <i class="icon-typelogo"></i>    
                         </a>
                     </div><!-- .logo -->
@@ -40,7 +40,7 @@
                 </div><!-- .mob-menu -->
 
                 <nav id="main-nav">
-                    <?php $args = array('theme_location' => 'header_nav','menu' => '','container' => '',);
+                    <?php $args = array('theme_location' => 'header_nav','menu' => '','container' => '', 'walker' => new Primary_Nav_Walker);
                         wp_nav_menu( $args ); 
                     ?>
                     <button id="search-toggle" class="search" aria-role="search toggle"></button>

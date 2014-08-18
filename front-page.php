@@ -43,7 +43,6 @@
 						<li class="clearfix">
 
 						<?php while($query->have_posts()): $query->the_post(); ?>					
-								<?php $category_name = strtolower(get_the_category_by_ID(top_level_cat())); ?>
 								<?php $category_name = top_level_cat(); ?>
 								<?php $format = get_post_format(); ?>
 
@@ -227,6 +226,85 @@
 					<?php endwhile; ?>	
 				</ul><!-- .slides -->
 			</div><!-- .schools -->
+
+			<div class="slider latest-cat-articles university">
+				<ul class="slides">	
+				<?php 
+					$i = 0;
+					$offset = 0;
+					$slides = 0; 
+				?>
+
+				<?php while($slides <= 1 ): ?>
+
+				<?php 
+				$args = array(
+					'category_name' => 'university',
+					'posts_per_page' => 4,
+					'offset' => $offset,
+
+				); 
+				?>
+				
+				<?php $latest_query = new WP_Query( $args ); ?>
+
+					<?php if($latest_query->have_posts()): ?>
+						<li class="clearfix">
+							<div class="row">	
+								<?php while($latest_query->have_posts()): $latest_query->the_post(); ?>					
+								<?php $category_name = top_level_cat(); ?>
+								<?php $category_link = get_category_link(top_level_cat()); ?>
+								<?php $format = get_post_format(); ?>
+
+								<?php if($i % 4 == 0): ?>
+									<article class="main meta-inner slide-col column col-full <?php echo $category_name; ?> <?php echo $format; ?>">
+								<?php else: ?>
+									<article class="slide-col column col-1-3 <?php echo $category_name; ?> <?php echo $format; ?>">
+								<?php endif; ?>
+
+										<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+
+										<div class="image" style="background-image:url(<?php echo $url ?>)">
+										<?php if($format == 'gallery'): ?>
+											<?php $images = get_field('gallery', $post->ID) ?>
+											<?php $count = count($images); ?>
+											<span class="gallery-count"> 
+												<i class="icon-gallery"></i>
+												<span class="count">
+												<?php echo $count; ?>
+												</span>
+											</span>
+										<?php endif; ?>
+										</div>
+										<div class="meta">
+											<div class="category out">
+												<a href="<?php echo $category_link; ?>">
+													<p class="cat-title"><?php echo $category_name; ?><i class="icon-badge"></i></p>										
+												</a>
+											</div>	
+											<div class="title match-height">
+												<a href="<?php the_permalink(); ?>">
+													<h2><?php the_title(); ?></h2>
+												</a>
+											</div>
+											<div class="misc">
+												<span class="date"><?php the_time('m M Y'); ?></span>
+											</div>
+										</div>					
+									</article>
+							<?php $i++ ?>
+						<?php endwhile; ?>
+							</div>
+						</li><!-- single slide -->
+						<?php endif; ?>
+						<?php wp_reset_query(); ?>
+						<?php 
+							$offset += 3;
+							$slides++
+						?>
+					<?php endwhile; ?>	
+				</ul><!-- .slides -->
+			</div><!-- .university -->
 
 		</div><!-- .section-content -->
 

@@ -74,16 +74,17 @@
 					$offset = 0; 
 					$slides = 0; 
 				?>
-				<?php $tags = wp_get_post_tags( $post->ID ) ?>
+<!-- 				<?php $tags = wp_get_post_tags( $post->ID ) ?>
 				<?php $tag_ids = array(); ?>
-				<?php foreach ($tags as $tag) { $tag_ids[] = $tag->term_id; } ?>
+				<?php foreach ($tags as $tag) { $tag_ids[] = $tag->term_id; } ?> -->
 				<?php while($slides <= 3 ): ?>
 
 				<?php 
 					$args = array(
 						'offset' => $offset,
 						'posts_per_page'	=> 4,
-						'tag__in'	=> $tag_ids,
+						// 'tag__in'	=> $tag_ids,
+						'category__in' => wp_get_post_categories($post->ID),
 						'post__not_in' => array($post->ID),
 						'tax_query' => array(
 		                    array(
@@ -165,16 +166,17 @@
 					$slides = 0; 
 				?>
 
-				<?php $tags = wp_get_post_tags( $post->ID ) ?>
+<!-- 				<?php $tags = wp_get_post_tags( $post->ID ) ?>
 				<?php $tag_ids = array(); ?>
-				<?php foreach ($tags as $tag) { $tag_ids[] = $tag->term_id; } ?>
+				<?php foreach ($tags as $tag) { $tag_ids[] = $tag->term_id; } ?> -->
 				<?php while($slides <= 1 ): ?>
 
 				<?php 
 					$args = array(
 						'offset' => $offset,
 						'posts_per_page'	=> 4,
-						'tag__in'	=> $tag_ids,
+						// 'tag__in'	=> $tag_ids,
+						'category__in' => wp_get_post_categories($post->ID),
 						'post__not_in' => array($post->ID),
 						'tax_query' => array(
 		                    array(

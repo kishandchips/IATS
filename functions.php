@@ -1,31 +1,44 @@
 <?php
 define('THEME_NAME', 'IATS');
 
+$template_directory_uri = get_template_directory_uri();
+$template_directory = get_template_directory();
+
 // Enable Features
-	add_theme_support( 'post-thumbnails' );
-	add_theme_support( 'post-formats', array( 'video', 'gallery' ) );
-	add_editor_style('/css/editor-style.css');
-	register_nav_menus(array(
-		'header_nav' => 'Main Header Menu',
-		'footer_nav' => 'Footer Menu',
-		'' => '')
-	);
+add_theme_support( 'post-thumbnails' );
+add_theme_support( 'post-formats', array( 'video', 'gallery' ) );
+add_editor_style('/css/editor-style.css');
+register_nav_menus(array(
+	'header_nav' => 'Main Header Menu',
+	'footer_nav' => 'Footer Menu',
+	'' => '')
+);
 
 // Image sizes
-	add_image_size( 'gallery-thumb', 150, 150, true );
+add_image_size( 'gallery-thumb', 150, 150, true );
+add_image_size( 'nav-thumb', 250, 150, true );
 
 // Add Actions
-	add_action( 'wp_enqueue_scripts', 'custom_styles', 30 );
-	add_action( 'wp_enqueue_scripts', 'custom_scripts', 30 );
-	add_action( 'widgets_init', 'register_widgets');
-	add_action('template_include', 'load_single_template');
-	add_action("gform_field_standard_settings", "custom_gform_standard_settings", 10, 2);
-	add_action('gform_enqueue_scripts',"custom_gform_enqueue_scripts", 10, 2);
+add_action( 'after_setup_theme', 'custom_after_setup_theme' );
+add_action( 'wp_enqueue_scripts', 'custom_styles', 30 );
+add_action( 'wp_enqueue_scripts', 'custom_scripts', 30 );
+add_action( 'widgets_init', 'register_widgets');
+add_action('template_include', 'load_single_template');
+add_action("gform_field_standard_settings", "custom_gform_standard_settings", 10, 2);
+add_action('gform_enqueue_scripts',"custom_gform_enqueue_scripts", 10, 2);
 
 // Functions
+function custom_after_setup_theme(){
+	global $template_directory;
+
+	require($template_directory.'/inc/primary-nav-walker.php');
+}
+
 function custom_styles(){
+	global $template_directory_uri;
+
 	wp_enqueue_style('fonts', 'http://fonts.googleapis.com/css?family=' );
-	wp_enqueue_style('main', get_template_directory_uri() . '/css/main.css');
+	wp_enqueue_style('main', $template_directory_uri . '/css/main.css');
 }
 
 function custom_scripts(){
@@ -35,12 +48,12 @@ function custom_scripts(){
 		'base' => site_url(),
 	));
 	
-	wp_enqueue_script('modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.6.1.min.js', array('jquery'), '', false);
-	wp_enqueue_script('flexslider', get_template_directory_uri() . '/js/vendor/jquery.flexslider.js', array('jquery'), '', true);
-	wp_enqueue_script('imagesLoaded', get_template_directory_uri() . '/js/vendor/imagesloaded.js', array('jquery'), '', true);
-	wp_enqueue_script('isotope', get_template_directory_uri() . '/js/vendor/isotope.js', array('jquery'), '', true);
-	wp_enqueue_script('matchHeight', get_template_directory_uri() . '/js/vendor/matchheight.min.js', array('jquery'), '', true);
-	wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '', true);
+	wp_enqueue_script('modernizr', $template_directory_uri . '/js/vendor/modernizr-2.6.1.min.js', array('jquery'), '', false);
+	wp_enqueue_script('flexslider', $template_directory_uri . '/js/vendor/jquery.flexslider.js', array('jquery'), '', true);
+	wp_enqueue_script('imagesLoaded', $template_directory_uri . '/js/vendor/imagesloaded.js', array('jquery'), '', true);
+	wp_enqueue_script('isotope', $template_directory_uri . '/js/vendor/isotope.js', array('jquery'), '', true);
+	wp_enqueue_script('matchHeight', $template_directory_uri . '/js/vendor/matchheight.min.js', array('jquery'), '', true);
+	wp_enqueue_script('main', $template_directory_uri . '/js/main.js', array('jquery'), '', true);
 }
 
 function register_widgets(){
@@ -72,6 +85,18 @@ function register_widgets(){
 		array(
 			'id' => 'social',
 			'name' => __( 'Social' ),
+			'description' => __( 'Social Widgets' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h4 class="widget-title">',
+			'after_title' => '</h4>'
+		)
+	);
+
+	register_sidebar(
+		array(
+			'id' => 'livestream',
+			'name' => __( 'Live' ),
 			'description' => __( 'Social Widgets' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget' => '</div>',

@@ -139,10 +139,6 @@
 					color: #000;
 					font-size: 1em;
 				}
-
-				.icon-arrow-down{
-					display: none;
-				}
 			}//li.menu-item
 
 			#search-toggle{
@@ -227,8 +223,9 @@
 
 			&:hover{
 				background-color: #fff;
-				.sub-menu{
+				>.sub-menu{
 					@extend .visible;
+					z-index: 90;
 				}
 				a{
 					color: #000;
@@ -247,7 +244,7 @@
 						background-color: $blue;
 
 						.menu-item{
-							.active:after{
+							&.visible a:after{
 								color: #6f87d8;
 							}
 						}
@@ -256,7 +253,7 @@
 
 				.menu-item-posts{
 					background-color: #6f87d8;
-					border-bottom: 5px solid $dblue;
+					// border-bottom: 5px solid $dblue;
 				}
 			}//.schools
 
@@ -272,7 +269,7 @@
 						background-color: $lred;
 
 						.menu-item{
-							.active:after{
+							&.visible a:after{
 								color: #822b2c;
 							}
 						}
@@ -281,7 +278,7 @@
 
 				.menu-item-posts{
 					background-color: #822b2c;
-					border-bottom:5px solid $dred;
+					// border-bottom:5px solid $dred;
 				}
 			}//.uni
 
@@ -297,7 +294,7 @@
 						background-color: $lpurple;
 
 						.menu-item{
-							.active:after{
+							&.visible a:after{
 								color: #b15c88;
 							}
 						}
@@ -307,7 +304,7 @@
 
 				.menu-item-posts{
 					background-color: #b15c88;
-					border-bottom: 5px solid $dpurple;
+					// border-bottom: 5px solid $dpurple;
 				}
 			}//.rep
 
@@ -323,7 +320,7 @@
 						background-color: $pink;
 
 						.menu-item{
-							.active:after{
+							&.visible a:after{
 								color: #e38782;
 							}
 						}
@@ -333,7 +330,7 @@
 
 				.menu-item-posts{
 					background-color: #e38782;
-					border-bottom: 5px solid $dpink;
+					// border-bottom: 5px solid $dpink;
 				}
 			}
 
@@ -355,20 +352,29 @@
 		width: 600px;
 		@extend .invisible;
 		@include transition(all,.3s);
+		z-index: 50;
 
 		li.menu-item{
 			line-height: 40px;
-		}
 
-		.active{
-			position: relative;
+			&.visible{
+				.menu-item-post{
+					@extend .visible;
+					z-index: 10;
+				}
+				>a{
+					position:relative;
+					&:after{
+						position:absolute;
+						bottom:-5px;
+						left:0;
+						right:0;
+						text-align: center;
+						content: "\e602";
+						@extend %icon;
+					}					
+				}
 
-			&:after{
-				position:absolute;
-				bottom:-5px;
-				left:35%;
-				content: "\e602";
-				@extend %icon;
 			}
 		}
 	}//.sub-menu
@@ -391,11 +397,15 @@
 	.menu-item-posts{
 		position: absolute;
 		top:100%;
+		left: 0;
 		width: 100%;
 		max-width: 600px;
 
 		.menu-item-post{
 			padding-top: 1em;
+			@extend .invisible;
+			@include transition(all,.2s);
+			z-index: 5;
 
 			p{
 				color: #fff;

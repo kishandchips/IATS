@@ -574,10 +574,10 @@ body.single{
 	.article-header-title{
 		float:left;
 		width: 40%;
-		height:400px;
+		// height:400px;
 		padding-top: 2em;
 		padding-bottom: 100px;
-		@extend .valign;
+		// @extend .valign;
 		color: #fff;
 
 		.title{
@@ -587,24 +587,38 @@ body.single{
 		}
 
 		@media screen and (max-width: 800px){
+			position: relative;
+			z-index: 1;
 			width: 100%;
-			padding: 0 1em;
 			height: initial;
 			text-align: center;
+
 		}
 	}
 
 	.article-header-image{
 		float:left;
+		position: relative;
 		width: 60%;
-		margin-left:40%;
+		// margin-left:40%;
 		height: 400px;
 		background-size:cover;
 		background-position: center;
 
 		@media screen and (max-width: 800px){
+			position: absolute;
+			top:0;right:0;bottom:0;left:0;
+			height: auto;
 			width: 100%;
 			margin: 0;
+
+			&:after{
+				content:"";
+				position: absolute;
+				display:inline-block;
+				top:0;right:0;bottom:0;left:0;
+				background-color:rgba(#000,0.2);
+			}
 		}
 	}
 

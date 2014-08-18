@@ -86,16 +86,15 @@
 		</div><!-- .inner-container -->
 	</div><!-- #content -->
 
-	<?php $tags = wp_get_post_tags( $post->ID ) ?>
+<!-- 	<?php $tags = wp_get_post_tags( $post->ID ) ?>
 	<?php $tag_ids = array(); ?>
-	<?php foreach ($tags as $tag) {
-		$tag_ids[] = $tag->term_id;
-	} ?>
+	<?php foreach ($tags as $tag) { $tag_ids[] = $tag->term_id; } ?> -->
 
 	<?php
 		$args = array(
 			'post__not_in'	=> array($post->ID),
-			'tag__in'	=> $tag_ids,
+			// 'tag__in'	=> $tag_ids,
+			'category__in' => wp_get_post_categories($post->ID),
 			'posts_per_page'	=> 4			
 		);
 	

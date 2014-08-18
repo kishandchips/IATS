@@ -21,7 +21,8 @@ var main = {
 		var menu = $('#menu-toggle'),
 			nav	= $('#main-nav'),
 			search = $('#search-toggle'),
-			searchBar = $('.search-bar');
+			searchBar = $('.search-bar'),
+			catToggle = $('.cat-toggle');
 
 		search.on('click', function(){
 			console.log('clicked');
@@ -30,6 +31,11 @@ var main = {
 
 		menu.on('click', function(){
 			nav.toggleClass('visible');
+		});
+
+		catToggle.on('hover', function(e){
+			e.preventDefault();
+			$(this).siblings().removeClass('visible').end().addClass('visible');
 		});
 	},
 
