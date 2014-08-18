@@ -1,0 +1,153 @@
+/* ==========================================================================
+   COLOUR SCHEMES
+   ========================================================================== */
+
+/*SCHOOLS*/
+$blue : #4968D1;
+$dblue : #0C3261;
+.schools-bg{
+	color: #fff;
+	background-color: $dblue;
+
+		.icon-badge:after{
+			@extend %icon;
+			content: "\e616";			
+		}
+}
+
+/*UNIVERSITIES*/
+$red : #992B2C;
+$lred : #B74144;
+$dred : #720D0E;
+.university-bg{
+	color: #fff;
+	background-color: $dred;
+
+		.icon-badge:after{
+			@extend %icon;
+			content: "\e618";			
+		}
+}
+
+/*REPRESENTATIVE*/
+$purple : #511D50;
+$lpurple: #9F3069;
+$dpurple : #100D3C;
+.representative-bg{
+	color: #fff;
+	background-color: $dpurple;
+
+		.icon-badge:after{
+			@extend %icon;
+			content: "\e615";			
+		}
+}
+
+/*SEVENS*/
+$pink : #DF6862;
+$dpink : #DB5657;
+.sevens-bg{
+	color: #fff;
+	background-color: $dpink;
+
+		.icon-badge:after{
+			@extend %icon;
+			content: "\e617";			
+		}
+}
+
+/*AROUND THE GAME*/
+$green : #1A4417;
+$dgreen : #1C3203;
+.around-the-game-bg{
+	color: #fff;
+	background-color: $dgreen;
+
+		.icon-badge:after{
+			@extend %icon;
+			content: "\e611";			
+		}
+}
+
+/*IATS*/
+$orange : #D45703;
+.fitness-bg{
+	color: #fff;
+	background-color: $orange;
+		.icon-badge:after{
+			@extend %icon;
+			content: "\e614";			
+		}
+}
+
+.live-bg{
+	color: #000;
+	background-color: #FFD20D;
+
+		.icon-badge:after{
+			@extend %icon;
+			content: "\e611";			
+		}
+}
+
+/*MEDIA*/
+.media-bg{
+	color: #fff;
+	background-color:#005377;
+
+		.icon-badge:after{
+			@extend %icon;
+			content: "\e619";		
+		}
+}
+
+.medialight-bg{
+	background-color: #262631;
+}
+.mediadark-bg{
+	background-color: #1b1b1f;
+}
+
+article{
+
+	.icon-badge:after{
+		font-size: 1.2em;
+	}
+
+	&.schools{
+		.icon-badge:after{
+			@extend %icon;
+			content: "\e616";			
+		}
+	}
+	&.university{
+		.icon-badge:after{
+			@extend %icon;
+			content: "\e618";			
+		}
+	}
+	&.representative{
+		.icon-badge:after{
+			@extend %icon;
+			content: "\e615";			
+		}
+	}
+	&.sevens{
+		.icon-badge:after{
+			@extend %icon;
+			content: "\e617";			
+		}
+	}
+	&.around-the-game{
+		.icon-badge:after{
+			@extend %icon;
+			content: "\e611";			
+		}
+	}
+	&.fitness, &.nutrition, &.training{
+		.icon-badge:after{
+			@extend %icon;
+			content: "\e614";			
+		}
+	}
+}

@@ -1,0 +1,3364 @@
+/*! normalize.css v1.0.1 | MIT License | git.io/normalize */
+@import '//fast.fonts.net/cssapi/774e7563-a8f4-4d3d-80ef-6ddbe85570fc.css';
+/* line 2, scss/_normalize.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+/* line 3, scss/_normalize.scss */
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+/* line 4, scss/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/* line 5, scss/_normalize.scss */
+[hidden] {
+  display: none; }
+
+/* line 6, scss/_normalize.scss */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/* line 7, scss/_normalize.scss */
+html, button, .form-actions input[type="submit"], #fohohfoh .message form input[type="submit"], input, select, textarea {
+  font-family: sans-serif; }
+
+/* line 8, scss/_normalize.scss */
+body {
+  margin: 0; }
+
+/* line 9, scss/_normalize.scss */
+a:focus {
+  outline: thin dotted; }
+
+/* line 10, scss/_normalize.scss */
+a:active, a:hover {
+  outline: 0; }
+
+/* line 11, scss/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: .67em 0; }
+
+/* line 12, scss/_normalize.scss */
+h2 {
+  font-size: 1.5em;
+  margin: .83em 0; }
+
+/* line 13, scss/_normalize.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0; }
+
+/* line 14, scss/_normalize.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0; }
+
+/* line 15, scss/_normalize.scss */
+h5 {
+  font-size: .83em;
+  margin: 1.67em 0; }
+
+/* line 16, scss/_normalize.scss */
+h6 {
+  font-size: .75em;
+  margin: 2.33em 0; }
+
+/* line 17, scss/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/* line 18, scss/_normalize.scss */
+b, strong {
+  font-weight: bold; }
+
+/* line 19, scss/_normalize.scss */
+blockquote {
+  margin: 1em 40px; }
+
+/* line 20, scss/_normalize.scss */
+dfn {
+  font-style: italic; }
+
+/* line 21, scss/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/* line 22, scss/_normalize.scss */
+p, pre {
+  margin: 1em 0; }
+
+/* line 23, scss/_normalize.scss */
+code, kbd, pre, samp {
+  font-family: monospace,serif;
+  _font-family: 'courier new',monospace;
+  font-size: 1em; }
+
+/* line 24, scss/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+/* line 25, scss/_normalize.scss */
+q {
+  quotes: none; }
+
+/* line 26, scss/_normalize.scss */
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 27, scss/_normalize.scss */
+small {
+  font-size: 80%; }
+
+/* line 28, scss/_normalize.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 29, scss/_normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* line 30, scss/_normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* line 31, scss/_normalize.scss */
+dl, menu, ol, ul {
+  margin: 1em 0; }
+
+/* line 32, scss/_normalize.scss */
+dd {
+  margin: 0 0 0 40px; }
+
+/* line 33, scss/_normalize.scss */
+menu, ol, ul {
+  padding: 0 0 0 40px; }
+
+/* line 34, scss/_normalize.scss */
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none; }
+
+/* line 35, scss/_normalize.scss */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic; }
+
+/* line 36, scss/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* line 37, scss/_normalize.scss */
+figure {
+  margin: 0; }
+
+/* line 38, scss/_normalize.scss */
+form {
+  margin: 0; }
+
+/* line 39, scss/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+/* line 40, scss/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px; }
+
+/* line 41, scss/_normalize.scss */
+button, .form-actions input[type="submit"], #fohohfoh .message form input[type="submit"], input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+/* line 42, scss/_normalize.scss */
+button, .form-actions input[type="submit"], #fohohfoh .message form input[type="submit"], input {
+  line-height: normal; }
+
+/* line 43, scss/_normalize.scss */
+button, .form-actions input[type="submit"], #fohohfoh .message form input[type="submit"], html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible; }
+
+/* line 44, scss/_normalize.scss */
+button[disabled], .form-actions input[disabled][type="submit"], #fohohfoh .message form input[disabled][type="submit"], input[disabled] {
+  cursor: default; }
+
+/* line 45, scss/_normalize.scss */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px; }
+
+/* line 46, scss/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+/* line 47, scss/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/* line 48, scss/_normalize.scss */
+button::-moz-focus-inner, .form-actions input[type="submit"]::-moz-focus-inner, #fohohfoh .message form input[type="submit"]::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 49, scss/_normalize.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+/* line 50, scss/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 1, scss/_grid.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 6, scss/_grid.scss */
+.row, .clearfix, .container, .inner-container {
+  *zoom: 1; }
+  /* line 9, scss/_grid.scss */
+  .row:before, .row:after, .clearfix:before, .clearfix:after, .container:before, .inner-container:before, .container:after, .inner-container:after {
+    content: " ";
+    display: table; }
+  /* line 15, scss/_grid.scss */
+  .row:after, .clearfix:after, .container:after, .inner-container:after {
+    clear: both; }
+
+/* line 20, scss/_grid.scss */
+.container, .inner-container {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 28, scss/_grid.scss */
+.inner-container {
+  width: 95%;
+  max-width: 1200px; }
+
+/* line 34, scss/_grid.scss */
+.row {
+  margin-left: -10px;
+  margin-right: -10px; }
+
+/* line 39, scss/_grid.scss */
+.column {
+  position: relative;
+  float: left;
+  display: block;
+  min-height: 2px;
+  padding-left: 10px;
+  padding-right: 10px; }
+  /* line 47, scss/_grid.scss */
+  .column.col-1-2 {
+    width: 50%; }
+  /* line 51, scss/_grid.scss */
+  .column.col-1 {
+    width: 10%; }
+  /* line 55, scss/_grid.scss */
+  .column.col-3 {
+    width: 30%; }
+  /* line 59, scss/_grid.scss */
+  .column.col-1-3 {
+    width: 33.333%; }
+  /* line 63, scss/_grid.scss */
+  .column.col-2-3 {
+    width: 66.666%; }
+  /* line 67, scss/_grid.scss */
+  .column.col-1-4 {
+    width: 25%; }
+  /* line 71, scss/_grid.scss */
+  .column.col-7 {
+    width: 70%; }
+  /* line 75, scss/_grid.scss */
+  .column.col-3-4 {
+    width: 75%; }
+  /* line 79, scss/_grid.scss */
+  .column.col-1-5 {
+    width: 20%; }
+  /* line 83, scss/_grid.scss */
+  .column.col-2-5 {
+    width: 40%; }
+  /* line 87, scss/_grid.scss */
+  .column.col-3-5 {
+    width: 60%; }
+  /* line 91, scss/_grid.scss */
+  .column.col-4-5 {
+    width: 80%; }
+  /* line 95, scss/_grid.scss */
+  .column.col-full {
+    width: 100%; }
+
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+/* Browser Resets
+*********************************/
+/* line 15, scss/_flexslider.scss */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+  outline: none; }
+
+/* line 19, scss/_flexslider.scss */
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/* Icon Fonts
+*********************************/
+/* Font-face Icons */
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot?2pcvv6");
+  src: url("fonts/icomoon.eot?#iefix2pcvv6") format("embedded-opentype"), url("fonts/icomoon.woff?2pcvv6") format("woff"), url("fonts/icomoon.ttf?2pcvv6") format("truetype"), url("fonts/icomoon.svg?2pcvv6#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* FlexSlider Necessary Styles
+*********************************/
+/* line 38, scss/_flexslider.scss */
+.flexslider {
+  margin: 0;
+  padding: 0; }
+
+/* line 39, scss/_flexslider.scss */
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden; }
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+/* line 40, scss/_flexslider.scss */
+.flexslider .slides img {
+  width: 100%;
+  display: block; }
+
+/* line 41, scss/_flexslider.scss */
+.flex-pauseplay span {
+  text-transform: capitalize; }
+
+/* Clearfix for the .slides element */
+/* line 44, scss/_flexslider.scss */
+.slides:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+/* line 45, scss/_flexslider.scss */
+html[xmlns] .slides {
+  display: block; }
+
+/* line 46, scss/_flexslider.scss */
+* html .slides {
+  height: 1%; }
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+/* line 51, scss/_flexslider.scss */
+.no-js .slides > li:first-child {
+  display: block; }
+
+/* FlexSlider Default Theme
+*********************************/
+/* line 55, scss/_flexslider.scss */
+.flexslider {
+  margin: 0 0 60px;
+  background: #fff;
+  border: 4px solid #fff;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  zoom: 1; }
+
+/* line 56, scss/_flexslider.scss */
+.flex-viewport {
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease; }
+
+/* line 57, scss/_flexslider.scss */
+.loading .flex-viewport {
+  max-height: 300px; }
+
+/* line 58, scss/_flexslider.scss */
+.flexslider .slides {
+  zoom: 1; }
+
+/* line 59, scss/_flexslider.scss */
+.carousel .slides li {
+  margin-right: 5px; }
+
+/* Direction Nav */
+/* line 62, scss/_flexslider.scss */
+.flex-direction-nav {
+  *height: 0; }
+
+/* line 63, scss/_flexslider.scss */
+.flex-direction-nav a {
+  text-decoration: none;
+  display: block;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  overflow: hidden;
+  opacity: 0;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease; }
+
+/* line 64, scss/_flexslider.scss */
+.flex-direction-nav .flex-prev {
+  left: -50px; }
+
+/* line 65, scss/_flexslider.scss */
+.flex-direction-nav .flex-next {
+  right: -50px;
+  text-align: right; }
+
+/* line 66, scss/_flexslider.scss */
+.flexslider:hover .flex-prev {
+  opacity: 0.7;
+  left: 10px; }
+
+/* line 67, scss/_flexslider.scss */
+.flexslider:hover .flex-next {
+  opacity: 0.7;
+  right: 10px; }
+
+/* line 68, scss/_flexslider.scss */
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
+  opacity: 1; }
+
+/* line 69, scss/_flexslider.scss */
+.flex-direction-nav .flex-disabled {
+  opacity: 0 !important;
+  filter: alpha(opacity=0);
+  cursor: default; }
+
+/* line 70, scss/_flexslider.scss */
+.flex-direction-nav a:before {
+  font-family: "icomoon";
+  font-size: 40px;
+  display: inline-block;
+  content: '\e60a'; }
+
+/* line 71, scss/_flexslider.scss */
+.flex-direction-nav a.flex-next:before {
+  content: '\e60b'; }
+
+/* Pause/Play */
+/* line 74, scss/_flexslider.scss */
+.flex-pauseplay a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  opacity: 0.8;
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+  color: #000; }
+
+/* line 75, scss/_flexslider.scss */
+.flex-pauseplay a:before {
+  font-family: "icomoon";
+  font-size: 20px;
+  display: inline-block;
+  content: '\f004'; }
+
+/* line 76, scss/_flexslider.scss */
+.flex-pauseplay a:hover {
+  opacity: 1; }
+
+/* line 77, scss/_flexslider.scss */
+.flex-pauseplay a.flex-play:before {
+  content: '\f003'; }
+
+/* Control Nav */
+/* line 80, scss/_flexslider.scss */
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  text-align: center; }
+
+/* line 81, scss/_flexslider.scss */
+.flex-control-nav li {
+  margin: 0 6px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline; }
+
+/* line 82, scss/_flexslider.scss */
+.flex-control-paging li a {
+  width: 11px;
+  height: 11px;
+  display: block;
+  background: #666;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-indent: -9999px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px; }
+
+/* line 83, scss/_flexslider.scss */
+.flex-control-paging li a:hover {
+  background: #333;
+  background: rgba(0, 0, 0, 0.7); }
+
+/* line 84, scss/_flexslider.scss */
+.flex-control-paging li a.flex-active {
+  background: #000;
+  background: rgba(0, 0, 0, 0.9);
+  cursor: default; }
+
+/* line 86, scss/_flexslider.scss */
+.flex-control-thumbs {
+  margin: 5px 0 0;
+  position: static;
+  overflow: hidden; }
+
+/* line 87, scss/_flexslider.scss */
+.flex-control-thumbs li {
+  width: 25%;
+  float: left;
+  margin: 0; }
+
+/* line 88, scss/_flexslider.scss */
+.flex-control-thumbs img {
+  width: 100%;
+  display: block;
+  opacity: .7;
+  cursor: pointer; }
+
+/* line 89, scss/_flexslider.scss */
+.flex-control-thumbs img:hover {
+  opacity: 1; }
+
+/* line 90, scss/_flexslider.scss */
+.flex-control-thumbs .flex-active {
+  opacity: 1;
+  cursor: default; }
+
+@media screen and (max-width: 860px) {
+  /* line 93, scss/_flexslider.scss */
+  .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 10px; }
+
+  /* line 94, scss/_flexslider.scss */
+  .flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 10px; } }
+/* ==========================================================================
+   COLOUR SCHEMES
+   ========================================================================== */
+/*SCHOOLS*/
+/* line 8, scss/_colours.scss */
+.schools-bg {
+  color: #fff;
+  background-color: #0c3261; }
+  /* line 12, scss/_colours.scss */
+  .schools-bg .icon-badge:after {
+    content: "\e616"; }
+
+/*UNIVERSITIES*/
+/* line 22, scss/_colours.scss */
+.university-bg {
+  color: #fff;
+  background-color: #720d0e; }
+  /* line 26, scss/_colours.scss */
+  .university-bg .icon-badge:after {
+    content: "\e618"; }
+
+/*REPRESENTATIVE*/
+/* line 36, scss/_colours.scss */
+.representative-bg {
+  color: #fff;
+  background-color: #100d3c; }
+  /* line 40, scss/_colours.scss */
+  .representative-bg .icon-badge:after {
+    content: "\e615"; }
+
+/*SEVENS*/
+/* line 49, scss/_colours.scss */
+.sevens-bg {
+  color: #fff;
+  background-color: #db5657; }
+  /* line 53, scss/_colours.scss */
+  .sevens-bg .icon-badge:after {
+    content: "\e617"; }
+
+/*AROUND THE GAME*/
+/* line 62, scss/_colours.scss */
+.around-the-game-bg {
+  color: #fff;
+  background-color: #1c3203; }
+  /* line 66, scss/_colours.scss */
+  .around-the-game-bg .icon-badge:after {
+    content: "\e611"; }
+
+/*IATS*/
+/* line 74, scss/_colours.scss */
+.fitness-bg {
+  color: #fff;
+  background-color: #d45703; }
+  /* line 77, scss/_colours.scss */
+  .fitness-bg .icon-badge:after {
+    content: "\e614"; }
+
+/* line 83, scss/_colours.scss */
+.live-bg {
+  color: #000;
+  background-color: #FFD20D; }
+  /* line 87, scss/_colours.scss */
+  .live-bg .icon-badge:after {
+    content: "\e611"; }
+
+/*MEDIA*/
+/* line 94, scss/_colours.scss */
+.media-bg {
+  color: #fff;
+  background-color: #005377; }
+  /* line 98, scss/_colours.scss */
+  .media-bg .icon-badge:after {
+    content: "\e619"; }
+
+/* line 104, scss/_colours.scss */
+.medialight-bg {
+  background-color: #262631; }
+
+/* line 107, scss/_colours.scss */
+.mediadark-bg {
+  background-color: #1b1b1f; }
+
+/* line 113, scss/_colours.scss */
+article .icon-badge:after {
+  font-size: 1.2em; }
+/* line 118, scss/_colours.scss */
+article.schools .icon-badge:after {
+  content: "\e616"; }
+/* line 124, scss/_colours.scss */
+article.university .icon-badge:after {
+  content: "\e618"; }
+/* line 130, scss/_colours.scss */
+article.representative .icon-badge:after {
+  content: "\e615"; }
+/* line 136, scss/_colours.scss */
+article.sevens .icon-badge:after {
+  content: "\e617"; }
+/* line 142, scss/_colours.scss */
+article.around-the-game .icon-badge:after {
+  content: "\e611"; }
+/* line 148, scss/_colours.scss */
+article.fitness .icon-badge:after, article.nutrition .icon-badge:after, article.training .icon-badge:after {
+  content: "\e614"; }
+
+/* ==========================================================================
+   FONTS
+   ========================================================================== */
+/* ==========================================================================
+   DEFAULTS
+   ========================================================================== */
+/* line 28, scss/_typography.scss */
+body {
+  font-size: 100%;
+  line-height: 1;
+  font-weight: normal;
+  font-family: 'Futura BT W01 Book'; }
+
+/* line 34, scss/_typography.scss */
+a {
+  color: #000;
+  text-decoration: none; }
+
+/* line 39, scss/_typography.scss */
+.small, button#js-sidebar, .form-actions input#js-sidebar[type="submit"], #fohohfoh .message form input#js-sidebar[type="submit"], .button.cat-filter, .form-help, .meta .category .cat-title, article .meta .misc .date, article .meta .misc .comments, .slider.hero .live-fixed .info .misc .match, .slider.hero .live-fixed .info .misc .date, .slider.hero .live-fixed .info .misc .comments, .slider.hero .slides li.live-event .slide-col.live .meta .match, #footer .footer-links ul a, #home .latest .filter-select-bg .label span, #home #feed .tweet .time, #media-single .video-content .category .cat-title, #single .page .breadcrumbs a {
+  font-size: 0.75em; }
+
+/* line 42, scss/_typography.scss */
+.normal, article .meta .title h2, article .meta .title h3, .slider.hero .live-fixed .info .title h2, .slider.hero .slides li.live-event .slide-col.live .meta .title h2, .slider.hero .slides .slide-col.two .title h2, .slider.latest-cat-articles .slide-col .title h3, .slider.three article .title h3, .slider.four .slide-col article .title h3, .pagination .page-numbers, #filters span {
+  font-size: 1em; }
+
+/* line 45, scss/_typography.scss */
+.medium, #sidebar .widget .widget-title, .slider.hero .slides .slide-col.one .title h2, .slider.latest-cat-articles .slide-col.main .title h3, #home #feed .tp_recent_tweets ul li span, #home #feed .tweet .text, #home #feed .tweet .user a, #single .page .page-content, #live .match-stats .period {
+  font-size: 1.125em; }
+
+/* line 48, scss/_typography.scss */
+.large, .page-content blockquote, .section header .sub-title, #fohohfoh .message p {
+  font-size: 1.5em; }
+
+/* line 51, scss/_typography.scss */
+.xlarge, #header .search-bar input[type="text"], #media-single .video-content .title, #live .match-stats .category {
+  font-size: 1.875em; }
+
+/* line 54, scss/_typography.scss */
+.xxlarge, #page-header .title, #sidebar .widget ul.ordered li span, .section header .title, #single .article-header-title .title, #live .statistics .team-name, #live .statistics .team-score {
+  font-size: 2.5em; }
+
+/* ==========================================================================
+   STUFF
+   ========================================================================== */
+/* line 63, scss/_typography.scss */
+#filters button, #filters .form-actions input[type="submit"], .form-actions #filters input[type="submit"], button#js-sidebar, .form-actions input#js-sidebar[type="submit"], .form-actions input[type="submit"], #page-header .title, #sidebar .widget .widget-title, .meta .category .cat-title, .pagination .page-numbers, #filters span, .section header .title, .section header .sub-title, #home .latest .filter-select-bg .label span, #media-single .video-content .category .cat-title, #single .article-header-title .title, #single .page-share, #live .match-stats .category, #live .match-stats .period, #live .statistics .team-name, #live .statistics .team-score, #live .statistics .stat, #live .match-notice ul.notices li, #live .event-content .text .title, #fohohfoh .message h1, #fohohfoh .message form input[type="submit"] {
+  margin: 0;
+  text-transform: uppercase; }
+
+/* line 68, scss/_typography.scss */
+#single .page .page-content a, #live .match-notice a {
+  padding-bottom: 2px;
+  color: #26AF70;
+  text-decoration: none;
+  border-bottom: 1px dotted #26AF70;
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s; }
+  /* line 75, scss/_typography.scss */
+  #single .page .page-content a:hover, #live .match-notice a:hover {
+    color: #177248;
+    border-bottom: 1px solid #177248; }
+
+/* line 82, scss/_typography.scss */
+.page-content blockquote {
+  padding: 2em;
+  font-weight: normal;
+  font-family: 'Futura BT W01 Bold';
+  background-color: #F3F3F3; }
+  @media screen and (max-width: 600px) {
+    /* line 82, scss/_typography.scss */
+    .page-content blockquote {
+      margin: 0; } }
+  /* line 92, scss/_typography.scss */
+  .page-content blockquote p {
+    margin: 0; }
+
+/* line 1, scss/_buttons.scss */
+button, .form-actions input[type="submit"], #fohohfoh .message form input[type="submit"] {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none; }
+  /* line 8, scss/_buttons.scss */
+  button.search:after, .form-actions input.search[type="submit"]:after, #fohohfoh .message form input.search[type="submit"]:after {
+    content: "\e603"; }
+  /* line 14, scss/_buttons.scss */
+  #filters button, #filters .form-actions input[type="submit"], .form-actions #filters input[type="submit"], #filters #fohohfoh .message form input[type="submit"], #fohohfoh .message form #filters input[type="submit"] {
+    font-size: 14px;
+    font-weight: normal;
+    font-family: 'Futura BT W01 Bold';
+    padding: 0 0.5em 2px 0.5em;
+    -moz-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    -webkit-transition: all, 0.3s;
+    transition: all, 0.3s; }
+    /* line 22, scss/_buttons.scss */
+    #filters button.frame, #filters .form-actions input.frame[type="submit"], .form-actions #filters input.frame[type="submit"], #filters #fohohfoh .message form input.frame[type="submit"], #fohohfoh .message form #filters input.frame[type="submit"] {
+      display: inline-block;
+      padding: 0.5em 1em; }
+      /* line 26, scss/_buttons.scss */
+      #filters button.frame:hover, #filters .form-actions input.frame[type="submit"]:hover, .form-actions #filters input.frame[type="submit"]:hover, #filters #fohohfoh .message form input.frame[type="submit"]:hover, #fohohfoh .message form #filters input.frame[type="submit"]:hover {
+        color: #fff;
+        background-color: #000;
+        border-bottom: transparent; }
+      /* line 32, scss/_buttons.scss */
+      #filters button.frame.active, #filters .form-actions input.frame.active[type="submit"], .form-actions #filters input.frame.active[type="submit"], #filters #fohohfoh .message form input.frame.active[type="submit"], #fohohfoh .message form #filters input.frame.active[type="submit"] {
+        color: #fff;
+        background-color: #000;
+        border-bottom: transparent; }
+    /* line 39, scss/_buttons.scss */
+    #filters button.active, #filters .form-actions input.active[type="submit"], .form-actions #filters input.active[type="submit"], #filters #fohohfoh .message form input.active[type="submit"], #fohohfoh .message form #filters input.active[type="submit"] {
+      border-bottom: 3px solid #d45703; }
+    /* line 43, scss/_buttons.scss */
+    #filters button:hover, #filters .form-actions input[type="submit"]:hover, .form-actions #filters input[type="submit"]:hover, #filters #fohohfoh .message form input[type="submit"]:hover, #fohohfoh .message form #filters input[type="submit"]:hover {
+      border-bottom: 3px solid #d45703; }
+    /* line 48, scss/_buttons.scss */
+    #filters button.schools.active, #filters .form-actions input.schools.active[type="submit"], .form-actions #filters input.schools.active[type="submit"], #filters #fohohfoh .message form input.schools.active[type="submit"], #fohohfoh .message form #filters input.schools.active[type="submit"] {
+      border-bottom: 3px solid #4968d1; }
+    /* line 51, scss/_buttons.scss */
+    #filters button.schools:hover, #filters .form-actions input.schools[type="submit"]:hover, .form-actions #filters input.schools[type="submit"]:hover, #filters #fohohfoh .message form input.schools[type="submit"]:hover, #fohohfoh .message form #filters input.schools[type="submit"]:hover {
+      border-bottom: 3px solid #4968d1; }
+    /* line 56, scss/_buttons.scss */
+    #filters button.university.active, #filters .form-actions input.university.active[type="submit"], .form-actions #filters input.university.active[type="submit"], #filters #fohohfoh .message form input.university.active[type="submit"], #fohohfoh .message form #filters input.university.active[type="submit"] {
+      border-bottom: 3px solid #992b2c; }
+    /* line 59, scss/_buttons.scss */
+    #filters button.university:hover, #filters .form-actions input.university[type="submit"]:hover, .form-actions #filters input.university[type="submit"]:hover, #filters #fohohfoh .message form input.university[type="submit"]:hover, #fohohfoh .message form #filters input.university[type="submit"]:hover {
+      border-bottom: 3px solid #992b2c; }
+    /* line 64, scss/_buttons.scss */
+    #filters button.representative.active, #filters .form-actions input.representative.active[type="submit"], .form-actions #filters input.representative.active[type="submit"], #filters #fohohfoh .message form input.representative.active[type="submit"], #fohohfoh .message form #filters input.representative.active[type="submit"] {
+      border-bottom: 3px solid #511d50; }
+    /* line 67, scss/_buttons.scss */
+    #filters button.representative:hover, #filters .form-actions input.representative[type="submit"]:hover, .form-actions #filters input.representative[type="submit"]:hover, #filters #fohohfoh .message form input.representative[type="submit"]:hover, #fohohfoh .message form #filters input.representative[type="submit"]:hover {
+      border-bottom: 3px solid #511d50; }
+    /* line 72, scss/_buttons.scss */
+    #filters button.sevens.active, #filters .form-actions input.sevens.active[type="submit"], .form-actions #filters input.sevens.active[type="submit"], #filters #fohohfoh .message form input.sevens.active[type="submit"], #fohohfoh .message form #filters input.sevens.active[type="submit"] {
+      border-bottom: 3px solid #df6862; }
+    /* line 75, scss/_buttons.scss */
+    #filters button.sevens:hover, #filters .form-actions input.sevens[type="submit"]:hover, .form-actions #filters input.sevens[type="submit"]:hover, #filters #fohohfoh .message form input.sevens[type="submit"]:hover, #fohohfoh .message form #filters input.sevens[type="submit"]:hover {
+      border-bottom: 3px solid #df6862; }
+    /* line 80, scss/_buttons.scss */
+    #filters button.around-the-game.active, #filters .form-actions input.around-the-game.active[type="submit"], .form-actions #filters input.around-the-game.active[type="submit"], #filters #fohohfoh .message form input.around-the-game.active[type="submit"], #fohohfoh .message form #filters input.around-the-game.active[type="submit"] {
+      border-bottom: 3px solid #1a4417; }
+    /* line 83, scss/_buttons.scss */
+    #filters button.around-the-game:hover, #filters .form-actions input.around-the-game[type="submit"]:hover, .form-actions #filters input.around-the-game[type="submit"]:hover, #filters #fohohfoh .message form input.around-the-game[type="submit"]:hover, #fohohfoh .message form #filters input.around-the-game[type="submit"]:hover {
+      border-bottom: 3px solid #1a4417; }
+  /* line 89, scss/_buttons.scss */
+  button#js-sidebar, .form-actions input#js-sidebar[type="submit"], #fohohfoh .message form input#js-sidebar[type="submit"] {
+    display: none;
+    padding: 0.5em 1em;
+    font-weight: normal;
+    font-family: 'Futura BT W01 Heavy';
+    color: #fff;
+    background-color: #000; }
+    /* line 98, scss/_buttons.scss */
+    button#js-sidebar i, .form-actions input#js-sidebar[type="submit"] i, #fohohfoh .message form input#js-sidebar[type="submit"] i {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 2em; }
+    @media screen and (max-width: 1100px) {
+      /* line 89, scss/_buttons.scss */
+      button#js-sidebar, .form-actions input#js-sidebar[type="submit"], #fohohfoh .message form input#js-sidebar[type="submit"] {
+        display: inline-block; } }
+
+/* line 111, scss/_buttons.scss */
+.button.cat-filter {
+  display: inline-block;
+  width: 100%;
+  color: #fff;
+  font-weight: normal;
+  font-family: 'Futura BT W01 Heavy';
+  text-align: left;
+  text-transform: uppercase;
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s; }
+  @media screen and (max-width: 900px) {
+    /* line 111, scss/_buttons.scss */
+    .button.cat-filter {
+      font-size: 0.625em; } }
+  @media screen and (max-width: 750px) {
+    /* line 111, scss/_buttons.scss */
+    .button.cat-filter {
+      font-size: 0.5em; } }
+  /* line 130, scss/_buttons.scss */
+  .button.cat-filter.active:after {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    content: "\e60c";
+    font-size: 1.5em;
+    line-height: 0.4 !important;
+    text-align: center;
+    -moz-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    -webkit-transition: all, 0.3s;
+    transition: all, 0.3s; }
+  /* line 143, scss/_buttons.scss */
+  .button.cat-filter.schools {
+    background-color: #0c3261;
+    border-bottom: 5px solid #4968d1; }
+    /* line 148, scss/_buttons.scss */
+    .button.cat-filter.schools.active:after {
+      color: #4968d1; }
+    /* line 153, scss/_buttons.scss */
+    .button.cat-filter.schools:hover {
+      background-color: #4968d1;
+      border-bottom: 5px solid #0c3261; }
+      /* line 158, scss/_buttons.scss */
+      .button.cat-filter.schools:hover.active:after {
+        color: #0c3261; }
+  /* line 165, scss/_buttons.scss */
+  .button.cat-filter.university {
+    background-color: #720d0e;
+    border-bottom: 5px solid #992b2c; }
+    /* line 170, scss/_buttons.scss */
+    .button.cat-filter.university.active:after {
+      color: #992b2c; }
+    /* line 175, scss/_buttons.scss */
+    .button.cat-filter.university:hover {
+      background-color: #992b2c;
+      border-bottom: 5px solid #720d0e; }
+      /* line 180, scss/_buttons.scss */
+      .button.cat-filter.university:hover.active:after {
+        color: #720d0e; }
+  /* line 187, scss/_buttons.scss */
+  .button.cat-filter.representative {
+    background-color: #100d3c;
+    border-bottom: 5px solid #511d50; }
+    /* line 192, scss/_buttons.scss */
+    .button.cat-filter.representative.active:after {
+      color: #511d50; }
+    /* line 197, scss/_buttons.scss */
+    .button.cat-filter.representative:hover {
+      background-color: #511d50;
+      border-bottom: 5px solid #100d3c; }
+      /* line 202, scss/_buttons.scss */
+      .button.cat-filter.representative:hover.active:after {
+        color: #100d3c; }
+  /* line 209, scss/_buttons.scss */
+  .button.cat-filter.sevens {
+    background-color: #db5657;
+    border-bottom: 5px solid #df6862; }
+    /* line 214, scss/_buttons.scss */
+    .button.cat-filter.sevens.active:after {
+      color: #df6862; }
+    /* line 219, scss/_buttons.scss */
+    .button.cat-filter.sevens:hover {
+      background-color: #df6862;
+      border-bottom: 5px solid #db5657; }
+      /* line 224, scss/_buttons.scss */
+      .button.cat-filter.sevens:hover.active:after {
+        color: #db5657; }
+  /* line 231, scss/_buttons.scss */
+  .button.cat-filter.around-the-game {
+    background-color: #1c3203;
+    border-bottom: 5px solid #1a4417; }
+    /* line 236, scss/_buttons.scss */
+    .button.cat-filter.around-the-game.active:after {
+      color: #1a4417; }
+    /* line 241, scss/_buttons.scss */
+    .button.cat-filter.around-the-game:hover {
+      background-color: #1a4417;
+      border-bottom: 5px solid #1c3203; }
+      /* line 246, scss/_buttons.scss */
+      .button.cat-filter.around-the-game:hover.active:after {
+        color: #1c3203; }
+  /* line 253, scss/_buttons.scss */
+  .button.cat-filter p {
+    text-align: center; }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot?o55278");
+  src: url("fonts/icomoon.eot?#iefixo55278") format("embedded-opentype"), url("fonts/icomoon.woff?o55278") format("woff"), url("fonts/icomoon.ttf?o55278") format("truetype"), url("fonts/icomoon.svg?o55278#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* line 12, scss/_icons.scss */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 26, scss/_icons.scss */
+.icon-icon-media:before {
+  content: "\e619"; }
+
+/* line 29, scss/_icons.scss */
+.icon-icon-other:before {
+  content: "\e611"; }
+
+/* line 32, scss/_icons.scss */
+.icon-icon-fitness:before {
+  content: "\e614"; }
+
+/* line 35, scss/_icons.scss */
+.icon-icon-representative:before {
+  content: "\e615"; }
+
+/* line 38, scss/_icons.scss */
+.icon-icon-schools:before {
+  content: "\e616"; }
+
+/* line 41, scss/_icons.scss */
+.icon-icon-sevens:before {
+  content: "\e617"; }
+
+/* line 44, scss/_icons.scss */
+.icon-icon-universities:before {
+  content: "\e618"; }
+
+/* line 47, scss/_icons.scss */
+.icon-slider-right:before {
+  content: "\e60b"; }
+
+/* line 50, scss/_icons.scss */
+.icon-slider-left:before {
+  content: "\e60a"; }
+
+/* line 53, scss/_icons.scss */
+.icon-pagination:before {
+  content: "\e609"; }
+
+/* line 56, scss/_icons.scss */
+.icon-typelogo:before {
+  content: "\e604"; }
+
+/* line 59, scss/_icons.scss */
+.icon-logo:before {
+  content: "\e600"; }
+
+/* line 62, scss/_icons.scss */
+.icon-facebook2:before {
+  content: "\e610"; }
+
+/* line 65, scss/_icons.scss */
+.icon-google:before {
+  content: "\e60f"; }
+
+/* line 68, scss/_icons.scss */
+.icon-play:before {
+  content: "\e60e"; }
+
+/* line 71, scss/_icons.scss */
+.icon-search:before {
+  content: "\e603"; }
+
+/* line 74, scss/_icons.scss */
+.icon-gallery:before {
+  content: "\e61a"; }
+
+/* line 77, scss/_icons.scss */
+.icon-menu:before {
+  content: "\e605"; }
+
+/* line 80, scss/_icons.scss */
+.icon-mail:before {
+  content: "\e613"; }
+
+/* line 83, scss/_icons.scss */
+.icon-reply:before {
+  content: "\e612"; }
+
+/* line 86, scss/_icons.scss */
+.icon-sidebar:before {
+  content: "\e60d"; }
+
+/* line 89, scss/_icons.scss */
+.icon-triangle-down:before {
+  content: "\e60c"; }
+
+/* line 92, scss/_icons.scss */
+.icon-comment:before {
+  content: "\e608"; }
+
+/* line 95, scss/_icons.scss */
+.icon-facebook:before {
+  content: "\e607"; }
+
+/* line 98, scss/_icons.scss */
+.icon-twitter:before {
+  content: "\e606"; }
+
+/* line 101, scss/_icons.scss */
+.icon-triangle:before {
+  content: "\e602"; }
+
+/* line 104, scss/_icons.scss */
+.icon-arrow-down:before {
+  content: "\e601"; }
+
+/* ==================== 
+    BASE
+   ==================== */
+/* line 4, scss/_misc.scss */
+html, body {
+  min-height: 100% !important;
+  height: 100%; }
+
+/* line 9, scss/_misc.scss */
+body {
+  font-size: 1em;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased; }
+
+/* line 15, scss/_misc.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/* line 20, scss/_misc.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/* line 25, scss/_misc.scss */
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+/* line 30, scss/_misc.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/* line 35, scss/_misc.scss */
+.invisible, #header .search-bar, #main-nav ul.sub-menu, .slider.latest-cat-articles {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  visibility: hidden; }
+
+/* line 40, scss/_misc.scss */
+.visible, #header .search-bar.visible, #main-nav ul.menu > li.menu-item:hover .sub-menu, .slider.latest-cat-articles.active {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  visibility: visible; }
+
+/* line 45, scss/_misc.scss */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle; }
+
+/* line 51, scss/_misc.scss */
+.left {
+  float: left; }
+
+/* line 55, scss/_misc.scss */
+.right {
+  float: right; }
+
+/* line 59, scss/_misc.scss */
+.valign, #header .logo a, article.video .image:after, #single .article-header-title {
+  position: absolute;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+/* line 65, scss/_misc.scss */
+span.vertical {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle; }
+
+/* line 71, scss/_misc.scss */
+.schools-bg .icon-badge:after, .university-bg .icon-badge:after, .representative-bg .icon-badge:after, .sevens-bg .icon-badge:after, .around-the-game-bg .icon-badge:after, .fitness-bg .icon-badge:after, .live-bg .icon-badge:after, .media-bg .icon-badge:after, article.schools .icon-badge:after, article.university .icon-badge:after, article.representative .icon-badge:after, article.sevens .icon-badge:after, article.around-the-game .icon-badge:after, article.fitness .icon-badge:after, article.nutrition .icon-badge:after, article.training .icon-badge:after, button.search:after, .form-actions input.search[type="submit"]:after, #fohohfoh .message form input.search[type="submit"]:after, .button.cat-filter.active:after, #main-nav ul.menu > li.menu-item-has-children > a:after, #main-nav ul.sub-menu .active:after, article.video .image:after, .category-around-the-game #page-header .icon-badge:after {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1; }
+
+/* line 81, scss/_misc.scss */
+.slide-right {
+  overflow-x: auto; }
+
+/* Alignment */
+/* line 89, scss/_misc.scss */
+.alignleft {
+  float: left; }
+
+/* line 93, scss/_misc.scss */
+.alignright {
+  float: right; }
+
+/* line 97, scss/_misc.scss */
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 103, scss/_misc.scss */
+blockquote.alignleft,
+figure.wp-caption.alignleft,
+img.alignleft {
+  margin: 7px 24px 7px 0; }
+
+/* line 109, scss/_misc.scss */
+.wp-caption.alignleft {
+  margin: 7px 14px 7px 0; }
+
+/* line 113, scss/_misc.scss */
+blockquote.alignright,
+figure.wp-caption.alignright,
+img.alignright {
+  margin: 7px 0 7px 24px; }
+
+/* line 119, scss/_misc.scss */
+.wp-caption.alignright {
+  margin: 7px 0 7px 14px; }
+
+/* line 123, scss/_misc.scss */
+blockquote.aligncenter,
+img.aligncenter,
+.wp-caption.aligncenter {
+  margin-top: 7px;
+  margin-bottom: 7px; }
+
+/* line 130, scss/_misc.scss */
+.site-content blockquote.alignleft,
+.site-content blockquote.alignright {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 17px;
+  width: 50%; }
+
+/* line 138, scss/_misc.scss */
+.site-content blockquote.alignleft p,
+.site-content blockquote.alignright p {
+  margin-bottom: 17px; }
+
+/* line 143, scss/_misc.scss */
+.wp-caption {
+  margin-bottom: 24px; }
+
+/* line 147, scss/_misc.scss */
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin: 0; }
+
+/* line 152, scss/_misc.scss */
+.wp-caption {
+  color: #767676; }
+
+/* line 156, scss/_misc.scss */
+.wp-caption-text {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.5;
+  margin: 9px 0; }
+
+/* line 166, scss/_misc.scss */
+div.wp-caption .wp-caption-text {
+  padding-right: 10px; }
+
+/* line 170, scss/_misc.scss */
+div.wp-caption.alignright img[class*="wp-image-"],
+div.wp-caption.alignright .wp-caption-text {
+  padding-left: 10px;
+  padding-right: 0; }
+
+/* line 176, scss/_misc.scss */
+.wp-smiley {
+  border: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0; }
+
+@media screen and (max-width: 750px) {
+  /* line 2, scss/_forms.scss */
+  form .column.col-1-3, form .column.col-2-3 {
+    width: 100%; } }
+/* line 8, scss/_forms.scss */
+form input[type="text"],
+form input[type="email"],
+form input[type="url"],
+form textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.5em;
+  border: 1px solid #e6e6e6;
+  outline: none; }
+/* line 19, scss/_forms.scss */
+form textarea {
+  height: 200px;
+  resize: vertical; }
+
+/* line 26, scss/_forms.scss */
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 0.5em;
+  border: 1px solid #e6e6e6;
+  outline: none; }
+
+/* line 34, scss/_forms.scss */
+fieldset {
+  margin: 0 0 1.2em 0;
+  padding: 0;
+  border: none; }
+  /* line 39, scss/_forms.scss */
+  fieldset label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    font-family: 'Futura BT W01 Heavy';
+    text-transform: uppercase; }
+
+/* line 47, scss/_forms.scss */
+.form-help {
+  margin: 0.5em 0;
+  color: #e74c3c;
+  font-style: italic;
+  text-align: right; }
+
+/* line 56, scss/_forms.scss */
+.form-actions input[type="submit"] {
+  padding: 0.5em 1em;
+  color: #fff;
+  font-weight: normal;
+  font-family: 'Futura BT W01 Heavy';
+  background-color: #000;
+  border: 1px solid transparent;
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s; }
+  /* line 66, scss/_forms.scss */
+  .form-actions input[type="submit"]:hover {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000; }
+
+/* ==========================================================================
+   Motherfucking styles
+   ========================================================================== */
+/* line 4, scss/_layout.scss */
+#joebudden {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  -webkit-box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1); }
+
+/* line 12, scss/_layout.scss */
+#header {
+  position: relative;
+  z-index: 9999; }
+  /* line 16, scss/_layout.scss */
+  #header .header-top {
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+    border-top: 5px solid #203f4c; }
+  /* line 23, scss/_layout.scss */
+  #header .logo {
+    position: relative;
+    float: left;
+    width: 30%;
+    min-width: 350px;
+    height: 150px;
+    z-index: 20; }
+    @media screen and (max-width: 1200px) {
+      /* line 23, scss/_layout.scss */
+      #header .logo {
+        width: 100%; } }
+    /* line 35, scss/_layout.scss */
+    #header .logo a {
+      display: inline-block;
+      width: 100%;
+      text-align: center; }
+    /* line 42, scss/_layout.scss */
+    #header .logo .icon-typelogo, #header .logo .icon-logo {
+      display: inline-block;
+      color: #203f4c;
+      vertical-align: middle; }
+    /* line 48, scss/_layout.scss */
+    #header .logo .icon-typelogo {
+      font-size: 3em; }
+      @media screen and (max-width: 500px) {
+        /* line 48, scss/_layout.scss */
+        #header .logo .icon-typelogo {
+          display: none; } }
+    /* line 56, scss/_layout.scss */
+    #header .logo .icon-logo {
+      margin-right: 0.3em;
+      font-size: 5em; }
+      @media screen and (max-width: 500px) {
+        /* line 56, scss/_layout.scss */
+        #header .logo .icon-logo {
+          margin: 0;
+          text-align: center; } }
+  /* line 67, scss/_layout.scss */
+  #header .advert {
+    float: left;
+    position: relative;
+    width: 70%;
+    height: 150px; }
+    /* line 73, scss/_layout.scss */
+    #header .advert .add {
+      width: 970px;
+      height: 90px;
+      margin-top: 32px;
+      border: 1px solid black; }
+    @media screen and (max-width: 1200px) {
+      /* line 67, scss/_layout.scss */
+      #header .advert {
+        display: none; } }
+  /* line 85, scss/_layout.scss */
+  #header .mob-menu {
+    display: none;
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+    z-index: 25; }
+    /* line 92, scss/_layout.scss */
+    #header .mob-menu #menu-toggle {
+      padding: 0.5em 0;
+      color: #fff;
+      font-size: 1em;
+      font-weight: normal;
+      font-family: 'Futura BT W01 Heavy';
+      vertical-align: middle; }
+  @media screen and (max-width: 1100px) {
+    /* line 102, scss/_layout.scss */
+    #header .mob-menu {
+      display: inline-block; }
+    /* line 106, scss/_layout.scss */
+    #header #main-nav {
+      overflow: hidden;
+      max-height: 0;
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+      opacity: 0;
+      -moz-transition: height, 0.3s;
+      -o-transition: height, 0.3s;
+      -webkit-transition: height, 0.3s;
+      transition: height, 0.3s;
+      float: none;
+      width: 100%;
+      background-color: #fff; }
+      /* line 116, scss/_layout.scss */
+      #header #main-nav.visible, #header #main-nav ul.menu > li.menu-item:hover #main-nav.sub-menu, #main-nav ul.menu > li.menu-item:hover #header #main-nav.sub-menu, #header #main-nav.slider.latest-cat-articles.active {
+        position: relative;
+        max-height: 600px;
+        filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+        opacity: 1; }
+      /* line 122, scss/_layout.scss */
+      #header #main-nav li.menu-item {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+        /* line 127, scss/_layout.scss */
+        #header #main-nav li.menu-item:hover {
+          background-color: #eee; }
+        /* line 131, scss/_layout.scss */
+        #header #main-nav li.menu-item .sub-menu {
+          display: none; }
+        /* line 135, scss/_layout.scss */
+        #header #main-nav li.menu-item a {
+          display: inline-block;
+          width: 100%;
+          padding: 0;
+          color: #000;
+          font-size: 1em; }
+        /* line 143, scss/_layout.scss */
+        #header #main-nav li.menu-item .icon-arrow-down {
+          display: none; }
+      /* line 148, scss/_layout.scss */
+      #header #main-nav #search-toggle {
+        display: none; } }
+  /* line 155, scss/_layout.scss */
+  #header .search-bar {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -moz-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    -webkit-transition: all, 0.3s;
+    transition: all, 0.3s; }
+    @media screen and (max-width: 900px) {
+      /* line 155, scss/_layout.scss */
+      #header .search-bar {
+        display: none; } }
+    /* line 168, scss/_layout.scss */
+    #header .search-bar .screen-reader-text {
+      display: none; }
+    /* line 172, scss/_layout.scss */
+    #header .search-bar #searchsubmit {
+      display: none; }
+    /* line 176, scss/_layout.scss */
+    #header .search-bar input[type="text"] {
+      display: inline-block;
+      width: 100%;
+      height: 120px;
+      padding: 0 1em;
+      color: #6190CC;
+      font-style: italic;
+      background-color: #E8F2F3;
+      border: none;
+      outline: none; }
+    /* line 189, scss/_layout.scss */
+    #header .search-bar.visible, #header #main-nav ul.menu > li.menu-item:hover .search-bar.sub-menu, #main-nav ul.menu > li.menu-item:hover #header .search-bar.sub-menu, #header .search-bar.slider.latest-cat-articles.active {
+      top: 100%; }
+
+/* line 197, scss/_layout.scss */
+#main-nav {
+  position: relative;
+  line-height: 60px;
+  background-color: #000;
+  z-index: 5; }
+  /* line 207, scss/_layout.scss */
+  #main-nav ul.menu > li.menu-item-has-children > a:after {
+    content: "\e601";
+    display: inline-block;
+    margin-left: 5px;
+    color: #fff;
+    font-size: 1.5em;
+    vertical-align: middle; }
+    @media screen and (max-width: 900px) {
+      /* line 207, scss/_layout.scss */
+      #main-nav ul.menu > li.menu-item-has-children > a:after {
+        display: none; } }
+  /* line 223, scss/_layout.scss */
+  #main-nav ul.menu > li.menu-item {
+    position: relative;
+    display: inline-block;
+    height: 60px; }
+    /* line 228, scss/_layout.scss */
+    #main-nav ul.menu > li.menu-item:hover {
+      background-color: #fff; }
+      /* line 233, scss/_layout.scss */
+      #main-nav ul.menu > li.menu-item:hover a {
+        color: #000; }
+    /* line 239, scss/_layout.scss */
+    #main-nav ul.menu > li.menu-item.schools:hover {
+      background-color: #4968d1; }
+      /* line 242, scss/_layout.scss */
+      #main-nav ul.menu > li.menu-item.schools:hover a {
+        color: #fff; }
+      /* line 246, scss/_layout.scss */
+      #main-nav ul.menu > li.menu-item.schools:hover .sub-menu {
+        background-color: #4968d1; }
+        /* line 250, scss/_layout.scss */
+        #main-nav ul.menu > li.menu-item.schools:hover .sub-menu .menu-item .active:after {
+          color: #6f87d8; }
+    /* line 257, scss/_layout.scss */
+    #main-nav ul.menu > li.menu-item.schools .menu-item-posts {
+      background-color: #6f87d8;
+      border-bottom: 5px solid #0c3261; }
+    /* line 264, scss/_layout.scss */
+    #main-nav ul.menu > li.menu-item.university:hover {
+      background-color: #b74144; }
+      /* line 267, scss/_layout.scss */
+      #main-nav ul.menu > li.menu-item.university:hover a {
+        color: #fff; }
+      /* line 271, scss/_layout.scss */
+      #main-nav ul.menu > li.menu-item.university:hover .sub-menu {
+        background-color: #b74144; }
+        /* line 275, scss/_layout.scss */
+        #main-nav ul.menu > li.menu-item.university:hover .sub-menu .menu-item .active:after {
+          color: #822b2c; }
+    /* line 282, scss/_layout.scss */
+    #main-nav ul.menu > li.menu-item.university .menu-item-posts {
+      background-color: #822b2c;
+      border-bottom: 5px solid #720d0e; }
+    /* line 289, scss/_layout.scss */
+    #main-nav ul.menu > li.menu-item.representative:hover {
+      background-color: #9f3069; }
+      /* line 292, scss/_layout.scss */
+      #main-nav ul.menu > li.menu-item.representative:hover a {
+        color: #fff; }
+      /* line 296, scss/_layout.scss */
+      #main-nav ul.menu > li.menu-item.representative:hover .sub-menu {
+        background-color: #9f3069; }
+        /* line 300, scss/_layout.scss */
+        #main-nav ul.menu > li.menu-item.representative:hover .sub-menu .menu-item .active:after {
+          color: #b15c88; }
+    /* line 308, scss/_layout.scss */
+    #main-nav ul.menu > li.menu-item.representative .menu-item-posts {
+      background-color: #b15c88;
+      border-bottom: 5px solid #100d3c; }
+    /* line 315, scss/_layout.scss */
+    #main-nav ul.menu > li.menu-item.sevens:hover {
+      background-color: #df6862; }
+      /* line 318, scss/_layout.scss */
+      #main-nav ul.menu > li.menu-item.sevens:hover a {
+        color: #fff; }
+      /* line 322, scss/_layout.scss */
+      #main-nav ul.menu > li.menu-item.sevens:hover .sub-menu {
+        background-color: #df6862; }
+        /* line 326, scss/_layout.scss */
+        #main-nav ul.menu > li.menu-item.sevens:hover .sub-menu .menu-item .active:after {
+          color: #e38782; }
+    /* line 334, scss/_layout.scss */
+    #main-nav ul.menu > li.menu-item.sevens .menu-item-posts {
+      background-color: #e38782;
+      border-bottom: 5px solid #db5657; }
+    /* line 341, scss/_layout.scss */
+    #main-nav ul.menu > li.menu-item.around-the-game:hover {
+      background-color: #1a4417; }
+      /* line 344, scss/_layout.scss */
+      #main-nav ul.menu > li.menu-item.around-the-game:hover a {
+        color: #fff; }
+  /* line 352, scss/_layout.scss */
+  #main-nav ul.sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 600px;
+    -moz-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    -webkit-transition: all, 0.3s;
+    transition: all, 0.3s; }
+    /* line 359, scss/_layout.scss */
+    #main-nav ul.sub-menu li.menu-item {
+      line-height: 40px; }
+    /* line 363, scss/_layout.scss */
+    #main-nav ul.sub-menu .active {
+      position: relative; }
+      /* line 366, scss/_layout.scss */
+      #main-nav ul.sub-menu .active:after {
+        position: absolute;
+        bottom: -5px;
+        left: 35%;
+        content: "\e602"; }
+  /* line 376, scss/_layout.scss */
+  #main-nav li.menu-item {
+    float: left;
+    font-weight: normal;
+    font-family: 'Futura BT W01 Heavy';
+    -moz-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    -webkit-transition: all, 0.3s;
+    transition: all, 0.3s; }
+    /* line 381, scss/_layout.scss */
+    #main-nav li.menu-item > a {
+      display: inline-block;
+      padding: 0 2em;
+      color: #fff;
+      font-size: 12px;
+      text-transform: uppercase;
+      -moz-transition: all, 0.3s;
+      -o-transition: all, 0.3s;
+      -webkit-transition: all, 0.3s;
+      transition: all, 0.3s; }
+  /* line 391, scss/_layout.scss */
+  #main-nav .menu-item-posts {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    max-width: 600px; }
+    /* line 397, scss/_layout.scss */
+    #main-nav .menu-item-posts .menu-item-post {
+      padding-top: 1em; }
+      /* line 400, scss/_layout.scss */
+      #main-nav .menu-item-posts .menu-item-post p {
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.2; }
+  /* line 409, scss/_layout.scss */
+  #main-nav #search-toggle {
+    display: inline-block;
+    padding: 0.5em;
+    color: #fff;
+    font-size: 1.3125em;
+    vertical-align: middle;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    opacity: 0.5;
+    -moz-transition: opacity, 0.2s;
+    -o-transition: opacity, 0.2s;
+    -webkit-transition: opacity, 0.2s;
+    transition: opacity, 0.2s; }
+    /* line 418, scss/_layout.scss */
+    #main-nav #search-toggle:hover {
+      filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+      opacity: 1; }
+
+/* ==========================================================================
+   PAGE HEADER
+   ========================================================================== */
+/* line 429, scss/_layout.scss */
+#page-header {
+  padding: 2em 0;
+  text-align: center; }
+  /* line 433, scss/_layout.scss */
+  #page-header .title {
+    font-weight: normal;
+    font-family: 'Futura BT W01 Heavy'; }
+  /* line 438, scss/_layout.scss */
+  #page-header i {
+    margin-right: 20px; }
+
+/* ==========================================================================
+   SIDEBAR
+   ========================================================================== */
+/* line 446, scss/_layout.scss */
+#js-sidebar {
+  position: absolute;
+  top: 13px;
+  right: 0;
+  z-index: 20; }
+
+/* line 453, scss/_layout.scss */
+#sidebar {
+  min-width: 300px;
+  padding: 0; }
+  /* line 457, scss/_layout.scss */
+  .sidebar-visible #sidebar {
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  @media screen and (max-width: 1100px) {
+    /* line 453, scss/_layout.scss */
+    #sidebar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      -moz-transform: translateX(110%);
+      -ms-transform: translateX(110%);
+      -webkit-transform: translateX(110%);
+      transform: translateX(110%);
+      -moz-transition: all, 0.3s;
+      -o-transition: all, 0.3s;
+      -webkit-transition: all, 0.3s;
+      transition: all, 0.3s; } }
+  /* line 469, scss/_layout.scss */
+  #sidebar .widget {
+    width: 300px;
+    margin: 0 0 30px auto; }
+    @media screen and (max-width: 800px) {
+      /* line 469, scss/_layout.scss */
+      #sidebar .widget {
+        font-size: 80%; } }
+    /* line 477, scss/_layout.scss */
+    #sidebar .widget .widget-title {
+      display: inline-block;
+      padding: 0.5em 1em;
+      background-color: #000;
+      color: #fff;
+      font-weight: normal;
+      font-family: 'Futura BT W01 Heavy'; }
+    /* line 487, scss/_layout.scss */
+    #sidebar .widget ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      background-color: fff;
+      border: 1px solid #000; }
+      /* line 494, scss/_layout.scss */
+      #sidebar .widget ul li {
+        padding: 10px;
+        font-weight: normal;
+        font-family: 'Futura BT W01 Heavy';
+        background-color: #fff;
+        border-top: 1px solid #000; }
+        /* line 500, scss/_layout.scss */
+        #sidebar .widget ul li:first-child {
+          border-top: none; }
+        /* line 504, scss/_layout.scss */
+        #sidebar .widget ul li a {
+          color: #000; }
+      /* line 510, scss/_layout.scss */
+      #sidebar .widget ul.ordered li {
+        overflow: hidden; }
+        /* line 513, scss/_layout.scss */
+        #sidebar .widget ul.ordered li span {
+          float: left;
+          display: inline-block;
+          width: 10%;
+          font-weight: normal;
+          font-family: 'Futura BT W01 Bold';
+          text-align: center;
+          vertical-align: middle; }
+        /* line 522, scss/_layout.scss */
+        #sidebar .widget ul.ordered li a {
+          float: left;
+          display: inline-block;
+          width: 90%;
+          padding-left: 10px; }
+    /* line 532, scss/_layout.scss */
+    #sidebar .widget.advert {
+      width: 300px;
+      height: 250px;
+      padding: 2em;
+      border: 1px solid gray; }
+
+/* ==========================================================================
+   ARTICLE
+   ========================================================================== */
+/* line 546, scss/_layout.scss */
+.meta .category {
+  display: inline-block; }
+  /* line 549, scss/_layout.scss */
+  .meta .category.out {
+    position: absolute;
+    top: -35px;
+    left: 0; }
+    @media screen and (max-width: 500px) {
+      /* line 549, scss/_layout.scss */
+      .meta .category.out {
+        top: -20px; } }
+  /* line 560, scss/_layout.scss */
+  .meta .category .cat-title {
+    position: relative;
+    font-weight: normal;
+    font-family: 'Futura BT W01 Heavy';
+    padding: 0 50px 0 10px;
+    color: #fff;
+    line-height: 35px; }
+    @media screen and (max-width: 500px) {
+      /* line 560, scss/_layout.scss */
+      .meta .category .cat-title {
+        line-height: 20px; } }
+    /* line 573, scss/_layout.scss */
+    .meta .category .cat-title i {
+      position: absolute;
+      right: 0;
+      display: inline-block;
+      width: 35px;
+      text-align: center;
+      line-height: 35px;
+      vertical-align: middle; }
+      @media screen and (max-width: 500px) {
+        /* line 573, scss/_layout.scss */
+        .meta .category .cat-title i {
+          line-height: 20px; } }
+
+/* line 592, scss/_layout.scss */
+.articles article {
+  margin-bottom: 20px; }
+  /* line 596, scss/_layout.scss */
+  .articles article.main .image {
+    height: 450px; }
+  @media screen and (max-width: 650px) {
+    /* line 600, scss/_layout.scss */
+    .articles article.main .image {
+      height: 300px; } }
+  @media screen and (max-width: 600px) {
+    /* line 606, scss/_layout.scss */
+    .articles article.col-1-3 {
+      width: 100%; } }
+  @media screen and (max-width: 1000px) {
+    /* line 612, scss/_layout.scss */
+    .articles article.col-1-4 {
+      width: 33%; } }
+  @media screen and (max-width: 600px) {
+    /* line 612, scss/_layout.scss */
+    .articles article.col-1-4 {
+      width: 50%; } }
+  @media screen and (max-width: 400px) {
+    /* line 612, scss/_layout.scss */
+    .articles article.col-1-4 {
+      width: 100%; } }
+  @media screen and (max-width: 650px) {
+    /* line 592, scss/_layout.scss */
+    .articles article {
+      width: 100%; }
+      /* line 627, scss/_layout.scss */
+      .articles article .image {
+        height: 150px; } }
+
+/* line 634, scss/_layout.scss */
+article {
+  position: relative; }
+  /* line 638, scss/_layout.scss */
+  article.medua .image {
+    float: left;
+    width: 30%;
+    height: initial;
+    padding-top: 20%; }
+  /* line 645, scss/_layout.scss */
+  article.medua .meta {
+    float: left;
+    width: 67%;
+    margin-left: 3%;
+    margin-top: 35px; }
+  @media screen and (max-width: 600px) {
+    /* line 652, scss/_layout.scss */
+    article.medua .image {
+      display: none; }
+    /* line 656, scss/_layout.scss */
+    article.medua .meta {
+      width: 100%;
+      margin-left: 0; } }
+  @media screen and (max-width: 500px) {
+    /* line 663, scss/_layout.scss */
+    article.medua .meta {
+      margin-top: 20px; } }
+  /* line 670, scss/_layout.scss */
+  article.meta-inner .meta {
+    position: absolute;
+    bottom: 0;
+    width: 80%; }
+  /* line 678, scss/_layout.scss */
+  article.video .image, article.gallery .image {
+    position: relative; }
+  /* line 688, scss/_layout.scss */
+  article.video .image:after {
+    width: 100%;
+    text-align: center;
+    content: "\e60e";
+    color: #fff;
+    font-size: 2em; }
+  /* line 702, scss/_layout.scss */
+  article.schools .cat-title {
+    background-color: #4968d1; }
+    /* line 705, scss/_layout.scss */
+    article.schools .cat-title i {
+      background-color: #0c3261; }
+  /* line 712, scss/_layout.scss */
+  article.university .cat-title {
+    background-color: #992b2c; }
+    /* line 715, scss/_layout.scss */
+    article.university .cat-title i {
+      background-color: #720d0e; }
+  /* line 722, scss/_layout.scss */
+  article.representative .cat-title {
+    background-color: #511d50; }
+    /* line 725, scss/_layout.scss */
+    article.representative .cat-title i {
+      background-color: #100d3c; }
+  /* line 732, scss/_layout.scss */
+  article.sevens .cat-title {
+    background-color: #df6862; }
+    /* line 735, scss/_layout.scss */
+    article.sevens .cat-title i {
+      background-color: #db5657; }
+  /* line 742, scss/_layout.scss */
+  article.around-the-game .cat-title {
+    background-color: #1a4417; }
+    /* line 745, scss/_layout.scss */
+    article.around-the-game .cat-title i {
+      background-color: #1c3203; }
+  /* line 752, scss/_layout.scss */
+  article.fitness .cat-title, article.nutrition .cat-title {
+    background-color: #d45703; }
+    /* line 755, scss/_layout.scss */
+    article.fitness .cat-title i, article.nutrition .cat-title i {
+      background-color: #000; }
+  /* line 762, scss/_layout.scss */
+  article.training .cat-title {
+    background-color: #000; }
+    /* line 765, scss/_layout.scss */
+    article.training .cat-title i {
+      background-color: #d45703; }
+  /* line 771, scss/_layout.scss */
+  article .image {
+    height: 300px;
+    background-size: cover;
+    background-position: center; }
+    /* line 776, scss/_layout.scss */
+    article .image .gallery-count {
+      display: inline-block;
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      color: #000;
+      background-color: #fff;
+      overflow: hidden; }
+      /* line 785, scss/_layout.scss */
+      article .image .gallery-count .icon-gallery {
+        float: left;
+        display: inline-block;
+        padding: 0.2em;
+        color: #fff;
+        background-color: #000;
+        line-height: 25px;
+        vertical-align: middle; }
+      /* line 795, scss/_layout.scss */
+      article .image .gallery-count .count {
+        float: left;
+        display: inline-block;
+        padding: 0.2em;
+        vertical-align: middle; }
+  /* line 804, scss/_layout.scss */
+  article .meta {
+    position: relative;
+    padding: 1em;
+    color: #000;
+    background-color: #fff; }
+    @media screen and (max-width: 750px) {
+      /* line 804, scss/_layout.scss */
+      article .meta {
+        font-size: 80%; } }
+    @media screen and (max-width: 500px) {
+      /* line 804, scss/_layout.scss */
+      article .meta {
+        font-size: 70%; }
+        /* line 816, scss/_layout.scss */
+        article .meta .misc {
+          font-size: 140%; } }
+    /* line 821, scss/_layout.scss */
+    .hero article .meta, .media article .meta, .galleries article .meta {
+      color: #fff;
+      background-color: #000; }
+      /* line 825, scss/_layout.scss */
+      .hero article .meta a, .media article .meta a, .galleries article .meta a {
+        color: #fff; }
+    /* line 830, scss/_layout.scss */
+    article .meta .title {
+      text-transform: uppercase;
+      margin-bottom: 1em; }
+      /* line 833, scss/_layout.scss */
+      article .meta .title h2, article .meta .title h3 {
+        font-weight: normal;
+        font-family: 'Futura BT W01 Heavy'; }
+      /* line 838, scss/_layout.scss */
+      article .meta .title h2:first-child, article .meta .title h3:first-child {
+        margin: 0; }
+    /* line 845, scss/_layout.scss */
+    article .meta .misc .date {
+      font-weight: normal;
+      font-family: 'Futura BT W01 Medium';
+      margin-right: 2em; }
+    /* line 850, scss/_layout.scss */
+    article .meta .misc .comments {
+      font-weight: normal;
+      font-family: 'Futura BT W01 Medium'; }
+      /* line 853, scss/_layout.scss */
+      article .meta .misc .comments .icon-comment {
+        margin-left: 0.5em; }
+
+/* ==========================================================================
+   SLIDER BASE
+   ========================================================================== */
+/* line 865, scss/_layout.scss */
+.slider {
+  overflow: hidden;
+  position: relative;
+  padding: 0 10% 0 10%; }
+  @media screen and (max-width: 1150px) {
+    /* line 865, scss/_layout.scss */
+    .slider {
+      padding: 0; } }
+  /* line 874, scss/_layout.scss */
+  .slider .slide-col {
+    padding: 5px; }
+  /* line 880, scss/_layout.scss */
+  .slider article.eastside .meta, .slider article.westside .meta {
+    position: absolute;
+    padding-top: 40px;
+    top: 5px;
+    bottom: 5px;
+    width: 50%; }
+    /* line 887, scss/_layout.scss */
+    .slider article.eastside .meta .category, .slider article.westside .meta .category {
+      top: 0; }
+  /* line 894, scss/_layout.scss */
+  .slider article.eastside .gallery-count {
+    display: inline-block;
+    position: absolute;
+    top: 1em;
+    right: 1em; }
+  /* line 901, scss/_layout.scss */
+  .slider article.eastside .meta {
+    right: 0; }
+  /* line 907, scss/_layout.scss */
+  .slider article.westside .gallery-count {
+    display: inline-block;
+    position: absolute;
+    top: 1em;
+    left: 1em; }
+  /* line 914, scss/_layout.scss */
+  .slider article.westside .meta {
+    left: 0; }
+  /* line 920, scss/_layout.scss */
+  .slider .flex-viewport {
+    overflow: initial;
+    width: 100%; }
+  /* line 925, scss/_layout.scss */
+  .slider .flex-control-nav {
+    display: inline-block;
+    position: relative;
+    bottom: auto;
+    height: 50px;
+    padding: 0 10%;
+    line-height: 50px; }
+    @media screen and (max-width: 1150px) {
+      /* line 925, scss/_layout.scss */
+      .slider .flex-control-nav {
+        padding: 0; } }
+    /* line 937, scss/_layout.scss */
+    .slider .flex-control-nav li {
+      margin: 0 5px;
+      vertical-align: middle; }
+    /* line 942, scss/_layout.scss */
+    .slider .flex-control-nav a {
+      width: 60px;
+      height: 7px;
+      background: #818181;
+      -moz-border-radius: 0;
+      -webkit-border-radius: 0;
+      border-radius: 0; }
+      /* line 948, scss/_layout.scss */
+      .slider .flex-control-nav a.flex-active {
+        background: #fff; }
+  /* line 956, scss/_layout.scss */
+  .slider .flex-direction-nav.flex-disabled {
+    display: none; }
+  /* line 960, scss/_layout.scss */
+  .slider .flex-direction-nav li {
+    position: absolute;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    padding-bottom: 50px;
+    background-color: rgba(232, 233, 237, 0.8); }
+    @media screen and (max-width: 1150px) {
+      /* line 960, scss/_layout.scss */
+      .slider .flex-direction-nav li {
+        width: auto;
+        height: 50px;
+        bottom: 0;
+        top: auto;
+        padding: 0 10px; }
+        /* line 975, scss/_layout.scss */
+        .slider .flex-direction-nav li a {
+          top: auto;
+          -moz-transform: translateY(0);
+          -ms-transform: translateY(0);
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+          line-height: 50px; } }
+    /* line 982, scss/_layout.scss */
+    .slider .flex-direction-nav li.left {
+      left: 0; }
+    /* line 985, scss/_layout.scss */
+    .slider .flex-direction-nav li.right {
+      right: 0; }
+    /* line 989, scss/_layout.scss */
+    .slider .flex-direction-nav li a {
+      width: auto;
+      height: auto;
+      position: relative;
+      filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+      opacity: 1;
+      color: #fff;
+      text-align: center; }
+      /* line 997, scss/_layout.scss */
+      .slider .flex-direction-nav li a:before {
+        font-size: 24px; }
+    /* line 1001, scss/_layout.scss */
+    .slider .flex-direction-nav li .flex-prev {
+      left: 0; }
+    /* line 1004, scss/_layout.scss */
+    .slider .flex-direction-nav li .flex-next {
+      left: 0; }
+
+/* ==========================================================================
+   SLIDER SPECIFIC
+   ========================================================================== */
+/* line 1019, scss/_layout.scss */
+.slider.hero .meta-inner .meta {
+  position: absolute;
+  bottom: 5px;
+  width: 80%; }
+/* line 1027, scss/_layout.scss */
+.slider.hero .live-fixed {
+  width: 100%;
+  color: #000;
+  background-color: #FFD20D; }
+  @media screen and (max-width: 1000px) {
+    /* line 1027, scss/_layout.scss */
+    .slider.hero .live-fixed {
+      display: block; } }
+  /* line 1036, scss/_layout.scss */
+  .slider.hero .live-fixed .info {
+    position: relative;
+    padding: 1em; }
+    /* line 1040, scss/_layout.scss */
+    .slider.hero .live-fixed .info .title {
+      margin-top: 30px;
+      text-transform: uppercase; }
+      /* line 1044, scss/_layout.scss */
+      .slider.hero .live-fixed .info .title h2 {
+        display: inline-block;
+        margin: 0;
+        font-weight: normal;
+        font-family: 'Futura BT W01 Heavy'; }
+      /* line 1051, scss/_layout.scss */
+      .slider.hero .live-fixed .info .title span {
+        display: inline-block;
+        padding: 0 0.8em;
+        color: #fff;
+        font-weight: normal;
+        font-family: 'Futura BT W01 Heavy'; }
+    /* line 1059, scss/_layout.scss */
+    .slider.hero .live-fixed .info .misc {
+      position: absolute;
+      top: 0.5em; }
+      /* line 1063, scss/_layout.scss */
+      .slider.hero .live-fixed .info .misc .match {
+        margin-right: 0.5em;
+        font-weight: normal;
+        font-family: 'Futura BT W01 Heavy';
+        text-transform: uppercase; }
+      /* line 1070, scss/_layout.scss */
+      .slider.hero .live-fixed .info .misc .date {
+        font-weight: normal;
+        font-family: 'Futura BT W01 Medium';
+        margin-right: 2em; }
+      /* line 1075, scss/_layout.scss */
+      .slider.hero .live-fixed .info .misc .comments {
+        font-weight: normal;
+        font-family: 'Futura BT W01 Medium'; }
+        /* line 1078, scss/_layout.scss */
+        .slider.hero .live-fixed .info .misc .comments .icon-comment {
+          margin-left: 0.5em; }
+/* line 1088, scss/_layout.scss */
+.slider.hero article a {
+  color: #fff; }
+/* line 1099, scss/_layout.scss */
+.slider.hero .slides li.live-event .slide-col.one {
+  width: 40%; }
+  @media screen and (max-width: 1000px) {
+    /* line 1099, scss/_layout.scss */
+    .slider.hero .slides li.live-event .slide-col.one {
+      width: 100%; } }
+/* line 1106, scss/_layout.scss */
+.slider.hero .slides li.live-event .slide-col.two {
+  width: 40%; }
+  @media screen and (max-width: 1000px) {
+    /* line 1106, scss/_layout.scss */
+    .slider.hero .slides li.live-event .slide-col.two {
+      width: 100%; } }
+/* line 1115, scss/_layout.scss */
+.slider.hero .slides li.live-event .slide-col.live a {
+  color: #000; }
+/* line 1119, scss/_layout.scss */
+.slider.hero .slides li.live-event .slide-col.live .image {
+  height: 500px; }
+/* line 1123, scss/_layout.scss */
+.slider.hero .slides li.live-event .slide-col.live .meta {
+  width: 100%;
+  color: #000;
+  background-color: #FFD20D; }
+  /* line 1128, scss/_layout.scss */
+  .slider.hero .slides li.live-event .slide-col.live .meta .icon-logo {
+    color: #fff;
+    font-size: 1.2em;
+    background-color: #000; }
+  /* line 1134, scss/_layout.scss */
+  .slider.hero .slides li.live-event .slide-col.live .meta .cat-title {
+    color: #000;
+    background-color: #FFD20D; }
+  /* line 1140, scss/_layout.scss */
+  .slider.hero .slides li.live-event .slide-col.live .meta .title h2 {
+    margin: 0;
+    display: inline-block; }
+  /* line 1145, scss/_layout.scss */
+  .slider.hero .slides li.live-event .slide-col.live .meta .title span {
+    display: block;
+    padding: 0 0.8em;
+    color: #fff;
+    font-weight: normal;
+    font-family: 'Futura BT W01 Heavy'; }
+  /* line 1153, scss/_layout.scss */
+  .slider.hero .slides li.live-event .slide-col.live .meta .match {
+    display: none;
+    margin-right: 0.5em;
+    font-weight: normal;
+    font-family: 'Futura BT W01 Heavy';
+    text-transform: uppercase; }
+@media screen and (max-width: 1000px) {
+  /* line 1113, scss/_layout.scss */
+  .slider.hero .slides li.live-event .slide-col.live {
+    display: none; } }
+@media screen and (max-width: 1000px) {
+  /* line 1169, scss/_layout.scss */
+  .slider.hero .slides .slide-col {
+    padding: 0; } }
+/* line 1174, scss/_layout.scss */
+.slider.hero .slides .slide-col.one {
+  width: 50%; }
+  /* line 1182, scss/_layout.scss */
+  .slider.hero .slides .slide-col.one .image {
+    height: 500px; }
+  @media screen and (max-width: 1000px) {
+    /* line 1174, scss/_layout.scss */
+    .slider.hero .slides .slide-col.one {
+      width: 100%; }
+      /* line 1189, scss/_layout.scss */
+      .slider.hero .slides .slide-col.one .image {
+        height: 300px; } }
+/* line 1195, scss/_layout.scss */
+.slider.hero .slides .slide-col.two {
+  width: 50%; }
+  /* line 1198, scss/_layout.scss */
+  .slider.hero .slides .slide-col.two article {
+    margin-top: 10px; }
+    /* line 1201, scss/_layout.scss */
+    .slider.hero .slides .slide-col.two article:first-child {
+      margin-top: 0; }
+  /* line 1211, scss/_layout.scss */
+  .slider.hero .slides .slide-col.two .image {
+    height: 245px; }
+  @media screen and (max-width: 1000px) {
+    /* line 1195, scss/_layout.scss */
+    .slider.hero .slides .slide-col.two {
+      width: 100%; }
+      /* line 1218, scss/_layout.scss */
+      .slider.hero .slides .slide-col.two article {
+        margin-top: 0; }
+      /* line 1222, scss/_layout.scss */
+      .slider.hero .slides .slide-col.two .meta {
+        top: 0;
+        bottom: auto;
+        height: 100%; }
+      /* line 1227, scss/_layout.scss */
+      .slider.hero .slides .slide-col.two .image {
+        height: 145px; } }
+/* line 1238, scss/_layout.scss */
+#media-archive .slider.hero .slides .slide-col.one {
+  width: 70%; }
+  /* line 1240, scss/_layout.scss */
+  #media-archive .slider.hero .slides .slide-col.one .image {
+    height: initial; }
+  @media screen and (max-width: 650px) {
+    /* line 1238, scss/_layout.scss */
+    #media-archive .slider.hero .slides .slide-col.one {
+      width: 100%; } }
+/* line 1248, scss/_layout.scss */
+#media-archive .slider.hero .slides .slide-col.two {
+  width: 30%; }
+  /* line 1250, scss/_layout.scss */
+  #media-archive .slider.hero .slides .slide-col.two .image {
+    height: initial; }
+  @media screen and (max-width: 650px) {
+    /* line 1248, scss/_layout.scss */
+    #media-archive .slider.hero .slides .slide-col.two {
+      width: 100%; } }
+/* line 1263, scss/_layout.scss */
+.slider.latest-cat-articles {
+  padding-left: 0;
+  padding-right: 0;
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s; }
+  /* line 1273, scss/_layout.scss */
+  .slider.latest-cat-articles .row {
+    margin: 0 -10px; }
+  /* line 1277, scss/_layout.scss */
+  .slider.latest-cat-articles .slide-col {
+    padding: 10px; }
+    /* line 1280, scss/_layout.scss */
+    .slider.latest-cat-articles .slide-col.main .image {
+      height: 600px; }
+    /* line 1284, scss/_layout.scss */
+    .slider.latest-cat-articles .slide-col.main .meta {
+      width: 50%;
+      bottom: 10px; }
+    @media screen and (max-width: 650px) {
+      /* line 1279, scss/_layout.scss */
+      .slider.latest-cat-articles .slide-col.main {
+        padding: 0; }
+        /* line 1297, scss/_layout.scss */
+        .slider.latest-cat-articles .slide-col.main .image {
+          height: 300px; }
+        /* line 1301, scss/_layout.scss */
+        .slider.latest-cat-articles .slide-col.main .meta {
+          width: 80%; } }
+    @media screen and (max-width: 650px) {
+      /* line 1307, scss/_layout.scss */
+      .slider.latest-cat-articles .slide-col.col-1-3 {
+        width: 100%; }
+        /* line 1311, scss/_layout.scss */
+        .slider.latest-cat-articles .slide-col.col-1-3 .image {
+          height: 150px; } }
+  /* line 1325, scss/_layout.scss */
+  .slider.latest-cat-articles .flex-control-nav {
+    display: inline-block;
+    width: auto;
+    padding: 0;
+    text-align: left; }
+    /* line 1331, scss/_layout.scss */
+    .slider.latest-cat-articles .flex-control-nav li {
+      margin: 0 0 0 10px; }
+      /* line 1334, scss/_layout.scss */
+      .slider.latest-cat-articles .flex-control-nav li:first-child {
+        margin-left: 0; }
+  /* line 1340, scss/_layout.scss */
+  .slider.latest-cat-articles .flex-direction-nav {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: inline-block;
+    vertical-align: middle; }
+    /* line 1347, scss/_layout.scss */
+    .slider.latest-cat-articles .flex-direction-nav li {
+      float: none;
+      position: relative;
+      display: inline-block;
+      width: auto;
+      height: 50px;
+      background-color: transparent; }
+      /* line 1355, scss/_layout.scss */
+      .slider.latest-cat-articles .flex-direction-nav li.prev {
+        left: 0; }
+      /* line 1358, scss/_layout.scss */
+      .slider.latest-cat-articles .flex-direction-nav li.next {
+        right: 0; }
+      /* line 1362, scss/_layout.scss */
+      .slider.latest-cat-articles .flex-direction-nav li a {
+        display: inline-block;
+        width: 60px;
+        height: auto;
+        position: relative;
+        filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+        opacity: 1;
+        color: #b8b8b8;
+        text-align: center; }
+        @media screen and (max-width: 1150px) {
+          /* line 1362, scss/_layout.scss */
+          .slider.latest-cat-articles .flex-direction-nav li a {
+            line-height: 1; } }
+        /* line 1375, scss/_layout.scss */
+        .slider.latest-cat-articles .flex-direction-nav li a.valign, .slider.latest-cat-articles .flex-direction-nav li #header .logo a, #header .logo .slider.latest-cat-articles .flex-direction-nav li a, .slider.latest-cat-articles .flex-direction-nav li article.video a.image:after, article.video .slider.latest-cat-articles .flex-direction-nav li a.image:after, .slider.latest-cat-articles .flex-direction-nav li #single a.article-header-title, #single .slider.latest-cat-articles .flex-direction-nav li a.article-header-title {
+          top: auto;
+          -moz-transform: translateY(0);
+          -ms-transform: translateY(0);
+          -webkit-transform: translateY(0);
+          transform: translateY(0); }
+        /* line 1380, scss/_layout.scss */
+        .slider.latest-cat-articles .flex-direction-nav li a:hover {
+          color: #000; }
+        /* line 1384, scss/_layout.scss */
+        .slider.latest-cat-articles .flex-direction-nav li a:before {
+          font-size: 2em; }
+      /* line 1388, scss/_layout.scss */
+      .slider.latest-cat-articles .flex-direction-nav li .flex-prev {
+        margin-right: 5px; }
+@media screen and (max-width: 650px) {
+  /* line 1401, scss/_layout.scss */
+  .slider.three .slide-col {
+    width: 100%; } }
+@media screen and (max-width: 1050px) {
+  /* line 1417, scss/_layout.scss */
+  .slider.four .slide-col {
+    width: 50%; } }
+@media screen and (max-width: 650px) {
+  /* line 1417, scss/_layout.scss */
+  .slider.four .slide-col {
+    width: 100%; }
+    /* line 1424, scss/_layout.scss */
+    .slider.four .slide-col .image {
+      height: 150px; } }
+/* line 1438, scss/_layout.scss */
+.slider.gallery {
+  padding: 0; }
+  /* line 1442, scss/_layout.scss */
+  .slider.gallery .slides li {
+    position: relative;
+    height: 600px;
+    padding-bottom: 50px;
+    text-align: center; }
+    /* line 1449, scss/_layout.scss */
+    .slider.gallery .slides li.portrait img {
+      display: inline-block;
+      max-height: 100%;
+      width: auto;
+      vertical-align: middle; }
+    /* line 1458, scss/_layout.scss */
+    .slider.gallery .slides li.landscape img {
+      display: inline-block;
+      max-width: 100%;
+      height: auto;
+      vertical-align: middle; }
+/* line 1470, scss/_layout.scss */
+.slider.carousel .flex-direction-nav li {
+  padding-bottom: 0; }
+  @media screen and (max-width: 1150px) {
+    /* line 1470, scss/_layout.scss */
+    .slider.carousel .flex-direction-nav li {
+      height: 100%; }
+      /* line 1475, scss/_layout.scss */
+      .slider.carousel .flex-direction-nav li a {
+        top: 50%;
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%); } }
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+/* line 1488, scss/_layout.scss */
+#footer {
+  position: relative;
+  padding: 5em 0;
+  color: #fff;
+  background-color: #000; }
+  /* line 1494, scss/_layout.scss */
+  #footer a {
+    color: #fff; }
+  /* line 1498, scss/_layout.scss */
+  #footer .widget-title {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    font-family: 'Futura BT W01 Medium';
+    text-transform: uppercase; }
+  /* line 1505, scss/_layout.scss */
+  #footer .footer-links {
+    overflow: hidden; }
+    /* line 1508, scss/_layout.scss */
+    #footer .footer-links .widget {
+      float: left;
+      width: 50%; }
+    /* line 1513, scss/_layout.scss */
+    #footer .footer-links ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none; }
+      /* line 1518, scss/_layout.scss */
+      #footer .footer-links ul li {
+        margin-top: 2px; }
+      /* line 1522, scss/_layout.scss */
+      #footer .footer-links ul a {
+        display: inline-block;
+        padding: 2px 5px;
+        text-transform: uppercase;
+        -moz-transition: all, 0.3s;
+        -o-transition: all, 0.3s;
+        -webkit-transition: all, 0.3s;
+        transition: all, 0.3s; }
+        /* line 1530, scss/_layout.scss */
+        #footer .footer-links ul a:hover {
+          color: #000;
+          background-color: #fff; }
+  /* line 1538, scss/_layout.scss */
+  #footer .footer-social {
+    text-align: center; }
+    /* line 1541, scss/_layout.scss */
+    #footer .footer-social .social-link {
+      margin-bottom: 1em; }
+    /* line 1545, scss/_layout.scss */
+    #footer .footer-social p {
+      margin: 0; }
+    /* line 1549, scss/_layout.scss */
+    #footer .footer-social i {
+      font-size: 2em;
+      padding: 2px;
+      border: 2px solid transparent;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      -moz-transition: all, 0.3s;
+      -o-transition: all, 0.3s;
+      -webkit-transition: all, 0.3s;
+      transition: all, 0.3s; }
+      /* line 1557, scss/_layout.scss */
+      #footer .footer-social i:hover {
+        border: 2px solid #fff; }
+  /* line 1563, scss/_layout.scss */
+  #footer .logo {
+    text-align: center; }
+    /* line 1566, scss/_layout.scss */
+    #footer .logo .icon-logo {
+      font-size: 9em; }
+    /* line 1569, scss/_layout.scss */
+    #footer .logo p {
+      font-size: 10px; }
+  @media screen and (max-width: 850px) {
+    /* line 1488, scss/_layout.scss */
+    #footer {
+      padding-bottom: 0; }
+      /* line 1577, scss/_layout.scss */
+      #footer .footer-links {
+        width: 70%; }
+      /* line 1581, scss/_layout.scss */
+      #footer .footer-social {
+        width: 30%; }
+      /* line 1585, scss/_layout.scss */
+      #footer .logo {
+        width: 100%;
+        padding: 2em 0 1em 0; } }
+  @media screen and (max-width: 700px) {
+    /* line 1592, scss/_layout.scss */
+    #footer .footer-links {
+      width: 100%; }
+    /* line 1596, scss/_layout.scss */
+    #footer .footer-social {
+      width: 100%;
+      overflow: hidden; }
+      /* line 1600, scss/_layout.scss */
+      #footer .footer-social .social-link {
+        float: left;
+        width: 50%; } }
+  @media screen and (max-width: 500px) {
+    /* line 1488, scss/_layout.scss */
+    #footer {
+      padding-top: 2em; }
+      /* line 1610, scss/_layout.scss */
+      #footer .footer-links {
+        text-align: center; }
+        /* line 1613, scss/_layout.scss */
+        #footer .footer-links .widget {
+          width: 100%;
+          margin-bottom: 2em; }
+        /* line 1618, scss/_layout.scss */
+        #footer .footer-links ul li {
+          line-height: 30px; }
+      /* line 1624, scss/_layout.scss */
+      #footer .footer-social .social-link {
+        width: 100%; } }
+
+/* ==========================================================================
+   STUFF
+   ========================================================================== */
+/* line 1634, scss/_layout.scss */
+.pagination {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  text-align: center; }
+  /* line 1638, scss/_layout.scss */
+  .pagination .page-numbers {
+    display: inline-block;
+    padding: 0 0.5em;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: normal;
+    font-family: 'Futura BT W01 Heavy';
+    line-height: 50px;
+    border-top: 1px solid transparent;
+    vertical-align: bottom;
+    -moz-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    -webkit-transition: all, 0.3s;
+    transition: all, 0.3s; }
+    /* line 1650, scss/_layout.scss */
+    .pagination .page-numbers:hover {
+      color: #000;
+      border-top: 1px solid black; }
+    /* line 1655, scss/_layout.scss */
+    .pagination .page-numbers.current {
+      color: #000;
+      border-top: 1px solid black; }
+  /* line 1661, scss/_layout.scss */
+  .pagination i {
+    padding: 0 0.5em; }
+
+/* line 1666, scss/_layout.scss */
+#filters {
+  padding: 1em 0; }
+  /* line 1669, scss/_layout.scss */
+  #filters .button-group {
+    margin-top: 0.5em; }
+    /* line 1672, scss/_layout.scss */
+    #filters .button-group:first-child {
+      margin-top: 0; }
+  /* line 1677, scss/_layout.scss */
+  #filters span {
+    font-weight: normal;
+    font-family: 'Futura BT W01 Bold'; }
+
+/* ==========================================================================
+   PAGE GENERAL
+   ========================================================================== */
+/* line 4, scss/_templates.scss */
+#joebudden {
+  overflow: hidden; }
+
+/* line 9, scss/_templates.scss */
+.category-around-the-game #page-header {
+  color: #fff;
+  background-color: #1c3203; }
+  /* line 13, scss/_templates.scss */
+  .category-around-the-game #page-header .icon-badge:after {
+    content: "\e611"; }
+
+/* line 20, scss/_templates.scss */
+.section {
+  position: relative;
+  padding: 50px 0;
+  background-color: #E8E9ED; }
+  /* line 25, scss/_templates.scss */
+  .section.no-pad {
+    padding: 0; }
+    /* line 28, scss/_templates.scss */
+    .section.no-pad header {
+      margin-top: 1em; }
+  /* line 33, scss/_templates.scss */
+  .section.medialight-bg {
+    background-color: #262631; }
+    /* line 36, scss/_templates.scss */
+    .section.medialight-bg .flex-direction-nav li {
+      background-color: rgba(38, 38, 49, 0.7); }
+  /* line 41, scss/_templates.scss */
+  .section.mediadark-bg {
+    background-color: #1b1b1f; }
+    /* line 44, scss/_templates.scss */
+    .section.mediadark-bg .flex-direction-nav li {
+      background-color: rgba(27, 27, 31, 0.7); }
+  /* line 51, scss/_templates.scss */
+  .section.medialight-bg header .title, .section.mediadark-bg header .title {
+    color: #fff; }
+  /* line 54, scss/_templates.scss */
+  .section.medialight-bg header .sub-title, .section.mediadark-bg header .sub-title {
+    color: #c3c3c3; }
+  /* line 61, scss/_templates.scss */
+  .section header .title {
+    color: #4A4A4A;
+    font-weight: normal;
+    font-family: 'Futura BT W01 Heavy';
+    margin-bottom: 20px; }
+    @media screen and (max-width: 500px) {
+      /* line 61, scss/_templates.scss */
+      .section header .title {
+        font-size: 24px; } }
+  /* line 73, scss/_templates.scss */
+  .section header .sub-title {
+    color: #4A4A4A;
+    font-weight: normal;
+    font-family: 'Futura BT W01 Heavy';
+    margin-bottom: 20px; }
+    @media screen and (max-width: 500px) {
+      /* line 73, scss/_templates.scss */
+      .section header .sub-title {
+        font-size: 18px; } }
+  /* line 86, scss/_templates.scss */
+  .section.advertisement {
+    background-color: #F3F4F6; }
+    /* line 90, scss/_templates.scss */
+    .section.advertisement .advert {
+      width: 728px;
+      height: 90px;
+      margin: 0 auto;
+      text-align: center;
+      border: 1px solid gray; }
+    @media screen and (max-width: 728px) {
+      /* line 86, scss/_templates.scss */
+      .section.advertisement {
+        display: none; } }
+  /* line 104, scss/_templates.scss */
+  .section .section-content {
+    padding: 0;
+    -moz-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    -webkit-transition: all, 0.3s;
+    transition: all, 0.3s; }
+    @media screen and (max-width: 1100px) {
+      /* line 104, scss/_templates.scss */
+      .section .section-content {
+        width: 100%; }
+        /* line 111, scss/_templates.scss */
+        .sidebar-visible .section .section-content {
+          -moz-transform: translateX(-315px);
+          -ms-transform: translateX(-315px);
+          -webkit-transform: translateX(-315px);
+          transform: translateX(-315px); } }
+
+/* ==========================================================================
+   PAGE SPECIFIC STYLES
+   ========================================================================== */
+/* line 125, scss/_templates.scss */
+body.single .page-meta {
+  position: relative;
+  margin-bottom: 3em; }
+  /* line 129, scss/_templates.scss */
+  body.single .page-meta span {
+    display: inline-block;
+    vertical-align: middle; }
+  /* line 134, scss/_templates.scss */
+  body.single .page-meta .author {
+    font-weight: normal;
+    font-family: 'Futura BT W01 Bold'; }
+  /* line 138, scss/_templates.scss */
+  body.single .page-meta .date {
+    margin-left: 2em; }
+  /* line 142, scss/_templates.scss */
+  body.single .page-meta .social-icons {
+    position: absolute;
+    top: 0;
+    right: 0; }
+    @media screen and (max-width: 500px) {
+      /* line 142, scss/_templates.scss */
+      body.single .page-meta .social-icons {
+        position: relative;
+        display: block;
+        padding-top: 1em;
+        text-align: left; } }
+/* line 158, scss/_templates.scss */
+body.single .social-icons a {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  padding: 0.2em; }
+/* line 165, scss/_templates.scss */
+body.single .social-icons i {
+  padding: 0.5em;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px; }
+/* line 173, scss/_templates.scss */
+body.single .social-icons .icon-facebook2 {
+  background-color: #3B5998; }
+/* line 177, scss/_templates.scss */
+body.single .social-icons .icon-twitter {
+  background-color: #2CAAE1; }
+/* line 181, scss/_templates.scss */
+body.single .social-icons .icon-google {
+  background-color: #BB2F2C; }
+
+/* =================================
+   HOME
+   ================================= */
+/* line 193, scss/_templates.scss */
+#home .hero {
+  background-color: #283537; }
+  /* line 196, scss/_templates.scss */
+  #home .hero .flex-direction-nav li {
+    background-color: rgba(40, 54, 55, 0.8); }
+/* line 203, scss/_templates.scss */
+#home .latest #filter {
+  margin-bottom: 1em; }
+/* line 207, scss/_templates.scss */
+#home .latest #filter-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+  /* line 212, scss/_templates.scss */
+  #home .latest #filter-list li {
+    position: relative;
+    float: left;
+    width: 19%;
+    margin-left: 1.25%; }
+    /* line 218, scss/_templates.scss */
+    #home .latest #filter-list li:first-child {
+      margin-left: 0; }
+  @media screen and (max-width: 600px) {
+    /* line 207, scss/_templates.scss */
+    #home .latest #filter-list {
+      display: none; } }
+/* line 228, scss/_templates.scss */
+#home .latest .filter-select-bg {
+  display: none;
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+  padding: 0.5em 0;
+  overflow: hidden; }
+  @media screen and (max-width: 600px) {
+    /* line 228, scss/_templates.scss */
+    #home .latest .filter-select-bg {
+      display: block; } }
+  /* line 240, scss/_templates.scss */
+  #home .latest .filter-select-bg #filter-select {
+    position: relative;
+    width: 320px;
+    padding-left: 10px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: 'Futura BT W01 Heavy';
+    text-transform: uppercase;
+    background-color: transparent;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    z-index: 10; }
+  /* line 255, scss/_templates.scss */
+  #home .latest .filter-select-bg.schools {
+    background-color: #0c3261; }
+  /* line 259, scss/_templates.scss */
+  #home .latest .filter-select-bg.university {
+    background-color: #720d0e; }
+  /* line 263, scss/_templates.scss */
+  #home .latest .filter-select-bg.representative {
+    background-color: #100d3c; }
+  /* line 267, scss/_templates.scss */
+  #home .latest .filter-select-bg.sevens {
+    background-color: #db5657; }
+  /* line 271, scss/_templates.scss */
+  #home .latest .filter-select-bg.around-the-game {
+    background-color: #1c3203; }
+  /* line 275, scss/_templates.scss */
+  #home .latest .filter-select-bg .label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5em; }
+    /* line 283, scss/_templates.scss */
+    #home .latest .filter-select-bg .label span {
+      display: inline-block;
+      padding-left: 0.5em;
+      color: #fff;
+      font-weight: normal;
+      font-family: 'Futura BT W01 Heavy';
+      border-left: 1px solid #fff; }
+      /* line 292, scss/_templates.scss */
+      #home .latest .filter-select-bg .label span .icon-arrow-down {
+        margin: 0 0.5em; }
+@media screen and (max-width: 950px) {
+  /* line 302, scss/_templates.scss */
+  #home .fitness .articles .col-1-4 {
+    width: 50%;
+    margin-bottom: 20px; } }
+@media screen and (max-width: 500px) {
+  /* line 302, scss/_templates.scss */
+  #home .fitness .articles .col-1-4 {
+    width: 100%; }
+    /* line 310, scss/_templates.scss */
+    #home .fitness .articles .col-1-4 .image {
+      height: 150px; } }
+/* line 320, scss/_templates.scss */
+#home #feed .tp_recent_tweets ul {
+  margin: 0;
+  padding: 0; }
+  /* line 324, scss/_templates.scss */
+  #home #feed .tp_recent_tweets ul li {
+    clear: none;
+    float: left;
+    width: 49%;
+    height: 180px;
+    margin-left: 2%;
+    margin-bottom: 20px;
+    padding: 2em;
+    background-color: #fff;
+    background-position: 2em 90%;
+    overflow: hidden;
+    -moz-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    -webkit-transition: all, 0.3s;
+    transition: all, 0.3s; }
+    /* line 337, scss/_templates.scss */
+    #home #feed .tp_recent_tweets ul li:nth-child(2n+1) {
+      margin-left: 0; }
+    /* line 341, scss/_templates.scss */
+    #home #feed .tp_recent_tweets ul li:hover {
+      -moz-box-shadow: #51cbee 0 0 5px;
+      -webkit-box-shadow: #51cbee 0 0 5px;
+      box-shadow: #51cbee 0 0 5px; }
+    @media screen and (max-width: 600px) {
+      /* line 324, scss/_templates.scss */
+      #home #feed .tp_recent_tweets ul li {
+        width: 100%;
+        margin-left: 0; } }
+    /* line 350, scss/_templates.scss */
+    #home #feed .tp_recent_tweets ul li span {
+      margin-bottom: 2em; }
+      @media screen and (max-width: 500px) {
+        /* line 350, scss/_templates.scss */
+        #home #feed .tp_recent_tweets ul li span {
+          font-size: 70%; } }
+      /* line 358, scss/_templates.scss */
+      #home #feed .tp_recent_tweets ul li span a {
+        color: #5e5e5e;
+        padding-bottom: 2px;
+        border-bottom: 1px dotted #000; }
+        /* line 363, scss/_templates.scss */
+        #home #feed .tp_recent_tweets ul li span a:hover {
+          border-bottom: 1px solid #000; }
+/* line 374, scss/_templates.scss */
+#home #feed .tweet .text {
+  margin-bottom: 2em; }
+  @media screen and (max-width: 500px) {
+    /* line 374, scss/_templates.scss */
+    #home #feed .tweet .text {
+      font-size: 70%; } }
+  /* line 382, scss/_templates.scss */
+  #home #feed .tweet .text p {
+    margin: 0; }
+  /* line 386, scss/_templates.scss */
+  #home #feed .tweet .text a {
+    color: #5e5e5e;
+    padding-bottom: 2px;
+    border-bottom: 1px dotted #000; }
+    /* line 391, scss/_templates.scss */
+    #home #feed .tweet .text a:hover {
+      border-bottom: 1px solid #000; }
+/* line 396, scss/_templates.scss */
+#home #feed .tweet .user {
+  display: inline-block;
+  float: left; }
+  /* line 399, scss/_templates.scss */
+  #home #feed .tweet .user a {
+    color: #000;
+    font-weight: normal;
+    font-family: 'Futura BT W01 Heavy'; }
+/* line 406, scss/_templates.scss */
+#home #feed .tweet .time {
+  display: inline-block;
+  float: right; }
+
+/* =================================
+   FITNESS ARCHIVE
+   ================================= */
+/* line 423, scss/_templates.scss */
+#fitness-archive .articles article.nutrition .image {
+  height: 250px; }
+  @media screen and (max-width: 650px) {
+    /* line 423, scss/_templates.scss */
+    #fitness-archive .articles article.nutrition .image {
+      height: 150px; } }
+
+/* =================================
+   MEDIA ARCHIVE
+   ================================= */
+@media screen and (max-width: 600px) {
+  /* line 441, scss/_templates.scss */
+  #media-archive .button-group.category {
+    display: none; } }
+/* line 448, scss/_templates.scss */
+#media-archive .slider.hero .video .image, #media-archive .slider.hero .gallery .image {
+  position: relative;
+  height: initial;
+  padding-top: 56.25%; }
+
+/* =================================
+   MEDIA SINGLE
+   ================================= */
+/* line 462, scss/_templates.scss */
+#media-single .video-wrapper {
+  width: 90%;
+  max-width: 640px;
+  margin: 0 auto; }
+  /* line 467, scss/_templates.scss */
+  #media-single .video-wrapper .video {
+    position: relative;
+    padding-top: 75%; }
+    /* line 471, scss/_templates.scss */
+    #media-single .video-wrapper .video iframe,
+    #media-single .video-wrapper .video object,
+    #media-single .video-wrapper .video embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+/* line 483, scss/_templates.scss */
+#media-single .video-content {
+  padding: 25px 0;
+  color: #fff; }
+  /* line 487, scss/_templates.scss */
+  #media-single .video-content .category {
+    display: inline-block; }
+    /* line 490, scss/_templates.scss */
+    #media-single .video-content .category .cat-title {
+      position: relative;
+      font-weight: normal;
+      font-family: 'Futura BT W01 Heavy';
+      padding: 0 50px 0 10px;
+      color: #fff;
+      line-height: 35px; }
+      @media screen and (max-width: 500px) {
+        /* line 490, scss/_templates.scss */
+        #media-single .video-content .category .cat-title {
+          line-height: 20px; } }
+      /* line 503, scss/_templates.scss */
+      #media-single .video-content .category .cat-title i {
+        position: absolute;
+        right: 0;
+        display: inline-block;
+        width: 35px;
+        text-align: center;
+        line-height: 35px;
+        vertical-align: middle; }
+        @media screen and (max-width: 500px) {
+          /* line 503, scss/_templates.scss */
+          #media-single .video-content .category .cat-title i {
+            line-height: 20px; } }
+  /* line 519, scss/_templates.scss */
+  #media-single .video-content .title {
+    margin: 10px 0;
+    font-weight: normal;
+    font-family: 'Futura BT W01 Heavy';
+    text-transform: uppercase; }
+
+/* =================================
+   SINGLE ARTICLE
+   ================================= */
+/* line 534, scss/_templates.scss */
+#single .article-header {
+  background-size: contain;
+  background-repeat: repeat-x; }
+  /* line 537, scss/_templates.scss */
+  #single .article-header.schools {
+    background-image: url(../img/schools-pattern.png); }
+  /* line 541, scss/_templates.scss */
+  #single .article-header.university {
+    background-image: url(../img/uni-pattern.png); }
+  /* line 545, scss/_templates.scss */
+  #single .article-header.representative {
+    background-image: url(../img/rep-pattern.png); }
+  /* line 549, scss/_templates.scss */
+  #single .article-header.sevens {
+    background-image: url(../img/sevens-pattern.png); }
+  /* line 553, scss/_templates.scss */
+  #single .article-header.around-the-game {
+    background-image: url(../img/around-pattern.png); }
+  /* line 557, scss/_templates.scss */
+  #single .article-header.fitness {
+    background-image: url(../img/fitness-pattern.png); }
+  @media screen and (max-width: 800px) {
+    /* line 562, scss/_templates.scss */
+    #single .article-header .inner-container {
+      width: 100%; } }
+/* line 569, scss/_templates.scss */
+#single #content.section {
+  padding-bottom: 0; }
+/* line 574, scss/_templates.scss */
+#single .article-header-title {
+  float: left;
+  width: 40%;
+  height: 400px;
+  padding-top: 2em;
+  padding-bottom: 100px;
+  color: #fff; }
+  /* line 583, scss/_templates.scss */
+  #single .article-header-title .title {
+    font-weight: normal;
+    font-family: 'Futura BT W01 Heavy'; }
+  @media screen and (max-width: 800px) {
+    /* line 574, scss/_templates.scss */
+    #single .article-header-title {
+      width: 100%;
+      padding: 0 1em;
+      height: initial;
+      text-align: center; } }
+/* line 597, scss/_templates.scss */
+#single .article-header-image {
+  float: left;
+  width: 60%;
+  margin-left: 40%;
+  height: 400px;
+  background-size: cover;
+  background-position: center; }
+  @media screen and (max-width: 800px) {
+    /* line 597, scss/_templates.scss */
+    #single .article-header-image {
+      width: 100%;
+      margin: 0; } }
+/* line 611, scss/_templates.scss */
+#single .page {
+  margin-top: -150px;
+  padding: 20px 70px;
+  background-color: #fff; }
+  @media screen and (max-width: 750px) {
+    /* line 611, scss/_templates.scss */
+    #single .page {
+      padding: 0 35px;
+      font-size: 80%; } }
+  @media screen and (max-width: 500px) {
+    /* line 611, scss/_templates.scss */
+    #single .page {
+      padding: 0 35px;
+      font-size: 65%; } }
+  /* line 625, scss/_templates.scss */
+  #single .page .breadcrumbs {
+    margin: 1em 0; }
+    /* line 627, scss/_templates.scss */
+    #single .page .breadcrumbs a {
+      color: #000;
+      text-transform: uppercase; }
+/* line 643, scss/_templates.scss */
+#single .page-share {
+  margin-bottom: 1em;
+  font-weight: normal;
+  font-family: 'Futura BT W01 Heavy'; }
+
+/* =================================
+   LIVE FEED
+   ================================= */
+@media screen and (max-width: 500px) {
+  /* line 654, scss/_templates.scss */
+  #live {
+    font-size: 80%; } }
+/* line 660, scss/_templates.scss */
+#live .match-stats {
+  min-width: 1200px;
+  padding: 2em;
+  text-align: center;
+  background-color: #fff; }
+  /* line 666, scss/_templates.scss */
+  #live .match-stats .category {
+    font-weight: normal;
+    font-family: 'Futura BT W01 Heavy'; }
+  /* line 672, scss/_templates.scss */
+  #live .match-stats .kickoff {
+    margin: 0.4em 0; }
+  /* line 676, scss/_templates.scss */
+  #live .match-stats .period {
+    color: #D0021B;
+    font-weight: normal;
+    font-family: 'Futura BT W01 Heavy'; }
+/* line 685, scss/_templates.scss */
+#live .statistics .padding {
+  margin-top: 0.5em; }
+/* line 689, scss/_templates.scss */
+#live .statistics .team-name, #live .statistics .team-score {
+  color: #454545;
+  font-weight: normal;
+  font-family: 'Futura BT W01 Bold'; }
+/* line 696, scss/_templates.scss */
+#live .statistics .team-name {
+  color: #000; }
+/* line 700, scss/_templates.scss */
+#live .statistics .stat {
+  display: inline-block;
+  font-weight: normal;
+  font-family: 'Futura BT W01 Bold'; }
+/* line 707, scss/_templates.scss */
+#live .match-notice {
+  margin-top: 5px;
+  padding: 2em;
+  background-color: #fff; }
+  /* line 716, scss/_templates.scss */
+  #live .match-notice ul.notices {
+    width: 60%;
+    margin: 0 auto; }
+    @media screen and (max-width: 800px) {
+      /* line 716, scss/_templates.scss */
+      #live .match-notice ul.notices {
+        width: 80%; } }
+    @media screen and (max-width: 600px) {
+      /* line 716, scss/_templates.scss */
+      #live .match-notice ul.notices {
+        width: 100%; } }
+    /* line 728, scss/_templates.scss */
+    #live .match-notice ul.notices li {
+      font-weight: normal;
+      font-family: 'Futura BT W01 Heavy'; }
+/* line 735, scss/_templates.scss */
+#live ul.match-events {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+  /* line 740, scss/_templates.scss */
+  #live ul.match-events li.event {
+    position: relative;
+    padding: 2em;
+    margin-top: 5px;
+    background-color: #fff; }
+/* line 748, scss/_templates.scss */
+#live .event-timestamp {
+  text-align: center; }
+  /* line 751, scss/_templates.scss */
+  #live .event-timestamp .game-time {
+    padding: 0.5em;
+    color: #fff;
+    font-weight: normal;
+    font-family: 'Futura BT W01 Heavy';
+    background-color: #203F4C; }
+  /* line 758, scss/_templates.scss */
+  #live .event-timestamp .out-game-time {
+    padding: 0.5em;
+    color: #fff;
+    font-weight: normal;
+    font-family: 'Futura BT W01 Heavy';
+    background-color: #B7B7B7; }
+/* line 766, scss/_templates.scss */
+#live .event-icon {
+  text-align: center; }
+/* line 772, scss/_templates.scss */
+#live .event-content .text .title {
+  font-weight: normal;
+  font-family: 'Futura BT W01 Heavy'; }
+/* line 779, scss/_templates.scss */
+#live .event-content .share a {
+  color: #B7B7B7; }
+
+/* =================================
+   CONTACT
+   ================================= */
+/* line 792, scss/_templates.scss */
+#contact .contact-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2em;
+  background-color: #fff; }
+  @media screen and (max-width: 600px) {
+    /* line 792, scss/_templates.scss */
+    #contact .contact-form {
+      font-size: 80%; } }
+
+/* =================================
+   404
+   ================================= */
+/* line 809, scss/_templates.scss */
+#fohohfoh {
+  padding: 10em;
+  color: #fff;
+  background-color: #000; }
+  /* line 814, scss/_templates.scss */
+  #fohohfoh .message {
+    text-align: center; }
+    @media screen and (max-width: 750px) {
+      /* line 814, scss/_templates.scss */
+      #fohohfoh .message {
+        font-size: 80%; } }
+    /* line 821, scss/_templates.scss */
+    #fohohfoh .message h1 {
+      margin: 0;
+      font-size: 5em; }
+    /* line 827, scss/_templates.scss */
+    #fohohfoh .message p {
+      padding: 0 2em; }
+    /* line 832, scss/_templates.scss */
+    #fohohfoh .message form {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto; }
+      /* line 837, scss/_templates.scss */
+      #fohohfoh .message form .screen-reader-text {
+        display: none; }
+      /* line 841, scss/_templates.scss */
+      #fohohfoh .message form input[type="submit"] {
+        padding: 0.5em 1em;
+        color: #fff;
+        font-weight: normal;
+        font-family: 'Futura BT W01 Heavy';
+        background-color: #000;
+        border: 1px solid transparent;
+        -moz-transition: all, 0.3s;
+        -o-transition: all, 0.3s;
+        -webkit-transition: all, 0.3s;
+        transition: all, 0.3s; }
+        /* line 851, scss/_templates.scss */
+        #fohohfoh .message form input[type="submit"]:hover {
+          color: #000;
+          background-color: #fff;
+          border: 1px solid #000; }

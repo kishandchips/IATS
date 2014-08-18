@@ -1,0 +1,257 @@
+button{
+	padding:0;
+	background-color: transparent;
+	border:none;
+	outline: none;
+
+	&.search{
+		&:after{
+			@extend %icon;
+			content: "\e603";
+		}		
+	}
+
+	#filters &{
+		@extend %title;
+		font-size: 14px;
+		@include bold;
+		padding: 0 0.5em 2px 0.5em;
+		// border-bottom: 3px solid transparent;
+		@include transition(all,.3s);
+
+		&.frame{
+			display: inline-block;
+			padding: 0.5em 1em;
+
+			&:hover{
+				color: #fff;
+				background-color: #000;
+				border-bottom: transparent;
+			}
+
+			&.active{
+				color: #fff;
+				background-color: #000;
+				border-bottom: transparent;
+			}
+		}
+
+		&.active{
+			border-bottom: 3px solid $orange;
+		}
+
+		&:hover{
+			border-bottom: 3px solid $orange;
+		}
+
+		&.schools{
+			&.active{
+				border-bottom: 3px solid $blue;
+			}
+			&:hover{
+				border-bottom: 3px solid $blue;
+			}
+		}
+		&.university{
+			&.active{
+				border-bottom: 3px solid $red;
+			}
+			&:hover{
+				border-bottom: 3px solid $red;
+			}
+		}
+		&.representative{
+			&.active{
+				border-bottom: 3px solid $purple;
+			}
+			&:hover{
+				border-bottom: 3px solid $purple;
+			}
+		}
+		&.sevens{
+			&.active{
+				border-bottom: 3px solid $pink;
+			}
+			&:hover{
+				border-bottom: 3px solid $pink;
+			}
+		}
+		&.around-the-game{
+			&.active{
+				border-bottom: 3px solid $green;
+			}
+			&:hover{
+				border-bottom: 3px solid $green;
+			}
+		}
+	}
+
+	&#js-sidebar{
+		display: none;
+		padding: 0.5em 1em;
+		@extend %title;
+		@extend .small;
+		@include heavy;
+		color:#fff;
+		background-color: #000;
+
+		i{
+			display: inline-block;
+			vertical-align: top;
+			font-size: 2em;			
+		}
+
+		@media screen and (max-width: 1100px){
+			display: inline-block;
+		}
+	}
+}
+
+.button{
+	&.cat-filter{
+		display: inline-block;
+		width: 100%;
+		color: #fff;
+		@extend .small;
+		@include heavy;
+		text-align: left;
+		text-transform: uppercase;
+		@include transition(all,.3s);
+
+		@media screen and (max-width: 900px){
+			font-size: 0.625em;
+		}
+
+		@media screen and (max-width: 750px){
+			font-size: 0.5em;
+		}
+
+		&.active{
+			&:after{
+				position: absolute;
+				top:100%;
+				width: 100%;
+				@extend %icon;
+				content: "\e60c";
+				font-size: 1.5em;
+				line-height: 0.4 !important;
+				text-align: center;
+				@include transition(all,.3s);
+			}
+		}
+
+		&.schools{
+			background-color: $dblue;
+			border-bottom: 5px solid $blue;
+
+			&.active{
+				&:after{
+					color: $blue;
+				}
+			}
+
+			&:hover{
+				background-color: $blue;
+				border-bottom: 5px solid $dblue;
+
+				&.active{
+					&:after{
+						color: $dblue;
+					}
+				}
+			}
+		}// .schools
+
+		&.university{
+			background-color: $dred;
+			border-bottom: 5px solid $red;
+			
+			&.active{
+				&:after{
+					color: $red;
+				}
+			}
+
+			&:hover{
+				background-color: $red;
+				border-bottom: 5px solid $dred;
+
+				&.active{
+					&:after{
+						color: $dred;
+					}
+				}
+			}
+		}// .uni
+
+		&.representative{
+			background-color: $dpurple;
+			border-bottom: 5px solid $purple;
+
+			&.active{
+				&:after{
+					color: $purple;
+				}
+			}
+
+			&:hover{
+				background-color: $purple;
+				border-bottom: 5px solid $dpurple;
+
+				&.active{
+					&:after{
+						color: $dpurple;
+					}
+				}	
+			}
+		}// .rep
+
+		&.sevens{
+			background-color: $dpink;
+			border-bottom: 5px solid $pink;
+
+			&.active{
+				&:after{
+					color: $pink;
+				}
+			}
+
+			&:hover{
+				background-color: $pink;
+				border-bottom: 5px solid $dpink;
+
+				&.active{
+					&:after{
+						color: $dpink;
+					}
+				}	
+			}
+		}// .sevens
+
+		&.around-the-game{
+			background-color: $dgreen;
+			border-bottom: 5px solid $green;
+
+			&.active{
+				&:after{
+					color: $green;
+				}
+			}
+
+			&:hover{
+				background-color: $green;
+				border-bottom: 5px solid $dgreen;
+
+				&.active{
+					&:after{
+						color: $dgreen;
+					}
+				}	
+			}
+		}// .around
+
+		p{
+			text-align: center;
+		}
+	}	
+}

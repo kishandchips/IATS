@@ -1,0 +1,96 @@
+/* ==========================================================================
+   FONTS
+   ========================================================================== */
+
+@import '//fast.fonts.net/cssapi/774e7563-a8f4-4d3d-80ef-6ddbe85570fc.css';
+
+@mixin book{
+	font-weight: normal;
+	font-family:'Futura BT W01 Book';
+}
+@mixin medium{
+	font-weight: normal;
+	font-family:'Futura BT W01 Medium';	
+}
+@mixin heavy{
+	font-weight: normal;
+	font-family:'Futura BT W01 Heavy';
+}
+@mixin bold{
+	font-weight: normal;
+	font-family:'Futura BT W01 Bold';
+}
+
+/* ==========================================================================
+   DEFAULTS
+   ========================================================================== */
+
+body{
+	font-size: 100%;
+	line-height: 1;
+	@include book;
+}
+
+a{
+	color: #000;
+	text-decoration: none;
+}
+
+.small{
+	font-size: 0.75em;
+}
+.normal{
+	font-size: 1em;
+}
+.medium{
+	font-size: 1.125em;
+}
+.large{
+	font-size: 1.5em;
+}
+.xlarge{
+	font-size: 1.875em;
+}
+.xxlarge{
+	font-size: 2.5em;
+}
+
+
+/* ==========================================================================
+   STUFF
+   ========================================================================== */
+
+%title{
+	margin: 0;
+	text-transform: uppercase;
+}
+
+%link{
+	padding-bottom: 2px;
+	color: #26AF70;
+	text-decoration: none;
+	border-bottom: 1px dotted #26AF70;
+	@include transition(all,.3s);
+
+	&:hover{
+		color:#177248;
+		border-bottom: 1px solid #177248;
+	}
+}
+
+.page-content{
+	blockquote{
+		padding: 2em;
+		@extend .large;
+		@include bold;
+		background-color: #F3F3F3;
+
+		@media screen and (max-width: 600px){
+			margin: 0;
+		}
+
+		p{
+			margin: 0;
+		}
+	}
+}

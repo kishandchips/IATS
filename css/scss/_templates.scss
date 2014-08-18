@@ -1,0 +1,859 @@
+/* ==========================================================================
+   PAGE GENERAL
+   ========================================================================== */
+#joebudden{
+	overflow: hidden;
+}
+
+.category-around-the-game{
+	#page-header{
+		color: #fff;
+		background-color: $dgreen;
+
+			.icon-badge:after{
+				@extend %icon;
+				content: "\e611";			
+			}
+	}
+}
+
+.section{
+	position: relative;
+	padding:50px 0;
+	background-color: #E8E9ED;
+
+	&.no-pad{
+		padding: 0;
+
+		header{
+			margin-top: 1em;
+		}
+	}
+
+	&.medialight-bg{
+	background-color: #262631;
+
+		.flex-direction-nav li{
+			background-color: rgba(38, 38, 49, 0.7);
+		}
+	}
+
+	&.mediadark-bg{
+		background-color: #1b1b1f;
+		
+		.flex-direction-nav li{
+			background-color: rgba(27, 27, 31, 0.7);
+		}
+	}
+
+	&.medialight-bg,&.mediadark-bg{
+		header{
+			.title{
+				color: #fff;
+			}
+			.sub-title{
+				color: #c3c3c3;
+			}
+		}
+	}
+
+	header{
+		.title{
+			@extend %title;
+			color: #4A4A4A;
+			@include heavy;
+			@extend .xxlarge;
+			margin-bottom: 20px;
+
+			@media screen and (max-width: 500px){
+				font-size: 24px;
+			}
+		}
+
+		.sub-title{
+			@extend %title;
+			color: #4A4A4A;
+			@include heavy;
+			@extend .large;
+			margin-bottom: 20px;
+
+			@media screen and (max-width: 500px){
+				font-size: 18px;
+			}
+		}
+	}
+
+	&.advertisement{
+		background-color: #F3F4F6;
+		
+		//////////////////////////////////////////// REMOVE THIS AFTER
+		.advert{
+			width: 728px;
+			height: 90px;
+			margin: 0 auto;
+			text-align: center;
+			border: 1px solid gray;
+		}
+
+		@media screen and (max-width:728px){
+			display: none;
+		}
+		////////////////////////////////////////////
+	}
+
+	.section-content{
+		padding: 0;
+		@include transition(all,.3s);
+
+		@media screen and (max-width: 1100px){
+			width: 100%;
+
+			.sidebar-visible &{
+				@include translateX(-315px);
+			}
+
+		}
+	}	
+}
+
+
+
+/* ==========================================================================
+   PAGE SPECIFIC STYLES
+   ========================================================================== */
+body.single{
+	.page-meta{
+		position: relative;
+		margin-bottom: 3em;
+
+		span{
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.author{
+			@include bold;
+		}
+
+		.date{
+			margin-left: 2em;
+		}
+
+		.social-icons{
+			position: absolute;
+			top: 0;
+			right: 0;
+	
+			@media screen and (max-width:500px){
+				position: relative;
+				display: block;
+				padding-top:1em;
+				text-align: left;
+			}
+		}
+	}// .page-meta
+
+	.social-icons{
+
+		a{
+			display: inline-block;
+			width: 2em;
+			height: 2em;
+			padding:0.2em;
+		}
+
+		i{
+			padding: 0.5em;
+			height: 100%;
+			width: 100%;
+			color: #fff;
+			@include border-radius(2px);
+		}
+
+		.icon-facebook2{
+			background-color: #3B5998;
+		}
+
+		.icon-twitter{
+			background-color: #2CAAE1;
+		}
+
+		.icon-google{
+			background-color: #BB2F2C;
+		}	
+	}// .social-icons
+}
+/* =================================
+   HOME
+   ================================= */
+
+#home{
+ 	// overflow: hidden;
+ 	
+ 	.hero{
+ 		background-color: #283537;
+
+		.flex-direction-nav li{
+			background-color: rgba(40, 54, 55, 0.8);
+		}
+ 	}
+
+ 	.latest{
+
+ 		#filter{
+ 			margin-bottom: 1em;
+ 		}
+
+	 	#filter-list{
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+
+			li{
+				position: relative;
+				float: left;
+				width: 19%;
+				margin-left: 1.25%;
+
+				&:first-child{
+					margin-left:0;
+				}
+			}
+
+			@media screen and (max-width: 600px){
+				display: none;
+			}
+	 	}
+
+	 	.filter-select-bg{
+	 		display: none;
+	 		position: relative;
+	 		width: 300px;
+	 		margin: 0 auto;
+	 		padding: 0.5em 0;
+	 		overflow: hidden;
+
+	 		@media screen and (max-width: 600px){
+	 			display: block;
+	 		}
+
+	 		#filter-select{
+	 			position: relative;
+				width: 320px;
+				padding-left: 10px;
+				color: #fff;
+				font-size: 12px;
+				@include heavy;
+				text-transform: uppercase;
+				background-color: transparent;
+				@include border-radius(0);
+				border: none;
+				outline: none;
+				z-index: 10;		
+	 		}
+
+	 		&.schools{
+				background-color: $dblue;
+	 		}
+
+	 		&.university{
+				background-color: $dred;
+	 		}
+
+	 		&.representative{
+				background-color: $dpurple;
+	 		}
+
+	 		&.sevens{
+				background-color: $dpink;
+	 		}
+
+	 		&.around-the-game{
+				background-color: $dgreen;
+	 		}
+
+	 		.label{
+	 			position: absolute;
+	 			top: 0;
+	 			right: 0;
+	 			padding: 0.5em;
+	 			
+				
+
+				span{
+					display: inline-block;
+					padding-left: 0.5em;
+					color: #fff;
+					@extend %title;
+					@include heavy;
+					@extend .small;
+					border-left: 1px solid #fff;
+
+					.icon-arrow-down{
+						margin:0 0.5em;
+					}
+				}
+	 		}	
+	 	} 		
+ 	}//.latest
+	
+	.fitness{
+		.articles{
+			.col-1-4{
+				@media screen and (max-width: 950px){
+					width: 50%;
+					margin-bottom: 20px;
+				}
+				@media screen and (max-width: 500px){
+					width: 100%;
+
+					.image{
+						height: 150px;
+					}
+				}
+			}
+		}
+	}// .fitness
+
+ 	#feed{
+ 		.tp_recent_tweets{
+ 			ul{
+ 				margin:0;
+ 				padding:0;
+
+	 			li{
+	 				clear: none;
+	 				float: left;
+	 				width: 49%;
+	 				height: 180px;
+	 				margin-left: 2%;
+		 			margin-bottom:20px;
+		 			padding: 2em;
+		 			background-color: #fff;
+		 			background-position: 2em 90%;
+		 			overflow:hidden;
+		 			@include transition(all,.3s);
+
+		 			&:nth-child(2n+1){
+		 				margin-left: 0;
+		 			}
+
+		 			&:hover{
+		 				@include box-shadow(rgba(81, 203, 238, 1) 0 0 5px );
+		 			}
+
+	 				@media screen and (max-width:600px){
+	 					width: 100%;
+	 					margin-left: 0;
+	 				}
+
+	 				span{
+		 				@extend .medium;
+		 				margin-bottom:2em;
+
+		 				@media screen and (max-width: 500px){
+		 					font-size: 70%;
+		 				}
+
+		 				a{
+		 					color: #5e5e5e;
+		 					padding-bottom:2px;
+		 					border-bottom:1px dotted #000;
+
+		 					&:hover{
+		 						border-bottom:1px solid #000;
+		 					}
+		 				}
+	 				}//span
+	 			}//li 				
+ 			}//ul
+ 		}//.tp_recent_tweets
+
+ 		.tweet{
+
+ 			.text{
+ 				@extend .medium;
+ 				margin-bottom:2em;
+
+ 				@media screen and (max-width: 500px){
+ 					font-size: 70%;
+ 				}
+
+ 				p{
+ 					margin:0;
+ 				}
+
+ 				a{
+ 					color: #5e5e5e;
+ 					padding-bottom:2px;
+ 					border-bottom:1px dotted #000;
+
+ 					&:hover{
+ 						border-bottom:1px solid #000;
+ 					}
+ 				}
+ 			}
+ 			.user{
+ 				display: inline-block;
+ 				float:left;
+ 				a{
+ 					color: #000;
+ 					@include heavy;
+					@extend .medium;	
+ 				}
+
+ 			}
+ 			.time{
+ 				display: inline-block;
+ 				float:right;
+ 				@extend .small;
+ 			}
+ 		}
+ 	}// #feed
+}// #home
+
+/* =================================
+   FITNESS ARCHIVE
+   ================================= */
+
+#fitness-archive{
+	.articles{
+		article{
+			&.nutrition{
+				.image{
+					height:250px;
+
+					@media screen and (max-width:650px){
+						height: 150px;
+					}				
+				}
+			}
+		}
+	}
+}
+
+/* =================================
+   MEDIA ARCHIVE
+   ================================= */
+
+#media-archive{
+	@media screen and (max-width: 600px){
+		.button-group.category{
+			display: none;
+		}
+	}
+
+	.slider.hero{
+		.video, .gallery{
+			.image{
+				position: relative;
+				height:initial;
+				padding-top: 56.25%;
+			}
+		}		
+	}
+}
+
+/* =================================
+   MEDIA SINGLE
+   ================================= */
+
+#media-single{
+	.video-wrapper{
+		width: 90%;
+		max-width: 640px;
+		margin: 0 auto;
+
+		.video{
+			position: relative;
+	    	padding-top: 75%;
+
+			iframe,
+			object,
+			embed {
+				position: absolute;
+				top: 0;
+					left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}		
+	}// .video-wrapper
+
+ 	.video-content{
+ 		padding:25px 0;
+ 		color: #fff;
+
+ 		.category{
+ 			display: inline-block;
+	
+			.cat-title{
+				position: relative;
+				@extend %title;
+				@extend .small;
+				@include heavy;
+				padding: 0 50px 0 10px;
+				color: #fff;
+				line-height: 35px;
+
+				@media screen and (max-width: 500px){
+					line-height: 20px;
+				}
+
+				i{
+					position: absolute;
+					right:0;
+					display: inline-block;
+					width: 35px;
+					text-align: center;
+					line-height: 35px;
+					vertical-align: middle;
+
+					@media screen and (max-width: 500px){
+						line-height: 20px;
+					}
+				}	
+			}//.cat-title
+ 		}
+
+ 		.title{
+ 			margin:10px 0;
+ 			@extend .xlarge;
+			@include heavy;
+			text-transform: uppercase;
+ 		}
+ 	}// .video-content
+
+}// #media-single
+
+/* =================================
+   SINGLE ARTICLE
+   ================================= */
+
+#single{
+	.article-header{
+			background-size: contain;
+			background-repeat: repeat-x;
+		&.schools{
+			background-image: url(../img/schools-pattern.png);
+		}
+
+		&.university{
+			background-image: url(../img/uni-pattern.png);
+		}
+
+		&.representative{
+			background-image: url(../img/rep-pattern.png);
+		}
+
+		&.sevens{
+			background-image: url(../img/sevens-pattern.png);
+		}
+
+		&.around-the-game{
+			background-image: url(../img/around-pattern.png);
+		}
+
+		&.fitness{
+			background-image: url(../img/fitness-pattern.png);
+		}
+
+		@media screen and (max-width:800px){
+			.inner-container{
+				width: 100%;
+			}
+		}
+	}
+
+	#content{
+		&.section{
+			padding-bottom: 0;
+		}
+	}
+
+	.article-header-title{
+		float:left;
+		width: 40%;
+		height:400px;
+		padding-top: 2em;
+		padding-bottom: 100px;
+		@extend .valign;
+		color: #fff;
+
+		.title{
+			@extend %title;
+			@extend .xxlarge;
+			@include heavy;
+		}
+
+		@media screen and (max-width: 800px){
+			width: 100%;
+			padding: 0 1em;
+			height: initial;
+			text-align: center;
+		}
+	}
+
+	.article-header-image{
+		float:left;
+		width: 60%;
+		margin-left:40%;
+		height: 400px;
+		background-size:cover;
+		background-position: center;
+
+		@media screen and (max-width: 800px){
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+	.page{
+		margin-top: -150px;
+		padding: 20px 70px;
+		background-color: #fff;
+
+		@media screen and (max-width:750px){
+			padding: 0 35px;
+			font-size: 80%;
+		}
+		@media screen and (max-width:500px){
+			padding: 0 35px;
+			font-size: 65%;
+		}
+
+		.breadcrumbs{
+			margin: 1em 0;
+			a{
+				color: #000;
+				@extend .small;
+				text-transform: uppercase;
+			}
+		}
+		.page-content{
+			@extend .medium;
+
+			a{
+				@extend %link;
+			}
+		}
+
+	}// .page
+
+	.page-share{
+		margin-bottom: 1em;
+		@extend %title;
+		@include heavy;
+	}
+}// #single
+
+/* =================================
+   LIVE FEED
+   ================================= */
+
+#live{
+
+	@media screen and (max-width:500px){
+		font-size: 80%;
+	}
+
+	.match-stats{
+		min-width: 1200px;
+		padding: 2em;
+		text-align: center;
+		background-color: #fff;
+
+		.category{
+			@extend %title;
+			@extend .xlarge;
+			@include heavy;
+		}
+
+		.kickoff{
+			margin: 0.4em 0;
+		}
+
+		.period{
+			color: #D0021B;
+			@extend %title;
+			@extend .medium;
+			@include heavy;
+		}
+	}// .match-stats
+
+	.statistics{
+		.padding{
+			margin-top: 0.5em;
+		}
+
+		.team-name,.team-score{
+			color: #454545;
+			@extend %title;
+			@extend .xxlarge;
+			@include bold;
+		}
+
+		.team-name{
+			color: #000;
+		}
+
+		.stat{
+			display: inline-block;
+			@extend %title;
+			@include bold;
+		}
+	}// .statistics
+
+	.match-notice{
+		margin-top: 5px;
+		padding: 2em;
+		background-color: #fff;
+
+		a{
+			@extend %link;
+		}
+
+		ul.notices{
+			width: 60%;
+			margin: 0 auto;
+
+			@media screen and (max-width:800px){
+				width: 80%;
+			}
+
+			@media screen and (max-width:600px){
+				width: 100%;
+			}
+
+			li{
+				@extend %title;
+				@include heavy;
+			}
+		}
+	}
+
+	ul.match-events{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		
+		li.event{
+			position: relative;
+			padding: 2em;
+			margin-top: 5px;
+			background-color: #fff;
+		}
+	}// .match-events
+
+	.event-timestamp{
+		text-align: center;
+		
+		.game-time{
+			padding: 0.5em;
+			color: #fff;
+			@include heavy;
+			background-color: #203F4C;
+		}
+
+		.out-game-time{
+			padding: 0.5em;
+			color: #fff;
+			@include heavy;
+			background-color: #B7B7B7;
+		}
+	}
+
+	.event-icon{
+		text-align: center;
+	}
+	
+	.event-content{
+		.text{
+			.title{
+				@extend %title;
+				@include heavy;
+			}
+		}
+
+		.share{
+			a{
+				color: #B7B7B7;
+			}
+			
+		}
+	}
+}// #live
+
+/* =================================
+   CONTACT
+   ================================= */
+
+#contact{
+	.contact-form{
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 2em;
+		background-color: #fff;
+
+		@media screen and (max-width: 600px){
+			font-size: 80%;
+		}
+	}
+}
+
+/* =================================
+   404
+   ================================= */
+
+#fohohfoh{
+	padding: 10em;
+	color: #fff;
+	background-color: #000;
+
+	.message{
+		text-align: center;
+
+		@media screen and (max-width: 750px){
+			font-size: 80%;
+		}
+
+		h1{
+			@extend %title;
+			margin: 0;
+			font-size: 5em;
+		}
+
+		p{
+			padding: 0 2em;
+			@extend .large;
+		}
+
+		form{
+			width: 100%;
+			max-width: 600px;
+			margin: 0 auto;
+
+			.screen-reader-text{
+				display: none;
+			}
+
+			input[type="submit"]{
+				@extend button;
+				padding: 0.5em 1em;
+				color: #fff;
+				@extend %title;
+				@include heavy;
+				background-color: #000;
+				border: 1px solid transparent;
+				@include transition(all,.3s);
+				
+				&:hover{
+					color: #000;
+					background-color: #fff;
+					border: 1px solid #000;
+				}	
+			}
+		}
+	}
+}
