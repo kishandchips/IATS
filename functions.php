@@ -32,6 +32,7 @@ function custom_after_setup_theme(){
 	global $template_directory;
 
 	require($template_directory.'/inc/primary-nav-walker.php');
+	require($template_directory.'/inc/custom-comment-walker.php');
 }
 
 function custom_styles(){

@@ -16,7 +16,7 @@
 			<div class="mediadark-bg">
 				<div class="video-wrapper">
 					<div class="video">
-						<iframe width="640" height="480" src="//www.youtube.com/embed/i9MHigUZKEM" frameborder="0" allowfullscreen></iframe>
+
 					</div>					
 				</div>
 			</div>
@@ -49,7 +49,9 @@
 						</div>
 
 						<div class="description">
-							<?php the_content(); ?>
+							<?php $content = get_the_content(); ?>
+							<?php echo $content; ?>
+							<!-- <?php the_content(); ?> -->
 						</div>
 
 					</div><!-- .video-content -->

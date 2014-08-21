@@ -29,7 +29,7 @@
 					$slides = 0; 
 				?>
 
-				<?php while($slides <= 3 ): ?>
+				<?php while($slides <= 1 ): ?>
 
 				<?php 
 					$args = array(

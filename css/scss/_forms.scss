@@ -1,28 +1,3 @@
-form{
-	.column.col-1-3, .column.col-2-3{
-		@media screen and (max-width:750px){
-			width: 100%;
-		}
-	}
-
-	input[type="text"],
-	input[type="email"],
-	input[type="url"],
-	textarea{
-		width: 100%;
-		max-width: 100%;	
-		padding: 0.5em;
-		border: 1px solid #e6e6e6;
-		outline: none;
-	}
-
-	textarea{
-		height: 200px;
-		resize: vertical;
-	}
-
-}
-
 input[type="text"],
 input[type="email"],
 textarea{
@@ -31,42 +6,59 @@ textarea{
 	outline: none;
 }
 
-fieldset{
-	margin: 0 0 1.2em 0;
-	padding: 0;
-	border:none;
+.gform_wrapper{
 
-	label{
-		display: block;
-		margin-bottom: 0.5em;
-		@include heavy;
-		text-transform: uppercase;
-	}
-}
+	.gfield{
+		margin: 0 0 1.2em 0;
+		padding: 0;
+		border:none;
+	
+		label{
+			display: block;
+			margin-bottom: 0.5em;
+			font-weight: normal !important;
+			@include heavy;
+			text-transform: uppercase;
+		}
 
-.form-help{
-	margin: 0.5em 0;
-	color: #e74c3c;
-	@extend .small;
-	font-style: italic;
-	text-align: right;
-}
+		.ginput_container{
+			input[type="text"],
+			input[type="email"],
+			input[type="url"],
+			textarea{
+				width: 100%;
+				max-width: 100%;	
+				padding: 0.5em;
+				font-size: 100%;
+				border: 1px solid #e6e6e6;
+				outline: none;
+			}
+		}
 
-.form-actions{
-	input[type="submit"]{
-		@extend button;
-		padding: 0.5em 1em;
-		color: #fff;
-		@extend %title;
-		@include heavy;
-		background-color: #000;
-		border: 1px solid transparent;
-		@include transition(all,.3s);
-		
-		&:hover{
-			color: #000;
-			background-color: #fff;
-			border: 1px solid #000;
-		}	
-	}
-}// .form-actions
+		&.gfield_error{
+			color: #e74c3c;
+			@extend .small;
+			background: none !important;
+		}
+	}// .gfield
+
+	.gform_footer{
+		input[type="submit"]{
+			@extend button;
+			padding: 0.5em 1em;
+			color: #fff;
+			@extend %title;
+			@include heavy;
+			background-color: #000;
+			border: 1px solid transparent;
+			@include transition(all,.3s);
+			
+			&:hover{
+				color: #000;
+				background-color: #fff;
+				border: 1px solid #000;
+			}	
+		}
+	}// .gform_footer
+
+}// .gform_wrapper

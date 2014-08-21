@@ -83,6 +83,7 @@ $orange : #D45703;
 .live-bg{
 	color: #000;
 	background-color: #FFD20D;
+	border-top: 1px solid black;
 
 		.icon-badge:after{
 			@extend %icon;

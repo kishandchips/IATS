@@ -97,12 +97,12 @@ class Primary_Nav_Walker extends Walker_Nav_Menu {
 		?>
 
         <div class="menu-item-posts clearfix">
-	        <?php $args = array(
+	        <?php $args2 = array(
 	        	'posts_per_page' => 3,
 	        	'cat' => $item->object_id
 	        ); ?>
 
-	        <?php $latest = get_posts($args); ?>
+	        <?php $latest = get_posts($args2); ?>
 
 	        <?php foreach ($latest as $post): setup_postdata( $post );?>
 	        	<a href="<?php echo get_the_permalink($post->ID); ?> ">

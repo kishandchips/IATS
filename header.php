@@ -17,25 +17,21 @@
         <![endif]-->
 
         <div id="joebudden" class="container">
-            <section id="header" class="clearfix">
-                <div class="header-top clearfix">
-                    <div class="logo">
-                        <a href="<?php echo bloginfo('url' ); ?>">
-                            <!-- <i class="icon-logo"></i>  -->
-                            <i class="icon-typelogo"></i>    
-                        </a>
-                    </div><!-- .logo -->
-                    
-                    <div class="advert">
-                        <div class="add">
-                        </div>
-                    </div>                    
+            <div class="section advertisement">
+                <div class="advert">
+                    advertising
                 </div>
+            </div>
+            <section id="header" class="clearfix">
+                <div class="logo">
+                    <a href="<?php bloginfo('url' ); ?>">
+                        <i class="icon-typelogo"></i>    
+                    </a>
+                </div><!-- .logo -->
 
                 <div class="mob-menu">
                     <button id="menu-toggle" aria-role="toggle menu">
-                        MENU
-                        <i class="icon-arrow-down"></i>
+                        <i class="icon-menu"></i>
                     </button>                    
                 </div><!-- .mob-menu -->
 

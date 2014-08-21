@@ -83,6 +83,7 @@ var main = {
 			//sliders
 			currentSlider.addClass('active').show();
 			$('#home .latest .slider').not('.' + slider).removeClass('active');
+			$(window).trigger('resize');
 			
 		});
 	},
@@ -111,7 +112,7 @@ var main = {
 			},
 
 			resize: function(){
-				var height = main.components.vars.sidebar.outerHeight();
+				var height = main.components.vars.sidebar.height();
 				var containerheight = main.components.vars.content.outerHeight();
 
 				if(containerheight < height){

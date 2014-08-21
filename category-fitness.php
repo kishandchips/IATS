@@ -23,6 +23,7 @@
 			<div class="section-content column col-7">
 
 			<div id="isotope" class="articles row">
+			<?php query_posts( 'posts_per_page=9' ); ?>
 				<?php if(have_posts()): while(have_posts()): the_post(); ?>
 				<?php $format = get_post_format(); ?>
 

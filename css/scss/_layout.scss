@@ -24,11 +24,13 @@
 		position:relative;
 		float:left;
 		width: 30%;
-		min-width: 350px;
-		height:150px;
+		min-width: 250px;
+		// height:150px;
+		height: 60px;
+		background-color: #177248;
 		z-index: 20;
 
-		@media screen and (max-width:1200px){
+		@media screen and (max-width:1250px){
 			width: 100%;
 		}
 
@@ -39,28 +41,14 @@
 			@extend .valign;
 		}
 
-		.icon-typelogo, .icon-logo{
+		.icon-typelogo{
 			display: inline-block;
-			color: #203f4c;
+			color: #fff;
 			vertical-align: middle
 		}
 
 		.icon-typelogo{
 			font-size: 3em;
-
-			@media screen and (max-width:500px){
-				display: none;
-			}
-		}
-
-		.icon-logo{
-			margin-right: 0.3em;
-			font-size: 5em;
-
-			@media screen and (max-width:500px){
-				margin: 0;
-				text-align: center;
-			}
 		}
 	}
 
@@ -76,10 +64,6 @@
 			margin-top: 32px;
 			border: 1px solid black;
 		}
-
-		@media screen and (max-width:1200px){
-			display: none;
-		}
 	}
 
 	.mob-menu{
@@ -90,7 +74,8 @@
 		z-index: 25;
 
 		#menu-toggle{
-			padding: 0.5em 0;
+			padding:1em 0;	
+			width: 100%;
 			color: #fff;
 			font-size: 1em;
 			@include heavy;
@@ -98,7 +83,7 @@
 		}
 	}//.mob-menu
 
-	@media screen and (max-width: 1100px){
+	@media screen and (max-width: 1000px){
 		.mob-menu{
 			display: inline-block;
 		}
@@ -157,7 +142,7 @@
 		@include opacity(0);
 		@include transition(all, .3s);
 
-		@media screen and (max-width:900px){
+		@media screen and (max-width:1000px){
 			display: none;
 		}
 
@@ -192,9 +177,15 @@
 
 #main-nav{
 	position: relative;
+	float: left;
+	width:70%;
 	line-height:60px;
 	background-color: #000;
 	z-index: 5;
+
+	@media screen and (max-width:1250px){
+		width: 100%;
+	}
 
 	ul.menu{
 
@@ -209,7 +200,7 @@
 					font-size: 1.5em;
 					vertical-align: middle;
 
-					@media screen and (max-width:900px){
+					@media screen and (max-width:1000px){
 						display: none;
 					}
 				}
@@ -253,7 +244,6 @@
 
 				.menu-item-posts{
 					background-color: #6f87d8;
-					// border-bottom: 5px solid $dblue;
 				}
 			}//.schools
 
@@ -278,7 +268,6 @@
 
 				.menu-item-posts{
 					background-color: #822b2c;
-					// border-bottom:5px solid $dred;
 				}
 			}//.uni
 
@@ -302,9 +291,14 @@
 
 				}
 
+				@media screen and (min-width:1250px) and (max-width:1400px){
+					.sub-menu{
+						left:auto;right:0;
+					}
+				}
+
 				.menu-item-posts{
 					background-color: #b15c88;
-					// border-bottom: 5px solid $dpurple;
 				}
 			}//.rep
 
@@ -328,9 +322,14 @@
 
 				}
 
+				@media screen and (min-width:1250px) and (max-width:1400px){
+					.sub-menu{
+						left:auto;right:0;
+					}
+				}
+
 				.menu-item-posts{
 					background-color: #e38782;
-					// border-bottom: 5px solid $dpink;
 				}
 			}
 
@@ -352,7 +351,7 @@
 		width: 600px;
 		@extend .invisible;
 		@include transition(all,.3s);
-		z-index: 50;
+		// z-index: 50;
 
 		li.menu-item{
 			line-height: 40px;
@@ -386,7 +385,7 @@
 
 		>a{
 			display: inline-block;
-			padding: 0 2em;
+			padding: 0 1em;
 			color: #fff;
 			font-size: 12px;
 			text-transform: uppercase;
@@ -513,6 +512,7 @@
 
 				a{
 					color: #000;
+					border-bottom: none;
 				}
 			}
 
@@ -1035,10 +1035,10 @@ article{
 
 		
 		.live-fixed{
-			// display: none;
 			width: 100%;
 			color: #000;
 			background-color: #FFD20D;
+			border-top: 1px solid black;
 			@media screen and (max-width: 1000px){
 				display: block;
 			}
@@ -1271,12 +1271,16 @@ article{
 	}// HERO
 
 	&.latest-cat-articles{
+		position: absolute;
 		padding-left:0;
 		padding-right:0;
 		@extend .invisible;
 		@include transition(all,.3s);
 
 		&.active{
+			position: relative;
+			height: auto;
+			width: auto;
 			@extend .visible;
 		}
 
