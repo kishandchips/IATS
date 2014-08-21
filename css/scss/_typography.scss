@@ -36,11 +36,6 @@ a{
 	text-decoration: none;
 }
 
-#content{
-	a{
-		@extend %link;
-	}
-}
 .small{
 	font-size: 0.75em;
 }

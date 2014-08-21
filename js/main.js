@@ -8,6 +8,7 @@ var main = {
 		this.listeners();
 		this.components.init();
 		this.flexsliderSwitch();
+		this.live();
 
 		$(window).resize(function(){
 			main.sticky();
@@ -139,6 +140,11 @@ var main = {
 		}
 	},
 
+	live: function(){
+	    setInterval(function() { // Do this
+            location.reload();
+      	}, 10000); // Every one second
+	}
 };//main
 
 	$(window).load(function(){

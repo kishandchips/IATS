@@ -151,4 +151,10 @@ article{
 			content: "\e614";			
 		}
 	}
+	&.media{
+		.icon-badge:after{
+			@extend %icon;
+			content: "\e60e";			
+		}
+	}
 }

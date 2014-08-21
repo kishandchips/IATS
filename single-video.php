@@ -13,22 +13,22 @@
 	<div id="content">
 		<?php if(have_posts()): while(have_posts()): the_post(); ?>
 		<article class="<?php echo $category_name ?>">
-			<div class="mediadark-bg">
+<!-- 			<div class="mediadark-bg">
 				<div class="video-wrapper">
 					<div class="video">
 
 					</div>					
 				</div>
-			</div>
+			</div> -->
 
 			<div class="medialight-bg">
 				<div class="video-wrapper">
 					<div class="video-content">
-						<div class="category">
+<!-- 						<div class="category">
 							<a href="<?php echo $category_link ?>">
 								<p class="cat-title"><?php echo $category_name ?><i class="icon-badge"></i></p>
 							</a>
-						</div>
+						</div> -->
 
 						<h2 class="title"><?php the_title(); ?></h2>
 

@@ -217,6 +217,7 @@
 				>.sub-menu{
 					@extend .visible;
 					z-index: 90;
+					height: auto;
 				}
 				a{
 					color: #000;
@@ -349,6 +350,7 @@
 		position:absolute;
 		top: 100%;left:0;
 		width: 600px;
+		height:0;
 		@extend .invisible;
 		@include transition(all,.3s);
 		// z-index: 50;
@@ -778,6 +780,16 @@ article{
 		}
 	}				
 	
+	&.media{
+		.cat-title{
+			background-color: #005375;
+
+			i{
+				background-color: #00364D;
+			}	
+		}
+	}
+
 	.image{
 		height:300px;
 		background-size: cover;
