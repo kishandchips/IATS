@@ -146,7 +146,7 @@ var main = {
 
 	    setInterval(function() { // Do this
             location.reload();
-      	}, 10000); // Every one second
+      	}, 300000); // Every one second
 	}
 };//main
 
