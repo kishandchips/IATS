@@ -1154,13 +1154,13 @@ nav ul {
   visibility: hidden; }
 
 /* line 35, scss/_misc.scss */
-.invisible, #header .search-bar, #main-nav ul.sub-menu, #main-nav .menu-item-posts .menu-item-post, .slider.latest-cat-articles {
+.invisible, #header .search-bar, #main-nav .menu-item-posts .menu-item-post, .slider.latest-cat-articles {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   visibility: hidden; }
 
 /* line 40, scss/_misc.scss */
-.visible, #header .search-bar.visible, #main-nav ul.menu > li.menu-item:hover > .sub-menu, #main-nav ul.sub-menu li.menu-item.visible .menu-item-post, .slider.latest-cat-articles.active {
+.visible, #header .search-bar.visible, #main-nav ul.sub-menu li.menu-item.visible .menu-item-post, .slider.latest-cat-articles.active {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
   visibility: visible; }
@@ -1195,7 +1195,7 @@ span.vertical {
   vertical-align: middle; }
 
 /* line 71, scss/_misc.scss */
-.schools-bg .icon-badge:after, .university-bg .icon-badge:after, .representative-bg .icon-badge:after, .sevens-bg .icon-badge:after, .around-the-game-bg .icon-badge:after, .fitness-bg .icon-badge:after, .live-bg .icon-badge:after, .media-bg .icon-badge:after, article.schools .icon-badge:after, article.university .icon-badge:after, article.representative .icon-badge:after, article.sevens .icon-badge:after, article.around-the-game .icon-badge:after, article.fitness .icon-badge:after, article.nutrition .icon-badge:after, article.training .icon-badge:after, article.media .icon-badge:after, button.search:after, .gform_wrapper .gform_footer input.search[type="submit"]:after, #fohohfoh .message form input.search[type="submit"]:after, .button.cat-filter.active:after, #main-nav ul.menu > li.menu-item-has-children > a:after, #main-nav ul.sub-menu li.menu-item.visible > a:after, #main-nav ul.sub-menu ul.menu > li.menu-item:hover > li.menu-item.sub-menu > a:after, #main-nav ul.sub-menu li.menu-item.visible li.menu-item.menu-item-post > a:after, #main-nav ul.sub-menu li.menu-item.slider.latest-cat-articles.active > a:after, article.video .image:after, .category-around-the-game #page-header .icon-badge:after {
+.schools-bg .icon-badge:after, .university-bg .icon-badge:after, .representative-bg .icon-badge:after, .sevens-bg .icon-badge:after, .around-the-game-bg .icon-badge:after, .fitness-bg .icon-badge:after, .live-bg .icon-badge:after, .media-bg .icon-badge:after, article.schools .icon-badge:after, article.university .icon-badge:after, article.representative .icon-badge:after, article.sevens .icon-badge:after, article.around-the-game .icon-badge:after, article.fitness .icon-badge:after, article.nutrition .icon-badge:after, article.training .icon-badge:after, article.media .icon-badge:after, button.search:after, .gform_wrapper .gform_footer input.search[type="submit"]:after, #fohohfoh .message form input.search[type="submit"]:after, .button.cat-filter.active:after, #main-nav ul.menu > li.menu-item-has-children > a:after, #main-nav ul.sub-menu li.menu-item.visible > a:after, #main-nav ul.sub-menu li.menu-item.visible li.menu-item.menu-item-post > a:after, #main-nav ul.sub-menu li.menu-item.slider.latest-cat-articles.active > a:after, article.video .image:after, .category-around-the-game #page-header .icon-badge:after {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -1450,7 +1450,7 @@ textarea {
       width: 100%;
       background-color: #fff; }
       /* line 101, scss/_layout.scss */
-      #header #main-nav.visible, #header #main-nav ul.menu > li.menu-item:hover > #main-nav.sub-menu, #main-nav #header ul.menu > li.menu-item:hover > #main-nav.sub-menu, #header #main-nav ul.sub-menu li.menu-item.visible #main-nav.menu-item-post, #main-nav ul.sub-menu li.menu-item.visible #header #main-nav.menu-item-post, #header #main-nav.slider.latest-cat-articles.active {
+      #header #main-nav.visible, #header #main-nav ul.sub-menu li.menu-item.visible #main-nav.menu-item-post, #main-nav ul.sub-menu li.menu-item.visible #header #main-nav.menu-item-post, #header #main-nav.slider.latest-cat-articles.active {
         position: relative;
         max-height: 600px;
         filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -1510,7 +1510,7 @@ textarea {
       border: none;
       outline: none; }
     /* line 170, scss/_layout.scss */
-    #header .search-bar.visible, #header #main-nav ul.menu > li.menu-item:hover > .search-bar.sub-menu, #main-nav #header ul.menu > li.menu-item:hover > .search-bar.sub-menu, #header #main-nav ul.sub-menu li.menu-item.visible .search-bar.menu-item-post, #main-nav ul.sub-menu li.menu-item.visible #header .search-bar.menu-item-post, #header .search-bar.slider.latest-cat-articles.active {
+    #header .search-bar.visible, #header #main-nav ul.sub-menu li.menu-item.visible .search-bar.menu-item-post, #main-nav ul.sub-menu li.menu-item.visible #header .search-bar.menu-item-post, #header .search-bar.slider.latest-cat-articles.active {
       top: 100%; }
 
 /* line 178, scss/_layout.scss */
@@ -1547,7 +1547,7 @@ textarea {
       background-color: #fff; }
       /* line 217, scss/_layout.scss */
       #main-nav ul.menu > li.menu-item:hover > .sub-menu {
-        z-index: 90;
+        display: block;
         height: auto; }
       /* line 222, scss/_layout.scss */
       #main-nav ul.menu > li.menu-item:hover a {
@@ -1562,7 +1562,7 @@ textarea {
       #main-nav ul.menu > li.menu-item.schools:hover .sub-menu {
         background-color: #4968d1; }
         /* line 239, scss/_layout.scss */
-        #main-nav ul.menu > li.menu-item.schools:hover .sub-menu .menu-item.visible a:after, #main-nav ul.menu > li.menu-item.schools:hover .sub-menu ul.menu > li.menu-item:hover > .menu-item.sub-menu a:after, #main-nav ul.menu > li.menu-item.schools:hover .sub-menu .menu-item.slider.latest-cat-articles.active a:after {
+        #main-nav ul.menu > li.menu-item.schools:hover .sub-menu .menu-item.visible a:after, #main-nav ul.menu > li.menu-item.schools:hover .sub-menu .menu-item.slider.latest-cat-articles.active a:after {
           color: #6f87d8; }
     /* line 246, scss/_layout.scss */
     #main-nav ul.menu > li.menu-item.schools .menu-item-posts {
@@ -1577,7 +1577,7 @@ textarea {
       #main-nav ul.menu > li.menu-item.university:hover .sub-menu {
         background-color: #b74144; }
         /* line 263, scss/_layout.scss */
-        #main-nav ul.menu > li.menu-item.university:hover .sub-menu .menu-item.visible a:after, #main-nav ul.menu > li.menu-item.university:hover .sub-menu ul.menu > li.menu-item:hover > .menu-item.sub-menu a:after, #main-nav ul.menu > li.menu-item.university:hover .sub-menu .menu-item.slider.latest-cat-articles.active a:after {
+        #main-nav ul.menu > li.menu-item.university:hover .sub-menu .menu-item.visible a:after, #main-nav ul.menu > li.menu-item.university:hover .sub-menu .menu-item.slider.latest-cat-articles.active a:after {
           color: #822b2c; }
     /* line 270, scss/_layout.scss */
     #main-nav ul.menu > li.menu-item.university .menu-item-posts {
@@ -1592,7 +1592,7 @@ textarea {
       #main-nav ul.menu > li.menu-item.representative:hover .sub-menu {
         background-color: #9f3069; }
         /* line 287, scss/_layout.scss */
-        #main-nav ul.menu > li.menu-item.representative:hover .sub-menu .menu-item.visible a:after, #main-nav ul.menu > li.menu-item.representative:hover .sub-menu ul.menu > li.menu-item:hover > .menu-item.sub-menu a:after, #main-nav ul.menu > li.menu-item.representative:hover .sub-menu .menu-item.slider.latest-cat-articles.active a:after {
+        #main-nav ul.menu > li.menu-item.representative:hover .sub-menu .menu-item.visible a:after, #main-nav ul.menu > li.menu-item.representative:hover .sub-menu .menu-item.slider.latest-cat-articles.active a:after {
           color: #b15c88; }
     @media screen and (min-width: 1250px) and (max-width: 1400px) {
       /* line 296, scss/_layout.scss */
@@ -1612,7 +1612,7 @@ textarea {
       #main-nav ul.menu > li.menu-item.sevens:hover .sub-menu {
         background-color: #df6862; }
         /* line 318, scss/_layout.scss */
-        #main-nav ul.menu > li.menu-item.sevens:hover .sub-menu .menu-item.visible a:after, #main-nav ul.menu > li.menu-item.sevens:hover .sub-menu ul.menu > li.menu-item:hover > .menu-item.sub-menu a:after, #main-nav ul.menu > li.menu-item.sevens:hover .sub-menu .menu-item.slider.latest-cat-articles.active a:after {
+        #main-nav ul.menu > li.menu-item.sevens:hover .sub-menu .menu-item.visible a:after, #main-nav ul.menu > li.menu-item.sevens:hover .sub-menu .menu-item.slider.latest-cat-articles.active a:after {
           color: #e38782; }
     @media screen and (min-width: 1250px) and (max-width: 1400px) {
       /* line 327, scss/_layout.scss */
@@ -1634,7 +1634,7 @@ textarea {
     top: 100%;
     left: 0;
     width: 600px;
-    height: 0;
+    display: none;
     -moz-transition: all, 0.3s;
     -o-transition: all, 0.3s;
     -webkit-transition: all, 0.3s;
@@ -1643,13 +1643,13 @@ textarea {
     #main-nav ul.sub-menu li.menu-item {
       line-height: 40px; }
       /* line 362, scss/_layout.scss */
-      #main-nav ul.sub-menu li.menu-item.visible .menu-item-post, #main-nav ul.sub-menu ul.menu > li.menu-item:hover > li.menu-item.sub-menu .menu-item-post, #main-nav ul.sub-menu li.menu-item.slider.latest-cat-articles.active .menu-item-post {
+      #main-nav ul.sub-menu li.menu-item.visible .menu-item-post, #main-nav ul.sub-menu li.menu-item.slider.latest-cat-articles.active .menu-item-post {
         z-index: 10; }
       /* line 366, scss/_layout.scss */
-      #main-nav ul.sub-menu li.menu-item.visible > a, #main-nav ul.sub-menu ul.menu > li.menu-item:hover > li.menu-item.sub-menu > a, #main-nav ul.sub-menu li.menu-item.visible li.menu-item.menu-item-post > a, #main-nav ul.sub-menu li.menu-item.slider.latest-cat-articles.active > a {
+      #main-nav ul.sub-menu li.menu-item.visible > a, #main-nav ul.sub-menu li.menu-item.visible li.menu-item.menu-item-post > a, #main-nav ul.sub-menu li.menu-item.slider.latest-cat-articles.active > a {
         position: relative; }
         /* line 368, scss/_layout.scss */
-        #main-nav ul.sub-menu li.menu-item.visible > a:after, #main-nav ul.sub-menu ul.menu > li.menu-item:hover > li.menu-item.sub-menu > a:after, #main-nav ul.sub-menu li.menu-item.visible li.menu-item.menu-item-post > a:after, #main-nav ul.sub-menu li.menu-item.slider.latest-cat-articles.active > a:after {
+        #main-nav ul.sub-menu li.menu-item.visible > a:after, #main-nav ul.sub-menu li.menu-item.visible li.menu-item.menu-item-post > a:after, #main-nav ul.sub-menu li.menu-item.slider.latest-cat-articles.active > a:after {
           position: absolute;
           bottom: -5px;
           left: 0;

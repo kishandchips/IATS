@@ -13,13 +13,15 @@
 	<div id="content">
 		<?php if(have_posts()): while(have_posts()): the_post(); ?>
 		<article class="<?php echo $category_name ?>">
-<!-- 			<div class="mediadark-bg">
+		<?php if(get_field('video')): ?>
+			<div class="mediadark-bg">
 				<div class="video-wrapper">
 					<div class="video">
-
+					<?php the_field('video'); ?>
 					</div>					
 				</div>
-			</div> -->
+			</div>
+		<?php endif; ?>
 
 			<div class="medialight-bg">
 				<div class="video-wrapper">

@@ -141,6 +141,9 @@ var main = {
 	},
 
 	live: function(){
+		var element = $('#live');
+		if(!element.length){return false;}
+
 	    setInterval(function() { // Do this
             location.reload();
       	}, 10000); // Every one second

@@ -215,8 +215,8 @@
 			&:hover{
 				background-color: #fff;
 				>.sub-menu{
-					@extend .visible;
-					z-index: 90;
+					display: block;
+					// @extend .visible;
 					height: auto;
 				}
 				a{
@@ -350,8 +350,8 @@
 		position:absolute;
 		top: 100%;left:0;
 		width: 600px;
-		height:0;
-		@extend .invisible;
+		display: none;
+		// @extend .invisible;
 		@include transition(all,.3s);
 		// z-index: 50;
 
