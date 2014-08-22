@@ -2151,7 +2151,7 @@ article {
     right: 1em; }
   /* line 927, scss/_layout.scss */
   .slider article.eastside .meta {
-    right: 0; }
+    right: 5px; }
   /* line 931, scss/_layout.scss */
   .slider article.eastside .image {
     float: left; }
@@ -2163,7 +2163,7 @@ article {
     left: 1em; }
   /* line 944, scss/_layout.scss */
   .slider article.westside .meta {
-    left: 0; }
+    left: 5px; }
   /* line 948, scss/_layout.scss */
   .slider article.westside .image {
     float: right; }
