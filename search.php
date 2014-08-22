@@ -57,6 +57,8 @@
 
 				$big = 999999999; // need an unlikely integer
 
+				echo $wp_query->max_num_pages;
+
 				echo paginate_links( array(
 					'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 					'format' => '?paged=%#%',

@@ -26,7 +26,6 @@ var main = {
 			catToggle = $('.cat-toggle');
 
 		search.on('click', function(){
-			console.log('clicked');
 			searchBar.toggleClass('visible');
 		});
 
@@ -97,7 +96,7 @@ var main = {
 			this.vars.body = $('body');
 			this.vars.sidebarButton = $('#js-sidebar');
 			this.vars.sidebar = $('#sidebar');
-			this.vars.content = $('#sidebar').siblings('.section-content');
+			this.vars.content = $('#sidebar').parent('.inner-container');
 			this.vars.filter = $('#filter-select');
 			
 			this.sidebar.trigger();
@@ -113,11 +112,11 @@ var main = {
 			},
 
 			resize: function(){
-				var height = main.components.vars.sidebar.height();
-				var containerheight = main.components.vars.content.outerHeight();
+				var sidebarHeight = main.components.vars.sidebar.height();
+				var containerHeight = main.components.vars.content.outerHeight();
 
-				if(containerheight < height){
-					main.components.vars.content.css('height', height);
+				if(containerHeight < sidebarHeight){
+					main.components.vars.content.css('height', sidebarHeight);
 				}else{
 					main.components.vars.content.css('height', 'auto');
 				}
@@ -146,7 +145,7 @@ var main = {
 
 	    setInterval(function() { // Do this
             location.reload();
-      	}, 300000); // Every one second
+      	}, 30000); // Every one second
 	}
 };//main
 

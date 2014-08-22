@@ -471,14 +471,27 @@ body.single{
 
 		.video{
 			position: relative;
-	    	padding-top: 75%;
+			padding-top:75%;
+			width:100% !important;
+
+			.wp-video{
+				position: absolute;
+				top: 0;
+				bottom: 0;
+			}
+
+			.mejs-video, .mejs-overlay{
+				width:100% !important;
+				height:100% !important;
+			}
 
 			iframe,
 			object,
+			video,
 			embed {
 				position: absolute;
 				top: 0;
-					left: 0;
+				left: 0;
 				width: 100%;
 				height: 100%;
 			}
@@ -526,6 +539,21 @@ body.single{
  			@extend .xlarge;
 			@include heavy;
 			text-transform: uppercase;
+ 		}
+
+ 		.description{
+ 			position:relative;
+
+ 			iframe,
+			object,
+			video,
+			embed {
+				position: relative;
+				top: 0;
+				left: 0;
+				width: 100%;
+				margin: 2em auto;
+ 			}
  		}
  	}// .video-content
 
@@ -654,6 +682,17 @@ body.single{
 
 			a{
 				@extend %link;
+			}
+
+			iframe,
+			object,
+			video,
+			embed {
+				position: relative;
+				top: 0;
+				left: 0;
+				width: 100%;
+				margin: 2em auto;				
 			}
 		}
 
