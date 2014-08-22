@@ -23,29 +23,31 @@
 			<div class="section-content column col-7">
 
 			<div id="isotope" class="articles row">
-			<?php query_posts( 'posts_per_page=9' ); ?>
 				<?php if(have_posts()): while(have_posts()): the_post(); ?>
 				<?php $format = get_post_format(); ?>
 
 					<article class="column col-1-3 <?php echo fitness_cat(); ?> <?php echo $format; ?>">
 						<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-						<div class="image" style="background-image:url(<?php echo $url; ?>)">
-							<?php if($format == 'gallery'): ?>
-								<?php $images = get_field('gallery', $post->ID) ?>
-								<?php $count = count($images); ?>
-								<span class="gallery-count"> 
-									<i class="icon-gallery"></i>
-									<span class="count">
-									<?php echo $count; ?>
+						<a href="<?php the_permalink(); ?> ">
+							<div class="image" style="background-image:url(<?php echo $url; ?>)">
+								<?php if($format == 'gallery'): ?>
+									<?php $images = get_field('gallery', $post->ID) ?>
+									<?php $count = count($images); ?>
+									<span class="gallery-count"> 
+										<i class="icon-gallery"></i>
+										<span class="count">
+										<?php echo $count; ?>
+										</span>
 									</span>
-								</span>
-							<?php endif; ?>
-						</div>
+								<?php endif; ?>
+							</div>
+						</a>
+
 						<div class="meta">
 							<div class="category out">
 								<p class="cat-title"><?php echo fitness_cat(); ?><i class="icon-badge"></i></p>
 							</div>	
-							<div class="title match-height">
+							<div class="title">
 								<a href="<?php the_permalink(); ?>">
 									<h2><?php the_title(); ?></h2>
 								</a>

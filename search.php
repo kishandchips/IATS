@@ -11,26 +11,30 @@
 				<h4 class="title">Search Results</h4>
 			</header>
 				<div class="articles row">
-					<?php query_posts( array( 'post_type' => 'post','posts_per_page' => 5) ); ?>
 					<?php if(have_posts()): while (have_posts()): the_post(); ?>
-					<?php $category_name = top_level_cat(); ?>
-					<?php $category_link = get_category_link(top_level_cat()); ?>
+					<?php $categoryid = top_level_cat(); ?>
+					<?php $category =  get_category($categoryid); ?>
+					<?php $category_name = strtolower($category->name); ?>
+					<?php $category_link = get_category_link($categoryid); ?>
 					<?php $format = get_post_format(); ?>
 
 						<article class="medua column col-full <?php echo $category_name ?> <?php echo $format; ?>">
 							<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-							<div class="image" style="background-image:url(<?php echo $url; ?>)">
-								<?php if($format == 'gallery'): ?>
-									<?php $images = get_field('gallery', $post->ID) ?>
-									<?php $count = count($images); ?>
-									<span class="gallery-count"> 
-										<i class="icon-gallery"></i>
-										<span class="count">
-										<?php echo $count; ?>
+							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+								<div class="image" style="background-image:url(<?php echo $url; ?>)">
+									<?php if($format == 'gallery'): ?>
+										<?php $images = get_field('gallery', $post->ID) ?>
+										<?php $count = count($images); ?>
+										<span class="gallery-count"> 
+											<i class="icon-gallery"></i>
+											<span class="count">
+											<?php echo $count; ?>
+											</span>
 										</span>
-									</span>
-								<?php endif; ?>
-							</div>
+									<?php endif; ?>
+								</div>
+							</a>
+
 							<div class="meta">
 								<div class="category out">
 									<a href="<?php echo $category_link; ?>">
@@ -56,8 +60,6 @@
 				global $wp_query;
 
 				$big = 999999999; // need an unlikely integer
-
-				echo $wp_query->max_num_pages;
 
 				echo paginate_links( array(
 					'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),

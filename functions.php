@@ -116,7 +116,7 @@ function top_level_cat(){
 	$categories = get_the_category();
 	foreach ($categories as $category) {
 		if($category->category_parent == 0){
-			return $category->slug;
+			return $category->term_id;
 		}
 	}
 }

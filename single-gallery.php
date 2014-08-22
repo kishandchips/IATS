@@ -37,14 +37,8 @@
 		<?php endif; ?>
 
 			<div class="medialight-bg">
-				<div class="video-wrapper">
-					<div class="video-content">
-						<div class="category">
-							<a href="<?php echo $category_link ?>">
-								<p class="cat-title"><?php echo $category_name ?><i class="icon-badge"></i></p>
-							</a>
-						</div>
-
+				<div class="media-wrapper">
+					<div class="media-content">
 						<h2 class="title"><?php the_title(); ?></h2>
 
 						<div class="page-meta">
@@ -117,14 +111,17 @@
 					<li class="clearfix">
 
 						<?php while($related_media->have_posts()): $related_media->the_post(); ?>
-						<?php $category_name = top_level_cat(); ?>
-						<?php $category_link = get_category_link(top_level_cat()); ?>
+						<?php $categoryid = top_level_cat(); ?>
+						<?php $category =  get_category($categoryid); ?>
+						<?php $category_name = strtolower($category->name); ?>
+						<?php $category_link = get_category_link($categoryid); ?>
+
 						<?php $format = get_post_format(); ?>
 
 						<article class="slide-col column col-1-4 <?php echo $category_name ?> <?php echo $format; ?>">
-							<a href="#" title="Post Title">
-								<article class="single">
-									<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+							<article class="single">
+								<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 									<div class="image" style="background-image:url(<?php echo $url; ?>);">
 										<?php if($format == 'gallery'): ?>
 											<?php $images = get_field('gallery', $post->ID) ?>
@@ -137,23 +134,24 @@
 											</span>
 										<?php endif; ?>
 									</div>
-									<div class="meta">
-										<div class="category out">
-											<a href="<?php echo $category_link ?>"><!-- CATEGORY LINK -->
-												<p class="cat-title"><?php echo $category_name ?><i class="icon-badge"></i></p>										
-											</a>
-										</div>	
-										<div class="title match-height">
-											<a href="<?php the_permalink(); ?>"><!-- POST LINK -->
-												<h2><?php the_title(); ?></h2>
-											</a>
-										</div>
-										<div class="misc">
-											<span class="date"><?php the_time('m M Y'); ?></span>
-										</div>
-									</div>				
-								</article>
-							</a>	
+								</a>
+
+								<div class="meta">
+									<div class="category out">
+										<a href="<?php echo $category_link ?>"><!-- CATEGORY LINK -->
+											<p class="cat-title"><?php echo $category_name ?><i class="icon-badge"></i></p>										
+										</a>
+									</div>	
+									<div class="title match-height">
+										<a href="<?php the_permalink(); ?>"><!-- POST LINK -->
+											<h2><?php the_title(); ?></h2>
+										</a>
+									</div>
+									<div class="misc">
+										<span class="date"><?php the_time('m M Y'); ?></span>
+									</div>
+								</div>				
+							</article>
 						</article>
 						<?php endwhile; ?>
 					</li><!-- slide item -->
@@ -210,30 +208,33 @@
 					<li class="clearfix">
 
 						<?php while($related_articles->have_posts()): $related_articles->the_post(); ?>
-						<?php $category_name = top_level_cat(); ?>
-						<?php $category_link = get_category_link(top_level_cat()); ?>	
+						<?php $categoryid = top_level_cat(); ?>
+						<?php $category =  get_category($categoryid); ?>
+						<?php $category_name = strtolower($category->name); ?>
+						<?php $category_link = get_category_link($categoryid); ?>
 
 						<article class="slide-col column col-1-4 <?php echo $category_name ?>">
-							<a href="#" title="Post Title">
-								<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+							<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 								<div class="image" style="background-image:url(<?php echo $url; ?>);">
 								</div>
-								<div class="meta">
-									<div class="category out">
-										<a href="<?php echo $category_link ?>"><!-- CATEGORY LINK -->
-											<p class="cat-title"><?php echo $category_name ?><i class="icon-badge"></i></p>										
-										</a>
-									</div>	
-									<div class="title match-height">
-										<a href="<?php the_permalink(); ?>"><!-- POST LINK -->
-											<h2><?php the_title(); ?></h2>
-										</a>
-									</div>
-									<div class="misc">
-										<span class="date"><?php the_time('m M Y'); ?></span>
-									</div>
-								</div>				
-							</a>	
+							</a>
+
+							<div class="meta">
+								<div class="category out">
+									<a href="<?php echo $category_link ?>"><!-- CATEGORY LINK -->
+										<p class="cat-title"><?php echo $category_name ?><i class="icon-badge"></i></p>										
+									</a>
+								</div>	
+								<div class="title match-height">
+									<a href="<?php the_permalink(); ?>"><!-- POST LINK -->
+										<h2><?php the_title(); ?></h2>
+									</a>
+								</div>
+								<div class="misc">
+									<span class="date"><?php the_time('m M Y'); ?></span>
+								</div>
+							</div>				
 						</article>
 						<?php endwhile; ?>
 					</li><!-- slide item -->

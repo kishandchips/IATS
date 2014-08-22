@@ -62,7 +62,10 @@
 						<li class="clearfix">
 
 						<?php while($query->have_posts()): $query->the_post(); ?>					
-								<?php $category_name = top_level_cat(); ?>
+								<?php $categoryid = top_level_cat(); ?>
+								<?php $category =  get_category($categoryid); ?>
+								<?php $category_name = strtolower($category->name); ?>
+								<?php $category_link = get_category_link($categoryid); ?>
 								<?php $format = get_post_format(); ?>
 
 								<?php if($i % 3 == 0): ?>
@@ -74,19 +77,21 @@
 								<?php endif; ?>
 
 										<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-
-										<div class="image" style="background-image:url(<?php echo $url ?>)">
-										<?php if($format == 'gallery'): ?>
-											<?php $images = get_field('gallery', $post->ID) ?>
-											<?php $count = count($images); ?>
-											<span class="gallery-count"> 
-												<i class="icon-gallery"></i>
-												<span class="count">
-												<?php echo $count; ?>
+										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+											<div class="image" style="background-image:url(<?php echo $url ?>)">
+											<?php if($format == 'gallery'): ?>
+												<?php $images = get_field('gallery', $post->ID) ?>
+												<?php $count = count($images); ?>
+												<span class="gallery-count"> 
+													<i class="icon-gallery"></i>
+													<span class="count">
+													<?php echo $count; ?>
+													</span>
 												</span>
-											</span>
-										<?php endif; ?>
-										</div>
+											<?php endif; ?>
+											</div>
+										</a>
+
 										<div class="meta">
 											<div class="category out">
 												<a href="<?php echo $category_link; ?>">
@@ -192,8 +197,10 @@
 						<li class="clearfix">
 							<div class="row">	
 								<?php while($latest_query->have_posts()): $latest_query->the_post(); ?>					
-								<?php $category_name = top_level_cat(); ?>
-								<?php $category_link = get_category_link(top_level_cat()); ?>
+								<?php $categoryid = top_level_cat(); ?>
+								<?php $category =  get_category($categoryid); ?>
+								<?php $category_name = strtolower($category->name); ?>
+								<?php $category_link = get_category_link($categoryid); ?>
 								<?php $format = get_post_format(); ?>
 
 								<?php if($i % 4 == 0): ?>
@@ -203,19 +210,21 @@
 								<?php endif; ?>
 
 										<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-
-										<div class="image" style="background-image:url(<?php echo $url ?>)">
-										<?php if($format == 'gallery'): ?>
-											<?php $images = get_field('gallery', $post->ID) ?>
-											<?php $count = count($images); ?>
-											<span class="gallery-count"> 
-												<i class="icon-gallery"></i>
-												<span class="count">
-												<?php echo $count; ?>
+										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+											<div class="image" style="background-image:url(<?php echo $url ?>)">
+											<?php if($format == 'gallery'): ?>
+												<?php $images = get_field('gallery', $post->ID) ?>
+												<?php $count = count($images); ?>
+												<span class="gallery-count"> 
+													<i class="icon-gallery"></i>
+													<span class="count">
+													<?php echo $count; ?>
+													</span>
 												</span>
-											</span>
-										<?php endif; ?>
-										</div>
+											<?php endif; ?>
+											</div>
+										</a>
+
 										<div class="meta">
 											<div class="category out">
 												<a href="<?php echo $category_link; ?>">
@@ -271,8 +280,10 @@
 						<li class="clearfix">
 							<div class="row">	
 								<?php while($latest_query->have_posts()): $latest_query->the_post(); ?>					
-								<?php $category_name = top_level_cat(); ?>
-								<?php $category_link = get_category_link(top_level_cat()); ?>
+								<?php $categoryid = top_level_cat(); ?>
+								<?php $category =  get_category($categoryid); ?>
+								<?php $category_name = strtolower($category->name); ?>
+								<?php $category_link = get_category_link($categoryid); ?>
 								<?php $format = get_post_format(); ?>
 
 								<?php if($i % 4 == 0): ?>
@@ -282,19 +293,21 @@
 								<?php endif; ?>
 
 										<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-
-										<div class="image" style="background-image:url(<?php echo $url ?>)">
-										<?php if($format == 'gallery'): ?>
-											<?php $images = get_field('gallery', $post->ID) ?>
-											<?php $count = count($images); ?>
-											<span class="gallery-count"> 
-												<i class="icon-gallery"></i>
-												<span class="count">
-												<?php echo $count; ?>
+										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+											<div class="image" style="background-image:url(<?php echo $url ?>)">
+											<?php if($format == 'gallery'): ?>
+												<?php $images = get_field('gallery', $post->ID) ?>
+												<?php $count = count($images); ?>
+												<span class="gallery-count"> 
+													<i class="icon-gallery"></i>
+													<span class="count">
+													<?php echo $count; ?>
+													</span>
 												</span>
-											</span>
-										<?php endif; ?>
-										</div>
+											<?php endif; ?>
+											</div>
+										</a>
+
 										<div class="meta">
 											<div class="category out">
 												<a href="<?php echo $category_link; ?>">
@@ -350,8 +363,10 @@
 						<li class="clearfix">
 							<div class="row">	
 								<?php while($latest_query->have_posts()): $latest_query->the_post(); ?>					
-								<?php $category_name = top_level_cat(); ?>
-								<?php $category_link = get_category_link(top_level_cat()); ?>
+								<?php $categoryid = top_level_cat(); ?>
+								<?php $category =  get_category($categoryid); ?>
+								<?php $category_name = strtolower($category->name); ?>
+								<?php $category_link = get_category_link($categoryid); ?>
 								<?php $format = get_post_format(); ?>
 
 								<?php if($i % 4 == 0): ?>
@@ -361,19 +376,21 @@
 								<?php endif; ?>
 
 										<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-
-										<div class="image" style="background-image:url(<?php echo $url ?>)">
-										<?php if($format == 'gallery'): ?>
-											<?php $images = get_field('gallery', $post->ID) ?>
-											<?php $count = count($images); ?>
-											<span class="gallery-count"> 
-												<i class="icon-gallery"></i>
-												<span class="count">
-												<?php echo $count; ?>
+										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+											<div class="image" style="background-image:url(<?php echo $url ?>)">
+											<?php if($format == 'gallery'): ?>
+												<?php $images = get_field('gallery', $post->ID) ?>
+												<?php $count = count($images); ?>
+												<span class="gallery-count"> 
+													<i class="icon-gallery"></i>
+													<span class="count">
+													<?php echo $count; ?>
+													</span>
 												</span>
-											</span>
-										<?php endif; ?>
-										</div>
+											<?php endif; ?>
+											</div>
+										</a>
+
 										<div class="meta">
 											<div class="category out">
 												<a href="<?php echo $category_link; ?>">
@@ -429,8 +446,10 @@
 						<li class="clearfix">
 							<div class="row">	
 								<?php while($latest_query->have_posts()): $latest_query->the_post(); ?>					
-								<?php $category_name = top_level_cat(); ?>
-								<?php $category_link = get_category_link(top_level_cat()); ?>
+								<?php $categoryid = top_level_cat(); ?>
+								<?php $category =  get_category($categoryid); ?>
+								<?php $category_name = strtolower($category->name); ?>
+								<?php $category_link = get_category_link($categoryid); ?>
 								<?php $format = get_post_format(); ?>
 
 								<?php if($i % 4 == 0): ?>
@@ -440,19 +459,21 @@
 								<?php endif; ?>
 
 										<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-
-										<div class="image" style="background-image:url(<?php echo $url ?>)">
-										<?php if($format == 'gallery'): ?>
-											<?php $images = get_field('gallery', $post->ID) ?>
-											<?php $count = count($images); ?>
-											<span class="gallery-count"> 
-												<i class="icon-gallery"></i>
-												<span class="count">
-												<?php echo $count; ?>
+										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+											<div class="image" style="background-image:url(<?php echo $url ?>)">
+											<?php if($format == 'gallery'): ?>
+												<?php $images = get_field('gallery', $post->ID) ?>
+												<?php $count = count($images); ?>
+												<span class="gallery-count"> 
+													<i class="icon-gallery"></i>
+													<span class="count">
+													<?php echo $count; ?>
+													</span>
 												</span>
-											</span>
-										<?php endif; ?>
-										</div>
+											<?php endif; ?>
+											</div>
+										</a>
+
 										<div class="meta">
 											<div class="category out">
 												<a href="<?php echo $category_link; ?>">
@@ -508,8 +529,10 @@
 						<li class="clearfix">
 							<div class="row">	
 								<?php while($latest_query->have_posts()): $latest_query->the_post(); ?>					
-								<?php $category_name = top_level_cat(); ?>
-								<?php $category_link = get_category_link(top_level_cat()); ?>
+								<?php $categoryid = top_level_cat(); ?>
+								<?php $category =  get_category($categoryid); ?>
+								<?php $category_name = strtolower($category->name); ?>
+								<?php $category_link = get_category_link($categoryid); ?>
 								<?php $format = get_post_format(); ?>
 
 								<?php if($i % 4 == 0): ?>
@@ -519,19 +542,21 @@
 								<?php endif; ?>
 
 										<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-
-										<div class="image" style="background-image:url(<?php echo $url ?>)">
-										<?php if($format == 'gallery'): ?>
-											<?php $images = get_field('gallery', $post->ID) ?>
-											<?php $count = count($images); ?>
-											<span class="gallery-count"> 
-												<i class="icon-gallery"></i>
-												<span class="count">
-												<?php echo $count; ?>
+										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+											<div class="image" style="background-image:url(<?php echo $url ?>)">
+											<?php if($format == 'gallery'): ?>
+												<?php $images = get_field('gallery', $post->ID) ?>
+												<?php $count = count($images); ?>
+												<span class="gallery-count"> 
+													<i class="icon-gallery"></i>
+													<span class="count">
+													<?php echo $count; ?>
+													</span>
 												</span>
-											</span>
-										<?php endif; ?>
-										</div>
+											<?php endif; ?>
+											</div>
+										</a>
+
 										<div class="meta">
 											<div class="category out">
 												<a href="<?php echo $category_link; ?>">
@@ -618,24 +643,29 @@
 						<li class="clearfix">
 
 						<?php while($latest_media->have_posts()): $latest_media->the_post(); ?>					
-								<?php $category_name = top_level_cat(); ?>
-								<?php $category_link = get_category_link(top_level_cat()); ?>
+								<?php $categoryid = top_level_cat(); ?>
+								<?php $category =  get_category($categoryid); ?>
+								<?php $category_name = strtolower($category->name); ?>
+								<?php $category_link = get_category_link($categoryid); ?>
 								<?php $format = get_post_format(); ?>
 
 										<article class="slide-col two column col-1-3 <?php echo $category_name; ?> <?php echo $format; ?>">
 										<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-										<div class="image" style="background-image:url(<?php echo $url ?>)">
-										<?php if($format == 'gallery'): ?>
-											<?php $images = get_field('gallery', $post->ID) ?>
-											<?php $count = count($images); ?>
-											<span class="gallery-count"> 
-												<i class="icon-gallery"></i>
-												<span class="count">
-												<?php echo $count; ?>
+										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+											<div class="image" style="background-image:url(<?php echo $url ?>)">
+											<?php if($format == 'gallery'): ?>
+												<?php $images = get_field('gallery', $post->ID) ?>
+												<?php $count = count($images); ?>
+												<span class="gallery-count"> 
+													<i class="icon-gallery"></i>
+													<span class="count">
+													<?php echo $count; ?>
+													</span>
 												</span>
-											</span>
-										<?php endif; ?>
-										</div>
+											<?php endif; ?>
+											</div>
+										</a>
+
 										<div class="meta">
 											<div class="category out">
 												<a href="<?php echo $category_link; ?>">
@@ -703,24 +733,29 @@
 						<li class="clearfix">
 
 						<?php while($latest_galleries->have_posts()): $latest_galleries->the_post(); ?>					
-								<?php $category_name = top_level_cat(); ?>
-								<?php $category_link = get_category_link(top_level_cat()); ?>
+								<?php $categoryid = top_level_cat(); ?>
+								<?php $category =  get_category($categoryid); ?>
+								<?php $category_name = strtolower($category->name); ?>
+								<?php $category_link = get_category_link($categoryid); ?>
 								<?php $format = get_post_format(); ?>
 
 										<article class="slide-col two column col-1-4 <?php echo $category_name; ?> <?php echo $format; ?>">
 										<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-										<div class="image" style="background-image:url(<?php echo $url ?>)">
-											<?php if($format == 'gallery'): ?>
-											<?php $images = get_field('gallery', $post->ID) ?>
-											<?php $count = count($images); ?>
-												<span class="gallery-count"> 
-													<i class="icon-gallery"></i>
-													<span class="count">
-														<?php echo $count; ?> 
+										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+											<div class="image" style="background-image:url(<?php echo $url ?>)">
+												<?php if($format == 'gallery'): ?>
+												<?php $images = get_field('gallery', $post->ID) ?>
+												<?php $count = count($images); ?>
+													<span class="gallery-count"> 
+														<i class="icon-gallery"></i>
+														<span class="count">
+															<?php echo $count; ?> 
+														</span>
 													</span>
-												</span>
-											<?php endif; ?>
-										</div>
+												<?php endif; ?>
+											</div>
+										</a>
+
 										<div class="meta">
 											<div class="category out">
 												<a href="<?php echo $category_link; ?>">
@@ -772,30 +807,34 @@
 					$fitness = new WP_Query( $args );
 				 ?>
 				<?php if($fitness->have_posts()): while($fitness->have_posts()): $fitness->the_post(); ?>
-				<?php $category_name = top_level_cat(); ?>
-				<?php $category_link = get_category_link(top_level_cat()); ?>
+				<?php $categoryid = top_level_cat(); ?>
+				<?php $category =  get_category($categoryid); ?>
+				<?php $category_name = strtolower($category->name); ?>
+				<?php $category_link = get_category_link($categoryid); ?>
+
 				<?php $format = get_post_format(); ?>
 						<article class="column col-1-4 <?php echo fitness_cat(); ?> <?php echo $format; ?>">
-							<a href="<?php the_permalink(); ?>" title="<?php the_title() ?>">
-								<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+							<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 								<div class="image" style="background-image:url(<?php echo $url ?>)">
 								</div>
-								<div class="meta">
-									<div class="category out">
-										<a href="<?php $category_link; ?>"><!-- CATEGORY LINK -->
-											<p class="cat-title"><?php echo fitness_cat(); ?><i class="icon-badge"></i></p>										
-										</a>
-									</div>	
-									<div class="title match-height">
-										<a href="<?php the_permalink(); ?>"><!-- POST LINK -->
-											<h2><?php the_title(); ?></h2>										
-										</a>
-									</div>
-									<div class="misc">
-										<span class="date"><?php the_time('m M Y'); ?></span>
-									</div>
-								</div>									
 							</a>
+
+							<div class="meta">
+								<div class="category out">
+									<a href="<?php $category_link; ?>"><!-- CATEGORY LINK -->
+										<p class="cat-title"><?php echo fitness_cat(); ?><i class="icon-badge"></i></p>										
+									</a>
+								</div>	
+								<div class="title match-height">
+									<a href="<?php the_permalink(); ?>"><!-- POST LINK -->
+										<h2><?php the_title(); ?></h2>										
+									</a>
+								</div>
+								<div class="misc">
+									<span class="date"><?php the_time('m M Y'); ?></span>
+								</div>
+							</div>									
 						</article>
 					<?php endwhile; endif; ?>
 					<?php wp_reset_query(); ?>
