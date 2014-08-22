@@ -121,6 +121,7 @@
 /* ==========================================================================
    PAGE SPECIFIC STYLES
    ========================================================================== */
+
 body.single{
 	.page-meta{
 		position: relative;
@@ -143,11 +144,6 @@ body.single{
 			position: absolute;
 			top: 0;
 			right: 0;
-
-			a{
-				text-decoration: none;
-				border-bottom: none !important;
-			}
 	
 			@media screen and (max-width:500px){
 				position: relative;
@@ -165,6 +161,8 @@ body.single{
 			width: 2em;
 			height: 2em;
 			padding:0.2em;
+			text-decoration: none;
+			border-bottom: none !important;
 		}
 
 		i{
@@ -822,6 +820,66 @@ body.single{
 
 	.event-icon{
 		text-align: center;
+
+		i{
+			font-size: 2em;
+
+			&.icon-first-start:after{
+				@extend %icon;
+				content: "\e61c";
+				color: #2ecc71;
+			}
+			&.icon-first-end:after{
+				@extend %icon;
+				content: "\e61b";
+				color: #e74c3c;
+			}
+			&.icon-second-start:after{
+ 				@extend %icon;
+ 				content: "\e61e";
+ 				color: #2ecc71;
+			}
+			&.icon-second-end:after{
+ 				@extend %icon;
+ 				content: "\e61d";
+ 				color: #e74c3c;
+			}
+			&.icon-conversion:after{
+ 				@extend %icon;
+ 				content: "\e61f";
+			}
+			&.icon-goal:after{
+ 				@extend %icon;
+ 				content: "\e620";
+			}
+			&.icon-extra-start:after{
+ 				@extend %icon;
+ 				content: "\e622";
+ 				color: #2ecc71;
+			}
+			&.icon-extra-end:after{
+ 				@extend %icon;
+ 				content: "\e621";
+ 				color: #e74c3c;
+			}
+			&.icon-penalty:after{
+ 				@extend %icon;
+ 				content: "\e623";
+			}
+			&.icon-sub:after{
+ 				@extend %icon;
+ 				content: "\e624";
+			}
+			&.icon-try:after{
+ 				@extend %icon;
+ 				content: "\e625";
+			}
+			&.icon-card:after{
+ 				@extend %icon;
+ 				content: "\e626";
+ 				color: #f1c40f;
+			}
+		}
 	}
 	
 	.event-content{

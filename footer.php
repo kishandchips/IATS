@@ -10,11 +10,11 @@
 		<div class="footer-social column col-1-4">
 			<div class="social-link">
 				<h4 class="widget-title">Find us on Facebook</h4>
-				<p><a href="#"><i class="icon-facebook"></i></a></p>					
+				<p><a href="https://www.facebook.com/inattheside" target="_blank"><i class="icon-facebook"></i></a></p>					
 			</div>
 			<div class="social-link">
 				<h4 class="widget-title">Follow us on Twitter</h4>
-				<p><a href="#"><i class="icon-twitter"></i></a></p>					
+				<p><a href="https://twitter.com/Inattheside" target="_blank"><i class="icon-twitter"></i></a></p>					
 			</div>
 		</div><!-- .footer-social -->
 

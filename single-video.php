@@ -13,23 +13,25 @@
 	<div id="content">
 		<?php if(have_posts()): while(have_posts()): the_post(); ?>
 		<article class="<?php echo $category_name ?>">
-			<div class="mediadark-bg">
-				<div class="video-wrapper">
-					<div class="video">
-						<?php $source = get_field('video_source') ?>
+			<?php if(get_field('video_source')): ?>
+				<div class="mediadark-bg">
+					<div class="video-wrapper">
+						<div class="video">
+							<?php $source = get_field('video_source') ?>
 
-						<?php if(get_field('video_select') && $source == 'upload' ): ?>
-							<?php $url = get_field('video_select'); ?>
+							<?php if(get_field('video_select') && $source == 'upload' ): ?>
+								<?php $url = get_field('video_select'); ?>
 
-							<?php echo do_shortcode('[video src="'. $url['url'] .'"]'); ?>
+								<?php echo do_shortcode('[video src="'. $url['url'] .'"]'); ?>
 
-						<?php elseif(get_field('video_embed') && $source == 'embed'): ?>
-							<?php the_field('video_embed') ?>
+							<?php elseif(get_field('video_embed') && $source == 'embed'): ?>
+								<?php the_field('video_embed') ?>
 
-						<?php endif; ?>
-					</div>					
+							<?php endif; ?>
+						</div>					
+					</div>
 				</div>
-			</div>
+			<?php endif; ?>
 
 			<div class="medialight-bg">
 				<div class="video-wrapper">

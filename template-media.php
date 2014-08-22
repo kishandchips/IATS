@@ -57,8 +57,10 @@
 								<?php $category_link = get_category_link(top_level_cat()); ?>
 								<?php $format = get_post_format(); ?>
 
-									<?php if($i == 0): ?>
+									<?php if($i % 3 == 0): ?>
 										<article class="slide-col one column col-2-5 <?php echo $category_name; ?> <?php echo $format; ?>">
+									<?php elseif($i % 3 == 1): ?>
+										<article class="slide-col two column col-2-5 <?php echo $category_name; ?> <?php echo $format; ?>">
 									<?php else: ?>
 										<article class="slide-col two column col-2-5 <?php echo $category_name; ?> <?php echo $format; ?>">
 									<?php endif; ?>
