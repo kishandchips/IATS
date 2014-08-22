@@ -167,6 +167,9 @@ var main = {
 			slideshow: false,
 			before: function(slider){
 				$('.slider.three').resize();
+			},
+			after: function(){
+				$(window).trigger('resize');
 			}
 		});
 
@@ -176,6 +179,9 @@ var main = {
 			slideshow: false,
 			before: function(slider){
 				$('.slider.four').resize();
+			},
+			after: function(){
+				$(window).trigger('resize');
 			}
 		});
 
