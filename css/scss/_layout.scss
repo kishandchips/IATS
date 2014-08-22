@@ -926,6 +926,9 @@ article{
 			
 			.meta{
 				right: 5px;
+				@media screen and (max-width: 1000px){
+					right:0;
+				}
 			}
 
 			.image{
@@ -943,6 +946,9 @@ article{
 
 			.meta{
 				left: 5px;
+				@media screen and (max-width: 1000px){
+					left:0;
+				}
 			}
 
 			.image{
