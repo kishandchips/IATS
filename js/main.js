@@ -194,6 +194,9 @@ var main = {
 				slideshow: false,
 				before: function(slider){
 					$('.slider.latest-cat-articles').resize();
+				},
+				after: function(){
+					$(window).trigger('resize');
 				}
 			});			
 		}
@@ -224,7 +227,8 @@ var main = {
 		}
 	   
 		$('.match-height').matchHeight();
-
+		$(window).trigger('resize');
+		
 		main.isotope();
 
 	});
