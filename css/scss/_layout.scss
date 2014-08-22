@@ -910,6 +910,10 @@ article{
 					top:0;
 				}					
 			}
+
+			.image{
+				width: 50%;
+			}
 		}
 		&.eastside{
 
@@ -923,6 +927,10 @@ article{
 			.meta{
 				right: 0;
 			}
+
+			.image{
+				float: left;
+			}
 		}
 		&.westside{
 
@@ -935,6 +943,10 @@ article{
 
 			.meta{
 				left: 0;
+			}
+
+			.image{
+				float: right;
 			}
 		}
 	}
