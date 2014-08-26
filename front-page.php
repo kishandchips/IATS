@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 
 	<div id="home">
-		<div class="slider hero">
-
 		<?php 
 			$args = array(
 				'post_type' => 'match',
@@ -39,7 +37,8 @@
 			<?php endwhile; ?>
 		<?php endif; ?>
 		<!-- END -->
-
+		
+		<div class="slider hero">
 			<ul class="slides">	
 				<?php 
 					$i = 0;
@@ -47,12 +46,14 @@
 					$slides = 0; 
 				?>
 
-				<?php while($slides <= 1 ): ?>
+				<?php while($slides <= 2 ): ?>
 
 				<?php 
 				$args = array(
 					'posts_per_page' => 3,
 					'offset' => $offset,
+					'meta_key' => 'featured_post',
+					'meta_value' => true
 				); 
 				?>
 				

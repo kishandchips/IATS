@@ -18,7 +18,7 @@ $dblue : #0C3261;
 /*UNIVERSITIES*/
 $red : #992B2C;
 $lred : #B74144;
-$dred : #720D0E;
+$dred : #810106;
 .university-bg{
 	color: #fff;
 	background-color: $dred;
@@ -45,7 +45,7 @@ $dpurple : #100D3C;
 
 /*SEVENS*/
 $pink : #DF6862;
-$dpink : #DB5657;
+$dpink : #E74E8B;
 .sevens-bg{
 	color: #fff;
 	background-color: $dpink;
@@ -139,7 +139,7 @@ article{
 			content: "\e617";			
 		}
 	}
-	&.around-the-game{
+	&.around{
 		.icon-badge:after{
 			@extend %icon;
 			content: "\e611";			

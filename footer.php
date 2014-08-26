@@ -1,3 +1,7 @@
+<span id="twitter-count" class="hidden">
+	<?php echo getTwitterFollowers('inattheside'); ?>
+</span>
+
 <div class="push"></div>
 </div><!-- #joebudden -->
 

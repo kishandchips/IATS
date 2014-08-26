@@ -9,15 +9,17 @@ var main = {
 		this.components.init();
 		this.flexsliderSwitch();
 		this.live();
+		this.socialAjax();
 
 		offset = $('#header').offset();
+		sticky = $('.sticky-header');
 
 		$(window).scroll(function() {
 			if ($(this).scrollTop() > offset.top){  
-			    $('.sticky-header').addClass("sticky");
+			    sticky.addClass("sticky");
 			}
 			else{
-			    $('.sticky-header').removeClass("sticky");
+			    sticky.removeClass("sticky");
 			}
 		});
 
@@ -26,6 +28,26 @@ var main = {
 			main.components.sidebar.resize();
 			main.isotope();
 		});
+	},
+
+	socialAjax: function(){
+		var element = $('#sidebar');
+		if(!element.length){return false;}
+
+		var twitterCount = $('#twitter-count').html();
+
+		$('.twitter.count').html(twitterCount);
+
+		$.ajax({
+			url: "http://graph.facebook.com/http://inattheside.com",
+
+		})
+		.done(function(data){
+			facebookCount = data.shares;
+			$('.facebook.count').html(data.shares);
+		});
+
+		
 	},
 
 	listeners: function(){

@@ -51,9 +51,10 @@
 								<a href="http://twitter.com/share?text=<?php the_title(); ?>" title="Share on Twitter" target="_blank">
 									<i class="icon-twitter"></i>
 								</a>
-								<a href="https://plus.google.com/share?url={<?php the_permalink(); ?>}" title="Share on Google" target="_blank">
-									<i class="icon-google"></i>
+								<a href="mailto:?&body=<?php the_permalink(); ?>">
+									<i class="icon-mail"></i>
 								</a>
+									<a href="whatsapp://send" data-text="Take a look at this article:" data-href="" class="wa_btn wa_btn_m" style="display:none"></a><script type="text/javascript">if(typeof wabtn4fg==="undefined"){wabtn4fg=1;h=document.head||document.getElementsByTagName("head")[0],s=document.createElement("script");s.type="text/javascript";s.src="//whatsapp-sharing.com/button";h.appendChild(s);}</script>
 							</span>
 						</div>
 

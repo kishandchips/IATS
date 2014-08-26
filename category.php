@@ -2,9 +2,10 @@
 <?php $categoryid = top_level_cat(); ?>
 <?php $category =  get_category($categoryid); ?>
 <?php $category_name = strtolower($category->name); ?>
+<?php $cat = strtolower(single_cat_title('',false)); ?>
 
 <div id="category">
-	<header id="page-header" class="<?php echo $category_name; ?>-bg">
+	<header id="page-header" class="<?php echo $cat ?>-bg">
 		<h1 class="title">
 			<i class="icon-badge"></i>
 			<?php single_cat_title(); ?>
@@ -68,6 +69,7 @@
 								</article>
 							<?php $i++ ?>
 						<?php endwhile; endif; ?>
+						<?php wp_reset_query(); ?>
 					</div><!-- .articles.row -->
 
 					<div class="pagination">
