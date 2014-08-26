@@ -9,9 +9,21 @@
 	box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
 }
 
+.sticky-header{
+	&.sticky{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 9999;
+	}
+}
+
 #header{
 	position: relative;
 	z-index: 9999;
+	max-width: 1600px;
+	margin: 0 auto;
 
 	.header-top{
 		position: relative;
@@ -171,8 +183,7 @@
 			top:100%;
 			@extend .visible;
 		}
-	}//.search-bar	
-
+	}//.search-bar
 }//#header
 
 #main-nav{
@@ -1326,7 +1337,7 @@ article{
 			padding: 10px;
 			&.main{
 				.image{
-					height: 600px;
+					height: 400px;
 				}
 				
 				.meta{

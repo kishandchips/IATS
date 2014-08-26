@@ -10,6 +10,17 @@ var main = {
 		this.flexsliderSwitch();
 		this.live();
 
+		offset = $('#header').offset();
+
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > offset.top){  
+			    $('.sticky-header').addClass("sticky");
+			}
+			else{
+			    $('.sticky-header').removeClass("sticky");
+			}
+		});
+
 		$(window).resize(function(){
 			main.sticky();
 			main.components.sidebar.resize();

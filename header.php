@@ -22,26 +22,29 @@
                     advertising
                 </div>
             </div>
-            <section id="header" class="clearfix">
-                <div class="logo">
-                    <a href="<?php bloginfo('url' ); ?>">
-                        <i class="icon-typelogo"></i>    
-                    </a>
-                </div><!-- .logo -->
+            
+            <div class="sticky-header">
+                <section id="header" class="clearfix">
+                    <div class="logo">
+                        <a href="<?php bloginfo('url' ); ?>">
+                            <i class="icon-typelogo"></i>    
+                        </a>
+                    </div><!-- .logo -->
 
-                <div class="mob-menu">
-                    <button id="menu-toggle" aria-role="toggle menu">
-                        <i class="icon-menu"></i>
-                    </button>                    
-                </div><!-- .mob-menu -->
+                    <div class="mob-menu">
+                        <button id="menu-toggle" aria-role="toggle menu">
+                            <i class="icon-menu"></i>
+                        </button>                    
+                    </div><!-- .mob-menu -->
 
-                <nav id="main-nav">
-                    <?php $args = array('theme_location' => 'header_nav','menu' => '','container' => '', 'walker' => new Primary_Nav_Walker);
-                        wp_nav_menu( $args ); 
-                    ?>
-                    <button id="search-toggle" class="search" aria-role="search toggle"></button>
-                </nav>
-                <div class="search-bar">
-                    <?php get_search_form(); ?>
-                </div>
-            </section><!-- #header -->
+                    <nav id="main-nav">
+                        <?php $args = array('theme_location' => 'header_nav','menu' => '','container' => '', 'walker' => new Primary_Nav_Walker);
+                            wp_nav_menu( $args ); 
+                        ?>
+                        <button id="search-toggle" class="search" aria-role="search toggle"></button>
+                    </nav>
+                    <div class="search-bar">
+                        <?php get_search_form(); ?>
+                    </div>
+                </section><!-- #header -->                
+            </div><!-- #sticky-header -->
