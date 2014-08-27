@@ -37,7 +37,7 @@
 			<?php endwhile; ?>
 		<?php endif; ?>
 		<!-- END -->
-		
+
 		<div class="slider hero">
 			<ul class="slides">	
 				<?php 
