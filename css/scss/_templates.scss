@@ -318,26 +318,36 @@ body.single{
 		}
 	}// .fitness
 
+	.section.feed{
+		background-color: #fff;
+	}
+
  	#feed{
- 		.tp_recent_tweets{
+
+ 		.wptt_TwitterTweets{
  			ul{
  				margin:0;
  				padding:0;
 
 	 			li{
-	 				clear: none;
+	 				position: relative;
 	 				float: left;
 	 				width: 49%;
-	 				height: 180px;
+	 				min-height: 200px;
 	 				margin-left: 2%;
 		 			margin-bottom:20px;
-		 			padding: 2em;
+		 			padding: 2.5em !important;
 		 			background-color: #fff;
-		 			background-position: 2em 90%;
+		 			background-image: url(../img/tweet.png);
+		 			background-repeat: no-repeat;
+		 			background-position: 2.5em 90%;
+		 			border: 1px solid rgba(#333,.5);
 		 			overflow:hidden;
+		 			@include border-radius(0);
 		 			@include transition(all,.3s);
 
 		 			&:nth-child(2n+1){
+		 				clear: both;
 		 				margin-left: 0;
 		 			}
 
@@ -350,9 +360,26 @@ body.single{
 	 					margin-left: 0;
 	 				}
 
-	 				span{
-		 				@extend .medium;
-		 				margin-bottom:2em;
+	 				.wdtf-user-card{
+	 					float: left;
+	 					width: 20%;
+	 				}
+
+	 				.wdtf-screen-name{
+	 					position: absolute;
+	 					bottom: 1em;
+	 					left: 22%;
+
+		 				.screen_name{
+		 					display: none;
+		 				}	 					
+	 				}
+
+	 				.tweet_data{
+	 					float: left;
+	 					width: 80%;
+	 					font-weight: normal;
+	 					font-family:'Futura BT W01 Medium' !important;	
 
 		 				@media screen and (max-width: 500px){
 		 					font-size: 70%;
@@ -367,35 +394,17 @@ body.single{
 		 						border-bottom:1px solid #000;
 		 					}
 		 				}
-	 				}//span
+	 				}//.tweet_data
+
+	 				.times{
+	 					padding-left: 20%;
+	 				}
+
 	 			}//li 				
  			}//ul
- 		}//.tp_recent_tweets
+ 		}//wptt_TwitterTweets
 
  		.tweet{
-
- 			.text{
- 				@extend .medium;
- 				margin-bottom:2em;
-
- 				@media screen and (max-width: 500px){
- 					font-size: 70%;
- 				}
-
- 				p{
- 					margin:0;
- 				}
-
- 				a{
- 					color: #5e5e5e;
- 					padding-bottom:2px;
- 					border-bottom:1px dotted #000;
-
- 					&:hover{
- 						border-bottom:1px solid #000;
- 					}
- 				}
- 			}
  			.user{
  				display: inline-block;
  				float:left;
