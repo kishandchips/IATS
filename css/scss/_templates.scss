@@ -324,87 +324,65 @@ body.single{
 
  	#feed{
 
- 		.wptt_TwitterTweets{
- 			ul{
- 				margin:0;
- 				padding:0;
+ 		ul.tweets{
+ 			padding: 0;
+ 			list-style: none;
+ 		}
 
-	 			li{
-	 				position: relative;
-	 				float: left;
-	 				width: 49%;
-	 				min-height: 200px;
-	 				margin-left: 2%;
-		 			margin-bottom:20px;
-		 			padding: 2.5em !important;
-		 			background-color: #fff;
-		 			background-image: url(../img/tweet.png);
-		 			background-repeat: no-repeat;
-		 			background-position: 2.5em 90%;
-		 			border: 1px solid rgba(#333,.5);
-		 			overflow:hidden;
-		 			@include border-radius(0);
-		 			@include transition(all,.3s);
+		.tweet{
+			position: relative;
+			float:left;
+			width: 49%;
+			margin-left: 2%;
+ 			margin-bottom:20px;
+ 			padding: 2em;
+ 			border: 1px solid rgba(#333,.5);
+ 			background-color: #fff;
+ 			overflow:hidden;
+ 			@include transition(all,.3s);
 
-		 			&:nth-child(2n+1){
-		 				clear: both;
-		 				margin-left: 0;
-		 			}
+ 			@media screen and (max-width: 900px){
+ 				width: 100%;
+ 				margin-left: 0;
+ 			}
 
-		 			&:hover{
-		 				@include box-shadow(rgba(81, 203, 238, 1) 0 0 5px );
-		 			}
+ 			&:hover{
+ 				@include box-shadow(rgba(81, 203, 238, 1) 0 0 5px );
+ 			}
+			
+			&:nth-child(2n+1){
+				margin-left: 0;
+			}
 
-	 				@media screen and (max-width:600px){
-	 					width: 100%;
-	 					margin-left: 0;
-	 				}
+			.avatar{
+				float: left;
+				overflow: hidden;
+				@include border-radius(50px);
+			}
 
-	 				.wdtf-user-card{
-	 					float: left;
-	 					width: 20%;
-	 				}
+ 			.text{
+ 				padding-left: 60px;
+ 				@extend .medium;
+ 				margin-bottom:2em;
 
-	 				.wdtf-screen-name{
-	 					position: absolute;
-	 					bottom: 1em;
-	 					left: 22%;
+ 				@media screen and (max-width: 500px){
+ 					font-size: 70%;
+ 				}
 
-		 				.screen_name{
-		 					display: none;
-		 				}	 					
-	 				}
+ 				p{
+ 					margin:0;
+ 				}
 
-	 				.tweet_data{
-	 					float: left;
-	 					width: 80%;
-	 					font-weight: normal;
-	 					font-family:'Futura BT W01 Medium' !important;	
+ 				a{
+ 					color: #5e5e5e;
+ 					padding-bottom:2px;
+ 					border-bottom:1px dotted #000;
 
-		 				@media screen and (max-width: 500px){
-		 					font-size: 70%;
-		 				}
-
-		 				a{
-		 					color: #5e5e5e;
-		 					padding-bottom:2px;
-		 					border-bottom:1px dotted #000;
-
-		 					&:hover{
-		 						border-bottom:1px solid #000;
-		 					}
-		 				}
-	 				}//.tweet_data
-
-	 				.times{
-	 					padding-left: 20%;
-	 				}
-
-	 			}//li 				
- 			}//ul
- 		}//wptt_TwitterTweets
-
- 		.tweet{
+ 					&:hover{
+ 						border-bottom:1px solid #000;
+ 					}
+ 				}
+ 			}
  			.user{
  				display: inline-block;
  				float:left;
@@ -575,30 +553,66 @@ body.single{
 
 #single{
 	.article-header{
-			background-size: contain;
-			background-repeat: repeat-x;
+		background-size: contain;
+		background-repeat: repeat-x;
+
+		.icon-badge:after{
+			font-size: 2em;
+		}
+
 		&.schools{
 			background-image: url(../img/schools-pattern.png);
+
+			.icon-badge:after{
+				@extend %icon;
+				content: "\e616";			
+			}
+
 		}
 
 		&.university{
 			background-image: url(../img/uni-pattern.png);
+
+			.icon-badge:after{
+				@extend %icon;
+				content: "\e618";			
+			}
 		}
 
 		&.representative{
 			background-image: url(../img/rep-pattern.png);
+
+			.icon-badge:after{
+				@extend %icon;
+				content: "\e615";			
+			}
 		}
 
 		&.sevens{
 			background-image: url(../img/sevens-pattern.png);
+
+			.icon-badge:after{
+				@extend %icon;
+				content: "\e617";			
+			}
 		}
 
-		&.around-the-game{
+		&.around{
 			background-image: url(../img/around-pattern.png);
+
+			.icon-badge:after{
+				@extend %icon;
+				content: "\e611";			
+			}
 		}
 
 		&.fitness{
 			background-image: url(../img/fitness-pattern.png);
+
+			.icon-badge:after{
+				@extend %icon;
+				content: "\e614";			
+			}
 		}
 
 		@media screen and (max-width:800px){
@@ -608,24 +622,16 @@ body.single{
 		}
 	}
 
-	#content{
-		&.section{
-			padding-bottom: 0;
-		}
-	}
-
 	.article-header-title{
 		float:left;
 		width: 40%;
-		// height:400px;
 		padding-top: 2em;
-		padding-bottom: 100px;
-		// @extend .valign;
 		color: #fff;
 
 		.title{
+			margin-top: 1.5em;
 			@extend %title;
-			@extend .xxlarge;
+			@extend .xlarge;
 			@include heavy;
 		}
 
@@ -634,8 +640,13 @@ body.single{
 			z-index: 1;
 			width: 100%;
 			height: initial;
+			margin-bottom: 100px;
 			text-align: center;
 
+			.title{
+				margin-top: 1em;
+				margin-bottom: 1em;	
+			}
 		}
 	}
 
@@ -662,6 +673,12 @@ body.single{
 				top:0;right:0;bottom:0;left:0;
 				background-color:rgba(#000,0.2);
 			}
+		}
+	}
+
+	#content{
+		&.section{
+			padding-bottom: 0;
 		}
 	}
 

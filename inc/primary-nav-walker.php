@@ -104,10 +104,12 @@ class Primary_Nav_Walker extends Walker_Nav_Menu {
 
 	        <?php $latest = get_posts($args2); ?>
 
-	        <?php foreach ($latest as $post): setup_postdata( $post );?>
+	        <?php foreach ($latest as $post): ?>
 	        	<a href="<?php echo get_the_permalink($post->ID); ?> ">
 		            <div class="menu-item-post column col-1-3">
-		                <?php echo get_the_post_thumbnail($post->ID,'nav-thumb' ); ?>
+		            	<figure>
+			            	<?php echo get_the_post_thumbnail($post->ID, array( 250, 150, 'bfi_thumb' => true )); ?>
+		            	</figure>
 		                <p><?php echo get_the_title($post->ID); ?></p> 
 		            </div>
 		        </a>

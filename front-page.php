@@ -22,15 +22,13 @@
 			<div class="live-fixed">
 				<a href="<?php the_permalink(); ?>">
 					<div class="info">
-						<div class="title">
-							<h2><?php echo get_the_title($team1_id ); ?></h2> 
-							<span>VS</span>
-							<h2><?php echo get_the_title($team2_id ); ?></h2>
-						</div>
-						<div class="misc">
-							<span class="match">Live Match</span>
-							<span class="date"><?php the_time('m M Y'); ?></span>
-						</div>
+						<span class="title">IATS LIVE</span>
+						<h2>
+							<span class="team"><?php echo get_the_title($team1_id ); ?></span> 
+							<span class="vs">VS</span> 
+							<span class="team"><?php echo get_the_title($team2_id ); ?></span> 
+							<span class="kickoff">KickOff - <?php echo get_field('kickoff') ?></span>
+						</h2>
 					</div>	
 				</a>
 			</div>

@@ -9,7 +9,7 @@
 		<div class="inner-container">
 			<div class="article-header-title">
 				<span class="emblem">
-					
+					<i class="icon-badge"></i>
 				</span>
 				<h1 class="title">
 					<?php the_title(); ?>
