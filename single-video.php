@@ -13,12 +13,11 @@
 	<div id="content">
 		<?php if(have_posts()): while(have_posts()): the_post(); ?>
 		<article class="<?php echo $category_name ?>">
-			<?php if(get_field('video_source')): ?>
+		<?php $source = get_field('video_source'); ?>
+			<?php if($source != 'none'): ?>
 				<div class="mediadark-bg">
 					<div class="media-wrapper">
 						<div class="video">
-							<?php $source = get_field('video_source') ?>
-
 							<?php if(get_field('video_select') && $source == 'upload' ): ?>
 								<?php $url = get_field('video_select'); ?>
 
