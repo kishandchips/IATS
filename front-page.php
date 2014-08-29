@@ -589,11 +589,6 @@
 		</div><!-- .section-content -->
 
 		<div id="sidebar" class="column col-3">
-
-			<div class="sidebar-widget advert">
-				
-			</div>
-
 			<div class="sidebar-widget list">
 				<?php dynamic_sidebar('primary' ); ?>
 			</div>
@@ -617,7 +612,7 @@
 			</script>            
         </div>
     </div><!-- cash money -->
-    
+
 
 	<section class="section media medialight-bg">
 		<div class="inner-container">
