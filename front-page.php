@@ -590,9 +590,9 @@
 
 		<div id="sidebar" class="column col-3">
 
-			<div class="sidebar-widget advert">
+<!-- 			<div class="sidebar-widget advert">
 				
-			</div>
+			</div> -->
 
 			<div class="sidebar-widget list">
 				<?php dynamic_sidebar('primary' ); ?>
@@ -784,11 +784,11 @@
 			</div><!-- .slider.four -->
 	</section><!-- .galleries -->
 
-	<div class="section advertisement">
+<!-- 	<div class="section advertisement">
 		<div class="advert">
 			advertising
 		</div>
-	</div><!-- cashmoney -->
+	</div><!-- cashmoney --> -->
 
 		<section class="section fitness">
 			<div class="inner-container">

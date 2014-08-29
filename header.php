@@ -17,11 +17,11 @@
         <![endif]-->
 
         <div id="joebudden" class="container">
-            <div class="section advertisement">
+<!--             <div class="section advertisement">
                 <div class="advert">
                     advertising
                 </div>
-            </div>
+            </div> -->
             
             <div class="sticky-header">
                 <section id="header" class="clearfix">

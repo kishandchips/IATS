@@ -81,7 +81,7 @@ a{
 .page-content{
 	blockquote{
 		padding: 2em;
-		@extend .large;
+		@extend .medium;
 		@include bold;
 		background-color: #F3F3F3;
 

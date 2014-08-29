@@ -16,6 +16,7 @@ register_nav_menus(array(
 
 // Image sizes
 add_image_size( 'gallery-thumb', 150, 150, true );
+add_image_size( 'nav-thumb', 250, 150, true );
 
 // Add Actions
 add_action( 'after_setup_theme', 'custom_after_setup_theme' );
@@ -25,9 +26,6 @@ add_action( 'widgets_init', 'register_widgets');
 add_action('template_include', 'load_single_template');
 add_action("gform_field_standard_settings", "custom_gform_standard_settings", 10, 2);
 add_action('gform_enqueue_scripts',"custom_gform_enqueue_scripts", 10, 2);
-
-
-require(get_template_directory() . '/inc/BFI_Thumb.php');
 
 // Functions
 function custom_after_setup_theme(){
@@ -260,3 +258,16 @@ function getTwitterFollowers($screenName = 'inattheside')
  
     return $numberOfFollowers;
 }
+
+function cdnify($url)
+{
+    return str_replace([
+        site_url(false, 'http') . '/wp-content/uploads',
+        site_url(false, 'https') . '/wp-content/uploads'
+    ], [
+        'http://8e3e9343ba79890fa866-de14c4817643e8b76b6ae36789eb89da.r42.cf3.rackcdn.com',
+        'https://270d40956d33bdd1c081-de14c4817643e8b76b6ae36789eb89da.ssl.cf3.rackcdn.com'
+    ], $url);
+}
+
+add_filter('wp_get_attachment_url', 'cdnify');

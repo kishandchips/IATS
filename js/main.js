@@ -39,12 +39,12 @@ var main = {
 		$('.twitter.count').html(twitterCount);
 
 		$.ajax({
-			url: "http://graph.facebook.com/http://inattheside.com",
+			url: "https://graph.facebook.com/inattheside?fields=likes",
 
 		})
 		.done(function(data){
-			facebookCount = data.shares;
-			$('.facebook.count').html(data.shares);
+			var facebookCount = data.likes;
+			$('.facebook.count').html(facebookCount);
 		});
 
 		

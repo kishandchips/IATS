@@ -108,7 +108,7 @@ class Primary_Nav_Walker extends Walker_Nav_Menu {
 	        	<a href="<?php echo get_the_permalink($post->ID); ?> ">
 		            <div class="menu-item-post column col-1-3">
 		            	<figure>
-			            	<?php echo get_the_post_thumbnail($post->ID, array( 250, 150, 'bfi_thumb' => true )); ?>
+			            	<?php echo get_the_post_thumbnail($post->ID, 'nav-thumb') ?>
 		            	</figure>
 		                <p><?php echo get_the_title($post->ID); ?></p> 
 		            </div>

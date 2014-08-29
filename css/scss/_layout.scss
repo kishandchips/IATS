@@ -438,6 +438,11 @@
 				figure:after{
 					@extend .visible;
 				}
+
+				p{
+					padding-bottom: 0.5em;
+					border-bottom: 2px solid #fff;
+				}
 			}
 
 			figure{
@@ -458,9 +463,12 @@
 			}
 
 			p{
+				padding-bottom: 0.5em;
 				color: #fff;
 				font-size: 14px;
 				line-height: 1.2;
+				border-bottom: 2px solid transparent;
+				@include transition(border-color,.3s);
 			}
 		}
 	}
@@ -579,12 +587,25 @@
 		&.popular-posts{
 			li{
 				overflow: hidden;
+
+				&:hover{
+					background-color: #177248;
+
+					.counter{
+						color: #fff;
+					}
+
+					a{
+						color: #fff;
+					}
+				}
 			}
 
 			.counter{
 				float:left;
 				display: inline-block;
 				width:10%;
+				color: #A5A5A5;
 				@extend .xxlarge;
 				@include bold;
 				text-align: center;
@@ -600,16 +621,21 @@
 			}	
 		}//.popular-posts
 
-		&.popular-posts, &.widget_recent_entries{
-			ul li{
+		&.widget_recent_entries{
+
+			li{
 				&:hover{
+					background-color: #203f4c;
+
 					a{
 						color: #fff;
 					}
-
-					color: #fff;
-					background-color: #000;
 				}
+			}
+			.post-date{
+				display: inline-block;
+				margin-top: 1em;
+				color: #A5A5A5;
 			}
 		}
 

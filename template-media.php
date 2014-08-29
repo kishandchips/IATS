@@ -134,9 +134,11 @@
 			<div class="section-content">
 
 				<div id="isotope" class="articles row">
+
+					<?php $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1; ?>
 					<?php 
 						$args = array(
-							'posts_per_page'	=> 3,
+							'posts_per_page'	=> 15,
 							//remove this line
 							// 'offset'	=> 9,
 							'tax_query' => array(
@@ -145,12 +147,12 @@
 			                        'field' => 'slug',
 			                        'terms' => array( 'post-format-video', 'post-format-gallery' )
 			                    )
-							)
+							),
+							'paged' => $paged
 
 						);
-					
-					$query2 = new WP_Query( $args );
 					 ?>
+					 <?php $query2 = new WP_Query( $args ); ?>
 
 					<?php if ($query2->have_posts()): while($query2->have_posts()): $query2->the_post(); ?>
 					<?php $categoryid = top_level_cat(); ?>
@@ -194,24 +196,23 @@
 						</div>		
 					</article>						
 					<?php endwhile; endif; ?>
+					<?php wp_reset_postdata(); ?>
 				</div><!-- #isotope -->
 	
-				<div class="pagination">
+					<div class="pagination">
 					<?php
-						global $wp_query;
-
 						$big = 999999999; // need an unlikely integer
 
 						echo paginate_links( array(
 							'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 							'format' => '?paged=%#%',
 							'current' => max( 1, get_query_var('paged') ),
-							'total' => $wp_query->max_num_pages,
+							'total' => $query2->max_num_pages,
 							'prev_text' => __('<i class="icon-slider-left"></i>Previous'),
 							'next_text' => __('Next <i class="icon-slider-right"></i>')
 						) );
 					?>
-				</div><!-- .pagination -->
+					</div><!-- .pagination -->
 
 			</div><!-- .section-content -->
 		</div><!-- .inner-container -->
