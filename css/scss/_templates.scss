@@ -159,6 +159,12 @@ body.single{
 			padding:0.2em;
 			text-decoration: none;
 			border-bottom: none !important;
+
+			&:hover{
+				i{
+					@include opacity(1);
+				}
+			}
 		}
 
 		i{
@@ -166,7 +172,9 @@ body.single{
 			height: 100%;
 			width: 100%;
 			color: #fff;
+			@include opacity(0.8);
 			@include border-radius(2px);
+			@include transition(opacity,.3s);
 		}
 
 		.icon-facebook2{

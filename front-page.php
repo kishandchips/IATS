@@ -183,7 +183,7 @@
 
 				<?php 
 				$args = array(
-					'category_name' => 'schools',
+					'cat' => '4',
 					'posts_per_page' => 4,
 					'offset' => $offset,
 
@@ -266,7 +266,7 @@
 
 				<?php 
 				$args = array(
-					'category_name' => 'university',
+					'cat' => '3',
 					'posts_per_page' => 4,
 					'offset' => $offset,
 
@@ -349,7 +349,7 @@
 
 				<?php 
 				$args = array(
-					'category_name' => 'representative',
+					'cat' => '1',
 					'posts_per_page' => 4,
 					'offset' => $offset,
 
@@ -432,7 +432,7 @@
 
 				<?php 
 				$args = array(
-					'category_name' => 'sevens',
+					'cat' => '5',
 					'posts_per_page' => 4,
 					'offset' => $offset,
 
@@ -515,7 +515,7 @@
 
 				<?php 
 				$args = array(
-					'category_name' => 'around-the-game',
+					'cat' => '2102',
 					'posts_per_page' => 4,
 					'offset' => $offset,
 
@@ -590,9 +590,9 @@
 
 		<div id="sidebar" class="column col-3">
 
-<!-- 			<div class="sidebar-widget advert">
+			<div class="sidebar-widget advert">
 				
-			</div> -->
+			</div>
 
 			<div class="sidebar-widget list">
 				<?php dynamic_sidebar('primary' ); ?>
@@ -602,6 +602,7 @@
 	</div><!-- .inner-container -->
 
 	</section><!-- .section.latest -->
+
 
     <div class="section">
         <div class="advertisement leaderboard">
@@ -616,6 +617,7 @@
 			</script>            
         </div>
     </div><!-- cash money -->
+    
 
 	<section class="section media medialight-bg">
 		<div class="inner-container">
@@ -798,67 +800,67 @@
 			</div><!-- .slider.four -->
 	</section><!-- .galleries -->
 
-	<section class="section fitness">
-		<div class="inner-container">
-			<header>
-				<h4 class="title">Fitness Zone</h4>
-			</header>
-			<div class="articles row">
-			<?php
-				$args = array(
-					'posts_per_page' => 4,
-					'post__not_in' => array($post->ID),
-					'category_name'    => 'fitness',
-				);
-			
-				$fitness = new WP_Query( $args );
-			 ?>
-			<?php if($fitness->have_posts()): while($fitness->have_posts()): $fitness->the_post(); ?>
-			<?php $categoryid = top_level_cat(); ?>
-			<?php $category =  get_category($categoryid); ?>
-			<?php $category_name = strtolower($category->name); ?>
-			<?php $category_link = get_category_link($categoryid); ?>
+		<section class="section fitness">
+			<div class="inner-container">
+				<header>
+					<h4 class="title">Fitness Zone</h4>
+				</header>
+				<div class="articles row">
+				<?php
+					$args = array(
+						'posts_per_page' => 4,
+						'post__not_in' => array($post->ID),
+						'category_name'    => 'fitness',
+					);
+				
+					$fitness = new WP_Query( $args );
+				 ?>
+				<?php if($fitness->have_posts()): while($fitness->have_posts()): $fitness->the_post(); ?>
+				<?php $categoryid = top_level_cat(); ?>
+				<?php $category =  get_category($categoryid); ?>
+				<?php $category_name = strtolower($category->name); ?>
+				<?php $category_link = get_category_link($categoryid); ?>
 
-			<?php $format = get_post_format(); ?>
-					<article class="column col-1-4 <?php echo fitness_cat(); ?> <?php echo $format; ?>">
-						<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-							<div class="image" style="background-image:url(<?php echo $url ?>)">
-							</div>
-						</a>
+				<?php $format = get_post_format(); ?>
+						<article class="column col-1-4 <?php echo fitness_cat(); ?> <?php echo $format; ?>">
+							<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+								<div class="image" style="background-image:url(<?php echo $url ?>)">
+								</div>
+							</a>
 
-						<div class="meta">
-							<div class="category out">
-								<a href="<?php $category_link; ?>"><!-- CATEGORY LINK -->
-									<p class="cat-title"><?php echo fitness_cat(); ?><i class="icon-badge"></i></p>										
-								</a>
-							</div>	
-							<div class="title match-height">
-								<a href="<?php the_permalink(); ?>"><!-- POST LINK -->
-									<h2><?php the_title(); ?></h2>										
-								</a>
-							</div>
-							<div class="misc">
-								<span class="date"><?php the_time('m M Y'); ?></span>
-							</div>
-						</div>									
-					</article>
-				<?php endwhile; endif; ?>
-				<?php wp_reset_query(); ?>
-			</div><!-- .row -->
-		</div><!-- .inner-container -->
-	</section><!-- .fitness -->
+							<div class="meta">
+								<div class="category out">
+									<a href="<?php $category_link; ?>"><!-- CATEGORY LINK -->
+										<p class="cat-title"><?php echo fitness_cat(); ?><i class="icon-badge"></i></p>										
+									</a>
+								</div>	
+								<div class="title match-height">
+									<a href="<?php the_permalink(); ?>"><!-- POST LINK -->
+										<h2><?php the_title(); ?></h2>										
+									</a>
+								</div>
+								<div class="misc">
+									<span class="date"><?php the_time('m M Y'); ?></span>
+								</div>
+							</div>									
+						</article>
+					<?php endwhile; endif; ?>
+					<?php wp_reset_query(); ?>
+				</div><!-- .row -->
+			</div><!-- .inner-container -->
+		</section><!-- .fitness -->
 
-	<section class="section feed">
-		<div class="inner-container">
-			<header>
-				<h4 class="title">Twitter Feed</h4>
-			</header>
-			<div id="feed" class="row">
-				<?php dynamic_sidebar('social' ); ?>
-			</div>
-		</div><!-- .inner-container -->
-	</section><!-- .feed -->
+		<section class="section feed">
+			<div class="inner-container">
+				<header>
+					<h4 class="title">Twitter Feed</h4>
+				</header>
+				<div id="feed" class="row">
+					<?php dynamic_sidebar('social' ); ?>
+				</div>
+			</div><!-- .inner-container -->
+		</section><!-- .feed -->
 
-</div><!-- #home -->
+</div><!-- #hero -->
 <?php get_footer(); ?>

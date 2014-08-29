@@ -220,7 +220,6 @@ var main = {
 
 		//Only on home
 		if($('body').hasClass('home')){
-
 			$('.slider.latest-cat-articles').flexslider({
 				animation: "slide",
 				animationLoop: false,

@@ -1,23 +1,15 @@
 <!DOCTYPE html>
-<!--
- .d8888b.  8888888b.  Y88b   d88P       888      8888888888 8888888888 888    d8P         d8888 8888888b.  8888888 88888888888  .d8888b.                                          
-d88P  Y88b 888   Y88b  Y88b d88P        888      888        888        888   d8P         d88888 888  "Y88b   888       888     d88P  Y88b                                         
-Y88b.      888    888   Y88o88P         888      888        888        888  d8P         d88P888 888    888   888       888     Y88b.                                              
- "Y888b.   888   d88P    Y888P          888      8888888    8888888    888d88K         d88P 888 888    888   888       888      "Y888b.                                           
-    "Y88b. 8888888P"      888           888      888        888        8888888b       d88P  888 888    888   888       888         "Y88b.                                         
-      "888 888            888           888      888        888        888  Y88b     d88P   888 888    888   888       888           "888                                         
-Y88b  d88P 888            888           888      888        888        888   Y88b   d8888888888 888  .d88P   888       888     Y88b  d88P                                         
- "Y8888P"  888            888           88888888 8888888888 888        888    Y88b d88P     888 8888888P"  8888888     888      "Y8888P"                                          
-888b     d888 8888888888 8888888b.  888     888        d8888        .d88888b.  888    d8P   .d88888b.  888b    888 88888888888        d8888                                       
-8888b   d8888 888        888  "Y88b 888     888       d88888       d88P" "Y88b 888   d8P   d88P" "Y88b 8888b   888     888           d88888                                       
-88888b.d88888 888        888    888 888     888      d88P888       888     888 888  d8P    888     888 88888b  888     888          d88P888                                       
-888Y88888P888 8888888    888    888 888     888     d88P 888       888     888 888d88K     888     888 888Y88b 888     888         d88P 888                                       
-888 Y888P 888 888        888    888 888     888    d88P  888       888     888 8888888b    888     888 888 Y88b888     888        d88P  888                                       
-888  Y8P  888 888        888    888 888     888   d88P   888       888     888 888  Y88b   888     888 888  Y88888     888       d88P   888                                       
-888   "   888 888        888  .d88P Y88b. .d88P  d8888888888       Y88b. .d88P 888   Y88b  Y88b. .d88P 888   Y8888     888      d8888888888                                       
-888       888 8888888888 8888888P"   "Y88888P"  d88P     888        "Y88888P"  888    Y88b  "Y88888P"  888    Y888     888     d88P     888      
-   -->
-   
+<!--                                                                                                                                                                 
+ ad88888ba   88888888ba  8b        d8  88           88888888888  88888888888  88      a8P          db         88888888ba,    88  888888888888  88   ad88888ba   
+d8"     "8b  88      "8b  Y8,    ,8P   88           88           88           88    ,88'          d88b        88      `"8b   88       88       88  d8"     "8b  
+Y8,          88      ,8P   Y8,  ,8P    88           88           88           88  ,88"           d8'`8b       88        `8b  88       88       88  Y8,          
+`Y8aaaaa,    88aaaaaa8P'    "8aa8"     88           88aaaaa      88aaaaa      88,d88'           d8'  `8b      88         88  88       88       88  `Y8aaaaa,    
+  `"""""8b,  88""""""'       `88'      88           88"""""      88"""""      8888"88,         d8YaaaaY8b     88         88  88       88       88    `"""""8b,  
+        `8b  88               88       88           88           88           88P   Y8b       d8""""""""8b    88         8P  88       88       88          `8b  
+Y8a     a8P  88               88       88           88           88           88     "88,    d8'        `8b   88      .a8P   88       88       88  Y8a     a8P  
+ "Y88888P"   88               88       88888888888  88888888888  88           88       Y8b  d8'          `8b  88888888Y"'    88       88       88   "Y88888P"                                                                                                                                                              
+ -->
+ 
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -36,19 +28,19 @@ Y88b  d88P 888            888           888      888        888        888   Y88
         <![endif]-->
 
         <div id="joebudden" class="container">
-            <div class="section">
-                <div class="advertisement banner">
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- Large Leaderboard -->
-                    <ins class="adsbygoogle"
-                         style="display:inline-block;width:970px;height:90px"
-                         data-ad-client="ca-pub-1566926890494756"
-                         data-ad-slot="7646876626"></ins>
-                    <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>                
-                </div>
+        <div class="section">
+            <div class="advertisement banner">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- Large Leaderboard -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:970px;height:90px"
+                     data-ad-client="ca-pub-1566926890494756"
+                     data-ad-slot="7646876626"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>            
             </div>
+        </div><!-- cash money -->
             
             <div class="sticky-header">
                 <section id="header" class="clearfix">
