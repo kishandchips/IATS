@@ -752,11 +752,11 @@ a {
   font-size: 1.5em; }
 
 /* line 51, scss/_typography.scss */
-.xlarge, #header .search-bar input[type="text"], .live-fixed .info .title, .live-fixed .info h2, #media-single .media-content .title, #single .article-header-title .title, #live .match-stats .category {
+.xlarge, #header .search-bar input[type="text"], .live-fixed .info .title, .live-fixed .info h2, #media-single .media-content .title, #single .article-header-title .title, #live .match-stats .category, #live .statistics .team-name, #live .statistics .team-score {
   font-size: 1.875em; }
 
 /* line 54, scss/_typography.scss */
-.xxlarge, #page-header .title, #sidebar .widget.popular-posts .counter, .section header .title, #live .statistics .team-name, #live .statistics .team-score {
+.xxlarge, #page-header .title, #sidebar .widget.popular-posts .counter, .section header .title {
   font-size: 2.5em; }
 
 /* ==========================================================================

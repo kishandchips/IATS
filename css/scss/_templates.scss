@@ -793,7 +793,7 @@ body.single{
 		.team-name,.team-score{
 			color: #454545;
 			@extend %title;
-			@extend .xxlarge;
+			@extend .xlarge;
 			@include bold;
 		}
 
