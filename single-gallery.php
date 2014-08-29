@@ -19,7 +19,7 @@
 					<ul class="slides">
 						<?php foreach ($images as $image): ?>
 							<li>
-								<span class="vertical"></span><img src="<?php echo $image['url']; ?>" alt="">
+								<span class="vertical"></span><img src="<?php echo $image['sizes']['gallery-slide']; ?>" alt="">
 							</li>
 						<?php endforeach; ?>
 					</ul>

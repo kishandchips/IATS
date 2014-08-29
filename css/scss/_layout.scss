@@ -1641,6 +1641,8 @@ article{
 		padding: 0;
 		
 		.slides{
+			height:600px;
+
 			li{
 				position: relative;
 				height: 600px;
@@ -1669,6 +1671,8 @@ article{
 	}
 
 	&.carousel{
+		height: 150px;
+		
 		.flex-direction-nav li{
 			padding-bottom: 0;
 

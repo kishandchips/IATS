@@ -15,6 +15,7 @@ register_nav_menus(array(
 );
 
 // Image sizes
+add_image_size('gallery-slide',1000, 600, false );
 add_image_size( 'gallery-thumb', 150, 150, true );
 add_image_size( 'nav-thumb', 250, 150, true );
 
@@ -259,6 +260,26 @@ function getTwitterFollowers($screenName = 'inattheside')
     return $numberOfFollowers;
 }
 
+//GOOGLE ANALYTICS
+function google_analytics_tracking_code(){
+
+ $host = $_SERVER['HTTP_HOST'];
+ ?> 
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-30380887-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+<?php }
+
+add_action('wp_footer', 'google_analytics_tracking_code');
+
+//CDN
 function cdnify($url)
 {
     return str_replace([
