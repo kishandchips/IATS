@@ -106,6 +106,20 @@
 			</div><!-- .inner-container -->
 	</div><!-- #content -->
 
+    <div class="section">
+        <div class="advertisement leaderboard">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- Leaderboard 1 -->
+			<ins class="adsbygoogle"
+			     style="display:inline-block;width:728px;height:90px"
+			     data-ad-client="ca-pub-1566926890494756"
+			     data-ad-slot="7832779426"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>            
+        </div>
+    </div><!-- cash money -->
+    
 	<section class="section medialight-bg">
 		<div class="inner-container">
 			<header>

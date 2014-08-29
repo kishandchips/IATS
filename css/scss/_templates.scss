@@ -81,25 +81,7 @@
 				font-size: 18px;
 			}
 		}
-	}
-
-	&.advertisement{
-		background-color: #F3F4F6;
-		
-		//////////////////////////////////////////// REMOVE THIS AFTER
-		.advert{
-			width: 728px;
-			height: 90px;
-			margin: 0 auto;
-			text-align: center;
-			border: 1px solid gray;
-		}
-
-		@media screen and (max-width:728px){
-			display: none;
-		}
-		////////////////////////////////////////////
-	}
+	}// header
 
 	.section-content{
 		padding: 0;
@@ -113,7 +95,21 @@
 			}
 
 		}
-	}	
+	}// .section-content
+
+	.advertisement{
+		margin: 0 auto;
+
+		&.banner{
+			width:970px;
+			height: 90px;
+		}
+
+		&.leaderboard{
+			width: 728px;
+			height: 90px;
+		}		
+	}
 }
 
 
