@@ -131,7 +131,7 @@
 
 				<ul id="filter-list" class="clearfix">
 					<li>
-						<a class="button cat-filter schools" href="#" data-category="schools">
+						<a class="button cat-filter schools active" href="#" data-category="schools">
 							<p>Schools</p>
 						</a>							
 					</li>

@@ -1286,6 +1286,15 @@ article{
 
 .slider{
 	&.hero{
+		height:560px;
+
+		@media screen and (max-width: 1000px){
+			height: 650px;
+		}
+
+		#media-archive &{
+			height: auto;
+		}
 
 		.meta-inner{
 			.meta{
