@@ -533,8 +533,19 @@ body.single{
 			text-transform: uppercase;
  		}
 
- 		.content{
+ 		.content, .description{
  			position:relative;
+
+ 			a{
+ 				padding-bottom: 2px;
+ 				color: #26AF70;
+ 				border-bottom: 1px dotted #26AF70;
+
+ 				&:hover{
+ 					color: #177248;
+ 					border-bottom: 1px solid #177248;
+ 				}
+ 			}
 
  			iframe,
 			object,

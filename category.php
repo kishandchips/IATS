@@ -1,15 +1,20 @@
 <?php get_header(); ?>
-<?php $categoryid = top_level_cat(); ?>
-<?php $category =  get_category($categoryid); ?>
-<?php $category_name = strtolower($category->name); ?>
-<?php $cat = strtolower(single_cat_title('',false)); ?>
+<?php 
+$category = get_queried_object();
+$cat_parent = $category->category_parent;
+	if($cat_parent == 0){
+		$cat_name = strtolower(get_cat_name($category->term_id));
+	} else {
+		$cat_name = strtolower(get_cat_name($category->category_parent));
+	}
+?>
 
 <div id="category">
-	<header id="page-header" class="<?php echo $cat ?>-bg">
+	<header id="page-header" class="<?php echo $cat_name ?>-bg">
 		<h1 class="title">
 			<i class="icon-badge"></i>
 			<?php single_cat_title(); ?>
-		</h1>	
+		</h1>
 	</header><!-- #page-header -->
 
 	<div id="content" class="section">

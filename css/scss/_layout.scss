@@ -7,6 +7,10 @@
 	height: 100%;
 	-webkit-box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
 	box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+
+	.admin-bar &{
+		margin-top: 32px;
+	}
 }
 
 .sticky-header{
@@ -16,6 +20,10 @@
 		left: 0;
 		right: 0;
 		z-index: 9999;
+		
+		.admin-bar &{
+			margin-top: 32px;
+		}
 	}
 }
 
@@ -552,17 +560,25 @@
 
 				&:hover{
 					color: #fff;
-					background-color: #000;
+
+					&.facebook{
+						background-color: #3B5996;
+					}
+					&.twitter{
+						background-color: #4099FF;
+					}
 
 					.count{
 						color: #000;
 					}
 				}
 			}
+			
 			span.count{
 				float: right;
 				margin-bottom: 0.5em;
 				padding:5px;
+				line-height: 1;
 				background-color: #E8E9ED;
 			}
 		}// .social-widget
@@ -1672,7 +1688,7 @@ article{
 
 	&.carousel{
 		height: 150px;
-		
+
 		.flex-direction-nav li{
 			padding-bottom: 0;
 

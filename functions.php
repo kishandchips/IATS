@@ -121,7 +121,7 @@ function top_level_cat(){
 	}
 }
 
-// FITNESSS CATEGORY
+// FITNESS CATEGORY
 function fitness_cat(){
  $category = get_the_category(); 
  $categories = array(); 
@@ -259,25 +259,6 @@ function getTwitterFollowers($screenName = 'inattheside')
  
     return $numberOfFollowers;
 }
-
-//GOOGLE ANALYTICS
-function google_analytics_tracking_code(){
-
- $host = $_SERVER['HTTP_HOST'];
- ?> 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-30380887-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
-<?php }
-
-add_action('wp_footer', 'google_analytics_tracking_code');
 
 //CDN
 function cdnify($url)
