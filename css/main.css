@@ -849,10 +849,10 @@ button, .gform_wrapper .gform_footer input[type="submit"], #fohohfoh .message fo
       border-bottom: 3px solid #992b2c; }
     /* line 64, scss/_buttons.scss */
     #filters button.representative.active, #filters .gform_wrapper .gform_footer input.representative.active[type="submit"], .gform_wrapper .gform_footer #filters input.representative.active[type="submit"], #filters #fohohfoh .message form input.representative.active[type="submit"], #fohohfoh .message form #filters input.representative.active[type="submit"] {
-      border-bottom: 3px solid #511d50; }
+      border-bottom: 3px solid #373553; }
     /* line 67, scss/_buttons.scss */
     #filters button.representative:hover, #filters .gform_wrapper .gform_footer input.representative[type="submit"]:hover, .gform_wrapper .gform_footer #filters input.representative[type="submit"]:hover, #filters #fohohfoh .message form input.representative[type="submit"]:hover, #fohohfoh .message form #filters input.representative[type="submit"]:hover {
-      border-bottom: 3px solid #511d50; }
+      border-bottom: 3px solid #373553; }
     /* line 72, scss/_buttons.scss */
     #filters button.sevens.active, #filters .gform_wrapper .gform_footer input.sevens.active[type="submit"], .gform_wrapper .gform_footer #filters input.sevens.active[type="submit"], #filters #fohohfoh .message form input.sevens.active[type="submit"], #fohohfoh .message form #filters input.sevens.active[type="submit"] {
       border-bottom: 3px solid #a73260; }
@@ -948,13 +948,13 @@ button, .gform_wrapper .gform_footer input[type="submit"], #fohohfoh .message fo
   /* line 187, scss/_buttons.scss */
   .button.cat-filter.representative {
     background-color: #100d3c;
-    border-bottom: 5px solid #511d50; }
+    border-bottom: 5px solid #373553; }
     /* line 192, scss/_buttons.scss */
     .button.cat-filter.representative.active:after {
-      color: #511d50; }
+      color: #373553; }
     /* line 197, scss/_buttons.scss */
     .button.cat-filter.representative:hover {
-      background-color: #511d50;
+      background-color: #373553;
       border-bottom: 5px solid #100d3c; }
       /* line 202, scss/_buttons.scss */
       .button.cat-filter.representative:hover.active:after {
@@ -1636,16 +1636,16 @@ textarea {
       background-color: #822b2c; }
     /* line 281, scss/_layout.scss */
     #main-nav ul.menu > li.menu-item.representative:hover {
-      background-color: #9f3069; }
+      background-color: #100d3c; }
       /* line 284, scss/_layout.scss */
       #main-nav ul.menu > li.menu-item.representative:hover a {
         color: #fff; }
       /* line 288, scss/_layout.scss */
       #main-nav ul.menu > li.menu-item.representative:hover .sub-menu {
-        background-color: #9f3069; }
+        background-color: #100d3c; }
         /* line 292, scss/_layout.scss */
         #main-nav ul.menu > li.menu-item.representative:hover .sub-menu .menu-item.visible a:after, #main-nav ul.menu > li.menu-item.representative:hover ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover figure.menu-item:after a:after, #main-nav ul.menu > li.menu-item.representative:hover .sub-menu .menu-item.slider.latest-cat-articles.active a:after {
-          color: #b15c88; }
+          color: #373553; }
     @media screen and (min-width: 1250px) and (max-width: 1400px) {
       /* line 301, scss/_layout.scss */
       #main-nav ul.menu > li.menu-item.representative .sub-menu {
@@ -1653,7 +1653,7 @@ textarea {
         right: 0; } }
     /* line 306, scss/_layout.scss */
     #main-nav ul.menu > li.menu-item.representative .menu-item-posts {
-      background-color: #b15c88; }
+      background-color: #373553; }
     /* line 312, scss/_layout.scss */
     #main-nav ul.menu > li.menu-item.sevens:hover {
       background-color: #e74e8b; }
@@ -2168,7 +2168,7 @@ article {
       background-color: #810106; }
   /* line 946, scss/_layout.scss */
   article.representative .cat-title {
-    background-color: #511d50; }
+    background-color: #373553; }
     /* line 949, scss/_layout.scss */
     article.representative .cat-title i {
       background-color: #100d3c; }

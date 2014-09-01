@@ -11,6 +11,7 @@ var main = {
 		this.live();
 		this.socialAjax();
 
+		// STICKY HEADER
 		offset = $('#header').offset();
 		sticky = $('.sticky-header');
 
@@ -23,6 +24,7 @@ var main = {
 			}
 		});
 
+		// WINDOW RESIZE
 		$(window).resize(function(){
 			main.sticky();
 			main.components.sidebar.resize();
