@@ -119,9 +119,9 @@
 
 						<article class="slide-col column col-1-4 <?php echo $category_name ?> <?php echo $format; ?>">
 							<article class="single">
-								<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
 								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-									<div class="image" style="background-image:url(<?php echo $url; ?>);">
+									<div class="image" style="background-image:url(<?php echo $image[0]; ?>);">
 										<?php if($format == 'gallery'): ?>
 											<?php $images = get_field('gallery', $post->ID) ?>
 											<?php $count = count($images); ?>
@@ -214,9 +214,9 @@
 						<?php $format = get_post_format(); ?>	
 
 						<article class="slide-col column col-1-4 <?php echo $category_name ?>">
-							<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-								<div class="image" style="background-image:url(<?php echo $url; ?>);">
+								<div class="image" style="background-image:url(<?php echo $image[0]; ?>);">
 								</div>
 							</a>
 

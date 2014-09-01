@@ -36,13 +36,13 @@ $cat_parent = $category->category_parent;
 
 							<?php if($i == 0): ?>
 								<article class="main meta-inner column col-full <?php echo $category_name; ?> <?php echo $format; ?>">
+								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'large' ); ?>
 							<?php else: ?>
 								<article class="column col-1-2 <?php echo $category_name; ?> <?php echo $format; ?>">
+								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
 							<?php endif; ?>
-							
-									<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-										<div class="image" style="background-image:url(<?php echo $url; ?>)">
+										<div class="image" style="background-image:url(<?php echo $image[0]; ?>)">
 											<?php if($format == 'gallery'): ?>
 												<?php $images = get_field('gallery', $post->ID) ?>
 												<?php $count = count($images); ?>
