@@ -78,9 +78,14 @@
 									<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
 								<?php endif; ?>
 										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+											<?php if($image[0]): ?>
 											<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+											<?php else: ?>
+											<div class="image placeholder">
+											<?php endif; ?>
+
 											<?php if($format == 'gallery'): ?>
-												<?php $images = get_field('gallery', $post->ID) ?>
+												<?php $images = get_field('gallery') ?>
 												<?php $count = count($images); ?>
 												<span class="gallery-count"> 
 													<i class="icon-gallery"></i>
@@ -104,7 +109,7 @@
 												</a>
 											</div>
 											<div class="misc">
-												<span class="date"><?php the_time('m M Y'); ?></span>
+												<span class="date"><?php the_time('d M Y'); ?></span>
 											</div>
 										</div>					
 									</article>
@@ -211,9 +216,14 @@
 									<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
 								<?php endif; ?>
 										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+											<?php if($image[0]): ?>
 											<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+											<?php else: ?>
+											<div class="image placeholder">
+											<?php endif; ?>
+
 											<?php if($format == 'gallery'): ?>
-												<?php $images = get_field('gallery', $post->ID) ?>
+												<?php $images = get_field('gallery') ?>
 												<?php $count = count($images); ?>
 												<span class="gallery-count"> 
 													<i class="icon-gallery"></i>
@@ -225,19 +235,19 @@
 											</div>
 										</a>
 
-										<div class="meta">
+										<div data-mh="grid" class="meta match-height">
 											<div class="category out">
 												<a href="<?php echo $category_link; ?>">
 													<p class="cat-title"><?php echo $category_name; ?><i class="icon-badge"></i></p>										
 												</a>
 											</div>	
-											<div class="title match-height">
+											<div class="title">
 												<a href="<?php the_permalink(); ?>">
 													<h2><?php the_title(); ?></h2>
 												</a>
 											</div>
 											<div class="misc">
-												<span class="date"><?php the_time('m M Y'); ?></span>
+												<span class="date"><?php the_time('d M Y'); ?></span>
 											</div>
 										</div>					
 									</article>
@@ -294,9 +304,14 @@
 									<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
 								<?php endif; ?>
 										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+											<?php if($image[0]): ?>
 											<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+											<?php else: ?>
+											<div class="image placeholder">
+											<?php endif; ?>
+
 											<?php if($format == 'gallery'): ?>
-												<?php $images = get_field('gallery', $post->ID) ?>
+												<?php $images = get_field('gallery') ?>
 												<?php $count = count($images); ?>
 												<span class="gallery-count"> 
 													<i class="icon-gallery"></i>
@@ -308,19 +323,19 @@
 											</div>
 										</a>
 
-										<div class="meta">
+										<div data-mh="grid" class="meta match-height">
 											<div class="category out">
 												<a href="<?php echo $category_link; ?>">
 													<p class="cat-title"><?php echo $category_name; ?><i class="icon-badge"></i></p>										
 												</a>
 											</div>	
-											<div class="title match-height">
+											<div class="title">
 												<a href="<?php the_permalink(); ?>">
 													<h2><?php the_title(); ?></h2>
 												</a>
 											</div>
 											<div class="misc">
-												<span class="date"><?php the_time('m M Y'); ?></span>
+												<span class="date"><?php the_time('d M Y'); ?></span>
 											</div>
 										</div>					
 									</article>
@@ -377,9 +392,14 @@
 									<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
 								<?php endif; ?>
 										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+											<?php if($image[0]): ?>
 											<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+											<?php else: ?>
+											<div class="image placeholder">
+											<?php endif; ?>
+
 											<?php if($format == 'gallery'): ?>
-												<?php $images = get_field('gallery', $post->ID) ?>
+												<?php $images = get_field('gallery') ?>
 												<?php $count = count($images); ?>
 												<span class="gallery-count"> 
 													<i class="icon-gallery"></i>
@@ -391,19 +411,19 @@
 											</div>
 										</a>
 
-										<div class="meta">
+										<div data-mh="grid" class="meta match-height">
 											<div class="category out">
 												<a href="<?php echo $category_link; ?>">
 													<p class="cat-title"><?php echo $category_name; ?><i class="icon-badge"></i></p>										
 												</a>
 											</div>	
-											<div class="title match-height">
+											<div class="title">
 												<a href="<?php the_permalink(); ?>">
 													<h2><?php the_title(); ?></h2>
 												</a>
 											</div>
 											<div class="misc">
-												<span class="date"><?php the_time('m M Y'); ?></span>
+												<span class="date"><?php the_time('d M Y'); ?></span>
 											</div>
 										</div>					
 									</article>
@@ -460,9 +480,14 @@
 									<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
 								<?php endif; ?>
 										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+											<?php if($image[0]): ?>
 											<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+											<?php else: ?>
+											<div class="image placeholder">
+											<?php endif; ?>
+
 											<?php if($format == 'gallery'): ?>
-												<?php $images = get_field('gallery', $post->ID) ?>
+												<?php $images = get_field('gallery') ?>
 												<?php $count = count($images); ?>
 												<span class="gallery-count"> 
 													<i class="icon-gallery"></i>
@@ -474,19 +499,19 @@
 											</div>
 										</a>
 
-										<div class="meta">
+										<div data-mh="grid" class="meta match-height">
 											<div class="category out">
 												<a href="<?php echo $category_link; ?>">
 													<p class="cat-title"><?php echo $category_name; ?><i class="icon-badge"></i></p>										
 												</a>
 											</div>	
-											<div class="title match-height">
+											<div class="title">
 												<a href="<?php the_permalink(); ?>">
 													<h2><?php the_title(); ?></h2>
 												</a>
 											</div>
 											<div class="misc">
-												<span class="date"><?php the_time('m M Y'); ?></span>
+												<span class="date"><?php the_time('d M Y'); ?></span>
 											</div>
 										</div>					
 									</article>
@@ -543,9 +568,14 @@
 									<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
 								<?php endif; ?>
 										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+											<?php if($image[0]): ?>
 											<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+											<?php else: ?>
+											<div class="image placeholder">
+											<?php endif; ?>
+
 											<?php if($format == 'gallery'): ?>
-												<?php $images = get_field('gallery', $post->ID) ?>
+												<?php $images = get_field('gallery') ?>
 												<?php $count = count($images); ?>
 												<span class="gallery-count"> 
 													<i class="icon-gallery"></i>
@@ -557,19 +587,19 @@
 											</div>
 										</a>
 
-										<div class="meta">
+										<div data-mh="grid" class="meta match-height">
 											<div class="category out">
 												<a href="<?php echo $category_link; ?>">
 													<p class="cat-title"><?php echo $category_name; ?><i class="icon-badge"></i></p>										
 												</a>
 											</div>	
-											<div class="title match-height">
+											<div class="title">
 												<a href="<?php the_permalink(); ?>">
 													<h2><?php the_title(); ?></h2>
 												</a>
 											</div>
 											<div class="misc">
-												<span class="date"><?php the_time('m M Y'); ?></span>
+												<span class="date"><?php the_time('d M Y'); ?></span>
 											</div>
 										</div>					
 									</article>
@@ -600,8 +630,8 @@
 	</section><!-- .section.latest -->
 
 
-    <div class="section">
-        <div class="advertisement leaderboard">
+    <div class="advertisement">
+        <div class="leaderboard">
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- Leaderboard 1 -->
 			<ins class="adsbygoogle"
@@ -663,9 +693,14 @@
 										<article class="slide-col two column col-1-3 <?php echo $category_name; ?> <?php echo $format; ?>">
 										<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
 										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+											<?php if($image[0]): ?>
 											<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+											<?php else: ?>
+											<div class="image placeholder">
+											<?php endif; ?>
+
 											<?php if($format == 'gallery'): ?>
-												<?php $images = get_field('gallery', $post->ID) ?>
+												<?php $images = get_field('gallery') ?>
 												<?php $count = count($images); ?>
 												<span class="gallery-count"> 
 													<i class="icon-gallery"></i>
@@ -677,19 +712,19 @@
 											</div>
 										</a>
 
-										<div class="meta">
+										<div data-mh="grid" class="meta match-height">
 											<div class="category out">
 												<a href="<?php echo $category_link; ?>">
 													<p class="cat-title"><?php echo $category_name; ?><i class="icon-badge"></i></p>										
 												</a>
 											</div>	
-											<div class="title match-height">
+											<div class="title">
 												<a href="<?php the_permalink(); ?>">
 													<h2><?php the_title(); ?></h2>
 												</a>
 											</div>
 											<div class="misc">
-												<span class="date"><?php the_time('m M Y'); ?></span>
+												<span class="date"><?php the_time('d M Y'); ?></span>
 											</div>
 										</div>					
 									</article>
@@ -753,9 +788,14 @@
 										<article class="slide-col two column col-1-4 <?php echo $category_name; ?> <?php echo $format; ?>">
 										<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
 										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+											<?php if($image[0]): ?>
 											<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+											<?php else: ?>
+											<div class="image placeholder">
+											<?php endif; ?>
+											
 												<?php if($format == 'gallery'): ?>
-												<?php $images = get_field('gallery', $post->ID) ?>
+												<?php $images = get_field('gallery') ?>
 												<?php $count = count($images); ?>
 													<span class="gallery-count"> 
 														<i class="icon-gallery"></i>
@@ -767,19 +807,19 @@
 											</div>
 										</a>
 
-										<div class="meta">
+										<div data-mh="grid" class="meta match-height">
 											<div class="category out">
 												<a href="<?php echo $category_link; ?>">
 													<p class="cat-title"><?php echo $category_name; ?><i class="icon-badge"></i></p>										
 												</a>
 											</div>	
-											<div class="title match-height">
+											<div class="title">
 												<a href="<?php the_permalink(); ?>">
 													<h2><?php the_title(); ?></h2>
 												</a>
 											</div>
 											<div class="misc">
-												<span class="date"><?php the_time('m M Y'); ?></span>
+												<span class="date"><?php the_time('d M Y'); ?></span>
 											</div>
 										</div>					
 									</article>
@@ -821,23 +861,27 @@
 						<article class="column col-1-4 <?php echo fitness_cat(); ?> <?php echo $format; ?>">
 							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+								<?php if($image[0]): ?>
 								<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+								<?php else: ?>
+								<div class="image placeholder">
+								<?php endif; ?>
 								</div>
 							</a>
 
-							<div class="meta">
+							<div data-mh="grid" class="meta match-height">
 								<div class="category out">
 									<a href="<?php $category_link; ?>"><!-- CATEGORY LINK -->
 										<p class="cat-title"><?php echo fitness_cat(); ?><i class="icon-badge"></i></p>										
 									</a>
 								</div>	
-								<div class="title match-height">
+								<div class="title">
 									<a href="<?php the_permalink(); ?>"><!-- POST LINK -->
 										<h2><?php the_title(); ?></h2>										
 									</a>
 								</div>
 								<div class="misc">
-									<span class="date"><?php the_time('m M Y'); ?></span>
+									<span class="date"><?php the_time('d M Y'); ?></span>
 								</div>
 							</div>									
 						</article>

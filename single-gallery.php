@@ -43,7 +43,7 @@
 
 						<div class="page-meta">
 							<span class="author"><?php the_author(); ?></span>
-							<span class="date"><?php the_time('m M Y'); ?></span>
+							<span class="date"><?php the_time('d M Y'); ?></span>
 							<span class="social-icons">
 								<a href="http://www.facebook.com/share.php?u=<?php the_permalink(); ?>" title="Share on Facebook" target="_blank">
 									<i class="icon-facebook2"></i>
@@ -54,7 +54,7 @@
 								<a href="mailto:?&body=<?php the_permalink(); ?>">
 									<i class="icon-mail"></i>
 								</a>
-									<a href="whatsapp://send" data-text="Take a look at this article:" data-href="" class="wa_btn wa_btn_m" style="display:none"></a><script type="text/javascript">if(typeof wabtn4fg==="undefined"){wabtn4fg=1;h=document.head||document.getElementsByTagName("head")[0],s=document.createElement("script");s.type="text/javascript";s.src="//whatsapp-sharing.com/button";h.appendChild(s);}</script>
+									<a href="whatsapp://send" data-text="Take a look at this awesome website:" data-href="" class="wa_btn wa_btn_s" style="display:none">Share</a><script type="text/javascript">if(typeof wabtn4fg==="undefined"){wabtn4fg=1;h=document.head||document.getElementsByTagName("head")[0],s=document.createElement("script");s.type="text/javascript";s.src="//whatsapp-sharing.com/button";h.appendChild(s);}</script>
 							</span>
 						</div>
 
@@ -123,7 +123,12 @@
 							<article class="single">
 								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
 								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-									<div class="image" style="background-image:url(<?php echo $image[0]; ?>);">
+									<?php if($image[0]): ?>
+									<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+									<?php else: ?>
+									<div class="image placeholder">
+									<?php endif; ?>
+
 										<?php if($format == 'gallery'): ?>
 											<?php $images = get_field('gallery', $post->ID) ?>
 											<?php $count = count($images); ?>
@@ -137,13 +142,13 @@
 									</div>
 								</a>
 
-								<div class="meta">
+								<div data-mh="grid" class="meta match-height">
 									<div class="category out">
 										<a href="<?php echo $category_link ?>"><!-- CATEGORY LINK -->
 											<p class="cat-title"><?php echo $category_name ?><i class="icon-badge"></i></p>										
 										</a>
 									</div>	
-									<div class="title match-height">
+									<div class="title">
 										<a href="<?php the_permalink(); ?>"><!-- POST LINK -->
 											<h2><?php the_title(); ?></h2>
 										</a>
@@ -217,17 +222,22 @@
 						<article class="slide-col column col-1-4 <?php echo $category_name ?>">
 							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-								<div class="image" style="background-image:url(<?php echo $image[0]; ?>);">
+								<?php if($image[0]): ?>
+								<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+								<?php else: ?>
+								<div class="image placeholder">
+								<?php endif; ?>
+
 								</div>
 							</a>
 
-							<div class="meta">
+							<div data-mh="grid" class="meta match-height">
 								<div class="category out">
 									<a href="<?php echo $category_link ?>"><!-- CATEGORY LINK -->
 										<p class="cat-title"><?php echo $category_name ?><i class="icon-badge"></i></p>										
 									</a>
 								</div>	
-								<div class="title match-height">
+								<div class="title">
 									<a href="<?php the_permalink(); ?>"><!-- POST LINK -->
 										<h2><?php the_title(); ?></h2>
 									</a>

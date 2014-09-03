@@ -73,7 +73,12 @@
 
 										<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+											<?php if($image[0]): ?>
 											<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+											<?php else: ?>
+											<div class="image placeholder">
+											<?php endif; ?>
+
 											<?php if($format == 'gallery'): ?>
 												<?php $images = get_field('gallery', $post->ID) ?>
 												<?php $count = count($images); ?>
@@ -99,7 +104,7 @@
 												</a>
 											</div>
 											<div class="misc">
-												<span class="date"><?php the_time('m M Y'); ?></span>
+												<span class="date"><?php the_time('d M Y'); ?></span>
 											</div>
 										</div>					
 									</article>
@@ -168,7 +173,12 @@
 					<article class="column col-1-3 <?php echo $category_name; ?> <?php echo $format; ?>">
 						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-							<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+								<?php if($image[0]): ?>
+								<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+								<?php else: ?>
+								<div class="image placeholder">
+								<?php endif; ?>
+								
 								<?php if($format == 'gallery'): ?>
 									<?php $images = get_field('gallery', $post->ID) ?>
 									<?php $count = count($images); ?>
@@ -182,19 +192,19 @@
 							</div>
 						</a>
 
-						<div class="meta">
+						<div data-mh="grid" class="meta match-height">
 							<div class="category out">
 								<a href="<?php echo $category_link ?>"><!-- CATEGORY LINK -->
 									<p class="cat-title"><?php echo $category_name; ?><i class="icon-badge"></i></p>										
 								</a>
 							</div>	
-							<div class="title match-height">
+							<div class="title">
 								<a href="<?php the_permalink(); ?>"><!-- POST LINK -->
 									<h2><?php the_title(); ?></h2>										
 								</a>
 							</div>
 							<div class="misc">
-								<span class="date"><?php the_time('m M Y'); ?></span>
+								<span class="date"><?php the_time('d M Y'); ?></span>
 							</div>
 						</div>		
 					</article>						

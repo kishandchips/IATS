@@ -60,9 +60,6 @@ class Twitter_Feed extends WP_Widget {
 		<ul class="tweets">
 			<?php foreach($tweets as $tweet): ?>
 			<li class="tweet">
-				<div class="avatar">
-					<img src="<?php echo $tweet['user']['profile_image_url']; ?> ">
-				</div>
 				<div class="text match-height">
 					<?php echo $this->sanitize_links($tweet); ?>
 				</div>

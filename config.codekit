@@ -392,6 +392,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/iats-posts.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1497,
+		"inputAbbreviatedPath": "\/img\/iats-posts.png",
+		"outputAbbreviatedPath": "\/img\/iats-posts.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/rep-pattern.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -553,6 +564,17 @@
 		"initialSize": 44314,
 		"inputAbbreviatedPath": "\/img\/temp\/England-u20s-2014-680x350.jpg",
 		"outputAbbreviatedPath": "\/img\/temp\/England-u20s-2014-680x350.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/favicon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1364,
+		"inputAbbreviatedPath": "\/img\/temp\/favicon.png",
+		"outputAbbreviatedPath": "\/img\/temp\/favicon.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -744,6 +766,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/tweet.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1316,
+		"inputAbbreviatedPath": "\/img\/tweet.png",
+		"outputAbbreviatedPath": "\/img\/tweet.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/uni-pattern.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -778,6 +811,33 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/inc\/widgets\/nav-latest.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/inc\/widgets\/twitter\/feed.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/inc\/widgets\/twitter\/feed.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/inc\/widgets\/twitter\/oauth\/OAuth.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/inc\/widgets\/twitter\/oauth\/OAuth.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/inc\/widgets\/twitter\/oauth\/twitteroauth.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/inc\/widgets\/twitter\/oauth\/twitteroauth.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -874,6 +934,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/vendor\/min\/jquery.flexslider-ck.js",
 		"outputAbbreviatedPath": "\/js\/vendor\/min\/min\/jquery.flexslider-ck-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/vendor\/min\/matchheight.min-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/vendor\/min\/matchheight.min-min.js",
+		"outputAbbreviatedPath": "\/js\/vendor\/min\/min\/matchheight.min-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -1003,7 +1074,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Spyros Lefkaditis",
+"lastSavedByUser": "SPYROS LEFKADITIS",
 "manualImportLinks": {
 	},
 "projectAttributes": {

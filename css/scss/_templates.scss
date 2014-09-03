@@ -96,22 +96,24 @@
 
 		}
 	}// .section-content
-
-	.advertisement{
-		margin: 0 auto;
-
-		&.banner{
-			width:970px;
-			height: 90px;
-		}
-
-		&.leaderboard{
-			width: 728px;
-			height: 90px;
-		}		
-	}
 }
 
+.advertisement{
+	padding: 2em 0;
+	background-color: #f3f4f6;
+
+	.banner{
+		width:970px;
+		height: 90px;
+		margin: 0 auto;
+	}
+
+	.leaderboard{
+		width: 728px;
+		height: 90px;
+		margin: 0 auto;
+	}		
+}
 
 
 /* ==========================================================================
@@ -156,9 +158,9 @@ body.single{
 			display: inline-block;
 			width: 2em;
 			height: 2em;
-			padding:0.2em;
 			text-decoration: none;
 			border-bottom: none !important;
+			vertical-align: top;
 
 			&:hover{
 				i{
@@ -168,10 +170,12 @@ body.single{
 		}
 
 		i{
+			display: inline-block;
 			padding: 0.5em;
-			height: 100%;
-			width: 100%;
+			height: 2em;
+			width: 2em;
 			color: #fff;
+			vertical-align: top;
 			@include opacity(0.8);
 			@include border-radius(2px);
 			@include transition(opacity,.3s);
@@ -187,7 +191,11 @@ body.single{
 
 		.icon-mail{
 			background-color: #BB2F2C;
-		}	
+		}
+
+		.wa_btn{
+			height:16px;
+		}
 	}// .social-icons
 }
 /* =================================
@@ -358,14 +366,7 @@ body.single{
 				margin-left: 0;
 			}
 
-			.avatar{
-				float: left;
-				overflow: hidden;
-				@include border-radius(50px);
-			}
-
  			.text{
- 				padding-left: 60px;
  				@extend .medium;
  				margin-bottom:2em;
 

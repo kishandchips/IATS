@@ -36,13 +36,18 @@ $cat_parent = $category->category_parent;
 
 							<?php if($i == 0): ?>
 								<article class="main meta-inner column col-full <?php echo $category_name; ?> <?php echo $format; ?>">
-								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'large' ); ?>
+								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(),'large' ); ?>
 							<?php else: ?>
-								<article class="column col-1-2 <?php echo $category_name; ?> <?php echo $format; ?>">
-								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
+								<article  class="column col-1-2 <?php echo $category_name; ?> <?php echo $format; ?>">
+								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(),'medium' ); ?>
 							<?php endif; ?>
 									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-										<div class="image" style="background-image:url(<?php echo $image[0]; ?>)">
+											<?php if($image[0]): ?>
+											<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+											<?php else: ?>
+											<div class="image placeholder">
+											<?php endif; ?>
+
 											<?php if($format == 'gallery'): ?>
 												<?php $images = get_field('gallery', $post->ID) ?>
 												<?php $count = count($images); ?>
@@ -56,19 +61,19 @@ $cat_parent = $category->category_parent;
 										</div>
 									</a>
 
-									<div class="meta">
+									<div data-mh="grid" class="meta match-height">
 										<div class="category out">
 											<a href="<?php echo $category_link; ?>">
 												<p class="cat-title"><?php echo $category_name; ?><i class="icon-badge"></i></p>										
 											</a>
 										</div>	
-										<div class="title match-height">
+										<div class="title">
 											<a href="<?php the_permalink() ?>">
 												<h2><?php the_title(); ?></h2>										
 											</a>
 										</div>
 										<div class="misc">
-											<span class="date"><?php the_time('m M Y'); ?></span>
+											<span class="date"><?php the_time('d M Y'); ?></span>
 										</div>
 									</div>			
 								</article>
@@ -99,15 +104,15 @@ $cat_parent = $category->category_parent;
 
 				<div id="sidebar" class="column col-3">
 					<div class="sidebar-widget list">
-						<?php dynamic_sidebar('primary' ); ?>
+						<?php dynamic_sidebar('secondary' ); ?>
 					</div>
 				</div><!-- #sidebar -->
 
 			</div><!-- .inner-container -->
 	</div><!-- #content -->
 
-    <div class="section">
-        <div class="advertisement leaderboard">
+    <div class="advertisement">
+        <div class="leaderboard">
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- Leaderboard 1 -->
 			<ins class="adsbygoogle"
@@ -119,15 +124,22 @@ $cat_parent = $category->category_parent;
 			</script>            
         </div>
     </div><!-- cash money -->
-    
+ 
+	<?php  
+		$cat = get_query_var('cat');
+		$yourcat = get_category ($cat);
+		$yourcat->slug;
+	?>
+
 	<section class="section medialight-bg">
 		<div class="inner-container">
 			<header>
+
 				<h4 class="sub-title">Latest Media</h4>
 			</header>
 		</div><!-- .inner-container -->
 
-			<div class="slider four">
+			<div class="slider three">
 				<ul class="slides">
 				<?php
 					$offset = 0; 
@@ -139,7 +151,7 @@ $cat_parent = $category->category_parent;
 					$args = array(
 						'offset' => $offset,
 						'posts_per_page'	=> 3,
-						'category_name' => single_cat_title('',false),
+						'category_name' => $yourcat->slug,
 						'tax_query' => array(
 		                    array(
 		                        'taxonomy' => 'post_format',
@@ -165,9 +177,14 @@ $cat_parent = $category->category_parent;
 
 						<article class="slide-col column col-1-3 <?php echo $category_name ?> <?php echo $format; ?>">
 							<article class="single">
-								<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(),'medium' ); ?>
 								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-									<div class="image" style="background-image:url(<?php echo $url; ?>);">
+										<?php if($image[0]): ?>
+										<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+										<?php else: ?>
+										<div class="image placeholder">
+										<?php endif; ?>
+											
 										<?php if($format == 'gallery'): ?>
 											<?php $images = get_field('gallery', $post->ID) ?>
 											<?php $count = count($images); ?>
@@ -181,19 +198,19 @@ $cat_parent = $category->category_parent;
 									</div>
 								</a>
 
-								<div class="meta">
+								<div data-mh="media-grid" class="meta match-height">
 									<div class="category out">
 										<a href="<?php echo $category_link ?>"><!-- CATEGORY LINK -->
 											<p class="cat-title"><?php echo $category_name ?><i class="icon-badge"></i></p>										
 										</a>
 									</div>	
-									<div class="title match-height">
+									<div  class="title">
 										<a href="<?php the_permalink(); ?>"><!-- POST LINK -->
 											<h2><?php the_title(); ?></h2>
 										</a>
 									</div>
 									<div class="misc">
-										<span class="date"><?php the_time('m M Y'); ?></span>
+										<span class="date"><?php the_time('d M Y'); ?></span>
 									</div>
 								</div>				
 							</article>
@@ -204,7 +221,7 @@ $cat_parent = $category->category_parent;
 				<?php $offset += 4; ?>
 				<?php $slides++; ?>
 				<?php endwhile; ?>
-				<?php wp_reset_query(); ?>
+				<?php wp_reset_postdata(); ?>
 				</ul>
 			</div><!-- .slider.four -->
 
@@ -229,7 +246,7 @@ $cat_parent = $category->category_parent;
 					$args = array(
 						'offset' => $offset,
 						'posts_per_page'	=> 4,
-						'category_name' => single_cat_title('',false),
+						'category_name' => $yourcat->slug,
 						'tax_query' => array(
 		                    array(
 		                        'taxonomy' => 'post_format',
@@ -255,9 +272,13 @@ $cat_parent = $category->category_parent;
 
 						<article class="slide-col column col-1-4 <?php echo $category_name ?> <?php echo $format; ?>">
 							<article class="single">
-								<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(),'medium' ); ?>
 								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-									<div class="image" style="background-image:url(<?php echo $url; ?>);">
+									<?php if($image[0]): ?>
+									<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+									<?php else: ?>
+									<div class="image placeholder">
+									<?php endif; ?>
 										<?php if($format == 'gallery'): ?>
 											<?php $images = get_field('gallery', $post->ID) ?>
 											<?php $count = count($images); ?>
@@ -271,19 +292,19 @@ $cat_parent = $category->category_parent;
 									</div>
 								</a>
 
-								<div class="meta">
+								<div data-mh="article-grid" class="meta match-height">
 									<div class="category out">
 										<a href="<?php echo $category_link ?>"><!-- CATEGORY LINK -->
 											<p class="cat-title"><?php echo $category_name ?><i class="icon-badge"></i></p>										
 										</a>
 									</div>	
-									<div class="title match-height">
+									<div class="title">
 										<a href="<?php the_permalink(); ?>"><!-- POST LINK -->
 											<h2><?php the_title(); ?></h2>
 										</a>
 									</div>
 									<div class="misc">
-										<span class="date"><?php the_time('m M Y'); ?></span>
+										<span class="date"><?php the_time('d M Y'); ?></span>
 									</div>
 								</div>				
 							</article>
@@ -294,7 +315,7 @@ $cat_parent = $category->category_parent;
 				<?php $offset += 4; ?>
 				<?php $slides++; ?>
 				<?php endwhile; ?>
-				<?php wp_reset_query(); ?>
+				<?php wp_reset_postdata(); ?>
 				</ul>
 			</div><!-- .slider.four -->
 	</section>	

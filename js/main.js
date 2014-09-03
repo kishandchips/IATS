@@ -11,16 +11,18 @@ var main = {
 		this.live();
 		this.socialAjax();
 
+		$('.sidebar-widget').stickyfloat();
+		$('.sidebar-widget').stickyfloat('update',{ duration:0 });
+
 		// STICKY HEADER
-		offset = $('#header').offset();
-		sticky = $('.sticky-header');
+		var offset = $('#navigation').offset(),
+			header = $('#header');
 
 		$(window).scroll(function() {
 			if ($(this).scrollTop() > offset.top){  
-			    sticky.addClass("sticky");
-			}
-			else{
-			    sticky.removeClass("sticky");
+			    header.addClass("sticky");
+			} else {
+			    header.removeClass("sticky");
 			}
 		});
 
@@ -32,12 +34,11 @@ var main = {
 		});
 
 		//FLEXSLIDERS
-		//
 		$('.slider.hero').flexslider({
 			slideshow: false,
 			animation: "slide",
 			startAt: 1,
-			before: function(slider){
+			before: function(){
 				$('.slider.hero').resize();
 			}
 		});
@@ -46,7 +47,7 @@ var main = {
 			animation: "slide",
 			animationLoop: false,
 			slideshow: false,
-			before: function(slider){
+			before: function(){
 				$('.slider.three').resize();
 			},
 			after: function(){
@@ -58,7 +59,7 @@ var main = {
 			animation: "slide",
 			animationLoop: false,
 			slideshow: false,
-			before: function(slider){
+			before: function(){
 				$('.slider.four').resize();
 			},
 			after: function(){
@@ -72,7 +73,7 @@ var main = {
 				animation: "slide",
 				animationLoop: false,
 				slideshow: false,
-				before: function(slider){
+				before: function(){
 					$('.slider.latest-cat-articles').resize();
 				},
 				after: function(){
@@ -98,7 +99,7 @@ var main = {
 
 			$('.slider.gallery').flexslider({
 				animation: "slide",
-				directionNav: false,
+				directionNav: true,
 			    controlNav: false,
 			    animationLoop: false,
 			    slideshow: false,
@@ -129,18 +130,30 @@ var main = {
 
 	listeners: function(){
 
-		var menu = $('#menu-toggle'),
+		var header = $('#header'),
+			search = $('#search-input'),
+			menu = $('#menu-toggle'),
+			sticky = $('.sticky-header'),
 			nav	= $('#main-nav'),
-			search = $('#search-toggle'),
-			searchBar = $('.search-bar'),
+			button = $('#searchsubmit'),
 			catToggle = $('.cat-toggle');
 
-		search.on('click', function(){
-			searchBar.toggleClass('visible');
+		menu.on('click', function(){
+			sticky.toggleClass('overflow');
+			nav.toggleClass('visible');
 		});
 
-		menu.on('click', function(){
-			nav.toggleClass('visible');
+		button.on('click', function(e){				
+			if(!header.hasClass('search-open') && !search.val()){
+				e.preventDefault();
+				header.toggleClass('search-open');
+				search.focus();
+			} else if(search.val()) {
+				return true;
+			} else{
+				e.preventDefault();
+				header.toggleClass('search-open');
+			}
 		});
 
 		catToggle.on('hover', function(e){
@@ -187,7 +200,7 @@ var main = {
 			var currentSlider = $('#home .latest').find('.slider.'+ slider);
 
 			//buttons
-			$('#filter .cat-filter').removeClass('active')
+			$('#filter .cat-filter').removeClass('active');
 			$(this).addClass('active');
 
 			//sliders
@@ -205,7 +218,7 @@ var main = {
 
 			this.vars.body = $('body');
 			this.vars.sidebarButton = $('#js-sidebar');
-			this.vars.sidebar = $('#sidebar');
+			this.vars.sidebar = $('.sidebar-widget');
 			this.vars.content = $('#sidebar').parent('.inner-container');
 			this.vars.filter = $('#filter-select');
 			
@@ -223,11 +236,13 @@ var main = {
 
 			resize: function(){
 				var sidebarHeight = main.components.vars.sidebar.height();
-				var containerHeight = main.components.vars.content.outerHeight();
+				var container = main.components.vars.content.height();
+				
+				if(sidebarHeight === container){return;}
 
-				if(containerHeight < sidebarHeight){
+				if(container < sidebarHeight){
 					main.components.vars.content.css('height', sidebarHeight);
-				}else{
+				} else {
 					main.components.vars.content.css('height', 'auto');
 				}
 			},
@@ -262,12 +277,9 @@ var main = {
 	$(window).load(function(){
 		main.sticky();
 	   	main.isotope();
+	   	$('.match-height').matchHeight(true);
 
-		$('.match-height').matchHeight();
 		$(window).trigger('resize');
-		
-		
-
 	});
 
 	main.init();

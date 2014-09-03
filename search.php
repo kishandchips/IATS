@@ -19,9 +19,14 @@
 					<?php $format = get_post_format(); ?>
 
 						<article class="medua column col-full <?php echo $category_name ?> <?php echo $format; ?>">
-							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
+							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id()); ?>
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-								<div class="image" style="background-image:url(<?php echo $image[0]; ?>)">
+									<?php if($image[0]): ?>
+									<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+									<?php else: ?>
+									<div class="image placeholder">
+									<?php endif; ?>
+									
 									<?php if($format == 'gallery'): ?>
 										<?php $images = get_field('gallery', $post->ID) ?>
 										<?php $count = count($images); ?>
@@ -47,7 +52,7 @@
 									</a>
 								</div>
 								<div class="misc">
-									<span class="date"><?php the_time('m M Y'); ?></span>
+									<span class="date"><?php the_time('d M Y'); ?></span>
 								</div>
 							</div>			
 						</article>
@@ -73,11 +78,6 @@
 				</div><!-- .section-content -->
 
 				<div id="sidebar" class="column col-3">
-
-					<div class="sidebar-widget advert">
-						
-					</div>
-
 					<div class="sidebar-widget list">
 						<?php dynamic_sidebar('primary' ); ?>
 					</div>

@@ -29,7 +29,12 @@
 					<article class="column col-1-3 <?php echo fitness_cat(); ?> <?php echo $format; ?>">
 						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
 						<a href="<?php the_permalink(); ?> ">
-							<div class="image" style="background-image:url(<?php echo $image[0]; ?>)">
+								<?php if($image[0]): ?>
+								<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+								<?php else: ?>
+								<div class="image placeholder">
+								<?php endif; ?>
+								
 								<?php if($format == 'gallery'): ?>
 									<?php $images = get_field('gallery', $post->ID) ?>
 									<?php $count = count($images); ?>
@@ -53,7 +58,7 @@
 								</a>
 							</div>
 							<div class="misc">
-								<span class="date"><?php the_time('m M Y'); ?></span>
+								<span class="date"><?php the_time('d M Y'); ?></span>
 							</div>
 						</div>		
 					</article>
