@@ -331,24 +331,19 @@ body.single{
 	}// .fitness
 
 	.section.feed{
-		background-color: #fff;
+		background-color: #f4f5f7;
 	}
 
  	#feed{
-
  		ul.tweets{
- 			padding: 0;
+ 			padding: 0 10px;
  			list-style: none;
  		}
 
 		.tweet{
-			position: relative;
-			float:left;
+			float: left;
 			width: 49%;
 			margin-left: 2%;
- 			margin-bottom:20px;
- 			padding: 2em;
- 			border: 1px solid rgba(#333,.5);
  			background-color: #fff;
  			overflow:hidden;
  			@include transition(all,.3s);
@@ -358,17 +353,13 @@ body.single{
  				margin-left: 0;
  			}
 
- 			&:hover{
- 				@include box-shadow(rgba(81, 203, 238, 1) 0 0 5px );
+ 			&:first-child{
+ 				margin-left: 0;
  			}
-			
-			&:nth-child(2n+1){
-				margin-left: 0;
-			}
 
  			.text{
+ 				padding:2em 2em 0 2em;
  				@extend .medium;
- 				margin-bottom:2em;
 
  				@media screen and (max-width: 500px){
  					font-size: 70%;
@@ -379,35 +370,42 @@ body.single{
  				}
 
  				a{
- 					color: #5e5e5e;
+ 					color: #167147;
+ 					@include medium;
  					padding-bottom:2px;
- 					border-bottom:1px dotted #000;
+ 					border-bottom:1px solid transparent;
+ 					@include transition(border-color,.3s);
 
  					&:hover{
- 						border-bottom:1px solid #000;
+ 						border-bottom:1px solid #167147;
  					}
  				}
  			}
+
+ 			.time{
+ 				padding: 0.5em 2em;
+ 				color: #949494;
+ 				@include medium;
+				@extend .medium;
+ 			}
+
  			.user{
- 				display: inline-block;
- 				float:left;
+ 				padding: 0.5em 2em;
+ 				background-color: #167147;
+
  				a{
- 					color: #000;
- 					@include heavy;
-					@extend .medium;	
+ 					color: #fff;
+ 					@include medium;
+					@extend .medium;
+					text-transform: uppercase;
  				}
 
  				.icon-twitter{
  					margin-right: 0.5em;
- 					font-size: 2em;
+ 					color: #fff;
+ 					font-size: 1.5em;
  					vertical-align: middle;
  				}
-
- 			}
- 			.time{
- 				display: inline-block;
- 				float:right;
- 				@extend .small;
  			}
  		}
  	}// #feed

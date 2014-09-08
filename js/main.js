@@ -11,8 +11,10 @@ var main = {
 		this.live();
 		this.socialAjax();
 
-		$('.sidebar-widget').stickyfloat();
-		$('.sidebar-widget').stickyfloat('update',{ duration:0 });
+		if($('body').hasClass('single')){
+			$('.sidebar-widget').stickyfloat();
+			$('.sidebar-widget').stickyfloat('update',{ duration:0 });
+		}
 
 		// STICKY HEADER
 		var offset = $('#navigation').offset(),
@@ -114,7 +116,7 @@ var main = {
 
 		var twitterCount = $('#twitter-count').html();
 
-		$('.twitter.count').html(twitterCount);
+		$('.twitter .count').html(twitterCount);
 
 		$.ajax({
 			url: "https://graph.facebook.com/inattheside?fields=likes",
@@ -122,7 +124,7 @@ var main = {
 		})
 		.done(function(data){
 			var facebookCount = data.likes;
-			$('.facebook.count').html(facebookCount);
+			$('.facebook .count').html(facebookCount);
 		});
 
 		
@@ -268,9 +270,11 @@ var main = {
 		var element = $('#live');
 		if(!element.length){return false;}
 
-	    setInterval(function() { // Do this
-            location.reload();
-      	}, 30000); // Every one second
+		if(! $('body').hasClass('logged-in')){
+		    setInterval(function() { // Do this
+	            location.reload();
+	      	}, 30000); // Every one second
+		}
 	}
 };//main
 

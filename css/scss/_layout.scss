@@ -18,7 +18,6 @@
 }//#joebudden
 
 #header{
-
 	a.logo{
 		display: inline-block;
 		width: 100%;
@@ -33,13 +32,16 @@
 	}
 
 	.space-jam{
+		overflow: hidden;
+
 		.space-logo{
-			height:150px;
+			float: left;
 			position: relative;
 			display: inline-block;
-			width: 300px;
+			height:150px;
+			margin-left: 2em;
 
-			@media screen and (max-width: 1300px){
+			@media screen and (max-width: 1200px){
 				display: none;
 			}
 
@@ -48,9 +50,17 @@
 				font-size: 3em;
 			}
 		}
+
 		.advertisement{
 			float: right;
+			width: 70%;
+			min-width: 970px;
 			background: none;
+
+			@media screen and (max-width: 1200px){
+				float: none;
+				margin: 0 auto;
+			}
 		}
 	}// .space-jam
 
@@ -87,7 +97,7 @@
 		}
 	}
 
-	@media screen and (max-width: 1300px){
+	@media screen and (max-width: 1200px){
 		.logo-wrapper{
 			display: inline-block !important;
 		}
@@ -116,6 +126,7 @@
 	z-index: 9999;
 	max-width: 1600px;
 	margin: 0 auto;
+	@include transition(all,.3s);
 
 	.logo-wrapper{
 		display: none;
@@ -164,7 +175,7 @@
 
 		.search-wrap{
 			display: inline-block;
-		
+			padding: 0 10px;
 			@media screen and (max-width: 1250px){
 				display: none;
 			}
@@ -451,9 +462,7 @@
 		top: 100%;left:0;
 		width: 600px;
 		display: none;
-		// @extend .invisible;
 		@include transition(all,.3s);
-		// z-index: 50;
 
 		li.menu-item{
 			line-height: 40px;
@@ -477,7 +486,7 @@
 						}
 
 						p{
-							@include opacity(1);
+							@include opacity(0.7);
 						}
 					}
 
@@ -501,7 +510,7 @@
 					p{
 						font-size: 14px;
 						line-height: 1.2;
-						@include opacity(0.7);
+						@include opacity(1);
 						@include transition(opacity,.3s);
 					}
 				}
@@ -625,28 +634,21 @@
 				padding: 10px;
 				@include transition(all,.3s);
 
-				&:hover{
-					color: #fff;
-
-					&.facebook{
-						background-color: #3B5996;
-					}
-					&.twitter{
-						background-color: #4099FF;
-					}
-
-					.count{
-						color: #000;
-					}
+				&.facebook{
+					color: #3B5996;
+				}
+				&.twitter{
+					border-left: 1px solid #E8E9ED;
+					color: #4099FF;
 				}
 			}
 			
 			span.count{
-				float: right;
-				margin-bottom: 0.5em;
-				padding:5px;
+				display: inline-block;
+				margin-left: 1em;
+				@include heavy;
 				line-height: 1;
-				background-color: #E8E9ED;
+				vertical-align: middle;
 			}
 		}// .social-widget
 
@@ -982,12 +984,6 @@ article{
 				color: #fff;
 				font-size: 4em;
 			}			
-		}
-	}
-
-	&.gallery{
-		.image{
-			height: 250px;
 		}
 	}
 
@@ -1827,6 +1823,7 @@ article{
 	.widget-title{
 		margin-top: 0;
 		margin-bottom: 0.5em;
+		padding: 0 5px;
 		@include medium;
 		text-transform: uppercase;
 	}

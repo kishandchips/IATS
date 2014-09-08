@@ -50,7 +50,7 @@ class Twitter_Feed extends WP_Widget {
 			$token = '1361869022-Smh5Dmu0auCoaol9Bhy5CcFMWd5x6vbVFMH8paL';
 			$token_secret = 'zoZIhrRztmS6jRqWVQ8DTC7brfhfhvobbGyQUhSI';
 			$connection = new TwitterOAuth($key, $secret, $token, $token_secret);
-			$tweets = $connection->get('statuses/user_timeline', array('screen_name' => $args['username'], 'count' => 6, 'trim_user' => false));
+			$tweets = $connection->get('statuses/user_timeline', array('screen_name' => $args['username'], 'count' => 2, 'trim_user' => false));
 			// set_transient('tweets', $tweets);
 		// }
 		
@@ -63,11 +63,9 @@ class Twitter_Feed extends WP_Widget {
 				<div class="text match-height">
 					<?php echo $this->sanitize_links($tweet); ?>
 				</div>
+				<div class="time"><?php echo $this->relativeTime($tweet['created_at']); ?></div>
 				<div class="user">
 					<a href="http://twitter.com/<?php echo $tweet['user']['screen_name'] ?>" target="_blank"><i class="icon-twitter"></i>@<?php echo $tweet['user']['screen_name'] ?></a>
-				</div>
-				<div class="time">
-					<?php echo $this->relativeTime($tweet['created_at']); ?>
 				</div>
 			</li>
 			<?php endforeach; ?>
