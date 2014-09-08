@@ -1721,11 +1721,6 @@ textarea {
         /* line 372, scss/_layout.scss */
         #main-nav ul.menu > li.menu-item.representative:hover .sub-menu .menu-item.visible a:after, #main-nav ul.menu > li.menu-item.representative:hover ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover figure.menu-item:after a:after, #main-nav ul.menu > li.menu-item.representative:hover .sub-menu .menu-item.slider.latest-cat-articles.active a:after {
           color: #373553; }
-    @media screen and (min-width: 1250px) and (max-width: 1400px) {
-      /* line 381, scss/_layout.scss */
-      #main-nav ul.menu > li.menu-item.representative .sub-menu {
-        left: auto;
-        right: 0; } }
     /* line 386, scss/_layout.scss */
     #main-nav ul.menu > li.menu-item.representative .menu-item-posts {
       background-color: #373553; }
@@ -1741,11 +1736,6 @@ textarea {
         /* line 403, scss/_layout.scss */
         #main-nav ul.menu > li.menu-item.sevens:hover .sub-menu .menu-item.visible a:after, #main-nav ul.menu > li.menu-item.sevens:hover ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover figure.menu-item:after a:after, #main-nav ul.menu > li.menu-item.sevens:hover .sub-menu .menu-item.slider.latest-cat-articles.active a:after {
           color: #A73260; }
-    @media screen and (min-width: 1250px) and (max-width: 1400px) {
-      /* line 412, scss/_layout.scss */
-      #main-nav ul.menu > li.menu-item.sevens .sub-menu {
-        left: auto;
-        right: 0; } }
     /* line 417, scss/_layout.scss */
     #main-nav ul.menu > li.menu-item.sevens .menu-item-posts {
       background-color: #A73260; }
