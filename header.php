@@ -21,11 +21,9 @@
 
         <section id="header">
             <div class="space-jam clearfix">
-                <div class="space-logo">
-                    <a class="logo" href="<?php bloginfo('url' ); ?>">
-                        <i class="icon-typelogo"></i>    
-                    </a>
-                </div>
+<!--                 <div class="space-logo">
+
+                </div> -->
                 <div class="advertisement">
                     <div class="banner">
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -43,6 +41,9 @@
 
             <section id="navigation" class="clearfix">
                 <div class="logo-wrapper">
+                    <a class="logo" href="<?php bloginfo('url' ); ?>">
+                        <i class="icon-typelogo"></i>    
+                    </a>
                     <a class="logo" href="<?php bloginfo('url' ); ?>">
                         <i class="icon-logo"></i>    
                     </a>

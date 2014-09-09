@@ -22,39 +22,34 @@
 		display: inline-block;
 		width: 100%;
 		text-align: center;
-		@extend .valign;
-
-		.icon-typelogo{
-			display: inline-block;
-			font-size: 3em;
-			vertical-align: middle
-		}			
+		@extend .valign;	
 	}
 
 	.space-jam{
 		overflow: hidden;
 
-		.space-logo{
-			float: left;
-			position: relative;
-			display: inline-block;
-			height:150px;
-			margin-left: 2em;
+		// .space-logo{
+		// 	float: left;
+		// 	position: relative;
+		// 	display: inline-block;
+		// 	height:150px;
+		// 	margin-left: 2em;
 
-			@media screen and (max-width: 1200px){
-				display: none;
-			}
+		// 	@media screen and (max-width: 1200px){
+		// 		display: none;
+		// 	}
 
-			.icon-typelogo{
-				color: #177248;
-				font-size: 3em;
-			}
-		}
+		// 	.icon-typelogo{
+		// 		color: #177248;
+		// 		font-size: 3em;
+		// 	}
+		// }
 
 		.advertisement{
-			float: right;
-			width: 70%;
-			min-width: 970px;
+			// float: right;
+			// width: 70%;
+			width: 970px;
+			margin: 0 auto;
 			background: none;
 
 			@media screen and (max-width: 1200px){
@@ -103,12 +98,12 @@
 		}
 
 		#main-nav{
-			width: 90%;
+			width: 80%;
 		}
 	}
 
 	&.search-open{
-		@media screen and (min-width: 1100px) and (max-width: 1250px){
+		@media screen and (min-width: 1100px) and (max-width: 1400px){
 			.search-wrap{
 				display: inline-block !important;
 				position: absolute;
@@ -129,10 +124,9 @@
 	@include transition(all,.3s);
 
 	.logo-wrapper{
-		display: none;
 		position:relative;
 		float:left;
-		width: 10%;
+		width: 20%;
 		height:60px;
 		background-color: #177248;
 		z-index: 20;
@@ -140,14 +134,31 @@
 		.logo{
 			display: inline-block;
 			color: #fff;
-			font-size: 3em;
 			vertical-align: middle;
+			
+			.icon-typelogo{
+				color: #fff;
+				font-size: 2.5em;
+
+				@media screen and (max-width: 1100px){
+					display: none;
+				}
+			}
+
+			.icon-logo{
+				display: none;
+				font-size: 3em;
+
+				@media screen and (max-width: 1100px){
+					display: inline-block;
+				}
+			}
 		}
-	}
+	}//.logo-wrapper
 
 	.mob-menu{
 		display: none;
-		width: 90%;
+		width: 80%;
 		line-height: 60px;
 		text-align: center;
 		background-color: #000;
@@ -176,7 +187,7 @@
 		.search-wrap{
 			display: inline-block;
 			padding: 0 10px;
-			@media screen and (max-width: 1250px){
+			@media screen and (max-width: 1400px){
 				display: none;
 			}
 	
@@ -263,12 +274,12 @@
 #main-nav{
 	position: relative;
 	float: left;
-	width:100%;
+	width:80%;
 	line-height:60px;
 	background-color: #000;
 	z-index: 5;
 
-	@media screen and (max-width:1250px){
+	@media screen and (max-width:1100px){
 		width: 100%;
 	}
 
@@ -408,11 +419,11 @@
 
 				}
 
-				// @media screen and (min-width:1250px) and (max-width:1400px){
-				// 	.sub-menu{
-				// 		left:auto;right:0;
-				// 	}
-				// }
+				@media screen and (min-width:1101px) and (max-width:1250px){
+					.sub-menu{
+						left:auto;right:0;
+					}
+				}
 
 				.menu-item-posts{
 					background-color: #A73260;
@@ -775,9 +786,6 @@
 	color: #000;
 	background-color: #FFD20D;
 	border-top: 1px solid black;
-	@media screen and (max-width: 1000px){
-		display: block;
-	}
 
 	.info{
 		position: relative;
@@ -814,6 +822,10 @@
 			color: #000;
 			@extend .small;
 			margin-left: 1em;
+		}
+
+		@media screen and (max-width: 600px){
+			font-size: 80%;
 		}
 	}
 }// .live-fixed
