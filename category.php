@@ -39,7 +39,7 @@ $cat_parent = $category->category_parent;
 								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(),'large' ); ?>
 							<?php else: ?>
 								<article  class="column col-1-2 <?php echo $category_name; ?> <?php echo $format; ?>">
-								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(),'medium' ); ?>
+								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(),'grid' ); ?>
 							<?php endif; ?>
 									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 											<?php if($image[0]): ?>
@@ -177,7 +177,7 @@ $cat_parent = $category->category_parent;
 
 						<article class="slide-col column col-1-3 <?php echo $category_name ?> <?php echo $format; ?>">
 							<article class="single">
-								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(),'medium' ); ?>
+								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(),'grid' ); ?>
 								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 										<?php if($image[0]): ?>
 										<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
@@ -272,7 +272,7 @@ $cat_parent = $category->category_parent;
 
 						<article class="slide-col column col-1-4 <?php echo $category_name ?> <?php echo $format; ?>">
 							<article class="single">
-								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(),'medium' ); ?>
+								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(),'grid' ); ?>
 								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 									<?php if($image[0]): ?>
 									<div class="image" style="background-image:url(<?php echo $image[0] ?>)">

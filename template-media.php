@@ -65,10 +65,10 @@
 										<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'large' ); ?>
 									<?php elseif($i % 3 == 1): ?>
 										<article class="slide-col two column col-2-5 <?php echo $category_name; ?> <?php echo $format; ?>">
-										<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
+										<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid' ); ?>
 									<?php else: ?>
 										<article class="slide-col two column col-2-5 <?php echo $category_name; ?> <?php echo $format; ?>">
-										<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
+										<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid' ); ?>
 									<?php endif; ?>
 
 										<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
@@ -171,7 +171,7 @@
 					<?php $format = get_post_format(); ?>
 					
 					<article class="column col-1-3 <?php echo $category_name; ?> <?php echo $format; ?>">
-						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
+						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid' ); ?>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 								<?php if($image[0]): ?>
 								<div class="image" style="background-image:url(<?php echo $image[0] ?>)">

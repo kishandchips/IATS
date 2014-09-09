@@ -1449,9 +1449,6 @@ textarea {
       #header .space-jam .advertisement {
         float: none;
         margin: 0 auto; } }
-/* line 63, scss/_layout.scss */
-#header.sticky .space-logo {
-  display: none; }
 /* line 67, scss/_layout.scss */
 #header.sticky #navigation {
   position: fixed;
@@ -1469,7 +1466,7 @@ textarea {
     display: inline-block; }
   /* line 85, scss/_layout.scss */
   #header.sticky #navigation #main-nav {
-    width: 90%; }
+    width: 80%; }
     @media screen and (max-width: 1100px) {
       /* line 85, scss/_layout.scss */
       #header.sticky #navigation #main-nav {

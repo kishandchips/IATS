@@ -60,9 +60,9 @@
 	}// .space-jam
 
 	&.sticky{
-		.space-logo{
-			display: none;
-		}
+		// .space-logo{
+		// 	display: none;
+		// }
 
 		#navigation{
 			position: fixed;
@@ -83,7 +83,7 @@
 			}
 
 			#main-nav{
-				width: 90%;
+				width: 80%;
 
 				@media screen and (max-width:1100px){
 					width: 100%;

@@ -121,7 +121,7 @@
 
 						<article class="slide-col column col-1-4 <?php echo $category_name ?> <?php echo $format; ?>">
 							<article class="single">
-								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
+								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid' ); ?>
 								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 									<?php if($image[0]): ?>
 									<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
@@ -220,7 +220,7 @@
 						<?php $category_link = get_category_link($categoryid); ?>
 
 						<article class="slide-col column col-1-4 <?php echo $category_name ?>">
-							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
+							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid' ); ?>
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 								<?php if($image[0]): ?>
 								<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
