@@ -18,7 +18,7 @@ register_nav_menus(array(
 add_image_size('gallery-slide',1000, 600, false );
 add_image_size('gallery-thumb', 150, 150, true );
 add_image_size('nav-thumb', 250, 150, true );
-add_image_size('grid', 400,400, true);
+add_image_size('grid', 425,425, true);
 
 // Add Actions
 add_action( 'after_setup_theme', 'custom_after_setup_theme' );
