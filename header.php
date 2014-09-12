@@ -20,14 +20,13 @@
         <div id="joebudden" class="container">
 
         <section id="header">
-            <div class="space-jam clearfix">
-<!--                 <div class="space-logo">
+<!--        <div class="space-jam clearfix">
+                <div class="space-logo">
 
-                </div> -->
+                </div>                
                 <div class="advertisement">
                     <div class="banner">
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <!-- Large Leaderboard -->
                         <ins class="adsbygoogle"
                              style="display:inline-block;width:970px;height:90px"
                              data-ad-client="ca-pub-1566926890494756"
@@ -36,8 +35,8 @@
                         (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>            
                     </div>
-                </div><!-- cash money -->            
-            </div><!-- .space-jam -->
+                </div>        
+            </div> -->
 
             <section id="navigation" class="clearfix">
                 <div class="logo-wrapper">

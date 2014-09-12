@@ -630,10 +630,9 @@
 	</section><!-- .section.latest -->
 
 
-    <div class="advertisement">
+<!--     <div class="advertisement">
         <div class="leaderboard">
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			<!-- Leaderboard 1 -->
 			<ins class="adsbygoogle"
 			     style="display:inline-block;width:728px;height:90px"
 			     data-ad-client="ca-pub-1566926890494756"
@@ -642,7 +641,7 @@
 			(adsbygoogle = window.adsbygoogle || []).push({});
 			</script>            
         </div>
-    </div><!-- cash money -->
+    </div> -->
 
 
 	<section class="section media medialight-bg">

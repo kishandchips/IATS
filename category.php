@@ -111,10 +111,9 @@ $cat_parent = $category->category_parent;
 			</div><!-- .inner-container -->
 	</div><!-- #content -->
 
-    <div class="advertisement">
+<!--     <div class="advertisement">
         <div class="leaderboard">
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			<!-- Leaderboard 1 -->
 			<ins class="adsbygoogle"
 			     style="display:inline-block;width:728px;height:90px"
 			     data-ad-client="ca-pub-1566926890494756"
@@ -123,7 +122,7 @@ $cat_parent = $category->category_parent;
 			(adsbygoogle = window.adsbygoogle || []).push({});
 			</script>            
         </div>
-    </div><!-- cash money -->
+    </div> -->
  
 	<?php  
 		$cat = get_query_var('cat');

@@ -663,6 +663,43 @@
 			}
 		}// .social-widget
 
+		&.widget_polls-widget{
+			.wp-polls{
+				background-color: #fff;
+
+				>p{
+					margin:0;
+					padding: 15px;
+				}
+
+				.wp-polls-ul{
+					li{
+						border-top: 1px solid #E8E9ED;
+						border-bottom: 1px solid #E8E9ED;
+
+						&:first-child{
+							border-bottom: 0;
+						}
+					}
+				}
+				.pollbar{
+					background-color: #c8c8c8;
+					background-image: none;
+					border: none;
+				}
+
+				.wp-polls-ans{
+					>p{
+						margin: 0;
+						padding: 15px;
+						@extend .small;
+						@include medium;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}// polls-widget
+
 		&.popular-posts{
 			li{
 				overflow: hidden;
@@ -722,7 +759,6 @@
 			margin: 0;
 			padding: 0;
 			list-style-type: none;
-			background-color: fff;
 
 			li{
 				padding: 15px;
