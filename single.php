@@ -47,7 +47,7 @@
 						<a href="mailto:?&body=<?php the_permalink(); ?>">
 							<i class="icon-mail"></i>
 						</a>
-						<a href="whatsapp://send" data-text="Take a look at this awesome website:" data-href="" class="wa_btn wa_btn_m" style="display:none">Share</a>
+						<a href="whatsapp://send" data-text="Take a look at this awesome website:" data-href="<?php the_permalink(); ?>" class="wa_btn wa_btn_s" style="display:none">Share</a>
 					</span>
 				</div>
 
