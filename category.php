@@ -10,7 +10,7 @@ $cat_parent = $category->category_parent;
 ?>
 
 <div id="category">
-	<header id="page-header" class="<?php echo $cat_name ?>-bg">
+	<header id="page-header" class="<?php echo $cat_name ?>">
 		<h1 class="title">
 			<i class="icon-badge"></i>
 			<?php single_cat_title(); ?>

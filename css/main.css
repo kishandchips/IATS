@@ -1,5 +1,5 @@
 /*! normalize.css v1.0.1 | MIT License | git.io/normalize */
-@import '//fast.fonts.net/cssapi/774e7563-a8f4-4d3d-80ef-6ddbe85570fc.css';
+@import "//fast.fonts.net/cssapi/774e7563-a8f4-4d3d-80ef-6ddbe85570fc.css";
 /* line 2, scss/_normalize.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
@@ -613,107 +613,102 @@ html[xmlns] .slides {
    COLOUR SCHEMES
    ========================================================================== */
 /*SCHOOLS*/
-/* line 8, scss/_colours.scss */
-.schools-bg {
-  color: #fff;
-  background-color: #0c3261; }
-  /* line 12, scss/_colours.scss */
-  .schools-bg .icon-badge:after {
-    content: "\e616"; }
-
 /*UNIVERSITIES*/
-/* line 22, scss/_colours.scss */
-.university-bg {
+/*REPRESENTATIVE*/
+/*SEVENS*/
+/*AROUND THE GAME*/
+/*IATS*/
+/* line 33, scss/_colours.scss */
+#page-header.schools {
+  color: #fff;
+  background-color: #0C3261; }
+  /* line 37, scss/_colours.scss */
+  #page-header.schools .icon-badge:after {
+    content: "\e616"; }
+/* line 43, scss/_colours.scss */
+#page-header.university {
   color: #fff;
   background-color: #810106; }
-  /* line 26, scss/_colours.scss */
-  .university-bg .icon-badge:after {
+  /* line 47, scss/_colours.scss */
+  #page-header.university .icon-badge:after {
     content: "\e618"; }
-
-/*REPRESENTATIVE*/
-/* line 36, scss/_colours.scss */
-.representative-bg {
+/* line 53, scss/_colours.scss */
+#page-header.representative {
   color: #fff;
-  background-color: #250d3c; }
-  /* line 40, scss/_colours.scss */
-  .representative-bg .icon-badge:after {
+  background-color: #250D3C; }
+  /* line 57, scss/_colours.scss */
+  #page-header.representative .icon-badge:after {
     content: "\e615"; }
-
-/*SEVENS*/
-/* line 49, scss/_colours.scss */
-.sevens-bg {
+/* line 63, scss/_colours.scss */
+#page-header.sevens {
   color: #fff;
-  background-color: #e74e8b; }
-  /* line 53, scss/_colours.scss */
-  .sevens-bg .icon-badge:after {
+  background-color: #E74E8B; }
+  /* line 67, scss/_colours.scss */
+  #page-header.sevens .icon-badge:after {
     content: "\e617"; }
-
-/*AROUND THE GAME*/
-/* line 62, scss/_colours.scss */
-.around-the-game-bg {
+/* line 73, scss/_colours.scss */
+#page-header.around-the-game {
   color: #fff;
-  background-color: #1c3203; }
-  /* line 66, scss/_colours.scss */
-  .around-the-game-bg .icon-badge:after {
-    content: "\e611"; }
-
-/*IATS*/
-/* line 74, scss/_colours.scss */
-.fitness-bg {
-  color: #fff;
-  background-color: #d45703; }
+  background-color: #1C3203; }
   /* line 77, scss/_colours.scss */
-  .fitness-bg .icon-badge:after {
+  #page-header.around-the-game .icon-badge:after {
+    content: "\e611"; }
+/* line 83, scss/_colours.scss */
+#page-header.fitness {
+  color: #fff;
+  background-color: #D45703; }
+  /* line 87, scss/_colours.scss */
+  #page-header.fitness .icon-badge:after {
     content: "\e614"; }
 
-/* line 83, scss/_colours.scss */
+/* line 94, scss/_colours.scss */
 .live-bg {
   color: #000;
   background-color: #FFD20D;
   border-top: 1px solid black; }
-  /* line 88, scss/_colours.scss */
+  /* line 99, scss/_colours.scss */
   .live-bg .icon-badge:after {
     content: "\e611"; }
 
 /*MEDIA*/
-/* line 95, scss/_colours.scss */
+/* line 106, scss/_colours.scss */
 .media-bg {
   color: #fff;
   background-color: #005377; }
-  /* line 99, scss/_colours.scss */
+  /* line 110, scss/_colours.scss */
   .media-bg .icon-badge:after {
     content: "\e619"; }
 
-/* line 105, scss/_colours.scss */
+/* line 116, scss/_colours.scss */
 .medialight-bg {
   background-color: #262631; }
 
-/* line 108, scss/_colours.scss */
+/* line 119, scss/_colours.scss */
 .mediadark-bg {
   background-color: #1b1b1f; }
 
-/* line 114, scss/_colours.scss */
+/* line 125, scss/_colours.scss */
 article .icon-badge:after {
   font-size: 1.2em; }
-/* line 119, scss/_colours.scss */
+/* line 130, scss/_colours.scss */
 article.schools .icon-badge:after {
   content: "\e616"; }
-/* line 125, scss/_colours.scss */
+/* line 136, scss/_colours.scss */
 article.university .icon-badge:after {
   content: "\e618"; }
-/* line 131, scss/_colours.scss */
+/* line 142, scss/_colours.scss */
 article.representative .icon-badge:after {
   content: "\e615"; }
-/* line 137, scss/_colours.scss */
+/* line 148, scss/_colours.scss */
 article.sevens .icon-badge:after {
   content: "\e617"; }
-/* line 143, scss/_colours.scss */
+/* line 154, scss/_colours.scss */
 article.around .icon-badge:after {
   content: "\e611"; }
-/* line 149, scss/_colours.scss */
+/* line 160, scss/_colours.scss */
 article.fitness .icon-badge:after, article.nutrition .icon-badge:after, article.training .icon-badge:after {
   content: "\e614"; }
-/* line 155, scss/_colours.scss */
+/* line 166, scss/_colours.scss */
 article.media .icon-badge:after {
   content: "\e60e"; }
 
@@ -831,22 +826,22 @@ button, .gform_wrapper .gform_footer input[type="submit"], #fohohfoh .message fo
         border-bottom: transparent; }
     /* line 38, scss/_buttons.scss */
     #filters button.active, #filters .gform_wrapper .gform_footer input.active[type="submit"], .gform_wrapper .gform_footer #filters input.active[type="submit"], #filters #fohohfoh .message form input.active[type="submit"], #fohohfoh .message form #filters input.active[type="submit"] {
-      border-bottom: 3px solid #d45703; }
+      border-bottom: 3px solid #D45703; }
     /* line 42, scss/_buttons.scss */
     #filters button:hover, #filters .gform_wrapper .gform_footer input[type="submit"]:hover, .gform_wrapper .gform_footer #filters input[type="submit"]:hover, #filters #fohohfoh .message form input[type="submit"]:hover, #fohohfoh .message form #filters input[type="submit"]:hover {
-      border-bottom: 3px solid #d45703; }
+      border-bottom: 3px solid #D45703; }
     /* line 47, scss/_buttons.scss */
     #filters button.schools.active, #filters .gform_wrapper .gform_footer input.schools.active[type="submit"], .gform_wrapper .gform_footer #filters input.schools.active[type="submit"], #filters #fohohfoh .message form input.schools.active[type="submit"], #fohohfoh .message form #filters input.schools.active[type="submit"] {
-      border-bottom: 3px solid #4968d1; }
+      border-bottom: 3px solid #4968D1; }
     /* line 50, scss/_buttons.scss */
     #filters button.schools:hover, #filters .gform_wrapper .gform_footer input.schools[type="submit"]:hover, .gform_wrapper .gform_footer #filters input.schools[type="submit"]:hover, #filters #fohohfoh .message form input.schools[type="submit"]:hover, #fohohfoh .message form #filters input.schools[type="submit"]:hover {
-      border-bottom: 3px solid #4968d1; }
+      border-bottom: 3px solid #4968D1; }
     /* line 55, scss/_buttons.scss */
     #filters button.university.active, #filters .gform_wrapper .gform_footer input.university.active[type="submit"], .gform_wrapper .gform_footer #filters input.university.active[type="submit"], #filters #fohohfoh .message form input.university.active[type="submit"], #fohohfoh .message form #filters input.university.active[type="submit"] {
-      border-bottom: 3px solid #992b2c; }
+      border-bottom: 3px solid #992B2C; }
     /* line 58, scss/_buttons.scss */
     #filters button.university:hover, #filters .gform_wrapper .gform_footer input.university[type="submit"]:hover, .gform_wrapper .gform_footer #filters input.university[type="submit"]:hover, #filters #fohohfoh .message form input.university[type="submit"]:hover, #fohohfoh .message form #filters input.university[type="submit"]:hover {
-      border-bottom: 3px solid #992b2c; }
+      border-bottom: 3px solid #992B2C; }
     /* line 63, scss/_buttons.scss */
     #filters button.representative.active, #filters .gform_wrapper .gform_footer input.representative.active[type="submit"], .gform_wrapper .gform_footer #filters input.representative.active[type="submit"], #filters #fohohfoh .message form input.representative.active[type="submit"], #fohohfoh .message form #filters input.representative.active[type="submit"] {
       border-bottom: 3px solid #373553; }
@@ -855,16 +850,16 @@ button, .gform_wrapper .gform_footer input[type="submit"], #fohohfoh .message fo
       border-bottom: 3px solid #373553; }
     /* line 71, scss/_buttons.scss */
     #filters button.sevens.active, #filters .gform_wrapper .gform_footer input.sevens.active[type="submit"], .gform_wrapper .gform_footer #filters input.sevens.active[type="submit"], #filters #fohohfoh .message form input.sevens.active[type="submit"], #fohohfoh .message form #filters input.sevens.active[type="submit"] {
-      border-bottom: 3px solid #a73260; }
+      border-bottom: 3px solid #A73260; }
     /* line 74, scss/_buttons.scss */
     #filters button.sevens:hover, #filters .gform_wrapper .gform_footer input.sevens[type="submit"]:hover, .gform_wrapper .gform_footer #filters input.sevens[type="submit"]:hover, #filters #fohohfoh .message form input.sevens[type="submit"]:hover, #fohohfoh .message form #filters input.sevens[type="submit"]:hover {
-      border-bottom: 3px solid #a73260; }
+      border-bottom: 3px solid #A73260; }
     /* line 79, scss/_buttons.scss */
     #filters button.around-the-game.active, #filters .gform_wrapper .gform_footer input.around-the-game.active[type="submit"], .gform_wrapper .gform_footer #filters input.around-the-game.active[type="submit"], #filters #fohohfoh .message form input.around-the-game.active[type="submit"], #fohohfoh .message form #filters input.around-the-game.active[type="submit"] {
-      border-bottom: 3px solid #1a4417; }
+      border-bottom: 3px solid #1A4417; }
     /* line 82, scss/_buttons.scss */
     #filters button.around-the-game:hover, #filters .gform_wrapper .gform_footer input.around-the-game[type="submit"]:hover, .gform_wrapper .gform_footer #filters input.around-the-game[type="submit"]:hover, #filters #fohohfoh .message form input.around-the-game[type="submit"]:hover, #fohohfoh .message form #filters input.around-the-game[type="submit"]:hover {
-      border-bottom: 3px solid #1a4417; }
+      border-bottom: 3px solid #1A4417; }
   /* line 88, scss/_buttons.scss */
   button#js-sidebar, .gform_wrapper .gform_footer input#js-sidebar[type="submit"], #fohohfoh .message form input#js-sidebar[type="submit"] {
     display: none;
@@ -933,35 +928,35 @@ button, .gform_wrapper .gform_footer input[type="submit"], #fohohfoh .message fo
       transition: all, 0.3s; }
   /* line 148, scss/_buttons.scss */
   .button.cat-filter.schools {
-    background-color: #0c3261;
-    border-bottom: 5px solid #4968d1; }
+    background-color: #0C3261;
+    border-bottom: 5px solid #4968D1; }
     /* line 153, scss/_buttons.scss */
     .button.cat-filter.schools.active:after {
-      color: #4968d1; }
+      color: #4968D1; }
     /* line 158, scss/_buttons.scss */
     .button.cat-filter.schools:hover {
-      background-color: #4968d1;
-      border-bottom: 5px solid #0c3261; }
+      background-color: #4968D1;
+      border-bottom: 5px solid #0C3261; }
       /* line 163, scss/_buttons.scss */
       .button.cat-filter.schools:hover.active:after {
-        color: #0c3261; }
+        color: #0C3261; }
   /* line 170, scss/_buttons.scss */
   .button.cat-filter.university {
     background-color: #810106;
-    border-bottom: 5px solid #992b2c; }
+    border-bottom: 5px solid #992B2C; }
     /* line 175, scss/_buttons.scss */
     .button.cat-filter.university.active:after {
-      color: #992b2c; }
+      color: #992B2C; }
     /* line 180, scss/_buttons.scss */
     .button.cat-filter.university:hover {
-      background-color: #992b2c;
+      background-color: #992B2C;
       border-bottom: 5px solid #810106; }
       /* line 185, scss/_buttons.scss */
       .button.cat-filter.university:hover.active:after {
         color: #810106; }
   /* line 192, scss/_buttons.scss */
   .button.cat-filter.representative {
-    background-color: #250d3c;
+    background-color: #250D3C;
     border-bottom: 5px solid #373553; }
     /* line 197, scss/_buttons.scss */
     .button.cat-filter.representative.active:after {
@@ -969,38 +964,38 @@ button, .gform_wrapper .gform_footer input[type="submit"], #fohohfoh .message fo
     /* line 202, scss/_buttons.scss */
     .button.cat-filter.representative:hover {
       background-color: #373553;
-      border-bottom: 5px solid #250d3c; }
+      border-bottom: 5px solid #250D3C; }
       /* line 207, scss/_buttons.scss */
       .button.cat-filter.representative:hover.active:after {
-        color: #250d3c; }
+        color: #250D3C; }
   /* line 214, scss/_buttons.scss */
   .button.cat-filter.sevens {
-    background-color: #e74e8b;
-    border-bottom: 5px solid #a73260; }
+    background-color: #E74E8B;
+    border-bottom: 5px solid #A73260; }
     /* line 219, scss/_buttons.scss */
     .button.cat-filter.sevens.active:after {
-      color: #a73260; }
+      color: #A73260; }
     /* line 224, scss/_buttons.scss */
     .button.cat-filter.sevens:hover {
-      background-color: #a73260;
-      border-bottom: 5px solid #e74e8b; }
+      background-color: #A73260;
+      border-bottom: 5px solid #E74E8B; }
       /* line 229, scss/_buttons.scss */
       .button.cat-filter.sevens:hover.active:after {
-        color: #e74e8b; }
+        color: #E74E8B; }
   /* line 236, scss/_buttons.scss */
   .button.cat-filter.around-the-game {
-    background-color: #1c3203;
-    border-bottom: 5px solid #1a4417; }
+    background-color: #1C3203;
+    border-bottom: 5px solid #1A4417; }
     /* line 241, scss/_buttons.scss */
     .button.cat-filter.around-the-game.active:after {
-      color: #1a4417; }
+      color: #1A4417; }
     /* line 246, scss/_buttons.scss */
     .button.cat-filter.around-the-game:hover {
-      background-color: #1a4417;
-      border-bottom: 5px solid #1c3203; }
+      background-color: #1A4417;
+      border-bottom: 5px solid #1C3203; }
       /* line 251, scss/_buttons.scss */
       .button.cat-filter.around-the-game:hover.active:after {
-        color: #1c3203; }
+        color: #1C3203; }
   /* line 258, scss/_buttons.scss */
   .button.cat-filter p {
     text-align: center; }
@@ -1257,7 +1252,7 @@ span.vertical {
   vertical-align: middle; }
 
 /* line 71, scss/_misc.scss */
-.schools-bg .icon-badge:after, .university-bg .icon-badge:after, .representative-bg .icon-badge:after, .sevens-bg .icon-badge:after, .around-the-game-bg .icon-badge:after, .fitness-bg .icon-badge:after, .live-bg .icon-badge:after, .media-bg .icon-badge:after, article.schools .icon-badge:after, article.university .icon-badge:after, article.representative .icon-badge:after, article.sevens .icon-badge:after, article.around .icon-badge:after, article.fitness .icon-badge:after, article.nutrition .icon-badge:after, article.training .icon-badge:after, article.media .icon-badge:after, button.search:after, .gform_wrapper .gform_footer input.search[type="submit"]:after, #fohohfoh .message form input.search[type="submit"]:after, .button.cat-filter.active:after, #main-nav ul.menu > li.menu-item-has-children > a:after, #main-nav ul.sub-menu li.menu-item.visible > a:after, #main-nav ul.sub-menu li.menu-item.visible li.menu-item.menu-item-post > a:after, #main-nav ul.sub-menu li.menu-item.slider.latest-cat-articles.active > a:after, article.video .image:after, .category-around-the-game #page-header .icon-badge:after, #single .article-header.schools .icon-badge:after, #single .article-header.university .icon-badge:after, #single .article-header.representative .icon-badge:after, #single .article-header.sevens .icon-badge:after, #single .article-header.around .icon-badge:after, #single .article-header.fitness .icon-badge:after, #live .event-icon i.icon-first-start:after, #live .event-icon i.icon-first-end:after, #live .event-icon i.icon-second-start:after, #live .event-icon i.icon-second-end:after, #live .event-icon i.icon-conversion:after, #live .event-icon i.icon-goal:after, #live .event-icon i.icon-extra-start:after, #live .event-icon i.icon-extra-end:after, #live .event-icon i.icon-penalty:after, #live .event-icon i.icon-sub:after, #live .event-icon i.icon-try:after, #live .event-icon i.icon-card:after {
+#page-header.schools .icon-badge:after, #page-header.university .icon-badge:after, #page-header.representative .icon-badge:after, #page-header.sevens .icon-badge:after, #page-header.around-the-game .icon-badge:after, #page-header.fitness .icon-badge:after, .live-bg .icon-badge:after, .media-bg .icon-badge:after, article.schools .icon-badge:after, article.university .icon-badge:after, article.representative .icon-badge:after, article.sevens .icon-badge:after, article.around .icon-badge:after, article.fitness .icon-badge:after, article.nutrition .icon-badge:after, article.training .icon-badge:after, article.media .icon-badge:after, button.search:after, .gform_wrapper .gform_footer input.search[type="submit"]:after, #fohohfoh .message form input.search[type="submit"]:after, .button.cat-filter.active:after, #main-nav ul.menu > li.menu-item-has-children > a:after, #main-nav ul.sub-menu li.menu-item.visible > a:after, #main-nav ul.sub-menu li.menu-item.visible li.menu-item.menu-item-post > a:after, #main-nav ul.sub-menu li.menu-item.slider.latest-cat-articles.active > a:after, article.video .image:after, .category-around-the-game #page-header .icon-badge:after, #single .article-header.schools .icon-badge:after, #single .article-header.university .icon-badge:after, #single .article-header.representative .icon-badge:after, #single .article-header.sevens .icon-badge:after, #single .article-header.around .icon-badge:after, #single .article-header.fitness .icon-badge:after, #live .event-icon i.icon-first-start:after, #live .event-icon i.icon-first-end:after, #live .event-icon i.icon-second-start:after, #live .event-icon i.icon-second-end:after, #live .event-icon i.icon-conversion:after, #live .event-icon i.icon-goal:after, #live .event-icon i.icon-extra-start:after, #live .event-icon i.icon-extra-end:after, #live .event-icon i.icon-penalty:after, #live .event-icon i.icon-sub:after, #live .event-icon i.icon-try:after, #live .event-icon i.icon-card:after {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -1671,13 +1666,13 @@ textarea {
         color: #000; }
     /* line 324, scss/_layout.scss */
     #main-nav ul.menu > li.menu-item.schools:hover {
-      background-color: #4968d1; }
+      background-color: #4968D1; }
       /* line 327, scss/_layout.scss */
       #main-nav ul.menu > li.menu-item.schools:hover a {
         color: #fff; }
       /* line 331, scss/_layout.scss */
       #main-nav ul.menu > li.menu-item.schools:hover .sub-menu {
-        background-color: #4968d1; }
+        background-color: #4968D1; }
         /* line 335, scss/_layout.scss */
         #main-nav ul.menu > li.menu-item.schools:hover .sub-menu .menu-item.visible a:after, #main-nav ul.menu > li.menu-item.schools:hover ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover figure.menu-item:after a:after, #main-nav ul.menu > li.menu-item.schools:hover .sub-menu .menu-item.slider.latest-cat-articles.active a:after {
           color: #6f87d8; }
@@ -1701,13 +1696,13 @@ textarea {
       background-color: #822b2c; }
     /* line 372, scss/_layout.scss */
     #main-nav ul.menu > li.menu-item.representative:hover {
-      background-color: #250d3c; }
+      background-color: #250D3C; }
       /* line 375, scss/_layout.scss */
       #main-nav ul.menu > li.menu-item.representative:hover a {
         color: #fff; }
       /* line 379, scss/_layout.scss */
       #main-nav ul.menu > li.menu-item.representative:hover .sub-menu {
-        background-color: #250d3c; }
+        background-color: #250D3C; }
         /* line 383, scss/_layout.scss */
         #main-nav ul.menu > li.menu-item.representative:hover .sub-menu .menu-item.visible a:after, #main-nav ul.menu > li.menu-item.representative:hover ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover figure.menu-item:after a:after, #main-nav ul.menu > li.menu-item.representative:hover .sub-menu .menu-item.slider.latest-cat-articles.active a:after {
           color: #373553; }
@@ -1716,13 +1711,13 @@ textarea {
       background-color: #373553; }
     /* line 403, scss/_layout.scss */
     #main-nav ul.menu > li.menu-item.sevens:hover {
-      background-color: #e74e8b; }
+      background-color: #E74E8B; }
       /* line 406, scss/_layout.scss */
       #main-nav ul.menu > li.menu-item.sevens:hover a {
         color: #fff; }
       /* line 410, scss/_layout.scss */
       #main-nav ul.menu > li.menu-item.sevens:hover .sub-menu {
-        background-color: #e74e8b; }
+        background-color: #E74E8B; }
         /* line 414, scss/_layout.scss */
         #main-nav ul.menu > li.menu-item.sevens:hover .sub-menu .menu-item.visible a:after, #main-nav ul.menu > li.menu-item.sevens:hover ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover figure.menu-item:after a:after, #main-nav ul.menu > li.menu-item.sevens:hover .sub-menu .menu-item.slider.latest-cat-articles.active a:after {
           color: #A73260; }
@@ -1736,13 +1731,13 @@ textarea {
       background-color: #A73260; }
     /* line 434, scss/_layout.scss */
     #main-nav ul.menu > li.menu-item.around-the-game:hover {
-      background-color: #1a4417; }
+      background-color: #1A4417; }
       /* line 437, scss/_layout.scss */
       #main-nav ul.menu > li.menu-item.around-the-game:hover a {
         color: #fff; }
     /* line 444, scss/_layout.scss */
     #main-nav ul.menu > li.menu-item.fitness:hover {
-      background-color: #d45703; }
+      background-color: #D45703; }
       /* line 447, scss/_layout.scss */
       #main-nav ul.menu > li.menu-item.fitness:hover a {
         color: #fff; }
@@ -2226,13 +2221,13 @@ article {
     font-size: 4em; }
   /* line 1039, scss/_layout.scss */
   article.schools .cat-title {
-    background-color: #4968d1; }
+    background-color: #4968D1; }
     /* line 1042, scss/_layout.scss */
     article.schools .cat-title i {
-      background-color: #0c3261; }
+      background-color: #0C3261; }
   /* line 1049, scss/_layout.scss */
   article.university .cat-title {
-    background-color: #992b2c; }
+    background-color: #992B2C; }
     /* line 1052, scss/_layout.scss */
     article.university .cat-title i {
       background-color: #810106; }
@@ -2241,22 +2236,22 @@ article {
     background-color: #373553; }
     /* line 1062, scss/_layout.scss */
     article.representative .cat-title i {
-      background-color: #250d3c; }
+      background-color: #250D3C; }
   /* line 1069, scss/_layout.scss */
   article.sevens .cat-title {
-    background-color: #a73260; }
+    background-color: #A73260; }
     /* line 1072, scss/_layout.scss */
     article.sevens .cat-title i {
-      background-color: #e74e8b; }
+      background-color: #E74E8B; }
   /* line 1079, scss/_layout.scss */
   article.around .cat-title {
-    background-color: #1a4417; }
+    background-color: #1A4417; }
     /* line 1082, scss/_layout.scss */
     article.around .cat-title i {
-      background-color: #1c3203; }
+      background-color: #1C3203; }
   /* line 1089, scss/_layout.scss */
   article.fitness .cat-title, article.nutrition .cat-title {
-    background-color: #d45703; }
+    background-color: #D45703; }
     /* line 1092, scss/_layout.scss */
     article.fitness .cat-title i, article.nutrition .cat-title i {
       background-color: #000; }
@@ -2265,7 +2260,7 @@ article {
     background-color: #000; }
     /* line 1102, scss/_layout.scss */
     article.training .cat-title i {
-      background-color: #d45703; }
+      background-color: #D45703; }
   /* line 1109, scss/_layout.scss */
   article.media .cat-title {
     background-color: #005375; }
@@ -3031,7 +3026,7 @@ article {
 /* line 9, scss/_templates.scss */
 .category-around-the-game #page-header {
   color: #fff;
-  background-color: #1c3203; }
+  background-color: #1C3203; }
   /* line 13, scss/_templates.scss */
   .category-around-the-game #page-header .icon-badge:after {
     content: "\e611"; }
@@ -3248,19 +3243,19 @@ body.single .social-icons .wa_btn {
     z-index: 10; }
   /* line 270, scss/_templates.scss */
   #home .latest .filter-select-bg.schools {
-    background-color: #0c3261; }
+    background-color: #0C3261; }
   /* line 274, scss/_templates.scss */
   #home .latest .filter-select-bg.university {
     background-color: #810106; }
   /* line 278, scss/_templates.scss */
   #home .latest .filter-select-bg.representative {
-    background-color: #250d3c; }
+    background-color: #250D3C; }
   /* line 282, scss/_templates.scss */
   #home .latest .filter-select-bg.sevens {
-    background-color: #e74e8b; }
+    background-color: #E74E8B; }
   /* line 286, scss/_templates.scss */
   #home .latest .filter-select-bg.around-the-game {
-    background-color: #1c3203; }
+    background-color: #1C3203; }
   /* line 290, scss/_templates.scss */
   #home .latest .filter-select-bg .label {
     position: absolute;
