@@ -762,19 +762,32 @@ body.single{
 		font-size: 80%;
 	}
 
-	#comments{
-		ol.comment-list{
-			margin: 0;
-			padding: 0;
-			list-style-type: none;
+	// #comments{
+	// 	ol.comment-list{
+	// 		margin: 0;
+	// 		padding: 0;
+	// 		list-style-type: none;
 			
-			li.comment{
-				position: relative;
-				padding: 2em;
-				margin-top: 5px;
-				background-color: #fff;
-			}
-		}// .comment-list
+	// 		li.comment{
+	// 			position: relative;
+	// 			padding: 2em;
+	// 			margin-top: 5px;
+	// 			background-color: #fff;
+	// 		}
+	// 	}// .comment-list
+	// }
+
+	.live-header{
+		padding: 2em;
+		background-color: #fff;
+
+		.title{
+			@extend .xxlarge;
+		}
+
+		.image{
+			text-align: center;
+		}
 	}
 
 	.match-stats{
@@ -847,121 +860,210 @@ body.single{
 				width: 100%;
 			}
 		}
-	}
+	}// .match-notice
 
-	.event-timestamp{
-		text-align: center;
+	// .event-timestamp{
+	// 	text-align: center;
 		
-		.game-time{
-			padding: 0.5em;
-			color: #fff;
-			@include heavy;
-			background-color: #203F4C;
-		}
+	// 	.game-time{
+	// 		padding: 0.5em;
+	// 		color: #fff;
+	// 		@include heavy;
+	// 		background-color: #203F4C;
+	// 	}
 
-		.out-game-time{
-			padding: 0.5em;
-			color: #fff;
-			@include heavy;
-			background-color: #B7B7B7;
-		}
-	}
+	// 	.out-game-time{
+	// 		padding: 0.5em;
+	// 		color: #fff;
+	// 		@include heavy;
+	// 		background-color: #B7B7B7;
+	// 	}
+	// }
 
-	.event-icon{
-		text-align: center;
+	// .event-icon{
+	// 	text-align: center;
 
-		i{
-			font-size: 2em;
+	// 	i{
+	// 		font-size: 2em;
 
-			&.icon-first-start:after{
-				@extend %icon;
-				content: "\e61c";
-				color: #2ecc71;
-			}
-			&.icon-first-end:after{
-				@extend %icon;
-				content: "\e61b";
-				color: #e74c3c;
-			}
-			&.icon-second-start:after{
- 				@extend %icon;
- 				content: "\e61e";
- 				color: #2ecc71;
-			}
-			&.icon-second-end:after{
- 				@extend %icon;
- 				content: "\e61d";
- 				color: #e74c3c;
-			}
-			&.icon-conversion:after{
- 				@extend %icon;
- 				content: "\e61f";
-			}
-			&.icon-goal:after{
- 				@extend %icon;
- 				content: "\e620";
-			}
-			&.icon-extra-start:after{
- 				@extend %icon;
- 				content: "\e622";
- 				color: #2ecc71;
-			}
-			&.icon-extra-end:after{
- 				@extend %icon;
- 				content: "\e621";
- 				color: #e74c3c;
-			}
-			&.icon-penalty:after{
- 				@extend %icon;
- 				content: "\e623";
-			}
-			&.icon-sub:after{
- 				@extend %icon;
- 				content: "\e624";
-			}
-			&.icon-try:after{
- 				@extend %icon;
- 				content: "\e625";
-			}
-			&.icon-card:after{
- 				@extend %icon;
- 				content: "\e626";
- 				color: #f1c40f;
-			}
-		}
-	}
+	// 		&.icon-first-start:after{
+	// 			@extend %icon;
+	// 			content: "\e61c";
+	// 			color: #2ecc71;
+	// 		}
+	// 		&.icon-first-end:after{
+	// 			@extend %icon;
+	// 			content: "\e61b";
+	// 			color: #e74c3c;
+	// 		}
+	// 		&.icon-second-start:after{
+ // 				@extend %icon;
+ // 				content: "\e61e";
+ // 				color: #2ecc71;
+	// 		}
+	// 		&.icon-second-end:after{
+ // 				@extend %icon;
+ // 				content: "\e61d";
+ // 				color: #e74c3c;
+	// 		}
+	// 		&.icon-conversion:after{
+ // 				@extend %icon;
+ // 				content: "\e61f";
+	// 		}
+	// 		&.icon-goal:after{
+ // 				@extend %icon;
+ // 				content: "\e620";
+	// 		}
+	// 		&.icon-extra-start:after{
+ // 				@extend %icon;
+ // 				content: "\e622";
+ // 				color: #2ecc71;
+	// 		}
+	// 		&.icon-extra-end:after{
+ // 				@extend %icon;
+ // 				content: "\e621";
+ // 				color: #e74c3c;
+	// 		}
+	// 		&.icon-penalty:after{
+ // 				@extend %icon;
+ // 				content: "\e623";
+	// 		}
+	// 		&.icon-sub:after{
+ // 				@extend %icon;
+ // 				content: "\e624";
+	// 		}
+	// 		&.icon-try:after{
+ // 				@extend %icon;
+ // 				content: "\e625";
+	// 		}
+	// 		&.icon-card:after{
+ // 				@extend %icon;
+ // 				content: "\e626";
+ // 				color: #f1c40f;
+	// 		}
+	// 	}
+	// }
 	
-	.event-content{
-		.text{
-			.title{
-				@extend %title;
-				@include heavy;
-			}
-		}
+	// .event-content{
+	// 	.text{
+	// 		.title{
+	// 			@extend %title;
+	// 			@include heavy;
+	// 		}
+	// 	}
 
-		.share{
-			a{
-				color: #B7B7B7;
-			}
+	// 	.share{
+	// 		a{
+	// 			color: #B7B7B7;
+	// 		}
 			
-		}
-	}
+	// 	}
+	// }
+
+	#liveblog-container{
+		.liveblog-entry{
+			position: relative;
+			margin-top: 5px;
+			padding: 0;
+			background-color: #fff;
+
+			.liveblog-meta {
+
+				.liveblog-author-avatar {
+				    display: none;
+				}
+
+				.liveblog-author-name{
+					display: none;
+				}
+
+				.liveblog-meta-time a {
+					position: absolute;
+					top: 10px;
+					right: 10px;
+					padding-bottom: 2px;
+					color: #167147;
+					border-bottom: 1px dotted #fff; 
+				} 
+			}// .liveblog-meta
+
+			.liveblog-entry-text {
+			    margin: 0;
+			    padding: 2em;
+			    font-weight: normal;
+			    @include book;
+				
+				p:first-child {
+				    margin-top: 0; 
+				}
+
+				a {
+					color: #167147;
+					border-bottom: 1px solid transparent;
+					@include transition(all,.3s);
+
+					&:hover{
+						border-bottom: 1px solid #167147;
+					}
+				}
+			}// .liveblog-entry-text
+
+
+			.liveblog-form-entry {
+				resize: vertical; 
+			}
+
+		}// .liveblog-entry
+
+		.liveblog-entry-actions{
+			.liveblog-entry-edit{
+				margin-right: 1em;
+			}
+		}// .liveblog-entry-actions
+
+		.liveblog-submit-wrapper{
+			.button {
+				padding: 0.5em 1em;
+				color: #fff;
+				@include book;
+				background: #177248 !important;
+				border: 1px solid transparent !important;
+				@include transition(all,.3s);
+
+				&:hover{
+					background-color: #20A367 !important;
+	    			border: 1px solid #20A367 !important; 
+				}
+			}			
+		}// .liveblog-submit-wrapper
+	}// #liveblog-container
+
 }// #live
 
 /* =================================
-   CONTACT
+   SHOP
    ================================= */
+#shop{
+	background-color: #E8E9ED;
+}
 
-#contact{
-	.contact-form{
-		width: 100%;
-		max-width: 600px;
-		margin: 0 auto;
-		padding: 2em;
-		background-color: #fff;
+#cart-bar{
+	padding: 0.5em 1em;
+	color: #fff;
+	text-align: right;
+	background-color: #16a085;
 
-		@media screen and (max-width: 600px){
-			font-size: 80%;
+	a{
+		display: inline-block;
+		padding: 0.5em 1em;
+		color: #fff;
+		border: 1px solid #fff;
+		@include transition(all, .3s);
+
+		&:hover{
+			color: #16a085;
+			background-color: #fff;
+			border: 1px solid #16a085;
 		}
 	}
 }
@@ -1007,6 +1109,25 @@ body.single{
 				margin-bottom: 0.5em;
 			}
 		}		
+	}
+
+}// #advertising
+
+/* =================================
+   CONTACT
+   ================================= */
+
+#contact{
+	.contact-form{
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 2em;
+		background-color: #fff;
+
+		@media screen and (max-width: 600px){
+			font-size: 80%;
+		}
 	}
 }
 

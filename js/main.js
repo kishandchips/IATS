@@ -8,7 +8,6 @@ var main = {
 		this.listeners();
 		this.components.init();
 		this.flexsliderSwitch();
-		this.live();
 		this.socialAjax();
 
 		if($('body').hasClass('single')){
@@ -265,17 +264,6 @@ var main = {
 			});
 		}
 	},
-
-	live: function(){
-		var element = $('#live');
-		if(!element.length){return false;}
-
-		if(! $('body').hasClass('logged-in')){
-		    setInterval(function() { // Do this
-	            location.reload();
-	      	}, 30000); // Every one second
-		}
-	}
 };//main
 
 	$(window).load(function(){

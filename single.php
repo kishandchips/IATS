@@ -70,7 +70,7 @@
 						<a href="mailto:?&body=<?php the_permalink(); ?>">
 							<i class="icon-mail"></i>
 						</a>
-						<a href="whatsapp://send" data-text="Take a look at this article:" data-href="" class="wa_btn wa_btn_m" style="display:none"></a><script type="text/javascript">if(typeof wabtn4fg==="undefined"){wabtn4fg=1;h=document.head||document.getElementsByTagName("head")[0],s=document.createElement("script");s.type="text/javascript";s.src="//whatsapp-sharing.com/button";h.appendChild(s);}</script>
+						<!-- <a href="whatsapp://send" data-text="Take a look at this article:" data-href="" class="wa_btn wa_btn_m" style="display:none"></a><script type="text/javascript">if(typeof wabtn4fg==="undefined"){wabtn4fg=1;h=document.head||document.getElementsByTagName("head")[0],s=document.createElement("script");s.type="text/javascript";s.src="//whatsapp-sharing.com/button";h.appendChild(s);}</script> -->
 					</div>
 				</div>
 

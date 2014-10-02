@@ -78,6 +78,11 @@
 				</div><!-- .section-content -->
 
 				<div id="sidebar" class="column col-3">
+
+					<div class="sidebar-widget advert">
+						
+					</div>
+
 					<div class="sidebar-widget list">
 						<?php dynamic_sidebar('primary' ); ?>
 					</div>

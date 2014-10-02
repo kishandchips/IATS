@@ -5,7 +5,7 @@
 /*SCHOOLS*/
 $blue : #4968D1;
 $dblue : #0C3261;
-.schools-bg{
+header.schools{
 	color: #fff;
 	background-color: $dblue;
 
@@ -19,7 +19,7 @@ $dblue : #0C3261;
 $red : #992B2C;
 $lred : #B74144;
 $dred : #810106;
-.university-bg{
+header.university{
 	color: #fff;
 	background-color: $dred;
 
@@ -33,7 +33,7 @@ $dred : #810106;
 $purple : #373553;
 $lpurple: #250D3C;
 $dpurple : #250D3C;
-.representative-bg{
+header.representative{
 	color: #fff;
 	background-color: $dpurple;
 
@@ -46,7 +46,7 @@ $dpurple : #250D3C;
 /*SEVENS*/
 $pink : #A73260;
 $dpink : #E74E8B;
-.sevens-bg{
+header.sevens{
 	color: #fff;
 	background-color: $dpink;
 
@@ -59,7 +59,7 @@ $dpink : #E74E8B;
 /*AROUND THE GAME*/
 $green : #1A4417;
 $dgreen : #1C3203;
-.around-the-game-bg{
+header.around-the-game{
 	color: #fff;
 	background-color: $dgreen;
 
@@ -71,7 +71,7 @@ $dgreen : #1C3203;
 
 /*IATS*/
 $orange : #D45703;
-.fitness-bg{
+header.fitness{
 	color: #fff;
 	background-color: $orange;
 		.icon-badge:after{
@@ -89,6 +89,11 @@ $orange : #D45703;
 			@extend %icon;
 			content: "\e611";			
 		}
+}
+
+header.shop{
+	color: #fff;
+	background-color: #1abc9c;
 }
 
 /*MEDIA*/
