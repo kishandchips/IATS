@@ -613,7 +613,6 @@ html[xmlns] .slides {
    COLOUR SCHEMES
    ========================================================================== */
 /*SCHOOLS*/
-<<<<<<< HEAD
 /* line 8, scss/_colours.scss */
 header.schools {
   color: #fff;
@@ -665,62 +664,14 @@ header.fitness {
   background-color: #D45703; }
   /* line 77, scss/_colours.scss */
   header.fitness .icon-badge:after {
-=======
-/*UNIVERSITIES*/
-/*REPRESENTATIVE*/
-/*SEVENS*/
-/*AROUND THE GAME*/
-/*IATS*/
-/* line 33, scss/_colours.scss */
-#page-header.schools {
-  color: #fff;
-  background-color: #0C3261; }
-  /* line 37, scss/_colours.scss */
-  #page-header.schools .icon-badge:after {
-    content: "\e616"; }
-/* line 43, scss/_colours.scss */
-#page-header.university {
-  color: #fff;
-  background-color: #810106; }
-  /* line 47, scss/_colours.scss */
-  #page-header.university .icon-badge:after {
-    content: "\e618"; }
-/* line 53, scss/_colours.scss */
-#page-header.representative {
-  color: #fff;
-  background-color: #250D3C; }
-  /* line 57, scss/_colours.scss */
-  #page-header.representative .icon-badge:after {
-    content: "\e615"; }
-/* line 63, scss/_colours.scss */
-#page-header.sevens {
-  color: #fff;
-  background-color: #E74E8B; }
-  /* line 67, scss/_colours.scss */
-  #page-header.sevens .icon-badge:after {
-    content: "\e617"; }
-/* line 73, scss/_colours.scss */
-#page-header.around-the-game {
-  color: #fff;
-  background-color: #1C3203; }
-  /* line 77, scss/_colours.scss */
-  #page-header.around-the-game .icon-badge:after {
-    content: "\e611"; }
-/* line 83, scss/_colours.scss */
-#page-header.fitness {
-  color: #fff;
-  background-color: #D45703; }
-  /* line 87, scss/_colours.scss */
-  #page-header.fitness .icon-badge:after {
->>>>>>> 4d7442b04f8e8c375cbbc7e0f67b6bc4742d04f1
     content: "\e614"; }
 
-/* line 94, scss/_colours.scss */
+/* line 83, scss/_colours.scss */
 .live-bg {
   color: #000;
   background-color: #FFD20D;
   border-top: 1px solid black; }
-  /* line 99, scss/_colours.scss */
+  /* line 88, scss/_colours.scss */
   .live-bg .icon-badge:after {
     content: "\e611"; }
 
@@ -730,7 +681,6 @@ header.shop {
   background-color: #1abc9c; }
 
 /*MEDIA*/
-<<<<<<< HEAD
 /* line 100, scss/_colours.scss */
 .media-bg {
   color: #fff;
@@ -769,46 +719,6 @@ article.around .icon-badge:after {
 article.fitness .icon-badge:after, article.nutrition .icon-badge:after, article.training .icon-badge:after {
   content: "\e614"; }
 /* line 160, scss/_colours.scss */
-=======
-/* line 106, scss/_colours.scss */
-.media-bg {
-  color: #fff;
-  background-color: #005377; }
-  /* line 110, scss/_colours.scss */
-  .media-bg .icon-badge:after {
-    content: "\e619"; }
-
-/* line 116, scss/_colours.scss */
-.medialight-bg {
-  background-color: #262631; }
-
-/* line 119, scss/_colours.scss */
-.mediadark-bg {
-  background-color: #1b1b1f; }
-
-/* line 125, scss/_colours.scss */
-article .icon-badge:after {
-  font-size: 1.2em; }
-/* line 130, scss/_colours.scss */
-article.schools .icon-badge:after {
-  content: "\e616"; }
-/* line 136, scss/_colours.scss */
-article.university .icon-badge:after {
-  content: "\e618"; }
-/* line 142, scss/_colours.scss */
-article.representative .icon-badge:after {
-  content: "\e615"; }
-/* line 148, scss/_colours.scss */
-article.sevens .icon-badge:after {
-  content: "\e617"; }
-/* line 154, scss/_colours.scss */
-article.around .icon-badge:after {
-  content: "\e611"; }
-/* line 160, scss/_colours.scss */
-article.fitness .icon-badge:after, article.nutrition .icon-badge:after, article.training .icon-badge:after {
-  content: "\e614"; }
-/* line 166, scss/_colours.scss */
->>>>>>> 4d7442b04f8e8c375cbbc7e0f67b6bc4742d04f1
 article.media .icon-badge:after {
   content: "\e60e"; }
 
@@ -1356,11 +1266,7 @@ span.vertical {
   vertical-align: middle; }
 
 /* line 71, scss/_misc.scss */
-<<<<<<< HEAD
 header.schools .icon-badge:after, header.university .icon-badge:after, header.representative .icon-badge:after, header.sevens .icon-badge:after, header.around-the-game .icon-badge:after, header.fitness .icon-badge:after, .live-bg .icon-badge:after, .media-bg .icon-badge:after, article.schools .icon-badge:after, article.university .icon-badge:after, article.representative .icon-badge:after, article.sevens .icon-badge:after, article.around .icon-badge:after, article.fitness .icon-badge:after, article.nutrition .icon-badge:after, article.training .icon-badge:after, article.media .icon-badge:after, button.search:after, .gform_wrapper .gform_footer input.search[type="submit"]:after, #fohohfoh .message form input.search[type="submit"]:after, .button.cat-filter.active:after, #main-nav ul.menu > li.menu-item-has-children > a:after, #main-nav ul.sub-menu li.menu-item.visible > a:after, #main-nav ul.sub-menu li.menu-item.visible li.menu-item.menu-item-post > a:after, #main-nav ul.sub-menu li.menu-item.slider.latest-cat-articles.active > a:after, article.video .image:after, .category-around-the-game #page-header .icon-badge:after, #single .article-header.schools .icon-badge:after, #single .article-header.university .icon-badge:after, #single .article-header.representative .icon-badge:after, #single .article-header.sevens .icon-badge:after, #single .article-header.around .icon-badge:after, #single .article-header.fitness .icon-badge:after {
-=======
-#page-header.schools .icon-badge:after, #page-header.university .icon-badge:after, #page-header.representative .icon-badge:after, #page-header.sevens .icon-badge:after, #page-header.around-the-game .icon-badge:after, #page-header.fitness .icon-badge:after, .live-bg .icon-badge:after, .media-bg .icon-badge:after, article.schools .icon-badge:after, article.university .icon-badge:after, article.representative .icon-badge:after, article.sevens .icon-badge:after, article.around .icon-badge:after, article.fitness .icon-badge:after, article.nutrition .icon-badge:after, article.training .icon-badge:after, article.media .icon-badge:after, button.search:after, .gform_wrapper .gform_footer input.search[type="submit"]:after, #fohohfoh .message form input.search[type="submit"]:after, .button.cat-filter.active:after, #main-nav ul.menu > li.menu-item-has-children > a:after, #main-nav ul.sub-menu li.menu-item.visible > a:after, #main-nav ul.sub-menu li.menu-item.visible li.menu-item.menu-item-post > a:after, #main-nav ul.sub-menu li.menu-item.slider.latest-cat-articles.active > a:after, article.video .image:after, .category-around-the-game #page-header .icon-badge:after, #single .article-header.schools .icon-badge:after, #single .article-header.university .icon-badge:after, #single .article-header.representative .icon-badge:after, #single .article-header.sevens .icon-badge:after, #single .article-header.around .icon-badge:after, #single .article-header.fitness .icon-badge:after, #live .event-icon i.icon-first-start:after, #live .event-icon i.icon-first-end:after, #live .event-icon i.icon-second-start:after, #live .event-icon i.icon-second-end:after, #live .event-icon i.icon-conversion:after, #live .event-icon i.icon-goal:after, #live .event-icon i.icon-extra-start:after, #live .event-icon i.icon-extra-end:after, #live .event-icon i.icon-penalty:after, #live .event-icon i.icon-sub:after, #live .event-icon i.icon-try:after, #live .event-icon i.icon-card:after {
->>>>>>> 4d7442b04f8e8c375cbbc7e0f67b6bc4742d04f1
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -1769,21 +1675,13 @@ textarea {
     /* line 318, scss/_layout.scss */
     #main-nav ul.menu > li.menu-item.schools:hover {
       background-color: #4968D1; }
-<<<<<<< HEAD
       /* line 321, scss/_layout.scss */
-=======
-      /* line 327, scss/_layout.scss */
->>>>>>> 4d7442b04f8e8c375cbbc7e0f67b6bc4742d04f1
       #main-nav ul.menu > li.menu-item.schools:hover a {
         color: #fff; }
       /* line 325, scss/_layout.scss */
       #main-nav ul.menu > li.menu-item.schools:hover .sub-menu {
         background-color: #4968D1; }
-<<<<<<< HEAD
         /* line 329, scss/_layout.scss */
-=======
-        /* line 335, scss/_layout.scss */
->>>>>>> 4d7442b04f8e8c375cbbc7e0f67b6bc4742d04f1
         #main-nav ul.menu > li.menu-item.schools:hover .sub-menu .menu-item.visible a:after, #main-nav ul.menu > li.menu-item.schools:hover ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover figure.menu-item:after a:after, #main-nav ul.menu > li.menu-item.schools:hover .sub-menu .menu-item.slider.latest-cat-articles.active a:after {
           color: #6f87d8; }
     /* line 336, scss/_layout.scss */
@@ -1807,21 +1705,13 @@ textarea {
     /* line 366, scss/_layout.scss */
     #main-nav ul.menu > li.menu-item.representative:hover {
       background-color: #250D3C; }
-<<<<<<< HEAD
       /* line 369, scss/_layout.scss */
-=======
-      /* line 375, scss/_layout.scss */
->>>>>>> 4d7442b04f8e8c375cbbc7e0f67b6bc4742d04f1
       #main-nav ul.menu > li.menu-item.representative:hover a {
         color: #fff; }
       /* line 373, scss/_layout.scss */
       #main-nav ul.menu > li.menu-item.representative:hover .sub-menu {
         background-color: #250D3C; }
-<<<<<<< HEAD
         /* line 377, scss/_layout.scss */
-=======
-        /* line 383, scss/_layout.scss */
->>>>>>> 4d7442b04f8e8c375cbbc7e0f67b6bc4742d04f1
         #main-nav ul.menu > li.menu-item.representative:hover .sub-menu .menu-item.visible a:after, #main-nav ul.menu > li.menu-item.representative:hover ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover figure.menu-item:after a:after, #main-nav ul.menu > li.menu-item.representative:hover .sub-menu .menu-item.slider.latest-cat-articles.active a:after {
           color: #373553; }
     /* line 391, scss/_layout.scss */
@@ -1830,21 +1720,13 @@ textarea {
     /* line 397, scss/_layout.scss */
     #main-nav ul.menu > li.menu-item.sevens:hover {
       background-color: #E74E8B; }
-<<<<<<< HEAD
       /* line 400, scss/_layout.scss */
-=======
-      /* line 406, scss/_layout.scss */
->>>>>>> 4d7442b04f8e8c375cbbc7e0f67b6bc4742d04f1
       #main-nav ul.menu > li.menu-item.sevens:hover a {
         color: #fff; }
       /* line 404, scss/_layout.scss */
       #main-nav ul.menu > li.menu-item.sevens:hover .sub-menu {
         background-color: #E74E8B; }
-<<<<<<< HEAD
         /* line 408, scss/_layout.scss */
-=======
-        /* line 414, scss/_layout.scss */
->>>>>>> 4d7442b04f8e8c375cbbc7e0f67b6bc4742d04f1
         #main-nav ul.menu > li.menu-item.sevens:hover .sub-menu .menu-item.visible a:after, #main-nav ul.menu > li.menu-item.sevens:hover ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover figure.menu-item:after a:after, #main-nav ul.menu > li.menu-item.sevens:hover .sub-menu .menu-item.slider.latest-cat-articles.active a:after {
           color: #A73260; }
     @media screen and (min-width: 1101px) and (max-width: 1250px) {
@@ -1858,21 +1740,13 @@ textarea {
     /* line 428, scss/_layout.scss */
     #main-nav ul.menu > li.menu-item.around-the-game:hover {
       background-color: #1A4417; }
-<<<<<<< HEAD
       /* line 431, scss/_layout.scss */
-=======
-      /* line 437, scss/_layout.scss */
->>>>>>> 4d7442b04f8e8c375cbbc7e0f67b6bc4742d04f1
       #main-nav ul.menu > li.menu-item.around-the-game:hover a {
         color: #fff; }
     /* line 438, scss/_layout.scss */
     #main-nav ul.menu > li.menu-item.fitness:hover {
       background-color: #D45703; }
-<<<<<<< HEAD
       /* line 441, scss/_layout.scss */
-=======
-      /* line 447, scss/_layout.scss */
->>>>>>> 4d7442b04f8e8c375cbbc7e0f67b6bc4742d04f1
       #main-nav ul.menu > li.menu-item.fitness:hover a {
         color: #fff; }
   /* line 449, scss/_layout.scss */
@@ -2356,7 +2230,6 @@ article {
   /* line 1033, scss/_layout.scss */
   article.schools .cat-title {
     background-color: #4968D1; }
-<<<<<<< HEAD
     /* line 1036, scss/_layout.scss */
     article.schools .cat-title i {
       background-color: #0C3261; }
@@ -2364,15 +2237,6 @@ article {
   article.university .cat-title {
     background-color: #992B2C; }
     /* line 1046, scss/_layout.scss */
-=======
-    /* line 1042, scss/_layout.scss */
-    article.schools .cat-title i {
-      background-color: #0C3261; }
-  /* line 1049, scss/_layout.scss */
-  article.university .cat-title {
-    background-color: #992B2C; }
-    /* line 1052, scss/_layout.scss */
->>>>>>> 4d7442b04f8e8c375cbbc7e0f67b6bc4742d04f1
     article.university .cat-title i {
       background-color: #810106; }
   /* line 1053, scss/_layout.scss */
@@ -2381,7 +2245,6 @@ article {
     /* line 1056, scss/_layout.scss */
     article.representative .cat-title i {
       background-color: #250D3C; }
-<<<<<<< HEAD
   /* line 1063, scss/_layout.scss */
   article.sevens .cat-title {
     background-color: #A73260; }
@@ -2398,24 +2261,6 @@ article {
   article.fitness .cat-title, article.nutrition .cat-title {
     background-color: #D45703; }
     /* line 1086, scss/_layout.scss */
-=======
-  /* line 1069, scss/_layout.scss */
-  article.sevens .cat-title {
-    background-color: #A73260; }
-    /* line 1072, scss/_layout.scss */
-    article.sevens .cat-title i {
-      background-color: #E74E8B; }
-  /* line 1079, scss/_layout.scss */
-  article.around .cat-title {
-    background-color: #1A4417; }
-    /* line 1082, scss/_layout.scss */
-    article.around .cat-title i {
-      background-color: #1C3203; }
-  /* line 1089, scss/_layout.scss */
-  article.fitness .cat-title, article.nutrition .cat-title {
-    background-color: #D45703; }
-    /* line 1092, scss/_layout.scss */
->>>>>>> 4d7442b04f8e8c375cbbc7e0f67b6bc4742d04f1
     article.fitness .cat-title i, article.nutrition .cat-title i {
       background-color: #000; }
   /* line 1093, scss/_layout.scss */
@@ -2424,11 +2269,7 @@ article {
     /* line 1096, scss/_layout.scss */
     article.training .cat-title i {
       background-color: #D45703; }
-<<<<<<< HEAD
   /* line 1103, scss/_layout.scss */
-=======
-  /* line 1109, scss/_layout.scss */
->>>>>>> 4d7442b04f8e8c375cbbc7e0f67b6bc4742d04f1
   article.media .cat-title {
     background-color: #005375; }
     /* line 1106, scss/_layout.scss */
