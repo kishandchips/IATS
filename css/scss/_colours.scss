@@ -5,79 +5,90 @@
 /*SCHOOLS*/
 $blue : #4968D1;
 $dblue : #0C3261;
-header.schools{
-	color: #fff;
-	background-color: $dblue;
 
-		.icon-badge:after{
-			@extend %icon;
-			content: "\e616";			
-		}
-}
 
 /*UNIVERSITIES*/
 $red : #992B2C;
 $lred : #B74144;
 $dred : #810106;
-header.university{
-	color: #fff;
-	background-color: $dred;
-
-		.icon-badge:after{
-			@extend %icon;
-			content: "\e618";			
-		}
-}
 
 /*REPRESENTATIVE*/
 $purple : #373553;
 $lpurple: #250D3C;
 $dpurple : #250D3C;
-header.representative{
-	color: #fff;
-	background-color: $dpurple;
+
+/*SEVENS*/
+$pink : #A73260;
+$dpink : #E74E8B;
+
+/*AROUND THE GAME*/
+$green : #1A4417;
+$dgreen : #1C3203;
+
+/*IATS*/
+$orange : #D45703;
+
+#page-header{
+
+	&.schools{
+		color: #fff;
+		background-color: $dblue;
+
+		.icon-badge:after{
+			@extend %icon;
+			content: "\e616";			
+		}
+	}
+
+	&.university{
+		color: #fff;
+		background-color: $dred;
+
+		.icon-badge:after{
+			@extend %icon;
+			content: "\e618";			
+		}
+	}
+
+	&.representative{
+		color: #fff;
+		background-color: $dpurple;
 
 		.icon-badge:after{
 			@extend %icon;
 			content: "\e615";			
 		}
-}
+	}
 
-/*SEVENS*/
-$pink : #A73260;
-$dpink : #E74E8B;
-header.sevens{
-	color: #fff;
-	background-color: $dpink;
+	&.sevens{
+		color: #fff;
+		background-color: $dpink;
 
 		.icon-badge:after{
 			@extend %icon;
 			content: "\e617";			
 		}
-}
+	}
 
-/*AROUND THE GAME*/
-$green : #1A4417;
-$dgreen : #1C3203;
-header.around-the-game{
-	color: #fff;
-	background-color: $dgreen;
+	&.around-the-game{
+		color: #fff;
+		background-color: $dgreen;
 
 		.icon-badge:after{
 			@extend %icon;
 			content: "\e611";			
 		}
-}
-
-/*IATS*/
-$orange : #D45703;
-header.fitness{
-	color: #fff;
-	background-color: $orange;
+	}
+	
+	&.fitness{
+		color: #fff;
+		background-color: $orange;
+			
 		.icon-badge:after{
 			@extend %icon;
 			content: "\e614";			
 		}
+	}
 }
 
 .live-bg{
@@ -89,11 +100,6 @@ header.fitness{
 			@extend %icon;
 			content: "\e611";			
 		}
-}
-
-header.shop{
-	color: #fff;
-	background-color: #1abc9c;
 }
 
 /*MEDIA*/
