@@ -762,6 +762,15 @@ body.single{
 		font-size: 80%;
 	}
 
+	#updates{
+		margin: 50px 0;
+		background-color: #fff;
+
+		#24lb_footer{
+			display: none !important;
+		}
+	}
+
 	#comments{
 		ol.comment-list{
 			margin: 0;
@@ -788,6 +797,16 @@ body.single{
 
 		.image{
 			text-align: center;
+		}
+
+		@media screen and (max-width: 750px){
+			.col-1-2{
+				width: 100%;
+			}
+
+			.image{
+				display: none;
+			}
 		}
 	}
 

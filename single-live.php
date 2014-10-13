@@ -91,7 +91,7 @@
 				</div>
 			</div>
 			
-			<div id="content" class="section">
+			<div id="updates">
 				<?php the_content(); ?>
 			</div><!-- #content -->
 
@@ -125,7 +125,7 @@
 
 			</div>
 
-			<div id="content" class="section">
+			<div id="updates">
 				<?php the_content(); ?>
 			</div><!-- #content -->
 
