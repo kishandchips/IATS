@@ -5,7 +5,14 @@
 .woocommerce{
 	background-color: #E8E9ED;
 
-	.woocommerce-info{
+	#content{
+		.inner-container{
+			padding: 2em;
+			background-color: #fff;
+		}	
+	}
+
+	.woocommerce-info, .woocommerce-message{
 		margin: 0 !important;
 	}
 
@@ -17,7 +24,11 @@
 			color: #20A367;
 		}
 	}
-}
+
+	.attachment-shop_single{
+		width: auto !important;
+	}
+}// .woocommerce
 
 #shop{
 
@@ -26,6 +37,9 @@
 	}
 
 	.product{
+		width: 50%;
+		margin: 0;
+		padding: 0 10px;
 		text-align: center;
 		background-color: #fff;
 

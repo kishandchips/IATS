@@ -762,24 +762,25 @@ body.single{
 		font-size: 80%;
 	}
 
-	// #comments{
-	// 	ol.comment-list{
-	// 		margin: 0;
-	// 		padding: 0;
-	// 		list-style-type: none;
+	#comments{
+		ol.comment-list{
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
 			
-	// 		li.comment{
-	// 			position: relative;
-	// 			padding: 2em;
-	// 			margin-top: 5px;
-	// 			background-color: #fff;
-	// 		}
-	// 	}// .comment-list
-	// }
+			li.comment{
+				position: relative;
+				padding: 2em;
+				margin-top: 5px;
+				background-color: #fff;
+			}
+		}// .comment-list
+	}
 
 	.live-header{
 		padding: 2em;
 		background-color: #fff;
+		border-bottom: 10px solid #177248;
 
 		.title{
 			@extend .xxlarge;
@@ -862,103 +863,103 @@ body.single{
 		}
 	}// .match-notice
 
-	// .event-timestamp{
-	// 	text-align: center;
+	.event-timestamp{
+		text-align: center;
 		
-	// 	.game-time{
-	// 		padding: 0.5em;
-	// 		color: #fff;
-	// 		@include heavy;
-	// 		background-color: #203F4C;
-	// 	}
+		.game-time{
+			padding: 0.5em;
+			color: #fff;
+			@include heavy;
+			background-color: #203F4C;
+		}
 
-	// 	.out-game-time{
-	// 		padding: 0.5em;
-	// 		color: #fff;
-	// 		@include heavy;
-	// 		background-color: #B7B7B7;
-	// 	}
-	// }
+		.out-game-time{
+			padding: 0.5em;
+			color: #fff;
+			@include heavy;
+			background-color: #B7B7B7;
+		}
+	}
 
-	// .event-icon{
-	// 	text-align: center;
+	.event-icon{
+		text-align: center;
 
-	// 	i{
-	// 		font-size: 2em;
+		i{
+			font-size: 2em;
 
-	// 		&.icon-first-start:after{
-	// 			@extend %icon;
-	// 			content: "\e61c";
-	// 			color: #2ecc71;
-	// 		}
-	// 		&.icon-first-end:after{
-	// 			@extend %icon;
-	// 			content: "\e61b";
-	// 			color: #e74c3c;
-	// 		}
-	// 		&.icon-second-start:after{
- // 				@extend %icon;
- // 				content: "\e61e";
- // 				color: #2ecc71;
-	// 		}
-	// 		&.icon-second-end:after{
- // 				@extend %icon;
- // 				content: "\e61d";
- // 				color: #e74c3c;
-	// 		}
-	// 		&.icon-conversion:after{
- // 				@extend %icon;
- // 				content: "\e61f";
-	// 		}
-	// 		&.icon-goal:after{
- // 				@extend %icon;
- // 				content: "\e620";
-	// 		}
-	// 		&.icon-extra-start:after{
- // 				@extend %icon;
- // 				content: "\e622";
- // 				color: #2ecc71;
-	// 		}
-	// 		&.icon-extra-end:after{
- // 				@extend %icon;
- // 				content: "\e621";
- // 				color: #e74c3c;
-	// 		}
-	// 		&.icon-penalty:after{
- // 				@extend %icon;
- // 				content: "\e623";
-	// 		}
-	// 		&.icon-sub:after{
- // 				@extend %icon;
- // 				content: "\e624";
-	// 		}
-	// 		&.icon-try:after{
- // 				@extend %icon;
- // 				content: "\e625";
-	// 		}
-	// 		&.icon-card:after{
- // 				@extend %icon;
- // 				content: "\e626";
- // 				color: #f1c40f;
-	// 		}
-	// 	}
-	// }
+			&.icon-first-start:after{
+				@extend %icon;
+				content: "\e61c";
+				color: #2ecc71;
+			}
+			&.icon-first-end:after{
+				@extend %icon;
+				content: "\e61b";
+				color: #e74c3c;
+			}
+			&.icon-second-start:after{
+ 				@extend %icon;
+ 				content: "\e61e";
+ 				color: #2ecc71;
+			}
+			&.icon-second-end:after{
+ 				@extend %icon;
+ 				content: "\e61d";
+ 				color: #e74c3c;
+			}
+			&.icon-conversion:after{
+ 				@extend %icon;
+ 				content: "\e61f";
+			}
+			&.icon-goal:after{
+ 				@extend %icon;
+ 				content: "\e620";
+			}
+			&.icon-extra-start:after{
+ 				@extend %icon;
+ 				content: "\e622";
+ 				color: #2ecc71;
+			}
+			&.icon-extra-end:after{
+ 				@extend %icon;
+ 				content: "\e621";
+ 				color: #e74c3c;
+			}
+			&.icon-penalty:after{
+ 				@extend %icon;
+ 				content: "\e623";
+			}
+			&.icon-sub:after{
+ 				@extend %icon;
+ 				content: "\e624";
+			}
+			&.icon-try:after{
+ 				@extend %icon;
+ 				content: "\e625";
+			}
+			&.icon-card:after{
+ 				@extend %icon;
+ 				content: "\e626";
+ 				color: #f1c40f;
+			}
+		}
+	}
 	
-	// .event-content{
-	// 	.text{
-	// 		.title{
-	// 			@extend %title;
-	// 			@include heavy;
-	// 		}
-	// 	}
+	.event-content{
+		.text{
+			.title{
+				@extend %title;
+				@include heavy;
+			}
+		}
 
-	// 	.share{
-	// 		a{
-	// 			color: #B7B7B7;
-	// 		}
+		.share{
+			a{
+				color: #B7B7B7;
+			}
 			
-	// 	}
-	// }
+		}
+	}
 
 	#liveblog-container{
 		.liveblog-entry{

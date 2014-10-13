@@ -3,7 +3,7 @@
 	<div id="home">
 		<?php 
 			$args = array(
-				'post_type' => 'match',
+				'category__name' => 'live',
 				'posts_per_page' => 1,
 				'meta_key'  => 'live',
 				'meta_value'  => true,
@@ -12,28 +12,18 @@
 			$live = new WP_Query( $args );
 		 ?>
 		<!-- DISPLAY ONLY IF LIVE EVENT  -->
-		<?php if($live): ?>
-			<?php while($live->have_posts()): $live->the_post(); ?>
-			<?php $team1 = get_field('select_team'); ?>
-			<?php $team2 = get_field('select_team2'); ?>
-			<?php $team1_id = $team1->ID; ?>
-			<?php $team2_id = $team2->ID; ?>
-
+		<?php if($live->have_posts()): while($live->have_posts()): $live->the_post(); ?>
 			<div class="live-fixed">
 				<a href="<?php the_permalink(); ?>">
 					<div class="info">
 						<span class="title">IATS LIVE</span>
 						<h2>
-							<span class="team"><?php echo get_the_title($team1_id ); ?></span> 
-							<span class="vs">VS</span> 
-							<span class="team"><?php echo get_the_title($team2_id ); ?></span> 
-							<span class="kickoff">KickOff - <?php echo get_field('kickoff') ?></span>
+							<?php the_title(); ?>
 						</h2>
 					</div>	
 				</a>
 			</div>
-			<?php endwhile; ?>
-		<?php endif; ?>
+		<?php endwhile; endif; ?>
 		<!-- END -->
 
 		<div class="slider hero">

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 	
 <div id="fitness-archive">
-	<header id="page-header" class="fitness-bg">
+	<header id="page-header" class="fitness">
 		<h1 class="title">
 		<i class="icon-badge"></i>
 			Fitness

@@ -154,6 +154,8 @@ function load_single_template($template) {
     } else if (has_post_format( 'gallery' )){
 		// use template file single-video.php for video format
       	$new_template = locate_template(array('single-gallery.php' ));
+    } else if (in_category('live')){
+        $new_template = locate_template(array('single-live.php' ));
     }
  
   }
@@ -282,6 +284,8 @@ function cdnify($url)
 add_filter('wp_get_attachment_url', 'cdnify');
 
 // WOOCOMMERCE
+
+remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
 add_filter( 'woocommerce_product_tabs', 'sb_woo_remove_reviews_tab', 98);
 function sb_woo_remove_reviews_tab($tabs) {

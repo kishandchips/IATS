@@ -656,6 +656,32 @@
 				vertical-align: middle;
 			}
 		}// .social-widget
+		
+		&.widget_mc4wp_widget{
+			form.mc4wp-form {
+				margin: 0;
+				padding: 15px;
+				background-color: #FFF;
+
+				p{
+					margin:0;
+				}
+
+				input[type="submit"]{
+					margin-top: 0.5em;
+					padding: 0.5em 1em;
+					@include book;
+					background-color: #F3F6F8;
+					border: 1px solid #c8c8c8;
+					@include transition(all,.3s);
+
+					&:hover{
+						color: #fff;
+						background-color: #000;
+					}
+				}
+			}
+		}// newsletter signup
 
 		&.widget_polls-widget{
 			.wp-polls{
@@ -664,6 +690,13 @@
 				>p{
 					margin:0;
 					padding: 15px;
+				}
+
+				.wp-polls-form{
+					p{
+						margin: 0;
+						padding: 15px;
+					}
 				}
 
 				.wp-polls-ul{
@@ -691,7 +724,19 @@
 						text-transform: uppercase;
 					}
 				}
-			}
+
+				.Buttons{
+					padding: 0.5em 1em;
+					@include book;
+					@include transition(all,.3s);
+
+					&:hover{
+						color: #fff;
+						background-color: #000;
+					}
+				}
+
+			}// .wp-polls
 		}// polls-widget
 
 		&.popular-posts{
@@ -826,15 +871,16 @@
 		.title{
 			margin-right: 1em;
 			color: #fff;
-			@extend .xlarge;
+			@extend .large;
 			@include heavy;
 		}
 
 		h2{
 			display: inline-block;
 			margin: 0;
-			color: #fff;
-			@extend .xlarge;
+			color: #000;
+			// color: #fff;
+			@extend .large;
 			@include heavy;	
 		}
 

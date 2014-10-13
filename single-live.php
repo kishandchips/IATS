@@ -4,9 +4,6 @@
 <?php $team1_id = $team1->ID; ?>
 <?php $team2_id = $team2->ID; ?>
 
-<!-- Twitter script -->
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <div id="live">
 	<header id="page-header" class="live-bg">
 		<h1 class="title">
