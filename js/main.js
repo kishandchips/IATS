@@ -268,6 +268,9 @@ var bLazy = new Blazy({
 
 main.init();
 
-$('.match-height').matchHeight(true);
+if (typeof matchHeight == 'function') { 
+  $('.match-height').matchHeight(true);
+}
+
 
 })(jQuery);
