@@ -23,14 +23,13 @@
 
 				var	search 			= $('#search-input'),
 					menu 			= $('#menu-toggle'),
-					sticky 			= $('.sticky-header'),
+					sticky 			= $('.sticky'),
 					nav				= $('#main-nav'),
 					searchbutton 	= $('#searchsubmit'),
 					catToggle 		= $('.cat-toggle'),
 					offset 			= $('#navigation').offset();
 
-				menu.on('click', function(){
-					sticky.toggleClass('overflow');		
+				menu.on('click', function(){		
 					nav.toggleClass('visible');		
 				});		
 
@@ -174,8 +173,8 @@
 				
 				//sticky sidebar
 				if(body.hasClass('single')){
-					main.vars.widgets.stickyfloat();
-					main.vars.widgets.stickyfloat('update',{ duration:0 });
+					main.sidebar.vars.widgets.stickyfloat();
+					main.sidebar.vars.widgets.stickyfloat('update',{ duration:0 });
 				}
 
 				this.social();

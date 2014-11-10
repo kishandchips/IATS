@@ -13,30 +13,10 @@
         <?php wp_head(); ?>
     </head>
 	<body <?php body_class(); ?>>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-        <![endif]-->
-
+    
         <div id="joebudden" class="container">
 
         <section id="header">
-<!--        <div class="space-jam clearfix">
-                <div class="space-logo">
-
-                </div>                
-                <div class="advertisement">
-                    <div class="banner">
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <ins class="adsbygoogle"
-                             style="display:inline-block;width:970px;height:90px"
-                             data-ad-client="ca-pub-1566926890494756"
-                             data-ad-slot="7646876626"></ins>
-                        <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>            
-                    </div>
-                </div>        
-            </div> -->
 
             <section id="navigation" class="clearfix">
                 <div class="logo-wrapper">
@@ -59,5 +39,6 @@
                     ?>
                     <?php get_search_form(); ?>
                 </nav>
-            </section><!-- #navigation -->         
+            </section><!-- #navigation -->
+
         </section><!-- #header -->
