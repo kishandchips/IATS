@@ -26,11 +26,6 @@
 			left: 0;
 			z-index: 9999;
 
-			@media screen and (max-height: 700px){
-					bottom: 0;
-					overflow-y: scroll;
-			}
-
 			.logo-wrapper{
 				display: inline-block;
 			}
@@ -43,7 +38,38 @@
 				}
 			}
 		}
-	}
+
+		@media screen and (max-height: 700px){
+			&.visible{
+				#navigation{
+					bottom: 0;
+					overflow-y: scroll;					
+				}
+			}
+		}
+	}// .sticky
+
+	&.visible{
+
+		#main-nav{
+			position: relative;
+			height: auto;
+			@include opacity(1);
+
+			#searchform{
+				width: 100%;
+				text-align: center;
+
+				.search-wrap{
+					display: inline-block;
+				}
+
+				#searchsubmit{
+					color: #000;
+				}
+			}					
+		}
+	}// .visible
 
 	@media screen and (max-width: 1200px){
 		.logo-wrapper{
@@ -172,24 +198,7 @@
 			@include opacity(0);
 			@include transition(height,.3s);
 
-			&.visible{
-				position: relative;
-				height: auto;
-				@include opacity(1);
 
-				#searchform{
-					width: 100%;
-					text-align: center;
-
-					.search-wrap{
-						display: inline-block;
-					}
-
-					#searchsubmit{
-						color: #000;
-					}
-				}
-			}
 
 			li.menu-item{
 				float: none;
