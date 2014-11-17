@@ -26,6 +26,10 @@
 			left: 0;
 			z-index: 9999;
 
+			.logged-in &{
+				top: 32px;
+			}
+
 			.logo-wrapper{
 				display: inline-block;
 			}

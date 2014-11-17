@@ -1165,6 +1165,8 @@ textarea {
   right: 0;
   left: 0;
   z-index: 9999; }
+  .logged-in #header.sticky #navigation {
+    top: 32px; }
   #header.sticky #navigation .logo-wrapper {
     display: inline-block; }
   #header.sticky #navigation #main-nav {
