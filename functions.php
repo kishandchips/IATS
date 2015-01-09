@@ -40,8 +40,7 @@ function custom_after_setup_theme(){
 
 function custom_styles(){
 	global $template_directory_uri;
-    wp_enqueue_style('main', $template_directory_uri . '/css/main.css');
-	wp_enqueue_style('fonts', '//fast.fonts.net/cssapi/774e7563-a8f4-4d3d-80ef-6ddbe85570fc.css');
+	wp_enqueue_style('main', $template_directory_uri . '/css/main.css');
 }
 
 function custom_scripts(){

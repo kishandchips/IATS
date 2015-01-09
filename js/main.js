@@ -30,7 +30,7 @@
 					offset 			= $('#navigation').offset();
 
 				menu.on('click', function(){		
-					element.toggleClass('visible');		
+					nav.toggleClass('visible');		
 				});		
 
 				searchbutton.on('click', function(e){				
