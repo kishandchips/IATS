@@ -25,7 +25,7 @@
 							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id()); ?>
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 									<?php if($image[0]): ?>
-									<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+									<div class="image lazy" data-src="<?php echo $image[0] ?>">
 									<?php else: ?>
 									<div class="image placeholder">
 									<?php endif; ?>
