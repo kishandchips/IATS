@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 	
 <div id="fitness-archive">
-	<header id="page-header" class="fitness-bg">
+	<header id="page-header" class="fitness">
 		<h1 class="title">
 		<i class="icon-badge"></i>
 			Fitness
@@ -30,7 +30,7 @@
 						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
 						<a href="<?php the_permalink(); ?> ">
 								<?php if($image[0]): ?>
-								<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+								<div class="image lazy" data-src="<?php echo $image[0] ?>">
 								<?php else: ?>
 								<div class="image placeholder">
 								<?php endif; ?>

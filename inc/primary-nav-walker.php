@@ -108,7 +108,8 @@ class Primary_Nav_Walker extends Walker_Nav_Menu {
 	        	<a href="<?php echo get_the_permalink($post->ID); ?> ">
 		            <div class="menu-item-post column col-1-3">
 		            	<figure>
-			            	<?php echo get_the_post_thumbnail($post->ID, 'nav-thumb') ?>
+		            		<?php $url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'nav-thumb' ); ?>
+		            		<img src="<?php echo $url[0] ?>">
 		            	</figure>
 		                <p><?php echo get_the_title($post->ID); ?></p> 
 		            </div>

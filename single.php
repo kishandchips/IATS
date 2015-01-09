@@ -100,7 +100,7 @@
 		$related = new WP_Query( $args );
 	 ?>
 	
-	<section class="section">
+	<section class="related section">
 		<div class="inner-container">
 			<header>
 				<h4 class="sub-title">Related Articles</h4>
@@ -118,7 +118,7 @@
 						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'medium' ); ?>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 								<?php if($image[0]): ?>
-								<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+								<div class="image lazy" data-src="<?php echo $image[0] ?>">
 								<?php else: ?>
 								<div class="image placeholder">
 								<?php endif; ?>

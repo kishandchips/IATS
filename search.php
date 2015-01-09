@@ -10,6 +10,9 @@
 			<header>
 				<h4 class="title">Search Results</h4>
 			</header>
+
+			<?php if(have_posts()): ?>
+
 				<div class="articles row">
 					<?php if(have_posts()): while (have_posts()): the_post(); ?>
 					<?php $categoryid = top_level_cat(); ?>
@@ -60,6 +63,11 @@
 					<?php endwhile; endif; ?>
 				</div><!-- .articles.row -->
 
+			<?php else: ?>
+
+				<h2>No search results found.</h2>
+			<?php endif; ?>
+
 				<div class="pagination">
 				<?php
 				global $wp_query;
@@ -78,6 +86,11 @@
 				</div><!-- .section-content -->
 
 				<div id="sidebar" class="column col-3">
+
+					<div class="sidebar-widget advert">
+						
+					</div>
+
 					<div class="sidebar-widget list">
 						<?php dynamic_sidebar('primary' ); ?>
 					</div>

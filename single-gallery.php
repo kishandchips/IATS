@@ -80,19 +80,13 @@
 
 			<div class="slider four">
 				<ul class="slides">
-				<?php
-					$offset = 0; 
-					$slides = 0; 
-				?>
 <!-- 				<?php $tags = wp_get_post_tags( $post->ID ) ?>
 				<?php $tag_ids = array(); ?>
 				<?php foreach ($tags as $tag) { $tag_ids[] = $tag->term_id; } ?> -->
-				<?php while($slides <= 3 ): ?>
 
 				<?php 
 					$args = array(
-						'offset' => $offset,
-						'posts_per_page'	=> 4,
+						'posts_per_page'	=> 16,
 						'category__in' => wp_get_post_categories($post->ID),
 						// 'tag__in'	=> $tag_ids,
 						'post__not_in' => array($post->ID),
@@ -104,67 +98,70 @@
 		                    )
 		                )
 					);
-				
-				$related_media = new WP_Query( $args );
 				 ?>
+				 <?php $related_media = new WP_Query( $args ); ?>
 
-				<?php if($related_media->have_posts()): ?>
-					<li class="clearfix">
+				<?php if($related_media->have_posts()): while($related_media->have_posts()): $related_media->the_post(); ?>
+						
+					<?php if( $related_media->current_post % 4 == 0 ):?>
+						<?php $i = 0; ?>
+						<li class="clearfix">
+					<?php endif; ?>
 
-						<?php while($related_media->have_posts()): $related_media->the_post(); ?>
-						<?php $categoryid = top_level_cat(); ?>
-						<?php $category =  get_category($categoryid); ?>
-						<?php $category_name = strtolower($category->name); ?>
-						<?php $category_link = get_category_link($categoryid); ?>
+					<?php $categoryid = top_level_cat(); ?>
+					<?php $category =  get_category($categoryid); ?>
+					<?php $category_name = strtolower($category->name); ?>
+					<?php $category_link = get_category_link($categoryid); ?>
 
-						<?php $format = get_post_format(); ?>
+					<?php $format = get_post_format(); ?>
 
-						<article class="slide-col column col-1-4 <?php echo $category_name ?> <?php echo $format; ?>">
-							<article class="single">
-								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid' ); ?>
-								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-									<?php if($image[0]): ?>
-									<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
-									<?php else: ?>
-									<div class="image placeholder">
-									<?php endif; ?>
+					<article class="slide-col column col-1-4 <?php echo $category_name ?> <?php echo $format; ?>">
+						<article class="single">
+							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid' ); ?>
+							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+								<?php if($image[0]): ?>
+								<div class="image lazy" data-src="<?php echo $image[0] ?>">
+								<?php else: ?>
+								<div class="image placeholder">
+								<?php endif; ?>
 
-										<?php if($format == 'gallery'): ?>
-											<?php $images = get_field('gallery', $post->ID) ?>
-											<?php $count = count($images); ?>
-											<span class="gallery-count"> 
-												<i class="icon-gallery"></i>
-												<span class="count">
-												<?php echo $count; ?>
-												</span>
+									<?php if($format == 'gallery'): ?>
+										<?php $images = get_field('gallery', $post->ID) ?>
+										<?php $count = count($images); ?>
+										<span class="gallery-count"> 
+											<i class="icon-gallery"></i>
+											<span class="count">
+											<?php echo $count; ?>
 											</span>
-										<?php endif; ?>
-									</div>
-								</a>
+										</span>
+									<?php endif; ?>
+								</div>
+							</a>
 
-								<div data-mh="grid" class="meta match-height">
-									<div class="category out">
-										<a href="<?php echo $category_link ?>"><!-- CATEGORY LINK -->
-											<p class="cat-title"><?php echo $category_name ?><i class="icon-badge"></i></p>										
-										</a>
-									</div>	
-									<div class="title">
-										<a href="<?php the_permalink(); ?>"><!-- POST LINK -->
-											<h2><?php the_title(); ?></h2>
-										</a>
-									</div>
-									<div class="misc">
-										<span class="date"><?php the_time('m M Y'); ?></span>
-									</div>
-								</div>				
-							</article>
+							<div data-mh="grid" class="meta match-height">
+								<div class="category out">
+									<a href="<?php echo $category_link ?>"><!-- CATEGORY LINK -->
+										<p class="cat-title"><?php echo $category_name ?><i class="icon-badge"></i></p>										
+									</a>
+								</div>	
+								<div class="title">
+									<a href="<?php the_permalink(); ?>"><!-- POST LINK -->
+										<h2><?php the_title(); ?></h2>
+									</a>
+								</div>
+								<div class="misc">
+									<span class="date"><?php the_time('m M Y'); ?></span>
+								</div>
+							</div>				
 						</article>
-						<?php endwhile; ?>
-					</li><!-- slide item -->
+					</article>
+					<?php endwhile; ?>
+					
+					<?php if( $related_media->current_post%4 == 1 || $related_media->current_post == $related_media->post_count-1 ): ?>
+						</li><!-- slide -->
+					<?php endif; ?>
+				
 				<?php endif; ?>
-				<?php $offset += 4; ?>
-				<?php $slides++; ?>
-				<?php endwhile; ?>
 				<?php wp_reset_query(); ?>
 				</ul>
 			</div><!-- .slider.four -->
@@ -180,20 +177,14 @@
 
 			<div class="slider four">
 				<ul class="slides">
-				<?php
-					$offset = 0; 
-					$slides = 0; 
-				?>
 <!-- 
 				<?php $tags = wp_get_post_tags( $post->ID ) ?>
 				<?php $tag_ids = array(); ?>
 				<?php foreach ($tags as $tag) { $tag_ids[] = $tag->term_id; } ?> -->
-				<?php while($slides <= 1 ): ?>
 
 				<?php 
 					$args = array(
-						'offset' => $offset,
-						'posts_per_page'	=> 4,
+						'posts_per_page'	=> 8,
 						// 'tag__in'	=> $tag_ids,
 						'category__in' => wp_get_post_categories($post->ID),
 						'post__not_in' => array($post->ID),
@@ -206,14 +197,16 @@
 		                    )
 		                )
 					);
-				
-				$related_articles = new WP_Query( $args );
-				 ?>
+				?>
+				<?php $related_articles = new WP_Query( $args ); ?>
 
-				<?php if($related_articles->have_posts()): ?>
-					<li class="clearfix">
+				<?php if($related_articles->have_posts()): while($related_articles->have_posts()): $related_articles->the_post(); ?>
+					
+					<?php if( $related_articles->current_post % 4 == 0 ):?>
+						<?php $i = 0; ?>
+						<li class="clearfix">
+					<?php endif; ?>
 
-						<?php while($related_articles->have_posts()): $related_articles->the_post(); ?>
 						<?php $categoryid = top_level_cat(); ?>
 						<?php $category =  get_category($categoryid); ?>
 						<?php $category_name = strtolower($category->name); ?>
@@ -223,7 +216,7 @@
 							<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid' ); ?>
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 								<?php if($image[0]): ?>
-								<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+								<div class="image lazy" data-src="<?php echo $image[0] ?>">
 								<?php else: ?>
 								<div class="image placeholder">
 								<?php endif; ?>
@@ -248,11 +241,12 @@
 							</div>				
 						</article>
 						<?php endwhile; ?>
-					</li><!-- slide item -->
+						
+					<?php if( $related_articles->current_post%4 == 1 || $related_articles->current_post == $related_articles->post_count-1 ): ?>
+						</li><!-- slide -->
+					<?php endif; ?>
+				
 				<?php endif; ?>
-				<?php $offset += 4; ?>
-				<?php $slides++; ?>
-				<?php endwhile; ?>
 				<?php wp_reset_query(); ?>
 				</ul>
 			</div><!-- .slider.four -->

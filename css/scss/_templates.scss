@@ -318,6 +318,10 @@ body.single{
 				@media screen and (max-width: 950px){
 					width: 50%;
 					margin-bottom: 20px;
+
+					&:nth-child(2n+1){
+						clear:left;
+					}
 				}
 				@media screen and (max-width: 500px){
 					width: 100%;
@@ -410,6 +414,17 @@ body.single{
  		}
  	}// #feed
 }// #home
+
+#category{
+	.articles{
+		.col-1-2{
+			&:nth-child(2n+4){
+				clear: left;
+			}
+		}	
+	}
+}// #category
+
 
 /* =================================
    FITNESS ARCHIVE
@@ -750,6 +765,22 @@ body.single{
 		@extend %title;
 		@include heavy;
 	}
+
+	.related{
+		article{
+
+			@media screen and (max-width: 750px){
+				width: 50%;
+				&:nth-child(2n+1){
+					clear:left;
+				}				
+			}
+			@media screen and (max-width: 550px){
+				width: 100%;
+			}
+
+		}
+	}
 }// #single
 
 /* =================================
@@ -760,6 +791,15 @@ body.single{
 
 	@media screen and (max-width:500px){
 		font-size: 80%;
+	}
+
+	#updates{
+		margin: 50px 0;
+		background-color: #fff;
+
+		#24lb_footer{
+			display: none !important;
+		}
 	}
 
 	#comments{
@@ -775,6 +815,30 @@ body.single{
 				background-color: #fff;
 			}
 		}// .comment-list
+	}
+
+	.live-header{
+		padding: 2em;
+		background-color: #fff;
+		border-bottom: 10px solid #177248;
+
+		.title{
+			@extend .xxlarge;
+		}
+
+		.image{
+			text-align: center;
+		}
+
+		@media screen and (max-width: 750px){
+			.col-1-2{
+				width: 100%;
+			}
+
+			.image{
+				display: none;
+			}
+		}
 	}
 
 	.match-stats{
@@ -847,7 +911,7 @@ body.single{
 				width: 100%;
 			}
 		}
-	}
+	}// .match-notice
 
 	.event-timestamp{
 		text-align: center;
@@ -946,22 +1010,111 @@ body.single{
 			
 		}
 	}
+
+	#liveblog-container{
+		.liveblog-entry{
+			position: relative;
+			margin-top: 5px;
+			padding: 0;
+			background-color: #fff;
+
+			.liveblog-meta {
+
+				.liveblog-author-avatar {
+				    display: none;
+				}
+
+				.liveblog-author-name{
+					display: none;
+				}
+
+				.liveblog-meta-time a {
+					position: absolute;
+					top: 10px;
+					right: 10px;
+					padding-bottom: 2px;
+					color: #167147;
+					border-bottom: 1px dotted #fff; 
+				} 
+			}// .liveblog-meta
+
+			.liveblog-entry-text {
+			    margin: 0;
+			    padding: 2em;
+			    font-weight: normal;
+			    @include book;
+				
+				p:first-child {
+				    margin-top: 0; 
+				}
+
+				a {
+					color: #167147;
+					border-bottom: 1px solid transparent;
+					@include transition(all,.3s);
+
+					&:hover{
+						border-bottom: 1px solid #167147;
+					}
+				}
+			}// .liveblog-entry-text
+
+
+			.liveblog-form-entry {
+				resize: vertical; 
+			}
+
+		}// .liveblog-entry
+
+		.liveblog-entry-actions{
+			.liveblog-entry-edit{
+				margin-right: 1em;
+			}
+		}// .liveblog-entry-actions
+
+		.liveblog-submit-wrapper{
+			.button {
+				padding: 0.5em 1em;
+				color: #fff;
+				@include book;
+				background: #177248 !important;
+				border: 1px solid transparent !important;
+				@include transition(all,.3s);
+
+				&:hover{
+					background-color: #20A367 !important;
+	    			border: 1px solid #20A367 !important; 
+				}
+			}			
+		}// .liveblog-submit-wrapper
+	}// #liveblog-container
+
 }// #live
 
 /* =================================
-   CONTACT
+   SHOP
    ================================= */
+#shop{
+	background-color: #E8E9ED;
+}
 
-#contact{
-	.contact-form{
-		width: 100%;
-		max-width: 600px;
-		margin: 0 auto;
-		padding: 2em;
-		background-color: #fff;
+#cart-bar{
+	padding: 0.5em 1em;
+	color: #fff;
+	text-align: right;
+	background-color: #16a085;
 
-		@media screen and (max-width: 600px){
-			font-size: 80%;
+	a{
+		display: inline-block;
+		padding: 0.5em 1em;
+		color: #fff;
+		border: 1px solid #fff;
+		@include transition(all, .3s);
+
+		&:hover{
+			color: #16a085;
+			background-color: #fff;
+			border: 1px solid #16a085;
 		}
 	}
 }
@@ -995,6 +1148,10 @@ body.single{
 			@media screen and (max-width: 1100px){
 				font-size: 80%;
 				width: 50%;
+
+				&:nth-child(2n+1){
+					clear: left;
+				}
 			}
 
 			@media screen and (max-width: 600px){
@@ -1007,6 +1164,25 @@ body.single{
 				margin-bottom: 0.5em;
 			}
 		}		
+	}
+
+}// #advertising
+
+/* =================================
+   CONTACT
+   ================================= */
+
+#contact{
+	.contact-form{
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 2em;
+		background-color: #fff;
+
+		@media screen and (max-width: 600px){
+			font-size: 80%;
+		}
 	}
 }
 
@@ -1063,5 +1239,15 @@ body.single{
 				}	
 			}
 		}
+	}
+}
+
+/* =================================
+   SEARCH
+   ================================= */
+
+body.search{
+	#joebudden{
+		background-color: #E8E9ED;
 	}
 }

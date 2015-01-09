@@ -24,17 +24,8 @@
 
 			<ul class="slides">	
 				<?php 
-					$i = 0;
-					$offset = 0;
-					$slides = 0; 
-				?>
-
-				<?php while($slides <= 1 ): ?>
-
-				<?php 
 					$args = array(
-						'posts_per_page'	=> 3,
-						'offset'	=> $offset,
+						'posts_per_page'	=> 6,
 						'tax_query' => array(
 						                    array(
 						                        'taxonomy' => 'post_format',
@@ -44,80 +35,79 @@
 						                )
 
 					);
-				
-				$query = new WP_Query( $args );
-				 ?>
-				
+				?>
+				<?php $query = new WP_Query( $args ); ?>
 
-					<?php if($query->have_posts()): ?>
-						<li class="clearfix">
+					<?php if($query->have_posts()): while($query->have_posts()): $query->the_post(); ?>
+						
+						<?php if( $query->current_post % 3 == 0 ):?>
+							<?php $i = 0; ?>
+							<li class="clearfix">
+						<?php endif; ?>			
 
-						<?php while($query->have_posts()): $query->the_post(); ?>					
-								<?php $categoryid = top_level_cat(); ?>
-								<?php $category =  get_category($categoryid); ?>
-								<?php $category_name = strtolower($category->name); ?>
-								<?php $category_link = get_category_link($categoryid); ?>
+							<?php $categoryid = top_level_cat(); ?>
+							<?php $category =  get_category($categoryid); ?>
+							<?php $category_name = strtolower($category->name); ?>
+							<?php $category_link = get_category_link($categoryid); ?>
 
-								<?php $format = get_post_format(); ?>
+							<?php $format = get_post_format(); ?>
 
-									<?php if($i % 3 == 0): ?>
-										<article class="slide-col one column col-2-5 <?php echo $category_name; ?> <?php echo $format; ?>">
-										<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'large' ); ?>
-									<?php elseif($i % 3 == 1): ?>
-										<article class="slide-col two column col-2-5 <?php echo $category_name; ?> <?php echo $format; ?>">
-										<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid' ); ?>
-									<?php else: ?>
-										<article class="slide-col two column col-2-5 <?php echo $category_name; ?> <?php echo $format; ?>">
-										<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid' ); ?>
-									<?php endif; ?>
+								<?php if($i % 3 == 0): ?>
+									<article class="slide-col one column col-2-5 <?php echo $category_name; ?> <?php echo $format; ?>">
+									<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'large' ); ?>
+								<?php elseif($i % 3 == 1): ?>
+									<article class="slide-col two column col-2-5 <?php echo $category_name; ?> <?php echo $format; ?>">
+									<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid' ); ?>
+								<?php else: ?>
+									<article class="slide-col two column col-2-5 <?php echo $category_name; ?> <?php echo $format; ?>">
+									<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid' ); ?>
+								<?php endif; ?>
 
-										<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-											<?php if($image[0]): ?>
-											<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
-											<?php else: ?>
-											<div class="image placeholder">
-											<?php endif; ?>
+									<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+										<?php if($image[0]): ?>
+										<div class="image lazy" data-src="<?php echo $image[0] ?>">
+										<?php else: ?>
+										<div class="image placeholder">
+										<?php endif; ?>
 
-											<?php if($format == 'gallery'): ?>
-												<?php $images = get_field('gallery', $post->ID) ?>
-												<?php $count = count($images); ?>
-												<span class="gallery-count"> 
-													<i class="icon-gallery"></i>
-													<span class="count">
-													<?php echo $count; ?>
-													</span>
+										<?php if($format == 'gallery'): ?>
+											<?php $images = get_field('gallery', $post->ID) ?>
+											<?php $count = count($images); ?>
+											<span class="gallery-count"> 
+												<i class="icon-gallery"></i>
+												<span class="count">
+												<?php echo $count; ?>
 												</span>
-											<?php endif; ?>
-											</div>
-										</a>
+											</span>
+										<?php endif; ?>
+										</div>
+									</a>
 
-										<div class="meta">
-											<div class="category out">
-												<a href="<?php echo $category_link; ?>">
-													<p class="cat-title"><?php echo $category_name; ?><i class="icon-badge"></i></p>										
-												</a>
-											</div>	
-											<div class="title">
-												<a href="<?php the_permalink(); ?>">
-													<h2><?php the_title(); ?></h2>
-												</a>
-											</div>
-											<div class="misc">
-												<span class="date"><?php the_time('d M Y'); ?></span>
-											</div>
-										</div>					
-									</article>
-
+									<div class="meta">
+										<div class="category out">
+											<a href="<?php echo $category_link; ?>">
+												<p class="cat-title"><?php echo $category_name; ?><i class="icon-badge"></i></p>										
+											</a>
+										</div>	
+										<div class="title">
+											<a href="<?php the_permalink(); ?>">
+												<h2><?php the_title(); ?></h2>
+											</a>
+										</div>
+										<div class="misc">
+											<span class="date"><?php the_time('d M Y'); ?></span>
+										</div>
+									</div>					
+								</article>
 							<?php $i++ ?>
 						<?php endwhile; ?>
-						</li>
+
+						<?php if( $query->current_post%3 == 1 || $query->current_post == $query->post_count-1 ): ?>
+							</li><!-- slide -->
+						<?php endif; ?>
+						
 					<?php endif; ?>
-					<?php 
-						$offset += 3;
-						$slides++
-					?>
-				<?php endwhile; ?>
 				<?php wp_reset_query(); ?>						
 			</ul>
 	</div><!-- .hero-slider -->
@@ -174,7 +164,7 @@
 						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid' ); ?>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 								<?php if($image[0]): ?>
-								<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
+								<div class="image lazy" data-src="<?php echo $image[0] ?>">
 								<?php else: ?>
 								<div class="image placeholder">
 								<?php endif; ?>
