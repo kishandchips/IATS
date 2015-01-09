@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MOFO styles
+   Motherfucking styles
    ========================================================================== */
 #joebudden{
 	min-height: 100%;
@@ -7,6 +7,14 @@
 	height: 100%;
 	-webkit-box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
 	box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+
+	.admin-bar &{
+		#header.sticky{
+			#navigation{
+				margin-top: 32px;	
+			}
+		}
+	}
 }//#joebudden
 
 #header{
@@ -17,7 +25,28 @@
 		@extend .valign;	
 	}
 
+
+
+	.advertisement{
+		width: 970px;
+		margin: 0 auto;
+		text-align: center;
+		background: none;
+
+		@media screen and (max-width: 1200px){
+			float: none;
+			margin: 0 auto;
+		}
+
+		> div{
+			display: inline-block;
+		}
+	}
+
 	&.sticky{
+		// .space-logo{
+		// 	display: none;
+		// }
 
 		#navigation{
 			position: fixed;
@@ -26,9 +55,11 @@
 			left: 0;
 			z-index: 9999;
 
-			@media screen and (max-height: 700px){
+			@media screen and (max-height: 650px){
+				&.overflow{
 					bottom: 0;
-					overflow-y: scroll;
+					overflow-y: scroll;				
+				}
 			}
 
 			.logo-wrapper{

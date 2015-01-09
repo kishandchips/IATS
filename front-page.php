@@ -577,11 +577,21 @@
 				<div class="sidebar-widget list">
 					<?php dynamic_sidebar('primary' ); ?>
 				</div>
+
 			</div><!-- #sidebar -->
 
 		</div><!-- .inner-container -->
 
 	</section><!-- .section.latest -->
+
+    <div class="advertisement">
+        <!-- IAB_728x90_Test -->
+        <div id='div-gpt-ad-1418399064729-0' style='width:728px; height:90px;'>
+        <script type='text/javascript'>
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1418399064729-0'); });
+        </script>
+        </div>         
+    </div>
 
 	<section class="section media medialight-bg">
 		<div class="inner-container">
