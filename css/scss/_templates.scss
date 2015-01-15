@@ -98,24 +98,6 @@
 	}// .section-content
 }
 
-.advertisement{
-	padding: 2em 0;
-	background-color: #f3f4f6;
-
-	.banner{
-		width:970px;
-		height: 90px;
-		margin: 0 auto;
-	}
-
-	.leaderboard{
-		width: 728px;
-		height: 90px;
-		margin: 0 auto;
-	}		
-}
-
-
 /* ==========================================================================
    PAGE SPECIFIC STYLES
    ========================================================================== */
@@ -336,6 +318,26 @@ body.single{
 
 	.section.feed{
 		background-color: #f4f5f7;
+	}
+
+	.advertisement{
+		text-align: center;
+		background: none;
+
+		@media screen and (max-width: 1200px){
+			float: none;
+			margin: 0 auto;
+		}
+
+		> div{
+			display: inline-block;
+			padding: 2em 0;
+			@include box-sizing(content-box);
+
+			&[id*=tag_id] {
+				display: none;
+			}
+		}
 	}
 
  	#feed{

@@ -26,8 +26,6 @@
 	}
 
 	.advertisement{
-		width: 970px;
-		margin: 0 auto;
 		text-align: center;
 		background: none;
 
@@ -38,6 +36,12 @@
 
 		> div{
 			display: inline-block;
+			padding: 2em 0;
+			@include box-sizing(content-box);
+
+			&[id*=tag_id] {
+				display: none;
+			}
 		}
 	}
 
