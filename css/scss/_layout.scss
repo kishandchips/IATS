@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MOFO styles
+   Motherfucking styles
    ========================================================================== */
 #joebudden{
 	min-height: 100%;
@@ -7,6 +7,14 @@
 	height: 100%;
 	-webkit-box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
 	box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+
+	.admin-bar &{
+		#header.sticky{
+			#navigation{
+				margin-top: 32px;	
+			}
+		}
+	}
 }//#joebudden
 
 #header{
@@ -17,7 +25,44 @@
 		@extend .valign;	
 	}
 
+	.space-jam{
+		overflow: hidden;
+
+		// .space-logo{
+		// 	float: left;
+		// 	position: relative;
+		// 	display: inline-block;
+		// 	height:150px;
+		// 	margin-left: 2em;
+
+		// 	@media screen and (max-width: 1200px){
+		// 		display: none;
+		// 	}
+
+		// 	.icon-typelogo{
+		// 		color: #177248;
+		// 		font-size: 3em;
+		// 	}
+		// }
+
+		// .advertisement{
+		// 	// float: right;
+		// 	// width: 70%;
+		// 	width: 970px;
+		// 	margin: 0 auto;
+		// 	background: none;
+
+		// 	@media screen and (max-width: 1200px){
+		// 		float: none;
+		// 		margin: 0 auto;
+		// 	}
+		// }
+	}// .space-jam
+
 	&.sticky{
+		// .space-logo{
+		// 	display: none;
+		// }
 
 		#navigation{
 			position: fixed;
@@ -26,8 +71,11 @@
 			left: 0;
 			z-index: 9999;
 
-			.logged-in &{
-				top: 32px;
+			@media screen and (max-height: 650px){
+				&.overflow{
+					bottom: 0;
+					overflow-y: scroll;				
+				}
 			}
 
 			.logo-wrapper{
@@ -42,38 +90,7 @@
 				}
 			}
 		}
-
-		@media screen and (max-height: 700px){
-			&.visible{
-				#navigation{
-					bottom: 0;
-					overflow-y: scroll;					
-				}
-			}
-		}
-	}// .sticky
-
-	&.visible{
-
-		#main-nav{
-			position: relative;
-			height: auto;
-			@include opacity(1);
-
-			#searchform{
-				width: 100%;
-				text-align: center;
-
-				.search-wrap{
-					display: inline-block;
-				}
-
-				#searchsubmit{
-					color: #000;
-				}
-			}					
-		}
-	}// .visible
+	}
 
 	@media screen and (max-width: 1200px){
 		.logo-wrapper{
@@ -202,7 +219,24 @@
 			@include opacity(0);
 			@include transition(height,.3s);
 
+			&.visible{
+				position: relative;
+				height: auto;
+				@include opacity(1);
 
+				#searchform{
+					width: 100%;
+					text-align: center;
+
+					.search-wrap{
+						display: inline-block;
+					}
+
+					#searchsubmit{
+						color: #000;
+					}
+				}
+			}
 
 			li.menu-item{
 				float: none;

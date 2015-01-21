@@ -6,12 +6,12 @@ $template_directory = get_template_directory();
 
 // Enable Features
 add_theme_support( 'post-thumbnails' );
+add_theme_support( 'woocommerce' );
 add_theme_support( 'post-formats', array( 'video', 'gallery' ) );
 add_editor_style('/css/editor-style.css');
 register_nav_menus(array(
 	'header_nav' => 'Main Header Menu',
-	'footer_nav' => 'Footer Menu',
-	'' => '')
+	'footer_nav' => 'Footer Menu')
 );
 
 // Image sizes
@@ -303,6 +303,7 @@ function cdnify($url)
         'http://8e3e9343ba79890fa866-de14c4817643e8b76b6ae36789eb89da.r42.cf3.rackcdn.com',
         'https://270d40956d33bdd1c081-de14c4817643e8b76b6ae36789eb89da.ssl.cf3.rackcdn.com',
     ], $url);
+
 }
 
 add_filter('wp_get_attachment_url', 'cdnify');
@@ -317,4 +318,38 @@ function sb_woo_remove_reviews_tab($tabs) {
  unset($tabs['reviews']);
 
  return $tabs;
+}
+
+add_filter( 'acm_ad_tag_ids', 'custom_acm_ad_tag_ids' );
+
+function custom_acm_ad_tag_ids( $ad_tag_ids ) {
+    return array(
+        array(
+            'tag' => '728x90-header',
+            'url_vars' => array(
+                'fold' => 'atf',
+                'width' => '728',
+                'height' => '90',
+            ),
+            'enable_ui_mapping' => 1
+        ),
+        array(
+            'tag' => '728x90-frontpage-middle',
+            'url_vars' => array(
+                'fold' => 'btf',
+                'width' => '728',
+                'height' => '90',
+            ),
+            'enable_ui_mapping' => 1
+        ),
+        array(
+            'tag' => '300x250-sidebar-widget',
+            'url_vars' => array(
+                'fold' => 'btf',
+                'width' => '300',
+                'height' => '250',
+            ),
+            'enable_ui_mapping' => 1
+        )
+    );
 }

@@ -577,11 +577,16 @@
 				<div class="sidebar-widget list">
 					<?php dynamic_sidebar('primary' ); ?>
 				</div>
+
 			</div><!-- #sidebar -->
 
 		</div><!-- .inner-container -->
 
 	</section><!-- .section.latest -->
+
+    <div class="advertisement">
+    	<?php do_action( 'acm_tag', '728x90-frontpage-middle' ); ?>          
+    </div>
 
 	<section class="section media medialight-bg">
 		<div class="inner-container">

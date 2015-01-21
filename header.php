@@ -18,6 +18,10 @@
 
         <section id="header">
 
+            <div class="advertisement">
+                <?php do_action( 'acm_tag', '728x90-header' ); ?>
+            </div>
+
             <section id="navigation" class="clearfix">
                 <div class="logo-wrapper">
                     <a class="logo" href="<?php bloginfo('url' ); ?>">

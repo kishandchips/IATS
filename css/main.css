@@ -1146,7 +1146,7 @@ textarea {
     border: 1px solid #000; }
 
 /* ==========================================================================
-   MOFO styles
+   Motherfucking styles
    ========================================================================== */
 #joebudden {
   min-height: 100%;
@@ -1154,19 +1154,34 @@ textarea {
   height: 100%;
   -webkit-box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1); }
+  .admin-bar #joebudden #header.sticky #navigation {
+    margin-top: 32px; }
 
 #header a.logo {
   display: inline-block;
   width: 100%;
   text-align: center; }
+#header .advertisement {
+  width: 970px;
+  margin: 0 auto;
+  text-align: center;
+  background: none; }
+  @media screen and (max-width: 1200px) {
+    #header .advertisement {
+      float: none;
+      margin: 0 auto; } }
+  #header .advertisement > div {
+    display: inline-block; }
 #header.sticky #navigation {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 9999; }
-  .logged-in #header.sticky #navigation {
-    top: 32px; }
+  @media screen and (max-height: 650px) {
+    #header.sticky #navigation.overflow {
+      bottom: 0;
+      overflow-y: scroll; } }
   #header.sticky #navigation .logo-wrapper {
     display: inline-block; }
   #header.sticky #navigation #main-nav {
@@ -1287,6 +1302,18 @@ textarea {
       -o-transition: height, 0.3s;
       -webkit-transition: height, 0.3s;
       transition: height, 0.3s; }
+      #navigation #main-nav.visible, #navigation #main-nav ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover figure#main-nav:after, #main-nav ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover #navigation figure#main-nav:after, #navigation #main-nav ul.sub-menu li.menu-item.visible #main-nav.menu-item-post, #main-nav ul.sub-menu li.menu-item.visible #navigation #main-nav.menu-item-post, #navigation #main-nav.slider.latest-cat-articles.active {
+        position: relative;
+        height: auto;
+        filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+        opacity: 1; }
+        #navigation #main-nav.visible #searchform, #navigation #main-nav ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover figure#main-nav:after #searchform, #main-nav ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover #navigation figure#main-nav:after #searchform, #navigation #main-nav ul.sub-menu li.menu-item.visible #main-nav.menu-item-post #searchform, #main-nav ul.sub-menu li.menu-item.visible #navigation #main-nav.menu-item-post #searchform, #navigation #main-nav.slider.latest-cat-articles.active #searchform {
+          width: 100%;
+          text-align: center; }
+          #navigation #main-nav.visible #searchform .search-wrap, #navigation #main-nav ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover figure#main-nav:after #searchform .search-wrap, #main-nav ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover #navigation figure#main-nav:after #searchform .search-wrap, #navigation #main-nav ul.sub-menu li.menu-item.visible #main-nav.menu-item-post #searchform .search-wrap, #main-nav ul.sub-menu li.menu-item.visible #navigation #main-nav.menu-item-post #searchform .search-wrap, #navigation #main-nav.slider.latest-cat-articles.active #searchform .search-wrap {
+            display: inline-block; }
+          #navigation #main-nav.visible #searchform #searchsubmit, #navigation #main-nav ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover figure#main-nav:after #searchform #searchsubmit, #main-nav ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover #navigation figure#main-nav:after #searchform #searchsubmit, #navigation #main-nav ul.sub-menu li.menu-item.visible #main-nav.menu-item-post #searchform #searchsubmit, #main-nav ul.sub-menu li.menu-item.visible #navigation #main-nav.menu-item-post #searchform #searchsubmit, #navigation #main-nav.slider.latest-cat-articles.active #searchform #searchsubmit {
+            color: #000; }
       #navigation #main-nav li.menu-item {
         float: none;
         width: 100%;
