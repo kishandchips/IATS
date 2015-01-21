@@ -25,39 +25,21 @@
 		@extend .valign;	
 	}
 
-	.space-jam{
-		overflow: hidden;
+	.advertisement{
+		width: 970px;
+		margin: 0 auto;
+		text-align: center;
+		background: none;
 
-		// .space-logo{
-		// 	float: left;
-		// 	position: relative;
-		// 	display: inline-block;
-		// 	height:150px;
-		// 	margin-left: 2em;
+		@media screen and (max-width: 1200px){
+			float: none;
+			margin: 0 auto;
+		}
 
-		// 	@media screen and (max-width: 1200px){
-		// 		display: none;
-		// 	}
-
-		// 	.icon-typelogo{
-		// 		color: #177248;
-		// 		font-size: 3em;
-		// 	}
-		// }
-
-		// .advertisement{
-		// 	// float: right;
-		// 	// width: 70%;
-		// 	width: 970px;
-		// 	margin: 0 auto;
-		// 	background: none;
-
-		// 	@media screen and (max-width: 1200px){
-		// 		float: none;
-		// 		margin: 0 auto;
-		// 	}
-		// }
-	}// .space-jam
+		> div{
+			display: inline-block;
+		}
+	}
 
 	&.sticky{
 		// .space-logo{
@@ -90,7 +72,38 @@
 				}
 			}
 		}
-	}
+
+		@media screen and (max-height: 700px){
+			&.visible{
+				#navigation{
+					bottom: 0;
+					overflow-y: scroll;					
+				}
+			}
+		}
+	}// .sticky
+
+	&.visible{
+
+		#main-nav{
+			position: relative;
+			height: auto;
+			@include opacity(1);
+
+			#searchform{
+				width: 100%;
+				text-align: center;
+
+				.search-wrap{
+					display: inline-block;
+				}
+
+				#searchsubmit{
+					color: #000;
+				}
+			}					
+		}
+	}// .visible
 
 	@media screen and (max-width: 1200px){
 		.logo-wrapper{
