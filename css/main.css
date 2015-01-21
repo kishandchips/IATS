@@ -1189,6 +1189,22 @@ textarea {
     @media screen and (max-width: 1100px) {
       #header.sticky #navigation #main-nav {
         width: 100%; } }
+@media screen and (max-height: 700px) {
+  #header.sticky.visible #navigation, #main-nav ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover figure#header.sticky:after #navigation, #main-nav ul.sub-menu li.menu-item.visible #header.sticky.menu-item-post #navigation, #header.sticky.slider.latest-cat-articles.active #navigation {
+    bottom: 0;
+    overflow-y: scroll; } }
+#header.visible #main-nav, #main-nav ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover figure#header:after #main-nav, #main-nav ul.sub-menu li.menu-item.visible #header.menu-item-post #main-nav, #header.slider.latest-cat-articles.active #main-nav {
+  position: relative;
+  height: auto;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1; }
+  #header.visible #main-nav #searchform, #main-nav ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover figure#header:after #main-nav #searchform, #main-nav ul.sub-menu li.menu-item.visible #header.menu-item-post #main-nav #searchform, #header.slider.latest-cat-articles.active #main-nav #searchform {
+    width: 100%;
+    text-align: center; }
+    #header.visible #main-nav #searchform .search-wrap, #main-nav ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover figure#header:after #main-nav #searchform .search-wrap, #main-nav ul.sub-menu li.menu-item.visible #header.menu-item-post #main-nav #searchform .search-wrap, #header.slider.latest-cat-articles.active #main-nav #searchform .search-wrap {
+      display: inline-block; }
+    #header.visible #main-nav #searchform #searchsubmit, #main-nav ul.sub-menu li.menu-item .menu-item-posts .menu-item-post:hover figure#header:after #main-nav #searchform #searchsubmit, #main-nav ul.sub-menu li.menu-item.visible #header.menu-item-post #main-nav #searchform #searchsubmit, #header.slider.latest-cat-articles.active #main-nav #searchform #searchsubmit {
+      color: #000; }
 @media screen and (max-width: 1200px) {
   #header .logo-wrapper {
     display: inline-block !important; }
